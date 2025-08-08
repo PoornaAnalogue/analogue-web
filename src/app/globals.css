@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/* Base styles (Mobile-first under 310px) */
+.Navbar-main {
+  padding: 1rem;
+}
+
+/* sm (310px - 480px) */
+@media (min-width: 310px) and (max-width: 480px) {
+  .Navbar-main {
+    background-color: #f0f0f0;
+  }
+}
+
+/* sm2 (350px - 480px) */
+@media (min-width: 350px) and (max-width: 480px) {
+  .Navbar-main {
+    background-color: #e0e0e0;
+  }
+}
+
+/* md (481px - 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .Navbar-main {
+    background-color: #d0d0f0;
+  }
+}
+
+/* mdl (769px - 1023px) */
+@media (min-width: 769px) and (max-width: 1023px) {
+  .Navbar-main {
+    background-color: #c0d0f0;
+  }
+}
+
+/* lg (1024px - 1279px) */
+@media (min-width: 1024px) and (max-width: 1279px) {
+  .Navbar-main {
+    background-color: #a0c0e0;
+  }
+}
+
+/* xl (1280px - 1536px) */
+@media (min-width: 1280px) and (max-width: 1536px) {
+  .Navbar-main {
+    background-color: #90b0d0;
+  }
+}
+
+/* 2xl (1537px - 1920px) */
+@media (min-width: 1537px) and (max-width: 1920px) {
+  .Navbar-main {
+    background-color: #80a0c0;
+  }
+}
