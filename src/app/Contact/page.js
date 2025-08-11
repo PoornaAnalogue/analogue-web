@@ -1,3 +1,4 @@
+import Footer from "../../../Components/Footer";
 import Navbar from "../../../Components/Navbar";
 import Image from 'next/image';
 
@@ -56,8 +57,9 @@ export default function Contact(){
                     <p className=" text-gray-600 mt-4">Visit us at Analogue IT Solutions and let us help you with a customized quotation for your needs.</p>
                     </div>
                 <button className="bg-blue-700 rounded text-white p-3 text-sm">Contact Us</button>
+                </div> 
                 </div>
-        </div>
+            <Footer />
         </div>
     )
 }

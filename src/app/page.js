@@ -6,7 +6,7 @@ import ServicePage from "./Testing/page";
 export default function App(){
   return (<>
     <Home />
-    {/* <ServicePage />  */}
+    <ServicePage /> 
     <Services />
     <Contact />
 

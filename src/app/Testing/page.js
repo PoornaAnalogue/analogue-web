@@ -1,6 +1,7 @@
 "use client";
 import React, {useState, useEffect} from "react";
 import Image from 'next/image';
+import Footer from "../../../Components/Footer";
 
 const ServicePage = ()=>{
     const [animate, setAnimate] = useState(false);
@@ -82,6 +83,7 @@ const ServicePage = ()=>{
                                 ))}
                             </div>
                 </div>
+                <Footer/>
             </div>
         </>
     )

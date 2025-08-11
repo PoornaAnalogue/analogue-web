@@ -1,6 +1,7 @@
 import { FaChevronDown } from "react-icons/fa";
 import Image from 'next/image';
 import Navbar from "../../../../Components/Navbar";
+import Footer from "../../../../Components/Footer";
 
 export default function MainServicesPage(){
     const icons = [
@@ -88,8 +89,7 @@ export default function MainServicesPage(){
                 <p className="text-gray-500 mt-10">Analogue is a Best mobile app development company in Hyderabad that specialises in creating and enhancing user experience through the design and development of mobile and web applications. Our focus lies in helping businesses expand and reach their specific customer base by collaborating with individuals and organisations to conceptualise and promote their products. Analogue is a Best mobile ain helping businesses expand and reach their specific customer base by co Analogue is a Best mobile app development company in Hyderabad that specialises in creating and enhancing user experience through the design and development of mobile and web applications. Our focus lies in helping businesses expand and reach their specific customer base by collaborating with individuals and organisations to conceptualise and promote their products. Analogue is a Best mobile ain helping businesses expand and reach their specific customer base by co</p>
 
             </div>
-
-
+            <Footer />
         </div>
     )
 }
