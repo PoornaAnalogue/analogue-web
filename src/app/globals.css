@@ -29,11 +29,8 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-
-
-/* Base styles (Mobile-first under 310px) */
-.Navbar-main {
-  padding: 1rem;
+.left-hero{
+  background-color: oklch(97.593% 0.00604 224.239);
 }
 
 /* sm (310px - 480px) */
@@ -64,23 +61,3 @@ body {
   }
 }
 
-/* lg (1024px - 1279px) */
-@media (min-width: 1024px) and (max-width: 1279px) {
-  .Navbar-main {
-    background-color: #a0c0e0;
-  }
-}
-
-/* xl (1280px - 1536px) */
-@media (min-width: 1280px) and (max-width: 1536px) {
-  .Navbar-main {
-    background-color: #90b0d0;
-  }
-}
-
-/* 2xl (1537px - 1920px) */
-@media (min-width: 1537px) and (max-width: 1920px) {
-  .Navbar-main {
-    background-color: #80a0c0;
-  }
-}
