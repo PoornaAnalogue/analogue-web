@@ -1,5 +1,142 @@
 @import "tailwindcss";
 
+/* globals.css */
+.bg-industry {
+  background-image: url('/IndustryBg.jpg');
+}
+.animate-scroll {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  gap: 16px;
+}
+
+.animate-scrollLap {
+  display: flex;
+  animation: scrollLap 30s linear infinite !important;
+  gap: 16px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  8% {
+    transform: translateX(0);
+  }
+  10% {
+    transform: translateX(-166px);
+  }
+  18% {
+    transform: translateX(-166px);
+  }
+  20% {
+    transform: translateX(-332px);
+  }
+  28% {
+    transform: translateX(-332px);
+  }
+  30% {
+    transform: translateX(-498px);
+  }
+  38% {
+    transform: translateX(-498px);
+  }
+  40% {
+    transform: translateX(-664px);
+  }
+  48% {
+    transform: translateX(-664px);
+  }
+  50% {
+    transform: translateX(-830px);
+  }
+  58% {
+    transform: translateX(-830px);
+  }
+  60% {
+    transform: translateX(-996px);
+  }
+  68% {
+    transform: translateX(-996px);
+  }
+  70% {
+    transform: translateX(-1162px);
+  }
+  78% {
+    transform: translateX(-1162px);
+  }
+  80% {
+    transform: translateX(-1328px);
+  }
+  88% {
+    transform: translateX(-1328px);
+  }
+  90% {
+    transform: translateX(-1494px);
+  }
+  98% {
+    transform: translateX(-1494px);
+  }
+  100% {
+    transform: translateX(-1660px);
+  }
+}
+
+
+@keyframes scrollLap {
+  0% { transform: translateX(-1494px); }
+  /* 2% { transform: translateX(-1494px); } */
+  4% { transform: translateX(-1328px); }
+  /* 5% { transform: translateX(-1328px); } */
+  /* 6% { transform: translateX(-1162px); } */
+  8% { transform: translateX(-1162px); }
+  /* 9% { transform: translateX(-996px); } */
+  /* 11% { transform: translateX(-996px); } */
+  12% { transform: translateX(-830px); }
+  /* 14% { transform: translateX(-830px); } */
+  /* 15% { transform: translateX(-664px); } */
+  16% { transform: translateX(-664px); }
+  /* 18% { transform: translateX(-498px); } */
+  20% { transform: translateX(-498px); }
+  /* 21% { transform: translateX(-332px); } */
+  /* 23% { transform: translateX(-332px); } */
+  24% { transform: translateX(-166px); }
+  /* 26% { transform: translateX(-166px); } */
+  /* 27% { transform: translateX(0); } */
+  28% { transform: translateX(0); }
+  32% { transform: translateX(-1494px); }
+  36% { transform: translateX(-1328px); }
+  40% { transform: translateX(-1162px); }
+  144% { transform: translateX(-830px); }
+  48% { transform: translateX(-664px); }
+  52% { transform: translateX(-498px); }
+  56% { transform: translateX(-166px); }
+  60% { transform: translateX(0); }
+  64% { transform: translateX(-1494px); }
+  68% { transform: translateX(-1328px); }
+  72% { transform: translateX(-1162px); }
+  76% { transform: translateX(-830px); }
+  80% { transform: translateX(-664px); }
+  84% { transform: translateX(-498px); }
+  88% { transform: translateX(-166px); }
+  94% { transform: translateX(0); }
+  100% { transform: translateX(-1494px); }
+  
+
+   /* Loop back to start */
+  
+
+}
+
+.animate-scrollLap:hover {
+  animation-play-state: paused;
+}
+
+.animate-scroll:hover {
+  animation-play-state: paused;
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -29,6 +166,43 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+@media (max-width: 768px) {
+  .animate-scroll > div {
+    min-width: 120px;
+    height: 200px;
+  }
+  .animate-scroll img {
+    width: 120px;
+    height: 200px;
+  }
+
+  @keyframes scroll {
+    0% { transform: translateX(0); }
+    8% { transform: translateX(0); }
+    10% { transform: translateX(-136px); }
+    18% { transform: translateX(-136px); }
+    20% { transform: translateX(-272px); }
+    28% { transform: translateX(-272px); }
+    30% { transform: translateX(-408px); }
+    38% { transform: translateX(-408px); }
+    40% { transform: translateX(-544px); }
+    48% { transform: translateX(-544px); }
+    50% { transform: translateX(-680px); }
+    58% { transform: translateX(-680px); }
+    60% { transform: translateX(-816px); }
+    68% { transform: translateX(-816px); }
+    70% { transform: translateX(-952px); }
+    78% { transform: translateX(-952px); }
+    80% { transform: translateX(-1088px); }
+    88% { transform: translateX(-1088px); }
+    90% { transform: translateX(-1224px); }
+    98% { transform: translateX(-1224px); }
+    100% { transform: translateX(-1360px); }
+  }
+
+
+  
+}
 .left-hero{
   background-color: oklch(97.593% 0.00604 224.239);
 }
