@@ -3123,6 +3123,7 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist
 ;
 ;
 function Home() {
+    // this is the social icons data
     const socialIcons = [
         {
             id: 1,
@@ -3168,7 +3169,7 @@ function Home() {
             children: [
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$Components$2f$Navbar$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {}, void 0, false, {
                     fileName: "[project]/src/app/Home/page.js",
-                    lineNumber: 21,
+                    lineNumber: 23,
                     columnNumber: 7
                 }, this),
                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3182,7 +3183,7 @@ function Home() {
                                     children: "Best Mobile App Development Company in Hyderabad"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/Home/page.js",
-                                    lineNumber: 26,
+                                    lineNumber: 28,
                                     columnNumber: 11
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -3190,7 +3191,7 @@ function Home() {
                                     children: "Analogue is a Best mobile app development company in Hyderabad that specialises in creating and enhancing user experience through the design and development of mobile and web applications. Our focus lies in helping businesses expand and reach their specific customer base by collaborating with individuals and organisations to conceptualise and promote their products."
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/Home/page.js",
-                                    lineNumber: 29,
+                                    lineNumber: 31,
                                     columnNumber: 11
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3208,18 +3209,18 @@ function Home() {
                                             className: "rounded-full"
                                         }, id, false, {
                                             fileName: "[project]/src/app/Home/page.js",
-                                            lineNumber: 39,
+                                            lineNumber: 41,
                                             columnNumber: 15
                                         }, this))
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/Home/page.js",
-                                    lineNumber: 37,
+                                    lineNumber: 39,
                                     columnNumber: 11
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/Home/page.js",
-                            lineNumber: 25,
+                            lineNumber: 27,
                             columnNumber: 9
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3237,7 +3238,7 @@ function Home() {
                                             priority: true
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/Home/page.js",
-                                            lineNumber: 55,
+                                            lineNumber: 57,
                                             columnNumber: 13
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3251,18 +3252,18 @@ function Home() {
                                                 className: "w-full h-full object-contain"
                                             }, void 0, false, {
                                                 fileName: "[project]/src/app/Home/page.js",
-                                                lineNumber: 65,
+                                                lineNumber: 67,
                                                 columnNumber: 15
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/Home/page.js",
-                                            lineNumber: 64,
+                                            lineNumber: 66,
                                             columnNumber: 13
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/Home/page.js",
-                                    lineNumber: 53,
+                                    lineNumber: 55,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3276,7 +3277,7 @@ function Home() {
                                             className: "rotate-[-15deg] mb-[-50px]"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/Home/page.js",
-                                            lineNumber: 78,
+                                            lineNumber: 80,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -3287,13 +3288,13 @@ function Home() {
                                             className: "rotate-[10deg]"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/Home/page.js",
-                                            lineNumber: 85,
+                                            lineNumber: 87,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/Home/page.js",
-                                    lineNumber: 77,
+                                    lineNumber: 79,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3307,7 +3308,7 @@ function Home() {
                                             className: "rotate-[20deg] "
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/Home/page.js",
-                                            lineNumber: 96,
+                                            lineNumber: 98,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
@@ -3318,19 +3319,19 @@ function Home() {
                                             className: "mt-[-70px] z-10"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/Home/page.js",
-                                            lineNumber: 103,
+                                            lineNumber: 105,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/app/Home/page.js",
-                                    lineNumber: 95,
+                                    lineNumber: 97,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/Home/page.js",
-                            lineNumber: 52,
+                            lineNumber: 54,
                             columnNumber: 9
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -3348,12 +3349,12 @@ function Home() {
                                             className: "cursor-pointer hover:scale-110 transition-transform"
                                         }, void 0, false, {
                                             fileName: "[project]/src/app/Home/page.js",
-                                            lineNumber: 123,
+                                            lineNumber: 125,
                                             columnNumber: 15
                                         }, this)
                                     }, icon.id, false, {
                                         fileName: "[project]/src/app/Home/page.js",
-                                        lineNumber: 117,
+                                        lineNumber: 119,
                                         columnNumber: 13
                                     }, this)),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -3361,30 +3362,30 @@ function Home() {
                                     children: "Follow Us"
                                 }, void 0, false, {
                                     fileName: "[project]/src/app/Home/page.js",
-                                    lineNumber: 132,
+                                    lineNumber: 134,
                                     columnNumber: 11
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/app/Home/page.js",
-                            lineNumber: 115,
+                            lineNumber: 117,
                             columnNumber: 9
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/app/Home/page.js",
-                    lineNumber: 23,
+                    lineNumber: 25,
                     columnNumber: 7
                 }, this)
             ]
         }, void 0, true, {
             fileName: "[project]/src/app/Home/page.js",
-            lineNumber: 20,
+            lineNumber: 22,
             columnNumber: 5
         }, this)
     }, void 0, false, {
         fileName: "[project]/src/app/Home/page.js",
-        lineNumber: 19,
+        lineNumber: 21,
         columnNumber: 5
     }, this);
 }

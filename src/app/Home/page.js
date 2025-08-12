@@ -6,6 +6,8 @@ import Link from 'next/link';
 
 export default function Home() {
 
+  // this is the social icons data
+
   const socialIcons = [
     { id: 1, name: "Facebook", src: "/link1.png", link: "#" },
     { id: 2, name: "Twitter", src: "/link2.png", link: "#" },
