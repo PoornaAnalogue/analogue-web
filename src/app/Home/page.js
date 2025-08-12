@@ -7,6 +7,8 @@ import Link from 'next/link';
 export default function Home() {
 
   // this is the social icons data
+  // form Poorna Durga
+  // you can change the src and link as per your requirement
 
   const socialIcons = [
     { id: 1, name: "Facebook", src: "/link1.png", link: "#" },
