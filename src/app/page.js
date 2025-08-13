@@ -15,29 +15,49 @@ import Services from "./Services/Android-App-Development/page";
 import Image from "next/image";
 import MainServicesPage from "./Services/Android-App-Development/page";
 import Footer from "../../Components/Footer";
+import BookAppointment from "@/Components/BookAppointment/page";
+import CalendarTest from "@/Components/BookAppointment/page";
+import ServicePageTest from "@/Components/Services/testing";
+import Calendar from "@/Components/BookAppointment/testing";
+import Appointment from "@/Components/Testimonials/page";
+import Testimonials from "@/Components/Testimonials/testing";
+
+
 
 export default function App() {
   return (
     <>
-      <Home />
-      <ServicePage />
-      <Footer />
+      {/* <Home /> */}
+      {/* <ServicePage /> */}
+      {/* <Footer /> */}
 
-
-      <MainServicesPage />
-
-      <ObjectTechnologiesPagee />
-
-      <IndustryPage />
-
-
-      <ProductTesting />
-
-
-      <SingleProductPage /> 
+      {/* <ServicePageTest /> */}
       
 
-      <Contact />
+      {/* <CalendarTest /> */}
+      {/* <CalendarTest /> */}
+
+
+      {/* <MainServicesPage /> */}
+
+      {/* <ObjectTechnologiesPagee /> */}
+
+      {/* <IndustryPage /> */}
+
+
+      {/* <ProductTesting /> */}
+
+
+      {/* <SingleProductPage />  */}
+      
+
+      {/* <Contact /> */}
+
+      {/* <BookAppointment /> */}
+
+      {/* <Appointment /> */}
+
+      <Testimonials />
       
 
     </>

@@ -66,14 +66,14 @@ export default function ObjectTechnologiesPagee() {
                 { src: "/Mockup (6).png", alt: "Project 6 screenshot" },
                 { src: "/Mockup (7).png", alt: "Project 7 screenshot" },
                 { src: "/Mockup.png", alt: "Project 8 screenshot" },
-                { src: "/Mockup (1).png", alt: "Project 9 screenshot" },
-                { src: "/Mockup (2).png", alt: "Project 2 screenshot" },
-                { src: "/Mockup (3).png", alt: "Project 3 screenshot" },
-                { src: "/Mockup (4).png", alt: "Project 4 screenshot" },
-                { src: "/Mockup (5).png", alt: "Project 5 screenshot" },
-                { src: "/Mockup (6).png", alt: "Project 6 screenshot" },
-                { src: "/Mockup (7).png", alt: "Project 7 screenshot" },
-                { src: "/Mockup.png", alt: "Project 8 screenshot" },
+                // { src: "/Mockup (1).png", alt: "Project 9 screenshot" },
+                // { src: "/Mockup (2).png", alt: "Project 2 screenshot" },
+                // { src: "/Mockup (3).png", alt: "Project 3 screenshot" },
+                // { src: "/Mockup (4).png", alt: "Project 4 screenshot" },
+                // { src: "/Mockup (5).png", alt: "Project 5 screenshot" },
+                // { src: "/Mockup (6).png", alt: "Project 6 screenshot" },
+                // { src: "/Mockup (7).png", alt: "Project 7 screenshot" },
+                // { src: "/Mockup.png", alt: "Project 8 screenshot" },
               ].map((image, index) => (
                 <div
                   key={index}
@@ -100,10 +100,10 @@ export default function ObjectTechnologiesPagee() {
                 { src: "/Carousal-Lap-Img4.png", alt: "Project 4 screenshot" },
                 { src: "/Carousal-Lap-Img5.png", alt: "Project 5 screenshot" },
                 { src: "/Carousal-Lap-Img6.png", alt: "Project 6 screenshot" },
-                { src: "/Carousal-Lap-Img1.png", alt: "Project 7 screenshot" },
-                { src: "/Carousal-Lap-Img2.png", alt: "Project 8 screenshot" },
-                { src: "/Carousal-Lap-Img3.png", alt: "Project 9 screenshot" },
-                { src: "/Carousal-Lap-Img4.png", alt: "Project 2 screenshot" },
+                // { src: "/Carousal-Lap-Img1.png", alt: "Project 7 screenshot" },
+                // { src: "/Carousal-Lap-Img2.png", alt: "Project 8 screenshot" },
+                // { src: "/Carousal-Lap-Img3.png", alt: "Project 9 screenshot" },
+                // { src: "/Carousal-Lap-Img4.png", alt: "Project 2 screenshot" },
                 
               ].map((image, index) => (
                 <div
@@ -115,7 +115,7 @@ export default function ObjectTechnologiesPagee() {
                     width={150}
                     height={256}
                     alt={image.alt}
-                    className="w-full h-full object-contain rounded-lg shadow-lg transition-transform duration-300 hover:scale-110 hover:z-10"
+                    className="w-full h-full object-contain  transition-transform duration-300 hover:scale-110 hover:z-10"
                   />
                 </div>
               ))}
