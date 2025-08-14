@@ -19,8 +19,9 @@ import BookAppointment from "@/Components/BookAppointment/page";
 import CalendarTest from "@/Components/BookAppointment/page";
 import ServicePageTest from "@/Components/Services/testing";
 import Calendar from "@/Components/BookAppointment/testing";
-import Appointment from "@/Components/Testimonials/page";
-import Testimonials from "@/Components/Testimonials/testing";
+import Appointment from "@/app/Testimonials/page";
+import Testimonials from "@/app/Testimonials/page";
+import Resp_Testimonials from "./Testimonials/resp_testing";
 
 
 
@@ -57,7 +58,8 @@ export default function App() {
 
       {/* <Appointment /> */}
 
-      <Testimonials />
+      {/* <Testimonials /> */}
+      <Resp_Testimonials />
       
 
     </>

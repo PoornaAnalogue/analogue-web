@@ -1,13 +1,10 @@
 @import "tailwindcss";
 
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* 1. Override Tailwind's theme breakpoints */
-@layer theme {
-  :root {
+@theme {
     /* Your custom breakpoints */
     --breakpoint-xs: 360px;
     --breakpoint-sm: 480px;
@@ -18,37 +15,28 @@
     --breakpoint-3xl: 1536px;
  
     /* Map them to Tailwind's internal vars */
-    --tw-breakpoint-sm : var(--breakpoint-sm);
+    --tw-breakpoint-sm: var(--breakpoint-sm);
     --tw-breakpoint-md: var(--breakpoint-md);
     --tw-breakpoint-lg: var(--breakpoint-lg);
     --tw-breakpoint-xl: var(--breakpoint-xl);
     --tw-breakpoint-2xl: var(--breakpoint-2xl);
-  }
 }
  
-
+/* 2. Add xs: and 3xl: modifiers to Tailwind */
+@layer utilities {
+  /* xs: modifier */
+  @media (min-width: var(--breakpoint-xs)) {
+    .xs\:block { display: block; }
+    .xs\:hidden { display: none; }
+    /* Add more xs: utilities as needed */
+  }
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  /* 3xl: modifier */
+  @media (min-width: var(--breakpoint-3xl)) {
+    .\33 xl\:block { display: block; }
+    .\33 xl\:hidden { display: none; }
+    /* Add more 3xl: utilities as needed */
+  }
 
 /* globals.css */
 .bg-industry {
@@ -83,7 +71,6 @@
   gap: 16px;
 }
 
-
 .swiper-controls .swiper-button-prev,
 .swiper-controls .swiper-button-next {
   /* position: static !important; */
@@ -108,11 +95,6 @@
   height: 35px  !important;
 }
 
-
-
-
-
-
 .swiper-pagination-bullet {
   background: #999 !important;
   opacity: 1 !important;
@@ -124,12 +106,6 @@
 .swiper-pagination-bullet-active {
   background-color: #071637 !important; /* dark navy active */
 }
-
-
-
-
-
-
 
 @keyframes scroll {
   0% { transform: translateX(0); }
@@ -184,12 +160,6 @@
   animation-play-state: paused;
 }
 
-
-
-
-
-
-
 @layer utilities {
   @keyframes triangle-path {
     0% {
@@ -210,30 +180,6 @@
     animation: triangle-path 3s linear infinite;
   }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* :root {
-  --background: #ffffff;
-  --foreground: #171717; */
-
 
 @layer components {
   .btn-primaryyy {
@@ -353,5 +299,4 @@ body {
     background-color: #c0d0f0;
   }
 }
-
-
+}
