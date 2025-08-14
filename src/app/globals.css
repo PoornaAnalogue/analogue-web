@@ -16,6 +16,66 @@
   gap: 16px;
 }
 
+/* CLENT.. CAROUSEL */
+/* CLIENT CAROUSEL */
+
+/* Ensure consistent slide box + smooth transitions */
+.client-swiper .swiper-slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.4s ease, filter 0.4s ease, padding-top 0.4s ease;
+}
+
+/* Base scale for both carousels */
+.client-swiper .phone-wrapper,
+.client-swiper .logo-wrapper {
+  transform: scale(0.75);
+  padding-top: 3rem;
+  transition: transform 0.4s ease, padding-top 0.4s ease, opacity 0.3s ease;
+}
+
+/* Center (active) */
+.client-swiper .swiper-slide-active .phone-wrapper,
+.client-swiper .swiper-slide-active .logo-wrapper {
+  transform: scale(1.2);
+  padding-top: 2.5rem;
+}
+
+/* First neighbors (left/right) */
+.client-swiper .swiper-slide-prev .phone-wrapper,
+.client-swiper .swiper-slide-next .phone-wrapper,
+.client-swiper .swiper-slide-prev .logo-wrapper,
+.client-swiper .swiper-slide-next .logo-wrapper {
+  transform: scale(1);
+  padding-top: 2.5rem;
+}
+
+/* Second neighbors (our custom markers) */
+.client-swiper .prev-prev .phone-wrapper,
+.client-swiper .next-next .phone-wrapper,
+.client-swiper .prev-prev .logo-wrapper,
+.client-swiper .next-next .logo-wrapper {
+  transform: scale(0.82);
+  padding-top: 2.5rem;
+}
+
+
+/* Healr image when it's the first left or first right neighbor */
+.client-swiper .swiper-slide-prev .healr-slide,
+.client-swiper .swiper-slide-next .healr-slide {
+  transform: scale(0.9); /* smaller than default neighbor size */
+}
+.healr-slide img {
+  max-height: 380px; /* or match the others */
+}
+
+
+
+
+
+
+
 @keyframes scroll {
   0% {
     transform: translateX(0);
@@ -234,4 +294,5 @@ body {
     background-color: #c0d0f0;
   }
 }
+
 

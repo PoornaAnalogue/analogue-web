@@ -3,6 +3,7 @@ import { FaChevronDown } from "react-icons/fa";
 import Navbar from '../../../Components/Navbar';
 import Footer from '../../../Components/Footer';
 import Link from 'next/link';
+import ClientCorousel from '../Clientcorousel/page';
 
 export default function Home() {
 
@@ -138,6 +139,7 @@ export default function Home() {
       </div>
       </div>
       {/* <Footer /> */}
+     
     </div>
   );
 }

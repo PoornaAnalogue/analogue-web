@@ -15,11 +15,15 @@ import Services from "./Services/Android-App-Development/page";
 import Image from "next/image";
 import MainServicesPage from "./Services/Android-App-Development/page";
 import Footer from "../../Components/Footer";
+import ClientCorousel from "./Clientcorousel/page";
+import Puzzle from "./puzzle/page";
+import TestMonotors from "./testmonitors/page";
 
 export default function App() {
   return (
     <>
       <Home />
+         <ClientCorousel/>
       <ServicePage />
       <Footer />
 
@@ -36,8 +40,10 @@ export default function App() {
 
       <SingleProductPage /> 
       
-
+<Puzzle/>
+<TestMonotors/>
       <Contact />
+   
       
 
     </>
