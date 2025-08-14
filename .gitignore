@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
@@ -56,6 +55,3 @@ yarn-error.log*
 
 # Env files
 .env
-=======
-node_modules/
->>>>>>> 3d34caa92cc612041068b43098c1c8c91e6c1c85
