@@ -59,6 +59,87 @@ export default function Contact(){
                 <button className="bg-blue-700 rounded text-white p-3 text-sm">Contact Us</button>
                 </div> 
                 </div>
+
+                <div className="relative flex flex-col items-center justify-start h-[50rem] rounded-lg">
+                {/* Small centered background image */}
+                <div className="absolute top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2 z-0">
+                    <Image
+                    src="/contact/Form-background.png"
+                    alt="Form Background"
+                    width={500} // smaller width
+                    height={500}
+                    className="object-contain"
+                    />
+                </div>
+
+                {/* Big Background Text - moved closer to form */}
+                <div className="relative z-10 flex justify-center items-end mb-[-3rem] pointer-events-none">
+                    <h1 className="text-[12rem] text-gray-400 leading-none mr-4">
+                    Let&apos;s
+                    </h1>
+                    <h1 className="text-[12rem] text-blue-300 leading-none">
+                    Discuss
+                    </h1>
+                </div>
+
+                {/* Glassmorphic Form */}
+                <div className="relative z-20 w-[80%] max-w-5xl p-10 rounded-3xl border border-white/30 backdrop-blur-2xl shadow-lg bg-gradient-to-br from-white/30 via-white/10 to-transparent">
+                    {/* Form Header */}
+                    <h2 className="text-lg text-blue-500 mb-1">
+                    Let Us Elevate Your Projects With Our Skills
+                    </h2>
+                    <p className="text-xs text-gray-700 mb-6">
+                    Get a Quote from a Top Mobile App Development Company
+                    </p>
+
+                    {/* Form Fields */}
+                    <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <input
+                        type="text"
+                        placeholder="Your Name*"
+                        className="bg-transparent border-b border-gray-400 focus:outline-none text-gray-800 text-xs py-2"
+                    />
+                    <input
+                        type="email"
+                        placeholder="Your Email*"
+                        className="bg-transparent border-b border-gray-400 focus:outline-none text-gray-800 placeholder-black py-2"
+                    />
+                    <input
+                        type="tel"
+                        placeholder="Phone Number*"
+                        className="bg-transparent border-b border-gray-400 focus:outline-none text-gray-800 placeholder-gray-500 py-2"
+                    />
+                    <input
+                        type="text"
+                        placeholder="Subject..."
+                        className="bg-transparent border-b border-gray-400 focus:outline-none text-gray-800 placeholder-gray-500 py-2"
+                    />
+                    <select
+                        className="bg-transparent border-b border-gray-400 focus:outline-none text-gray-800 placeholder-gray-500 py-2 col-span-1 md:col-span-2"
+                    >
+                        <option>How Do You Reach Us?</option>
+                        <option>Email</option>
+                        <option>Phone</option>
+                        <option>WhatsApp</option>
+                    </select>
+                    <textarea
+                        placeholder="Your Message*"
+                        className="bg-transparent border-b border-gray-400 focus:outline-none text-gray-800 placeholder-gray-500 py-2 col-span-1 md:col-span-2"
+                    ></textarea>
+                    <div className="col-span-1 md:col-span-2 flex justify-start mt-4">
+                        <button
+                        type="submit"
+                        className="px-6 py-2 bg-blue-500 rounded-full text-white hover:bg-blue-600 transition"
+                        >
+                        Get A Quote
+                        </button>
+                    </div>
+                    </form>
+                </div>
+                </div>
+
+
+
             <Footer />
         </div>
     )

@@ -15,29 +15,46 @@ import Services from "./Services/Android-App-Development/page";
 import Image from "next/image";
 import MainServicesPage from "./Services/Android-App-Development/page";
 import Footer from "../../Components/Footer";
+import Lottie from "lottie-react";
+import GetAQuoteForm from "../../Components/GetAQuoteForm";
+import MyLottie from "../../Components/Lottie";
+import PuzzleSection from "./Puzzle/page";
+import MainHomeScreen from "../../Components/MainHomeScreen";
+import PopUpForm from "../../Components/PopUpForm";
+import MorphingHeading from "../../Components/trail";
+
 
 export default function App() {
   return (
     <>
+    <Navbar />
+{/* <MainHomeScreen /> */}
+
       <Home />
       <ServicePage />
-      <Footer />
 
 
-      <MainServicesPage />
+      {/* <MainServicesPage /> */}
 
-      <ObjectTechnologiesPagee />
+      {/* <ObjectTechnologiesPagee /> */}
 
-      <IndustryPage />
-
-
-      <ProductTesting />
+      {/* <IndustryPage /> */}
 
 
-      <SingleProductPage /> 
+      {/* <ProductTesting /> */}
+
+
+      {/* <SingleProductPage />  */}
       
 
-      <Contact />
+      {/* <Contact /> */}
+      <GetAQuoteForm />
+      <Footer /> 
+      <MorphingHeading />
+{/* <PopUpForm /> */}
+
+      {/* <PuzzleSection /> */}
+
       
 
     </>
