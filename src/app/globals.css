@@ -16,62 +16,65 @@
   gap: 16px;
 }
 
-/* CLENT.. CAROUSEL */
-/* CLIENT CAROUSEL */
 
-/* Ensure consistent slide box + smooth transitions */
-.client-swiper .swiper-slide {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: transform 0.4s ease, filter 0.4s ease, padding-top 0.4s ease;
+/* PUZZLE  */
+/* Hide scrollbar for all browsers */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
 }
-
-/* Base scale for both carousels */
-.client-swiper .phone-wrapper,
-.client-swiper .logo-wrapper {
-  transform: scale(0.75);
-  padding-top: 3rem;
-  transition: transform 0.4s ease, padding-top 0.4s ease, opacity 0.3s ease;
-}
-
-/* Center (active) */
-.client-swiper .swiper-slide-active .phone-wrapper,
-.client-swiper .swiper-slide-active .logo-wrapper {
-  transform: scale(1.2);
-  padding-top: 2.5rem;
-}
-
-/* First neighbors (left/right) */
-.client-swiper .swiper-slide-prev .phone-wrapper,
-.client-swiper .swiper-slide-next .phone-wrapper,
-.client-swiper .swiper-slide-prev .logo-wrapper,
-.client-swiper .swiper-slide-next .logo-wrapper {
-  transform: scale(1);
-  padding-top: 2.5rem;
-}
-
-/* Second neighbors (our custom markers) */
-.client-swiper .prev-prev .phone-wrapper,
-.client-swiper .next-next .phone-wrapper,
-.client-swiper .prev-prev .logo-wrapper,
-.client-swiper .next-next .logo-wrapper {
-  transform: scale(0.82);
-  padding-top: 2.5rem;
-}
-
-
-/* Healr image when it's the first left or first right neighbor */
-.client-swiper .swiper-slide-prev .healr-slide,
-.client-swiper .swiper-slide-next .healr-slide {
-  transform: scale(0.9); /* smaller than default neighbor size */
-}
-.healr-slide img {
-  max-height: 380px; /* or match the others */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 
 
+
+/* ======================= */
+/* CLIENT CAROUSEL STYLES  */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================= */
+
+
+
+
+/* RESPONSIVENESS ...... */
+/* 1. Override Tailwind's theme breakpoints */
+@layer theme {
+  :root {
+    /* Your custom breakpoints */
+    --breakpoint-xs: 360px;
+    --breakpoint-sm: 480px;
+    --breakpoint-md: 640px;
+    --breakpoint-lg: 768px;
+    --breakpoint-xl: 1024px;
+    --breakpoint-2xl: 1280px;
+    --breakpoint-3xl: 1536px;
+ 
+    /* Map them to Tailwind's internal vars */
+    
+    --tw-breakpoint-sm: var(--breakpoint-sm);
+    --tw-breakpoint-md: var(--breakpoint-md);
+    --tw-breakpoint-lg: var(--breakpoint-lg);
+    --tw-breakpoint-xl: var(--breakpoint-xl);
+    --tw-breakpoint-2xl: var(--breakpoint-2xl);
+    
+  }
+}
 
 
 

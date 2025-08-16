@@ -1,138 +1,162 @@
+
+
+
+
+
+
 "use client";
- 
-import { useEffect, useRef, useState, useCallback } from "react";
-import { motion, AnimatePresence } from "framer-motion";
- 
-const steps = [
-  {
-    id: 1,
-    title: "Requirements",
-    img: "https://api.cinepass.in/images/articles/1751347439896.png",
-  },
-  {
-    id: 2,
-    title: "Agreement",
-    img: "https://api.cinepass.in/images/articles/1751347439896.png",
-  },
-  {
-    id: 3,
-    title: "UX / UI",
-    img: "https://api.cinepass.in/images/articles/1751347439896.png",
-  },
-  {
-    id: 4,
-    title: "Development",
-    img: "https://api.cinepass.in/images/articles/1751347439896.png",
-  },
-  {
-    id: 5,
-    title: "Testing",
-    img: "https://api.cinepass.in/images/articles/1751347439896.png",
-  },
-  {
-    id: 6,
-    title: "Client Approval",
-    img: "https://api.cinepass.in/images/articles/1751347439896.png",
-  },
-  {
-    id: 7,
-    title: "Deployment",
-    img: "https://api.cinepass.in/images/articles/1751347439896.png",
-  },
-  {
-    id: 8,
-    title: "User Will Use",
-    img: "https://api.cinepass.in/images/articles/1751347439896.png",
-  },
-  {
-    id: 9,
-    title: "Analogue Monitor",
-    img: "https://api.cinepass.in/images/articles/1751347439896.png",
-  },
-];
- 
-export default function PuzzleSteps() {
-  const [stepIndex, setStepIndex] = useState(1);
-  const containerRef = useRef(null);
-  const lastScroll = useRef(0);
- 
-  const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
- 
-  const onWheel = useCallback((e) => {
-    const now = Date.now();
-    if (now - lastScroll.current < 200) return; // throttle
-    lastScroll.current = now;
- 
-    if (e.deltaY > 0) {
-      setStepIndex((i) => clamp(i + 1, 1, steps.length));
-    } else if (e.deltaY < 0) {
-      setStepIndex((i) => clamp(i - 1, 1, steps.length));
+
+import { useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Controller } from "swiper/modules";
+import Image from "next/image";
+
+import "swiper/css";
+
+export default function ClientCarousel() {
+  const companies = [
+    { logo: "/flythlogo.png", phone: "/flythimg.png" },
+    { logo: "/aarishlogo.png", phone: "/aarishimg.png" },
+    { logo: "/poshanalogo.png", phone: "/poshanaimg.png" },
+    { logo: "/giftlogo.png", phone: "/giftimg.png" },
+    { logo: "/healrlogo.png", phone: "/aarishimg1.png" },
+  ];
+
+  const phoneSwiperRef = useRef(null);
+  const logoSwiperRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const onPhoneSlideChange = (swiper) => {
+    const totalSlides = companies.length;
+    const realIndex = swiper.realIndex % totalSlides;
+    setActiveIndex(realIndex);
+  };
+
+  const onLogoClick = (index) => {
+    if (phoneSwiperRef.current) {
+      phoneSwiperRef.current.slideToLoop(index);
     }
-  }, []);
- 
-  useEffect(() => {
-    const el = containerRef.current;
-    el.addEventListener("wheel", onWheel, { passive: true });
-    return () => el.removeEventListener("wheel", onWheel);
-  }, [onWheel]);
- 
+  };
+
   return (
-    <div
-      ref={containerRef}
-      className="h-screen w-full flex items-center justify-center bg-neutral-900 text-white overflow-hidden"
-    >
-      <div className="grid grid-cols-1 md:grid-cols-2 w-11/12 max-w-6xl gap-6 items-center">
-        <div className="relative">
-          <AnimatePresence mode="wait">
-            {stepIndex > 0 && (
-              <motion.div
-                key={steps[stepIndex - 1].id}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -20 }}
-                transition={{ duration: 0.4 }}
-              >
-                <h2 className="text-3xl font-bold mb-4">
-                  Step {steps[stepIndex - 1].id}: {steps[stepIndex - 1].title}
-                </h2>
-                <p className="text-neutral-400">
-                  This is the description for{" "}
-                  <strong>{steps[stepIndex - 1].title}</strong>. Scroll to see
-                  the next puzzle piece appear.
-                </p>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
- 
-        <div className="grid grid-cols-3 grid-rows-3 gap-2 relative">
-          {steps.map((step, idx) => (
-            <AnimatePresence key={step.id}>
-              {idx < stepIndex && (
-                <motion.img
-                  src={step.img}
-                  alt={step.title}
-                  initial={
-                    idx === 0
-                      ? false // Step 1 appears instantly
-                      : { opacity: 0, x: 100 }
-                  }
-                  animate={{ opacity: 1, x: 0 }}
-                  exit={{ opacity: 0, x: 100 }}
-                  transition={{ duration: 0.5 }}
-                  className="w-full h-full object-contain"
-                  style={{
-                    top: idx === 2 ? "20px" : "80px", // custom top offset
-                    left: idx === 2 ? "40px" : "120px", // custom left offset
-                    width: "300px", // fixed size (optional)
-                    height: "auto", // maintain aspect ratio
-                  }}
-                />
-              )}
-            </AnimatePresence>
-          ))}
+    <div className="w-full px-4 sm:px-8 md:px-12 lg:px-16 ">
+      {/* Heading */}
+      <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-center text-[#7B7E86] mb-6 sm:mb-8 md:mb-10">
+        <span className="text-blue-400">O</span>
+        <span className="text-gray-300">ur Featured Projects</span>
+      </h2>
+
+      <p className="text-xs sm:text-sm md:text-lg lg:text-xl text-center font-normal mb-6 sm:mb-8 md:mb-10 text-[#071637]">
+        Our Clients
+      </p>
+
+      <div className="relative max-w-7xl mx-auto space-y-10">
+        {/* Logo Carousel */}
+        
+
+        <Swiper
+  loop={true}
+  loopedSlides={companies.length}
+   autoplay={{ delay: 2500, disableOnInteraction: false }}
+            speed={800}
+  slidesPerView={5}
+  centeredSlides={true}
+  spaceBetween={24}
+  modules={[Controller, Autoplay]}
+  breakpoints={{
+    360: { slidesPerView: 1.5, spaceBetween: 10 },
+    480: { slidesPerView: 2.5, spaceBetween: 12 },
+    640: { slidesPerView: 3.5, spaceBetween: 16 },
+    768: { slidesPerView: 4, spaceBetween: 20 },
+    1024: { slidesPerView: 5, spaceBetween: 24 },
+  }}
+>
+  {companies.concat(companies).map((c, i) => (
+    <SwiperSlide key={`logo-${i}`} onClick={() => onLogoClick(i)}>
+      <div
+        className={`flex justify-center transition-transform duration-300 cursor-pointer ${
+          activeIndex === i ? "scale-125 opacity-100" : "scale-90 opacity-50"
+        }`}
+      >
+        <Image
+          src={c.logo}
+          alt={`Logo ${i}`}
+          width={120}
+          height={100}
+          className="object-contain"
+        />
+      </div>
+    </SwiperSlide>
+  ))}
+</Swiper>
+
+
+        {/* Phone Carousel */}
+        <div className="w-full flex justify-center    translate-x-10  mx-auto">
+          <Swiper
+            className="client-swiper w-full  mx-auto mr-8 "
+            loop={true}
+            centeredSlides={true}
+            autoplay={{ delay: 2500, disableOnInteraction: false }}
+            speed={800}
+            slidesPerView={5}
+            spaceBetween={10}
+            modules={[Autoplay, Controller]}
+            breakpoints={{
+              360: { slidesPerView: 1.2, spaceBetween: 10 },
+              480: { slidesPerView: 1.5, spaceBetween: 12 },
+              640: { slidesPerView: 2, spaceBetween: 14 },
+              768: { slidesPerView: 3, spaceBetween: 16 },
+              1024: { slidesPerView: 5, spaceBetween: 20 },
+            }}
+            onSwiper={(swiper) => {
+              phoneSwiperRef.current = swiper;
+              if (logoSwiperRef.current)
+                swiper.controller.control = logoSwiperRef.current;
+            }}
+            onSlideChange={onPhoneSlideChange}
+          >
+            {companies.concat(companies).map((c, i) => (
+              <SwiperSlide key={`phone-${i}`} className="flex justify-center">
+                <div className="phone-wrapper flex justify-center">
+                  <Image
+                    src={c.phone}
+                    alt={`Phone ${i}`}
+                    width={260}
+                    height={520}
+                    className="object-contain w-[70%] sm:w-3/4 md:w-60 lg:w-64"
+                  />
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
+
+      {/* Global Styles */}
+<style jsx global>{`
+  .client-swiper .phone-wrapper {
+    transform: scale(0.8) translateY(30px);
+    transition: transform 0.5s ease;
+    padding-top: 2rem; /* keep padding same for all */
+  }
+
+  .client-swiper .swiper-slide-active .phone-wrapper {
+    transform: scale(1.2) translateY(0);
+  }
+
+  .client-swiper .swiper-slide-prev .phone-wrapper,
+  .client-swiper .swiper-slide-next .phone-wrapper {
+    transform: scale(0.95) translateY(15px);
+  }
+
+  .client-swiper .prev-prev .phone-wrapper,
+  .client-swiper .next-next .phone-wrapper {
+    transform: scale(0.85) translateY(20px);
+  }
+`}</style>
+
+
     </div>
   );
-} 
+}

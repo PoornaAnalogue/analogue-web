@@ -1,3 +1,10 @@
 {
-  "/page": "app/page.js"
+  "/Clientcorousel/page": "app/Clientcorousel/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/carousel/page": "app/carousel/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/guarantees/page": "app/guarantees/page.js",
+  "/page": "app/page.js",
+  "/puzzle/page": "app/puzzle/page.js",
+  "/sample/page": "app/sample/page.js"
 }

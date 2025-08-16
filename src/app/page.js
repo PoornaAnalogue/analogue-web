@@ -17,14 +17,19 @@ import MainServicesPage from "./Services/Android-App-Development/page";
 import Footer from "../../Components/Footer";
 import ClientCorousel from "./Clientcorousel/page";
 import Puzzle from "./puzzle/page";
-import TestMonotors from "./testmonitors/page";
+
+import Guarantees from "./guarantees/page";
+
 
 export default function App() {
   return (
     <>
       <Home />
-         <ClientCorousel/>
+      
       <ServicePage />
+         <ClientCorousel/>
+         <Guarantees/>
+          {/* <Puzzle/> */}
       <Footer />
 
 
@@ -36,12 +41,12 @@ export default function App() {
 
 
       <ProductTesting />
-
+{/* <Carousel/> */}
 
       <SingleProductPage /> 
       
-<Puzzle/>
-<TestMonotors/>
+
+
       <Contact />
    
       
