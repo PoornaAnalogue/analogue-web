@@ -1,65 +1,68 @@
- import MainPage from "@/Components/Home/page";
+import Image from "next/image";
+import MainPage from "@/Components/Home/page";
 import IndustryPage from "@/Components/Industries/page";
 import Navbar from "@/Components/Navbar";
 import ProductsPage from "@/Components/Products/page";
 import ProductTesting from "@/Components/Products/producttesting";
-// import ProductTesting from "@/Components/Products/producttesting";
 import HomeTesting from "@/Components/Products/producttesting";
-import ServicePage from "@/Components/Services/page";
 import SingleProductPage from "@/Components/SingleProduct/page";
 import ObjectTechnologiesPagee from "@/Components/Technologies/page";
 import Contact from "./Contact/page";
 import Home from "./Home/page";
 import Services from "./Services/Android-App-Development/page";
-// import ServicePage from "./Testing/page";
-import Image from "next/image";
 import MainServicesPage from "./Services/Android-App-Development/page";
 import Footer from "../../Components/Footer";
-import BookAppointment from "@/Components/BookAppointment/page";
-import CalendarTest from "@/Components/BookAppointment/page";
-import ServicePageTest from "@/Components/Services/testing";
-import Calendar from "@/Components/BookAppointment/testing";
-import Appointment from "@/app/Testimonials/page";
-import Testimonials from "@/app/Testimonials/page";
-import Resp_Testimonials from "./Testimonials/resp_testing";
 
+
+
+
+import CalendarTest from "@/Components/BookAppointment/page";
+import Responsive_Testimonials from "./TestimonialsPage/page";
+import Responsive_ServicePage from "./ServicesPage/page";
+import Responsive_Best_App from "./BestMobileApp/page";
+import Responsive_CalendarTest from "@/Components/BookAppointment/res_test";
+import Responsive_India from "./India/page";
 
 
 export default function App() {
   return (
     <>
-      {/* <Home /> */}
-      {/* <ServicePage /> */}
-      {/* <Footer /> */}
+      {/* Madhavika */}
+      {/* <Responsive_ServicePage /> */}
+      {/* <Responsive_Testimonials /> */}
+      {/* <Responsive_Best_App /> */}
+      {/* <Responsive_CalendarTest /> */}
+      {/* <Responsive_India /> */}
 
-      {/* <ServicePageTest /> */}
+      {/* <CalendarTest /> */}
+
       
-
-      {/* <CalendarTest /> */}
-      {/* <CalendarTest /> */}
-
-
-      {/* <MainServicesPage /> */}
-
+      
       {/* <ObjectTechnologiesPagee /> */}
-
       {/* <IndustryPage /> */}
-
-
       {/* <ProductTesting /> */}
-
-
       {/* <SingleProductPage />  */}
-      
 
+
+
+
+      {/* Remaining */}
+      {/* <Home /> */}
+      {/* <Footer /> */}
+      {/* <MainServicesPage /> */}
       {/* <Contact /> */}
 
-      {/* <BookAppointment /> */}
+  
 
-      {/* <Appointment /> */}
+      
 
-      {/* <Testimonials /> */}
-      <Resp_Testimonials />
+      
+      
+
+
+
+
+
       
 
     </>

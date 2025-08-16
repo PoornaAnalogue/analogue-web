@@ -71,6 +71,9 @@
   gap: 16px;
 }
 
+
+
+/* Testimonials Page */
 .swiper-controls .swiper-button-prev,
 .swiper-controls .swiper-button-next {
   /* position: static !important; */
@@ -106,6 +109,13 @@
 .swiper-pagination-bullet-active {
   background-color: #071637 !important; /* dark navy active */
 }
+
+
+/* service page image hover effects */
+/* {* group-hover:h-[10rem] xs:group-hover:h-[12rem] sm:group-hover:h-[14rem] md:group-hover:h-[16rem] lg:group-hover:h-[15rem]  */
+
+
+
 
 @keyframes scroll {
   0% { transform: translateX(0); }
@@ -161,20 +171,136 @@
 }
 
 @layer utilities {
+  
+
+
+
   @keyframes triangle-path {
     0% {
-      transform: translate(180, 180);
+      transform: translate(150, 80);
     }
     33% {
-      transform: translate(180px, 40px); /* up-right */
+      transform: translate(150px, 40px); /* up-right */
     }
     66% {
-      transform: translate(300px, 110px); /* down-right */
+      transform: translate(190px, 60px); /* down-right */
     }
     100% {
-      transform: translate(180, 180); /* back to start */
+      transform: translate(150, 80); /* back to start */
     }
   }
+
+
+  @media (min-width: 480px) {
+    @keyframes triangle-path {
+    0% {
+      transform: translate(160, 90);
+    }
+    33% {
+      transform: translate(160px, 40px); /* up-right */
+    }
+    66% {
+      transform: translate(210px, 70px); /* down-right */
+    }
+    100% {
+      transform: translate(160, 90); /* back to start */
+    }
+  }
+  }
+
+
+
+  @media (min-width: 640px) {
+    @keyframes triangle-path {
+    0% {
+      transform: translate(200, 100);
+    }
+    33% {
+      transform: translate(200px, 40px); /* up-right */
+    }
+    66% {
+      transform: translate(250px, 70px); /* down-right */
+    }
+    100% {
+      transform: translate(200, 100); /* back to start */
+    }
+  }
+  }
+
+
+  @media (min-width: 768px) {
+    @keyframes triangle-path {
+    0% {
+      transform: translate(200, 120);
+    }
+    33% {
+      transform: translate(200px, 40px); /* up-right */
+    }
+    66% {
+      transform: translate(280px, 80px); /* down-right */
+    }
+    100% {
+      transform: translate(200, 120); /* back to start */
+    }
+  }
+}
+
+
+
+@media (min-width: 1024px) {
+    @keyframes triangle-path {
+    0% {
+      transform: translate(240, 125);
+    }
+    33% {
+      transform: translate(240px, 60px); /* up-right */
+    }
+    66% {
+      transform: translate(310px, 90px); /* down-right */
+    }
+    100% {
+      transform: translate(240, 125); /* back to start */
+    }
+  }
+  }
+
+@media (min-width: 1280px) {
+    @keyframes triangle-path {
+    0% {
+      transform: translate(250, 135);
+    }
+    33% {
+      transform: translate(250px, 75px); /* up-right */
+    }
+    66% {
+      transform: translate(320px, 110px); /* down-right */
+    }
+    100% {
+      transform: translate(250, 135); /* back to start */
+    }
+  }
+  }
+
+
+  
+@media (min-width: 1536px) {
+    @keyframes triangle-path {
+    0% {
+      transform: translate(300, 220);
+    }
+    33% {
+      transform: translate(300px, 90px); /* up-right */
+    }
+    66% {
+      transform: translate(420px, 130px); /* down-right */
+    }
+    100% {
+      transform: translate(300, 220); /* back to start */
+    }
+  }
+  }
+
+
 
   .animate-triangle-path {
     animation: triangle-path 3s linear infinite;
@@ -300,3 +426,4 @@ body {
   }
 }
 }
+

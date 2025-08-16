@@ -21,7 +21,7 @@ const CalendarTest = () => {
   };
 
   return (
-          <div className='w-screen h-screen flex gap-5  bg-industry bg-center bg-cover  bg-no-repeat'>
+          <div className='w-screen h-screen  flex xl:flex gap-5  bg-industry bg-center bg-cover  bg-no-repeat'>
 
             <div className='self-center m-15 p-3 items-start flex flex-col gap-5 w-3/8 '>
                 <p className='font-weight-700 font-bold text-5xl'>Book Appointment <br /> for free.</p>

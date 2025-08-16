@@ -1,0 +1,161 @@
+'use client';
+
+import { useState } from 'react';
+import dayjs from 'dayjs';
+import TooltipBox from './Tooltip';
+
+const Responsive_CalendarTest = () => {
+  const [selectedDate, setSelectedDate] = useState(dayjs());
+  const [currentMonth, setCurrentMonth] = useState(dayjs());
+
+  const startDay = currentMonth.startOf('month').startOf('week');
+  const days = [...Array(42)].map((_, i) => startDay.add(i, 'day'));
+
+  const handlePrevMonth = () => {
+    setCurrentMonth(currentMonth.subtract(1, 'month'));
+  };
+
+  const handleNextMonth = () => {
+    setCurrentMonth(currentMonth.add(1, 'month'));
+  };
+
+  const handleDateSelect = (day) => {
+    const now = dayjs();
+    const updatedDate = day.hour(now.hour()).minute(now.minute());
+    setSelectedDate(updatedDate);
+    // Scroll to form section on same page with slight delay
+    setTimeout(() => {
+      const formSection = document.getElementById('form-section');
+      if (formSection) {
+        formSection.scrollIntoView({ behavior: 'smooth' });
+      }
+    }, 500);
+  };
+
+  return (
+    <>
+    <div className="3xl:pb-10  w-full  px-6 h-auto flex flex-col xl:flex-row xl:h-screen  xl:gap-10 bg-industry bg-center bg-cover bg-no-repeat box-border  ">
+      <div className="   self-center mx-2 xs:mx-3 md:mx-4 lg:mx-6 xl:mx-8 2xl:mx-10 py-2  xl:py-7  flex flex-col gap-2 sm:gap-4 xl:gap-8 w-full xs:w-full sm:w-10/12 md:w-9/12 lg:w-8/12 xl:w-5/12 3xl:py-12 max-w-full">
+        <p className="text-white font-bold text-lg xs:text-lg sm:text-lg md:text-2xl lg:text-3xl xl:text-[2.25rem] 2xl:text-5xl 3xl:text-7xl leading-tight">
+          Book Appointment <br /> for free.
+        </p>
+        <p className='font-weight-400 xl:text-xl text-[#0D6EFD]'>Choose the Best Mobile App Developers in Hyderabad and Beyond</p>
+        <p className="text-white text-[0.625rem] xs:text-[0.6rem] md:text-xs lg:text-md  3xl:text-lg leading-4 xs:leading-4  sm:leading-4 md:leading-5   lg:leading-6  text-start font-normal">
+          <span className='font-bold'>Are you searching for top mobile app developers? Look no further than Analogue! As a leading app development company in Hyderabad, we offer innovative solutions tailored
+            to your unique business needs, serving clients worldwide.</span>
+          <br /> Our expert team leverages the latest technologies to deliver exceptional mobile app development services across Android, iOS, and hybrid platforms. With a strong presence in Hyderabad, we are trusted by businesses globally for delivering high-quality and user-friendly apps. Partner with Analogue for unparalleled service and expertise that sets us apart as one of the best mobile app developers in the industry.
+        </p>
+      </div>
+      <div className="  self-center w-full  mb-3  sm:w-9/12 md:w-8/12 lg:w-8/12 xl:w-8/12 2xl:w-5/12 3xl:w-6/12 max-w-full bg-flower bg-contain bg-no-repeat bg-right xl:h-7/10 ">
+        <div className="  min-h-fit bg-ellipse bg-contain bg-left bg-bottom bg-no-repeat">
+          <div className=" xs:bottom-[20px] xl:right-[30px]  items-center    mx-2 xs:mx-3 sm:mx-4 md:mx-6 lg:mx-8 xl:mx-2 2xl:mx-10 3xl:mx-14  xs:mt-5 sm:mt-6 md:mt-8 xl:mt-15  relative p-1 xs:p-2 sm:p-3 md:p-4 xl:bottom-[80px] 3xl:bottom-[50px]  bg-white rounded-md shadow-xl box-border  w-[240px] xs:w-[180px] sm:w-[200px] md:w-[240px] lg:w-[260px] xl:w-[300px] 3xl:w-[400px]   xs:h-[150px] sm:h-[155px] md:h-[200px] lg:h-[220px] xl:h-[250px] 3xl:h-[360px] ">
+            <div className="h-1 xs:h-1 mb-1 xs:mb-1 xl:h-2 xl:mb-2 bg-dots bg-left bg-contain bg-no-repeat"></div>
+            {/* Header with month and navigation */}
+            <div className="w-full flex justify-between text-black items-center mb-1 xs:mb-2 ">
+              <button
+                onClick={handlePrevMonth}
+                className="text-[0.5rem]  md:text-xs 3xl:text-lg  px-1 xs:px-2 sm:px-2 md:px-3 xl:px-4 2xl:px-4 3xl:px-5 py-0.5 xs:py-1 sm:py-1  bg-gray-200 rounded hover:bg-gray-300"
+              >
+                ←
+              </button>
+              <h2 className="text-xs md:text-md lg:text-base 3xl:text-xl font-medium">
+                {currentMonth.format('MMMM YYYY')}
+              </h2>
+              <button
+                onClick={handleNextMonth}
+                className="text-[0.5rem]  md:text-xs lg:text-sm 3xl:text-lg   px-1 xs:px-2 sm:px-2 md:px-3 xl:px-4 2xl:px-4 3xl:px-5 py-0.5 xs:py-1 sm:py-1  bg-gray-200 rounded hover:bg-gray-300"
+              >
+                →
+              </button>
+            </div>
+            {/* Day labels */}
+            <div className="  w-full grid grid-cols-7 gap-0.5 sm:gap-1 text-center md:text-[0.6rem] text-gray-600 text-[0.6rem] xl:text-sm   3xl:text-base  font-medium mb-1  ">
+              {['Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa', 'Su'].map((d) => (
+                <div key={d}>{d}</div>
+              ))}
+            </div>
+            {/* Calendar days */}
+            <div className="w-full grid grid-cols-7 gap-0.5  text-center text-gray-600">
+              {days.map((day, i) => {
+                const isToday = day.isSame(dayjs(), 'day');
+                const isSelected = day.isSame(selectedDate, 'day');
+                const isCurrentMonth = day.month() === currentMonth.month();
+                return (
+                  <div
+                    key={i}
+                    onClick={() => handleDateSelect(day)}
+                    className={`cursor-pointer text-black md:p-0.5  lg:p-1 rounded-md transition text-[0.5rem]  md:text-[0.6rem] xl:text-xs   3xl:text-lg
+                      ${isSelected ? 'bg-gray-900 text-white' : ''}
+                      ${!isCurrentMonth ? 'text-gray-400' : ''}
+                      ${isToday && !isSelected ? 'bg-gray-200' : ''}
+                    `}
+                  >
+                    {day.date()}
+                  </div>
+                );
+              })}
+            </div>
+            {/* Tooltip */}
+            <div className=" mt-1 sm:mt-2 lg:mt-4 xl:mt-5 2xl:mt-6 3xl:mt-7 w-full max-w-full">
+              <div className="w-[85%] sm:w-[90%] md:w-[92%] lg:w-[94%] xl:w-[95%] 2xl:w-[96%] 3xl:w-[97%] mx-auto">
+                <TooltipBox date={selectedDate} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+    
+    {/* <section id="form-section" className="w-full xs:w-full sm:w-10/12 md:w-9/12 lg:w-8/12 xl:w-6/12 2xl:w-5/12 3xl:w-4/12 max-w-full mx-auto mt-8 xs:mt-10 sm:mt-12 md:mt-14 lg:mt-16 xl:mt-18 2xl:mt-20 3xl:mt-24 p-4 xs:p-5 sm:p-6 md:p-7 lg:p-8 xl:p-9 2xl:p-10 3xl:p-12 bg-white rounded-md shadow-xl">
+        <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[2.25rem] 2xl:text-[2.5rem] 3xl:text-5xl font-bold mb-4 xs:mb-5 sm:mb-6 md:mb-7 lg:mb-8 xl:mb-9 2xl:mb-10 3xl:mb-12">
+          Appointment Form
+        </h2>
+        <form className="flex flex-col gap-4 xs:gap-5 sm:gap-6 md:gap-7 lg:gap-8 xl:gap-9 2xl:gap-10 3xl:gap-12">
+          <div>
+            <label
+              htmlFor="name"
+              className="block text-[0.625rem] xs:text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-[1.125rem] 3xl:text-[1.25rem] font-medium"
+            >
+              Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              className="w-full p-2 xs:p-3 sm:p-4 md:p-5 lg:p-6 xl:p-7 2xl:p-8 3xl:p-9 border rounded-md"
+              placeholder="Your Name" />
+          </div>
+          <div>
+            <label
+              htmlFor="date"
+              className="block text-[0.625rem] xs:text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-[1.125rem] 3xl:text-[1.25rem] font-medium"
+            >
+              Selected Date
+            </label>
+            <input
+              type="text"
+              id="date"
+              value={selectedDate.format('YYYY-MM-DD')}
+              readOnly
+              className="w-full p-2 xs:p-3 sm:p-4 md:p-5 lg:p-6 xl:p-7 2xl:p-8 3xl:p-9 border rounded-md bg-gray-100" />
+          </div>
+          <button
+            type="submit"
+            className="bg-[#2D6096] text-white p-2 xs:p-3 sm:p-4 md:p-5 lg:p-6 xl:p-7 2xl:p-8 3xl:p-9 rounded-md hover:bg-[#1e4a6e]"
+          >
+            Submit
+          </button>
+        </form>
+      </section> */}
+
+    </>
+  );
+};
+
+
+
+
+
+export default Responsive_CalendarTest;
