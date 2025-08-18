@@ -92,6 +92,77 @@
   flex-shrink: 0;
 }
 
+
+/* PUZZLE  */
+/* Hide scrollbar */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+
+
+
+/* ======================= */
+/* CLIENT CAROUSEL STYLES  */
+
+
+
+/* For screens 480px and above only */
+@media (min-width: 480px) and (max-width: 639px) {
+  .my-swiper {
+    padding-left: 50px; 
+    padding-top: 50px;/* only applied in this range */
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ======================= */
+
+
+
+
+/* RESPONSIVENESS ...... */
+/* 1. Override Tailwind's theme breakpoints */
+@layer theme {
+  :root {
+    /* Your custom breakpoints */
+    --breakpoint-xs: 360px;
+    --breakpoint-sm: 480px;
+    --breakpoint-md: 640px;
+    --breakpoint-lg: 768px;
+    --breakpoint-xl: 1024px;
+    --breakpoint-2xl: 1280px;
+    --breakpoint-3xl: 1536px;
+ 
+    /* Map them to Tailwind's internal vars */
+    
+    --tw-breakpoint-sm: var(--breakpoint-sm);
+    --tw-breakpoint-md: var(--breakpoint-md);
+    --tw-breakpoint-lg: var(--breakpoint-lg);
+    --tw-breakpoint-xl: var(--breakpoint-xl);
+    --tw-breakpoint-2xl: var(--breakpoint-2xl);
+    
+  }
+}
+
+
+
+
 @keyframes scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(var(--total-width)); }
@@ -537,3 +608,4 @@ body {
     background-color: #c0d0f0;
   }
 }
+

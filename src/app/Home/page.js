@@ -9,6 +9,7 @@ import Footer from '../../../Components/Footer';
 import { useEffect, useState } from "react";
 import Link from "next/link";
 
+import ClientCorousel from '../Clientcorousel/page';
 
 export default function Home() {
 
@@ -158,6 +159,8 @@ export default function Home() {
 
 
       </div>
+      {/* <Footer /> */}
+     
     </div>
   );
 }

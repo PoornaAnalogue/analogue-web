@@ -26,6 +26,7 @@ import Responsive_ServicePage from "./ServicesPage/page";
 import Responsive_Best_App from "./BestMobileApp/page";
 import Responsive_India from "./India/page";
 import Responsive_CalendarTest from "@/app/BookAppointment/page";
+import ClientCarousel from "./Clientcorousel/page";
 
 
 export default function App() {
@@ -52,7 +53,7 @@ export default function App() {
       <Navbar />
       <Home />
       <Responsive_ServicePage />
-
+       <ClientCarousel/>
       <Footer />
       {/* <MainServicesPage /> */}
       {/* <Contact /> */}
