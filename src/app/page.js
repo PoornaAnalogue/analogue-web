@@ -1,4 +1,4 @@
- import MainPage from "@/Components/Home/page";
+import MainPage from "@/Components/Home/page";
 import IndustryPage from "@/Components/Industries/page";
 import Navbar from "@/Components/Navbar";
 import ProductsPage from "@/Components/Products/page";
@@ -19,38 +19,27 @@ import ClientCorousel from "./Clientcorousel/page";
 import Puzzle from "./puzzle/page";
 
 import Guarantees from "./guarantees/page";
-
+import PuzzleRes from "./puzzleres/page";
 
 export default function App() {
   return (
     <>
       <Home />
-      
+
       <ServicePage />
-         <ClientCorousel/>
-         <Guarantees/>
-          {/* <Puzzle/> */}
+
+     
+       <ClientCorousel />
+      <Guarantees />
+      <Puzzle />
       <Footer />
-
-
       <MainServicesPage />
-
       <ObjectTechnologiesPagee />
-
       <IndustryPage />
-
-
       <ProductTesting />
-{/* <Carousel/> */}
-
-      <SingleProductPage /> 
-      
-
-
+     <PuzzleRes/>
+      <SingleProductPage />
       <Contact />
-   
-      
-
     </>
   );
 }

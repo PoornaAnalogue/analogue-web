@@ -1,19 +1,11 @@
 "use client";
 
 import { useRef, useEffect, useState, useCallback } from "react";
-import { Autoplay, Navigation, Controller } from "swiper/modules";
 import { motion, AnimatePresence } from "framer-motion";
-import Image from "next/image";
 
-import "swiper/css";
-import "swiper/css/navigation";
-
-export default function Puzzle() {
-
-
-
-
-  // ==================== Puzzle Steps ====================     
+// ==================== Puzzle Component ====================
+export default function PuzzleRes() {
+  // ==================== Puzzle Steps ====================
   const steps = [
     {
       id: 1,
@@ -43,7 +35,6 @@ export default function Puzzle() {
       description:
         "Build the application’s frontend and backend. Ensure code is clean, maintainable, and scalable while implementing all required features. Use best practices, version control, and modular architecture. Collaborate with the team regularly to ensure consistency and integration of components.",
     },
-
     {
       id: 5,
       title: "Testing",
@@ -81,23 +72,66 @@ export default function Puzzle() {
     },
   ];
 
-  // ==================== Puzzle Offsets ====================
-  
-  const offsets = [
-    { x: 40, y: 0 }, // row1 col1
-    { x: 0, y: 35 }, // row1 col2
-    { x: -40, y: 0 }, // row1 col3
-    { x: 5, y: -40 }, // row2 col1
-    { x: -35, y: -5 }, // row2 col2
-    { x: -75, y: -40 }, // row2 col3
-    { x: 40, y: -80 }, // row3 col1
-    { x: 0, y: -45 }, // row3 col2
-    { x: -40, y: -80 }, // row3 col3
-  ];
+  // ==================== Dynamic Puzzle Offsets ====================
+  const [offsets, setOffsets] = useState([]);
 
+  const updateOffsets = (width) => {
+    if (width <= 480) {
+      // Mobile (small)
+      return [
+        { x: 15, y: 0 }, //1
+        { x: -25, y: 35 }, //2
+        { x: -60, y: 0 }, //3
+        { x: -20, y: -40 }, //4
+        { x: -60, y: -5 }, //5
+        { x: -95, y: -40 }, //6
+        { x: 15, y: -75 }, //7
+        { x: -25, y: -40 }, //8
+        { x: -65, y: -75 }, //9
+      ];
+    } else if (width <= 768) {
+      // Tablet
+      return [
+        { x: 25, y: 0 },
+        { x: 0, y: 25 },
+        { x: -25, y: 0 },
+        { x: 5, y: -25 },
+        { x: -20, y: -5 },
+        { x: -45, y: -25 },
+        { x: 25, y: -50 },
+        { x: 0, y: -30 },
+        { x: -25, y: -50 },
+      ];
+    } else {
+      // Desktop (large)
+      return [
+        { x: 40, y: 0 },
+        { x: 0, y: 35 },
+        { x: -40, y: 0 },
+        { x: 5, y: -40 },
+        { x: -35, y: -5 },
+        { x: -75, y: -40 },
+        { x: 40, y: -80 },
+        { x: 0, y: -45 },
+        { x: -40, y: -80 },
+      ];
+    }
+  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setOffsets(updateOffsets(window.innerWidth));
+    };
+
+    handleResize(); // run once on mount
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // ==================== Puzzle Directions ====================
   const directions = [
     { x: 0, y: -300 }, // from top
-    { x: -300, y: 550 }, // from left
+    { x: -300, y: 50 }, // from left
     { x: 300, y: 0 }, // from right
     { x: 0, y: 300 }, // from bottom
     { x: -300, y: 0 }, // from left
@@ -107,7 +141,7 @@ export default function Puzzle() {
     { x: 0, y: 0 }, // center
   ];
 
-
+  // ==================== State ====================
   const [stepIndex, setStepIndex] = useState(1);
   const containerRef = useRef(null);
   const lastScroll = useRef(0);
@@ -120,39 +154,35 @@ export default function Puzzle() {
       if (now - lastScroll.current < 200) return;
       lastScroll.current = now;
 
-      // Prevent default page scroll inside the puzzle container
       if (
         (e.deltaY > 0 && stepIndex < steps.length) ||
         (e.deltaY < 0 && stepIndex > 1)
       ) {
         e.preventDefault();
-
         if (e.deltaY > 0) {
           setStepIndex((i) => clamp(i + 1, 1, steps.length));
-        } else if (e.deltaY < 0) {
+        } else {
           setStepIndex((i) => clamp(i - 1, 1, steps.length));
         }
       }
     },
-    [stepIndex]
+    [stepIndex, steps.length]
   );
 
   useEffect(() => {
     const el = containerRef.current;
-    el.addEventListener("wheel", onWheel, { passive: false });  //........... passive: false important!
+    el.addEventListener("wheel", onWheel, { passive: false });
     return () => el.removeEventListener("wheel", onWheel);
   }, [onWheel]);
 
-
+  // ==================== Render ====================
   return (
     <div className="w-full">
-      {/* ==================== Process Section ==================== */}
-      <h2 className="text-3xl mt-5 sm:text-4xl  mb-10 md:text-6xl text-center text-[#7B7E86]">
+      <h2 className="text-3xl mt-5 sm:text-4xl mb-10 md:text-6xl text-center text-[#7B7E86]">
         <span className="text-blue-400">O</span>
         <span className="text-gray-300">ur Process</span>
       </h2>
 
-      {/* ==================== Puzzle Steps ==================== */}
       <div
         ref={containerRef}
         className="puzzle-container h-screen w-full flex items-center justify-center bg-[#071637] text-white"
@@ -160,9 +190,16 @@ export default function Puzzle() {
         <div className="grid grid-cols-1 md:grid-cols-2 w-11/12 max-w-6xl gap-6 items-start">
           {/* Left: Step Content */}
           <div className="relative max-h-[80vh] overflow-y-auto pr-4 scrollbar-hide">
-            <h3 className="text-white font-bold text-2xl mb-10 md:text-3xl font-semibold leading-snug ">
+            <h3
+              className="
+    text-white font-bold font-semibold leading-snug
+    text-2xl sm:text-2xl md:text-3xl lg:text-4xl
+    mt-6 sm:mt-8 md:mt-10 lg:mt-12
+  "
+            >
               Process we follow for <br /> successful project
             </h3>
+
             <AnimatePresence mode="wait">
               {stepIndex > 0 && (
                 <motion.div
@@ -188,7 +225,7 @@ export default function Puzzle() {
           <div className="grid grid-cols-3 grid-rows-3 gap-2 w-full max-w-md relative">
             {steps.map((step, idx) => (
               <AnimatePresence key={step.id}>
-                {idx < stepIndex && (
+                {idx < stepIndex && offsets[idx] && (
                   <motion.img
                     src={step.img}
                     alt={step.title}
@@ -227,7 +264,7 @@ export default function Puzzle() {
             ))}
           </div>
         </div>
-      </div> 
+      </div>
     </div>
   );
 }

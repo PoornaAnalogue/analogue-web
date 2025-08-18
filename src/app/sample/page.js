@@ -1,9 +1,3 @@
-
-
-
-
-
-
 "use client";
 
 import { useRef, useState } from "react";
@@ -40,8 +34,8 @@ export default function ClientCarousel() {
 
   return (
     <div className="w-full px-4 sm:px-8 md:px-12 lg:px-16 ">
-      {/* Heading */}
-      <h2 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl text-center text-[#7B7E86] mb-6 sm:mb-8 md:mb-10">
+      {/* Featured Projects....... */}
+      <h2 className="text-2xl sm:text-3xl mt-5 md:text-5xl lg:text-6xl text-center text-[#7B7E86] mb-6 sm:mb-8 md:mb-10">
         <span className="text-blue-400">O</span>
         <span className="text-gray-300">ur Featured Projects</span>
       </h2>
@@ -51,63 +45,64 @@ export default function ClientCarousel() {
       </p>
 
       <div className="relative max-w-7xl mx-auto space-y-10">
-        {/* Logo Carousel */}
-        
-
+        {/* Logo Carousel............... */}
         <Swiper
-  loop={true}
-  loopedSlides={companies.length}
-   autoplay={{ delay: 2500, disableOnInteraction: false }}
-            speed={800}
-  slidesPerView={5}
-  centeredSlides={true}
-  spaceBetween={24}
-  modules={[Controller, Autoplay]}
-  breakpoints={{
-    360: { slidesPerView: 1.5, spaceBetween: 10 },
-    480: { slidesPerView: 2.5, spaceBetween: 12 },
-    640: { slidesPerView: 3.5, spaceBetween: 16 },
-    768: { slidesPerView: 4, spaceBetween: 20 },
-    1024: { slidesPerView: 5, spaceBetween: 24 },
-  }}
->
-  {companies.concat(companies).map((c, i) => (
-    <SwiperSlide key={`logo-${i}`} onClick={() => onLogoClick(i)}>
-      <div
-        className={`flex justify-center transition-transform duration-300 cursor-pointer ${
-          activeIndex === i ? "scale-125 opacity-100" : "scale-90 opacity-50"
-        }`}
-      >
-        <Image
-          src={c.logo}
-          alt={`Logo ${i}`}
-          width={120}
-          height={100}
-          className="object-contain"
-        />
-      </div>
-    </SwiperSlide>
-  ))}
-</Swiper>
+          loop={true}
+          loopedSlides={companies.length}
+          autoplay={{ delay: 2500, disableOnInteraction: false }}
+          speed={800}
+          centeredSlides={true}
+          spaceBetween={24}
+          modules={[Controller, Autoplay]}
+          breakpoints={{
+            360: { slidesPerView: 1, spaceBetween: 10 },   // xs
+            480: { slidesPerView: 2, spaceBetween: 12 },   // sm
+            640: { slidesPerView: 3, spaceBetween: 16 },   // md
+            768: { slidesPerView: 3, spaceBetween: 20 },   // lg
+            1024: { slidesPerView: 4, spaceBetween: 24 },  // xl
+            1280: { slidesPerView: 5, spaceBetween: 28 },  // 2xl
+            1536: { slidesPerView: 6, spaceBetween: 32 },  // 3xl
+          }}
+        >
+          {companies.concat(companies).map((c, i) => (
+            <SwiperSlide key={`logo-${i}`} onClick={() => onLogoClick(i)}>
+              <div
+                className={`flex justify-center transition-transform duration-300 cursor-pointer ${
+                  activeIndex === i
+                    ? "scale-125 opacity-100"
+                    : "scale-90 opacity-50"
+                }`}
+              >
+                <Image
+                  src={c.logo}
+                  alt={`Logo ${i}`}
+                  width={120}
+                  height={100}
+                  className="object-contain"
+                />
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
 
-
-        {/* Phone Carousel */}
-        <div className="w-full flex justify-center    translate-x-10  mx-auto">
+        {/* Phone Carousel..............*/}
+        <div className="w-full flex justify-center  translate-x-10  mx-auto">
           <Swiper
-            className="client-swiper w-full  mx-auto mr-8 "
+            className="client-swiper w-full  mx-auto"
             loop={true}
             centeredSlides={true}
             autoplay={{ delay: 2500, disableOnInteraction: false }}
             speed={800}
-            slidesPerView={5}
             spaceBetween={10}
             modules={[Autoplay, Controller]}
             breakpoints={{
-              360: { slidesPerView: 1.2, spaceBetween: 10 },
-              480: { slidesPerView: 1.5, spaceBetween: 12 },
-              640: { slidesPerView: 2, spaceBetween: 14 },
-              768: { slidesPerView: 3, spaceBetween: 16 },
-              1024: { slidesPerView: 5, spaceBetween: 20 },
+              360: { slidesPerView: 1, spaceBetween: 10 },   // xs
+              480: { slidesPerView: 1.2, spaceBetween: 12 }, // sm
+              640: { slidesPerView: 2, spaceBetween: 14 },   // md
+              768: { slidesPerView: 3, spaceBetween: 16 },   // lg
+              1024: { slidesPerView: 4, spaceBetween: 20 },  // xl
+              1280: { slidesPerView: 5, spaceBetween: 24 },  // 2xl
+              1536: { slidesPerView: 5, spaceBetween: 28 },  // 3xl
             }}
             onSwiper={(swiper) => {
               phoneSwiperRef.current = swiper;
@@ -133,30 +128,28 @@ export default function ClientCarousel() {
         </div>
       </div>
 
-      {/* Global Styles */}
-<style jsx global>{`
-  .client-swiper .phone-wrapper {
-    transform: scale(0.8) translateY(30px);
-    transition: transform 0.5s ease;
-    padding-top: 2rem; /* keep padding same for all */
-  }
+      {/* Styles .............*/}
+      <style jsx global>{`
+        .client-swiper .phone-wrapper {
+          transform: scale(0.8) translateY(30px);
+          transition: transform 0.5s ease;
+          padding-top: 2rem; /* keep padding same for all */
+        }
 
-  .client-swiper .swiper-slide-active .phone-wrapper {
-    transform: scale(1.2) translateY(0);
-  }
+        .client-swiper .swiper-slide-active .phone-wrapper {
+          transform: scale(1.2) translateY(0);
+        }
 
-  .client-swiper .swiper-slide-prev .phone-wrapper,
-  .client-swiper .swiper-slide-next .phone-wrapper {
-    transform: scale(0.95) translateY(15px);
-  }
+        .client-swiper .swiper-slide-prev .phone-wrapper,
+        .client-swiper .swiper-slide-next .phone-wrapper {
+          transform: scale(0.95) translateY(15px);
+        }
 
-  .client-swiper .prev-prev .phone-wrapper,
-  .client-swiper .next-next .phone-wrapper {
-    transform: scale(0.85) translateY(20px);
-  }
-`}</style>
-
-
+        .client-swiper .prev-prev .phone-wrapper,
+        .client-swiper .next-next .phone-wrapper {
+          transform: scale(0.85) translateY(20px);
+        }
+      `}</style>
     </div>
   );
 }
