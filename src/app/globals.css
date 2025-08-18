@@ -5,7 +5,6 @@
 @tailwind utilities;
 
 @theme {
-    /* Your custom breakpoints */
     --breakpoint-xs: 360px;
     --breakpoint-sm: 480px;
     --breakpoint-md: 640px;
@@ -13,156 +12,59 @@
     --breakpoint-xl: 1024px;
     --breakpoint-2xl: 1280px;
     --breakpoint-3xl: 1536px;
- 
-    /* Map them to Tailwind's internal vars */
     --tw-breakpoint-sm: var(--breakpoint-sm);
     --tw-breakpoint-md: var(--breakpoint-md);
     --tw-breakpoint-lg: var(--breakpoint-lg);
     --tw-breakpoint-xl: var(--breakpoint-xl);
     --tw-breakpoint-2xl: var(--breakpoint-2xl);
 }
- 
-/* 2. Add xs: and 3xl: modifiers to Tailwind */
+
 @layer utilities {
-  /* xs: modifier */
   @media (min-width: var(--breakpoint-xs)) {
     .xs\:block { display: block; }
     .xs\:hidden { display: none; }
-    /* Add more xs: utilities as needed */
   }
- 
-  /* 3xl: modifier */
   @media (min-width: var(--breakpoint-3xl)) {
     .\33 xl\:block { display: block; }
     .\33 xl\:hidden { display: none; }
-    /* Add more 3xl: utilities as needed */
   }
-
-/* globals.css */
-.bg-industry {
-  background-image: url('/IndustryBg.jpg');
 }
 
-.bg-dots{
-  background-image: url('/Style-Dots.png');
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  max-width: 72rem;
 }
 
-.bg-calender{
-  background-image: url('/bg-calender.png');
-}
-
-.bg-flower{
-  background-image: url('/Flower-bg.png');
-}
-
-.bg-ellipse{
-  background-image: url('/Ellipse.png');
-}
-
-.animate-scroll {
-  display: flex;
-  animation: scroll 30s linear infinite;
-  gap: 16px;
-}
-
+.animate-scroll,
 .animate-scrollLap {
   display: flex;
-  animation: scrollLap 30s linear infinite; /* Match duration with scroll */
   gap: 16px;
+  width: max-content;
+  animation: none; /* Will be set dynamically */
 }
 
-
-
-/* Testimonials Page */
-.swiper-controls .swiper-button-prev,
-.swiper-controls .swiper-button-next {
-  /* position: static !important; */
-  transform: none !important;
+.animate-scroll > div,
+.animate-scrollLap > div {
+  flex-shrink: 0;
 }
-
-.swiper-controls .swiper-pagination {
-  /* position: static !important; */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  font-size: 20px  !important; /* default ~44px untundi */
-}
-
-.swiper-button-next,
-.swiper-button-prev {
-  width: 40px  !important;   /* clickable area */
-  height: 35px  !important;
-}
-
-.swiper-pagination-bullet {
-  background: #999 !important;
-  opacity: 1 !important;
-  background-color: #d6e0f5 !important; /* light blue inactive */
-  opacity: 1 !important;
-  width: 8px;
-  height: 8px;
-}
-.swiper-pagination-bullet-active {
-  background-color: #071637 !important; /* dark navy active */
-}
-
-
-/* service page image hover effects */
-/* {* group-hover:h-[10rem] xs:group-hover:h-[12rem] sm:group-hover:h-[14rem] md:group-hover:h-[16rem] lg:group-hover:h-[15rem]  */
-
-
-
 
 @keyframes scroll {
   0% { transform: translateX(0); }
-  8% { transform: translateX(0); }
-  10% { transform: translateX(-166px); }
-  18% { transform: translateX(-166px); }
-  20% { transform: translateX(-332px); }
-  28% { transform: translateX(-332px); }
-  30% { transform: translateX(-498px); }
-  38% { transform: translateX(-498px); }
-  40% { transform: translateX(-664px); }
-  48% { transform: translateX(-664px); }
-  50% { transform: translateX(-830px); }
-  58% { transform: translateX(-830px); }
-  60% { transform: translateX(-996px); }
-  68% { transform: translateX(-996px); }
-  70% { transform: translateX(-1162px); }
-  78% { transform: translateX(-1162px); }
-  80% { transform: translateX(-1328px); }
-  88% { transform: translateX(-1328px); }
-  90% { transform: translateX(-1494px); }
-  98% { transform: translateX(-1494px); }
-  100% { transform: translateX(-1660px); }
+  100% { transform: translateX(var(--total-width)); }
 }
 
 @keyframes scrollLap {
-  0% { transform: translateX(-1660px); } /* Start at the leftmost position */
-  8% { transform: translateX(-1494px); }
-  10% { transform: translateX(-1494px); }
-  18% { transform: translateX(-1328px); }
-  20% { transform: translateX(-1328px); }
-  28% { transform: translateX(-1162px); }
-  30% { transform: translateX(-1162px); }
-  38% { transform: translateX(-996px); }
-  40% { transform: translateX(-996px); }
-  48% { transform: translateX(-830px); }
-  50% { transform: translateX(-830px); }
-  58% { transform: translateX(-664px); }
-  60% { transform: translateX(-664px); }
-  68% { transform: translateX(-498px); }
-  70% { transform: translateX(-498px); }
-  78% { transform: translateX(-332px); }
-  80% { transform: translateX(-332px); }
-  88% { transform: translateX(-166px); }
-  90% { transform: translateX(-166px); }
-  98% { transform: translateX(0); }
-  100% { transform: translateX(0); } /* End at the rightmost position */
+  0% { transform: translateX(var(--total-width)); }
+  100% { transform: translateX(0); }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+.animate-scrollLap {
+  animation: scrollLap 30s linear infinite;
 }
 
 .animate-scroll:hover,
@@ -170,137 +72,116 @@
   animation-play-state: paused;
 }
 
+.bg-calendar {
+  background-image: url('/Calendar-Images/calendar-bg.jpg');
+}
+
+.bg-dots {
+  background-image: url('/Calendar-Images/Style-Dots.png');
+}
+
+.bg-flower {
+  background-image: url('/Calendar-Images/Flower-bg.png');
+}
+
+.bg-ellipse {
+  background-image: url('/Calendar-Images/Ellipse.png');
+}
+
+.swiper-controls .swiper-button-prev,
+.swiper-controls .swiper-button-next {
+  transform: none !important;
+}
+
+.swiper-controls .swiper-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  width: 40px !important;
+  height: 35px !important;
+}
+
+.swiper-pagination-bullet {
+  background: #d6e0f5 !important;
+  opacity: 1 !important;
+  width: 8px;
+  height: 8px;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #071637 !important;
+}
+
 @layer utilities {
-  
-
-
-
   @keyframes triangle-path {
-    0% {
-      transform: translate(150, 80);
-    }
-    33% {
-      transform: translate(150px, 40px); /* up-right */
-    }
-    66% {
-      transform: translate(190px, 60px); /* down-right */
-    }
-    100% {
-      transform: translate(150, 80); /* back to start */
-    }
+    0% { transform: translate(150px, 80px); }
+    33% { transform: translate(150px, 40px); }
+    66% { transform: translate(190px, 60px); }
+    100% { transform: translate(150px, 80px); }
   }
-
 
   @media (min-width: 480px) {
     @keyframes triangle-path {
-    0% {
-      transform: translate(160, 90);
-    }
-    33% {
-      transform: translate(160px, 40px); /* up-right */
-    }
-    66% {
-      transform: translate(210px, 70px); /* down-right */
-    }
-    100% {
-      transform: translate(160, 90); /* back to start */
+      0% { transform: translate(160px, 90px); }
+      33% { transform: translate(160px, 40px); }
+      66% { transform: translate(210px, 70px); }
+      100% { transform: translate(160px, 90px); }
     }
   }
-  }
-
-
 
   @media (min-width: 640px) {
     @keyframes triangle-path {
-    0% {
-      transform: translate(200, 100);
-    }
-    33% {
-      transform: translate(200px, 40px); /* up-right */
-    }
-    66% {
-      transform: translate(250px, 70px); /* down-right */
-    }
-    100% {
-      transform: translate(200, 100); /* back to start */
+      0% { transform: translate(200px, 100px); }
+      33% { transform: translate(200px, 40px); }
+      66% { transform: translate(250px, 70px); }
+      100% { transform: translate(200px, 100px); }
     }
   }
-  }
-
 
   @media (min-width: 768px) {
     @keyframes triangle-path {
-    0% {
-      transform: translate(200, 120);
-    }
-    33% {
-      transform: translate(200px, 40px); /* up-right */
-    }
-    66% {
-      transform: translate(280px, 80px); /* down-right */
-    }
-    100% {
-      transform: translate(200, 120); /* back to start */
+      0% { transform: translate(200px, 120px); }
+      33% { transform: translate(200px, 40px); }
+      66% { transform: translate(280px, 80px); }
+      100% { transform: translate(200px, 120px); }
     }
   }
-}
 
-
-
-@media (min-width: 1024px) {
+  @media (min-width: 1024px) {
     @keyframes triangle-path {
-    0% {
-      transform: translate(240, 125);
+      0% { transform: translate(240px, 125px); }
+      33% { transform: translate(240px, 60px); }
+      66% { transform: translate(310px, 90px); }
+      100% { transform: translate(240px, 125px); }
     }
-    33% {
-      transform: translate(240px, 60px); /* up-right */
-    }
-    66% {
-      transform: translate(310px, 90px); /* down-right */
-    }
-    100% {
-      transform: translate(240, 125); /* back to start */
-    }
-  }
   }
 
-@media (min-width: 1280px) {
+  @media (min-width: 1280px) {
     @keyframes triangle-path {
-    0% {
-      transform: translate(250, 135);
-    }
-    33% {
-      transform: translate(250px, 75px); /* up-right */
-    }
-    66% {
-      transform: translate(320px, 110px); /* down-right */
-    }
-    100% {
-      transform: translate(250, 135); /* back to start */
+      0% { transform: translate(250px, 135px); }
+      33% { transform: translate(250px, 75px); }
+      66% { transform: translate(320px, 110px); }
+      100% { transform: translate(250px, 135px); }
     }
   }
-  }
 
-
-  
-@media (min-width: 1536px) {
+  @media (min-width: 1536px) {
     @keyframes triangle-path {
-    0% {
-      transform: translate(300, 220);
-    }
-    33% {
-      transform: translate(300px, 90px); /* up-right */
-    }
-    66% {
-      transform: translate(420px, 130px); /* down-right */
-    }
-    100% {
-      transform: translate(300, 220); /* back to start */
+      0% { transform: translate(300px, 220px); }
+      33% { transform: translate(300px, 90px); }
+      66% { transform: translate(420px, 130px); }
+      100% { transform: translate(300px, 220px); }
     }
   }
-  }
-
-
 
   .animate-triangle-path {
     animation: triangle-path 3s linear infinite;
@@ -334,63 +215,21 @@ body {
 }
 
 @media (max-width: 768px) {
-  .animate-scroll > div,
-  .animate-scrollLap > div {
+  .animate-scroll > div {
     min-width: 120px;
     height: 200px;
   }
-  .animate-scroll img,
-  .animate-scrollLap img {
+  .animate-scroll img {
     width: 120px;
     height: 200px;
   }
-
-  @keyframes scroll {
-    0% { transform: translateX(0); }
-    8% { transform: translateX(0); }
-    10% { transform: translateX(-136px); }
-    18% { transform: translateX(-136px); }
-    20% { transform: translateX(-272px); }
-    28% { transform: translateX(-272px); }
-    30% { transform: translateX(-408px); }
-    38% { transform: translateX(-408px); }
-    40% { transform: translateX(-544px); }
-    48% { transform: translateX(-544px); }
-    50% { transform: translateX(-680px); }
-    58% { transform: translateX(-680px); }
-    60% { transform: translateX(-816px); }
-    68% { transform: translateX(-816px); }
-    70% { transform: translateX(-952px); }
-    78% { transform: translateX(-952px); }
-    80% { transform: translateX(-1088px); }
-    88% { transform: translateX(-1088px); }
-    90% { transform: translateX(-1224px); }
-    98% { transform: translateX(-1224px); }
-    100% { transform: translateX(-1360px); }
+  .animate-scrollLap > div {
+    min-width: 100px;
+    height: 180px;
   }
-
-  @keyframes scrollLap {
-    0% { transform: translateX(-1360px); } /* Start at leftmost */
-    8% { transform: translateX(-1224px); }
-    10% { transform: translateX(-1224px); }
-    18% { transform: translateX(-1088px); }
-    20% { transform: translateX(-1088px); }
-    28% { transform: translateX(-952px); }
-    30% { transform: translateX(-952px); }
-    38% { transform: translateX(-816px); }
-    40% { transform: translateX(-816px); }
-    48% { transform: translateX(-680px); }
-    50% { transform: translateX(-680px); }
-    58% { transform: translateX(-544px); }
-    60% { transform: translateX(-544px); }
-    68% { transform: translateX(-408px); }
-    70% { transform: translateX(-408px); }
-    78% { transform: translateX(-272px); }
-    80% { transform: translateX(-272px); }
-    88% { transform: translateX(-136px); }
-    90% { transform: translateX(-136px); }
-    98% { transform: translateX(0); }
-    100% { transform: translateX(0); } /* End at rightmost */
+  .animate-scrollLap img {
+    width: 100px;
+    height: 180px;
   }
 }
 
@@ -398,32 +237,26 @@ body {
   background-color: oklch(97.593% 0.00604 224.239);
 }
 
-/* sm (310px - 480px) */
 @media (min-width: 310px) and (max-width: 480px) {
   .Navbar-main {
     background-color: #f0f0f0;
   }
 }
 
-/* sm2 (350px - 480px) */
 @media (min-width: 350px) and (max-width: 480px) {
   .Navbar-main {
     background-color: #e0e0e0;
   }
 }
 
-/* md (481px - 768px) */
 @media (min-width: 481px) and (max-width: 768px) {
   .Navbar-main {
     background-color: #d0d0f0;
   }
 }
 
-/* mdl (769px - 1023px) */
 @media (min-width: 769px) and (max-width: 1023px) {
   .Navbar-main {
     background-color: #c0d0f0;
   }
 }
-}
-

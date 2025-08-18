@@ -2,7 +2,7 @@
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-import Navbar from '../Navbar';
+// import Navbar from '../Navbar';
 import Footer from '../../../Components/Footer';
 
 export default function ProductTesting() {
@@ -165,7 +165,7 @@ export default function ProductTesting() {
     <div className='w-full h-full bg-white'>
 
         <div className="h-auto " >
-                    <Navbar />
+                    {/* <Navbar /> */}
                     <div className=" bg-white flex h-full justify-center relative ">
                         <Image src="/AbstractDesign.jpg" width={500} height={600} alt="Abstract design background" />
                         <div className="bg-white absolute top-14  ">

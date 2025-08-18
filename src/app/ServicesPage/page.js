@@ -65,7 +65,7 @@ const Responsive_ServicePage = () => {
             {containers.map((container, index) => (
               <div
                 key={container.id}
-                className={`flex flex-col xs:flex-row overflow-hidden transition-all duration-300 ${
+                className={`flex flex-col xs:flex-row overflow-hidden transition-all duration-300  ${
                   index < 4
                     ? "  h-auto min-h-[2rem] xs:h-15 sm:h-17 md:h-18 lg:h-16 hover:h-auto hover:min-h-[16rem] xs:hover:h-[18rem] sm:hover:h-[18rem] md:hover:h-[18rem] lg:hover:h-[18rem] cursor-pointer"
                     : "h-auto min-h-[6rem] xs:h-[12rem] sm:h-[14rem] md:h-[16rem] lg:h-[17rem]"

@@ -34,7 +34,7 @@ const Responsive_CalendarTest = () => {
 
   return (
     <>
-    <div className="3xl:pb-10  w-full  px-6 h-auto flex flex-col xl:flex-row xl:h-screen  xl:gap-10 bg-industry bg-center bg-cover bg-no-repeat box-border  ">
+    <div className="3xl:pb-10  w-full  px-6 h-auto flex flex-col xl:flex-row xl:h-screen  xl:gap-10 bg-calendar bg-center bg-cover bg-no-repeat box-border  ">
       <div className="   self-center mx-2 xs:mx-3 md:mx-4 lg:mx-6 xl:mx-8 2xl:mx-10 py-2  xl:py-7  flex flex-col gap-2 sm:gap-4 xl:gap-8 w-full xs:w-full sm:w-10/12 md:w-9/12 lg:w-8/12 xl:w-5/12 3xl:py-12 max-w-full">
         <p className="text-white font-bold text-lg xs:text-lg sm:text-lg md:text-2xl lg:text-3xl xl:text-[2.25rem] 2xl:text-5xl 3xl:text-7xl leading-tight">
           Book Appointment <br /> for free.

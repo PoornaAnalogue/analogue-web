@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Navbar from "../Navbar";
+// import Navbar from "../Navbar";
 
 export default function ProductsPage(){
     const projects = [
@@ -102,7 +102,7 @@ export default function ProductsPage(){
         <div className="h-full w-full bg-white">
 
             <div className="h-auto " >
-            <Navbar />
+            {/* <Navbar /> */}
             <div className=" bg-white flex h-full justify-center relative ">
                 <Image src="/AbstractDesign.jpg" width={500} height={600} alt="Abstract design background" />
                 <div className="bg-white absolute top-14  ">
