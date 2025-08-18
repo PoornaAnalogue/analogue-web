@@ -51,7 +51,7 @@ export default function App() {
       {/* Remaining */}
       <Navbar />
       <Home />
-            <Responsive_ServicePage />
+      <Responsive_ServicePage />
 
       <Footer />
       {/* <MainServicesPage /> */}
