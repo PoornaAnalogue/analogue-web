@@ -5,7 +5,8 @@
 .hero {
   display: flex;
   flex-direction: row;
-  align-items: stretch; /* makes left-hero fill height of right-hero */
+  align-items: stretch;
+  /* makes left-hero fill height of right-hero */
   /* background-color: oklch(31.214% 0.0392 225.829); */
 }
 
@@ -13,21 +14,21 @@
 /* breakpoints for responsiveness */
 
 @theme {
-    /* Your custom breakpoints */
-    --breakpoint-xs: 360px;  /* 360 to end */
-    --breakpoint-sm: 480px;
-    --breakpoint-md: 640px;
-    --breakpoint-lg: 768px;
-    --breakpoint-xl: 1024px;
-    --breakpoint-2xl: 1280px;
-    --breakpoint-3xl: 1536px;
+  /* Your custom breakpoints */
+  --breakpoint-xs: 360px;
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 640px;
+  --breakpoint-lg: 768px;
+  --breakpoint-xl: 1024px;
+  --breakpoint-2xl: 1280px;
+  --breakpoint-3xl: 1536px;
 
-    /* Map them to Tailwind's internal vars */
-    --tw-breakpoint-sm: var(--breakpoint-sm); 
-    --tw-breakpoint-md: var(--breakpoint-md);
-    --tw-breakpoint-lg: var(--breakpoint-lg);
-    --tw-breakpoint-xl: var(--breakpoint-xl);
-    --tw-breakpoint-2xl: var(--breakpoint-2xl);
+  /* Map them to Tailwind's internal vars */
+  --tw-breakpoint-sm: var(--breakpoint-sm);
+  --tw-breakpoint-md: var(--breakpoint-md);
+  --tw-breakpoint-lg: var(--breakpoint-lg);
+  --tw-breakpoint-xl: var(--breakpoint-xl);
+  --tw-breakpoint-2xl: var(--breakpoint-2xl);
 }
 
 
@@ -36,6 +37,7 @@
 .bg-industry {
   background-image: url('/IndustryBg.jpg');
 }
+
 .animate-scroll {
   display: flex;
   animation: scroll 30s linear infinite;
@@ -52,111 +54,204 @@
   0% {
     transform: translateX(0);
   }
+
   8% {
     transform: translateX(0);
   }
+
   10% {
     transform: translateX(-166px);
   }
+
   18% {
     transform: translateX(-166px);
   }
+
   20% {
     transform: translateX(-332px);
   }
+
   28% {
     transform: translateX(-332px);
   }
+
   30% {
     transform: translateX(-498px);
   }
+
   38% {
     transform: translateX(-498px);
   }
+
   40% {
     transform: translateX(-664px);
   }
+
   48% {
     transform: translateX(-664px);
   }
+
   50% {
     transform: translateX(-830px);
   }
+
   58% {
     transform: translateX(-830px);
   }
+
   60% {
     transform: translateX(-996px);
   }
+
   68% {
     transform: translateX(-996px);
   }
+
   70% {
     transform: translateX(-1162px);
   }
+
   78% {
     transform: translateX(-1162px);
   }
+
   80% {
     transform: translateX(-1328px);
   }
+
   88% {
     transform: translateX(-1328px);
   }
+
   90% {
     transform: translateX(-1494px);
   }
+
   98% {
     transform: translateX(-1494px);
   }
+
   100% {
     transform: translateX(-1660px);
   }
 }
 
-
 @keyframes scrollLap {
-  0% { transform: translateX(-1494px); }
+  0% {
+    transform: translateX(-1494px);
+  }
+
   /* 2% { transform: translateX(-1494px); } */
-  4% { transform: translateX(-1328px); }
+  4% {
+    transform: translateX(-1328px);
+  }
+
   /* 5% { transform: translateX(-1328px); } */
   /* 6% { transform: translateX(-1162px); } */
-  8% { transform: translateX(-1162px); }
+  8% {
+    transform: translateX(-1162px);
+  }
+
   /* 9% { transform: translateX(-996px); } */
   /* 11% { transform: translateX(-996px); } */
-  12% { transform: translateX(-830px); }
+  12% {
+    transform: translateX(-830px);
+  }
+
   /* 14% { transform: translateX(-830px); } */
   /* 15% { transform: translateX(-664px); } */
-  16% { transform: translateX(-664px); }
+  16% {
+    transform: translateX(-664px);
+  }
+
   /* 18% { transform: translateX(-498px); } */
-  20% { transform: translateX(-498px); }
+  20% {
+    transform: translateX(-498px);
+  }
+
   /* 21% { transform: translateX(-332px); } */
   /* 23% { transform: translateX(-332px); } */
-  24% { transform: translateX(-166px); }
+  24% {
+    transform: translateX(-166px);
+  }
+
   /* 26% { transform: translateX(-166px); } */
   /* 27% { transform: translateX(0); } */
-  28% { transform: translateX(0); }
-  32% { transform: translateX(-1494px); }
-  36% { transform: translateX(-1328px); }
-  40% { transform: translateX(-1162px); }
-  144% { transform: translateX(-830px); }
-  48% { transform: translateX(-664px); }
-  52% { transform: translateX(-498px); }
-  56% { transform: translateX(-166px); }
-  60% { transform: translateX(0); }
-  64% { transform: translateX(-1494px); }
-  68% { transform: translateX(-1328px); }
-  72% { transform: translateX(-1162px); }
-  76% { transform: translateX(-830px); }
-  80% { transform: translateX(-664px); }
-  84% { transform: translateX(-498px); }
-  88% { transform: translateX(-166px); }
-  94% { transform: translateX(0); }
-  100% { transform: translateX(-1494px); }
-  
+  28% {
+    transform: translateX(0);
+  }
 
-   /* Loop back to start */
-  
+  32% {
+    transform: translateX(-1494px);
+  }
+
+  36% {
+    transform: translateX(-1328px);
+  }
+
+  40% {
+    transform: translateX(-1162px);
+  }
+
+  144% {
+    transform: translateX(-830px);
+  }
+
+  48% {
+    transform: translateX(-664px);
+  }
+
+  52% {
+    transform: translateX(-498px);
+  }
+
+  56% {
+    transform: translateX(-166px);
+  }
+
+  60% {
+    transform: translateX(0);
+  }
+
+  64% {
+    transform: translateX(-1494px);
+  }
+
+  68% {
+    transform: translateX(-1328px);
+  }
+
+  72% {
+    transform: translateX(-1162px);
+  }
+
+  76% {
+    transform: translateX(-830px);
+  }
+
+  80% {
+    transform: translateX(-664px);
+  }
+
+  84% {
+    transform: translateX(-498px);
+  }
+
+  88% {
+    transform: translateX(-166px);
+  }
+
+  94% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-1494px);
+  }
+
+
+  /* Loop back to start */
+
 
 }
 
@@ -201,43 +296,107 @@ body {
 }
 
 @media (max-width: 768px) {
-  .animate-scroll > div {
+  .animate-scroll>div {
     min-width: 120px;
     height: 200px;
   }
+
   .animate-scroll img {
     width: 120px;
     height: 200px;
   }
 
   @keyframes scroll {
-    0% { transform: translateX(0); }
-    8% { transform: translateX(0); }
-    10% { transform: translateX(-136px); }
-    18% { transform: translateX(-136px); }
-    20% { transform: translateX(-272px); }
-    28% { transform: translateX(-272px); }
-    30% { transform: translateX(-408px); }
-    38% { transform: translateX(-408px); }
-    40% { transform: translateX(-544px); }
-    48% { transform: translateX(-544px); }
-    50% { transform: translateX(-680px); }
-    58% { transform: translateX(-680px); }
-    60% { transform: translateX(-816px); }
-    68% { transform: translateX(-816px); }
-    70% { transform: translateX(-952px); }
-    78% { transform: translateX(-952px); }
-    80% { transform: translateX(-1088px); }
-    88% { transform: translateX(-1088px); }
-    90% { transform: translateX(-1224px); }
-    98% { transform: translateX(-1224px); }
-    100% { transform: translateX(-1360px); }
+    0% {
+      transform: translateX(0);
+    }
+
+    8% {
+      transform: translateX(0);
+    }
+
+    10% {
+      transform: translateX(-136px);
+    }
+
+    18% {
+      transform: translateX(-136px);
+    }
+
+    20% {
+      transform: translateX(-272px);
+    }
+
+    28% {
+      transform: translateX(-272px);
+    }
+
+    30% {
+      transform: translateX(-408px);
+    }
+
+    38% {
+      transform: translateX(-408px);
+    }
+
+    40% {
+      transform: translateX(-544px);
+    }
+
+    48% {
+      transform: translateX(-544px);
+    }
+
+    50% {
+      transform: translateX(-680px);
+    }
+
+    58% {
+      transform: translateX(-680px);
+    }
+
+    60% {
+      transform: translateX(-816px);
+    }
+
+    68% {
+      transform: translateX(-816px);
+    }
+
+    70% {
+      transform: translateX(-952px);
+    }
+
+    78% {
+      transform: translateX(-952px);
+    }
+
+    80% {
+      transform: translateX(-1088px);
+    }
+
+    88% {
+      transform: translateX(-1088px);
+    }
+
+    90% {
+      transform: translateX(-1224px);
+    }
+
+    98% {
+      transform: translateX(-1224px);
+    }
+
+    100% {
+      transform: translateX(-1360px);
+    }
   }
 
 
-  
+
 }
-.left-hero{
+
+.left-hero {
   background-color: oklch(97.593% 0.00604 224.239);
 }
 
@@ -245,67 +404,84 @@ body {
 
 /* 2. Add xs: and 3xl: modifiers to Tailwind */
 @layer utilities {
+
   /* xs: modifier */
   @media (min-width: var(--breakpoint-xs)) {
-    .xs\:block { display: block; }
-    .xs\:hidden { display: none; }
+    .xs\:block {
+      display: block;
+    }
+
+    .xs\:hidden {
+      display: none;
+    }
+
     /* Add more xs: utilities as needed */
   }
 
   /* 3xl: modifier */
   @media (min-width: var(--breakpoint-3xl)) {
-    .\33 xl\:block { display: block; }
-    .\33 xl\:hidden { display: none; }
+    .\33 xl\:block {
+      display: block;
+    }
+
+    .\33 xl\:hidden {
+      display: none;
+    }
+
     /* Add more 3xl: utilities as needed */
   }
 
 
-  
-/* globals.css additions */
-/* Hide hamburger and show desktop menu from 1024px upward */
-@media (min-width: 1024px) {
-  .hamburger {
-    display: none !important;
-  }
-  .desktop-menu {
-    display: flex !important;
-  }
-}
 
-/* Show hamburger and hide desktop menu below 1024px */
-@media (max-width: 1023px) {
-  .hamburger {
-    display: block !important;
-  }
-  .desktop-menu {
-    display: none !important;
-  }
-}
-/* Free Quote: visible only from 1024–1279px */
-@media (min-width: 1024px) and (max-width: 1279px) {
-  .free-quote-lg-only {
-    display: flex !important;
-  }
-}
-@media (max-width: 1023px), (min-width: 1280px) {
-  .free-quote-lg-only {
-    display: none !important;
-  }
-}
+  /* globals.css additions */
+  /* Hide hamburger and show desktop menu from 1024px upward */
+  @media (min-width: 1024px) {
+    .hamburger {
+      display: none !important;
+    }
 
-/* Phone + Quick Call block: visible only 1280px+ */
-@media (min-width: 1280px) {
-  .only-xl\:flex {
-    display: flex !important;
+    .desktop-menu {
+      display: flex !important;
+    }
   }
-}
-@media (max-width: 1279px) {
-  .only-xl\:flex {
-    display: none !important;
+
+  /* Show hamburger and hide desktop menu below 1024px */
+  @media (max-width: 1023px) {
+    .hamburger {
+      display: block !important;
+    }
+
+    .desktop-menu {
+      display: none !important;
+    }
   }
-}
 
+  /* Free Quote: visible only from 1024–1279px */
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    .free-quote-lg-only {
+      display: flex !important;
+    }
+  }
 
+  @media (max-width: 1023px),
+  (min-width: 1280px) {
+    .free-quote-lg-only {
+      display: none !important;
+    }
+  }
+
+  /* Phone + Quick Call block: visible only 1280px+ */
+  @media (min-width: 1280px) {
+    .only-xl\:flex {
+      display: flex !important;
+    }
+  }
+
+  @media (max-width: 1279px) {
+    .only-xl\:flex {
+      display: none !important;
+    }
+  }
 }
 
 
@@ -317,60 +493,140 @@ body {
    MULTI-TEXT FADE EFFECTS
    ====================== */
 
-/* 1. Crossfade between 2 texts */
+/* 1. Crossfade between 2 texts in home page title */
 @keyframes crossfadeTexts {
-  0%, 45%   { opacity: 1; }
-  50%, 95%  { opacity: 0; }
-  100%      { opacity: 1; }
+
+  0%,
+  45% {
+    opacity: 1;
+  }
+
+  50%,
+  95% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
+
 .animate-crossfadeTexts {
   animation: crossfadeTexts 4s ease-in-out infinite;
 }
 
 /* 2. Fade Out then Fade In */
 @keyframes fadeSwap {
-  0%   { opacity: 1; }
-  40%  { opacity: 0; }
-  60%  { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
+
 .animate-fadeSwap {
   animation: fadeSwap 3s ease-in-out infinite;
 }
 
 /* 3. Slide + Fade Swap (Left to Right) */
 @keyframes slideFadeSwap {
-  0%   { opacity: 1; transform: translateX(0); }
-  40%  { opacity: 0; transform: translateX(-30px); }
-  60%  { opacity: 0; transform: translateX(30px); }
-  100% { opacity: 1; transform: translateX(0); }
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  40% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  60% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
+
 .animate-slideFadeSwap {
   animation: slideFadeSwap 4s ease-in-out infinite;
 }
 
 /* 4. Scale + Fade Swap */
 @keyframes scaleFadeSwap {
-  0%   { opacity: 1; transform: scale(1); }
-  40%  { opacity: 0; transform: scale(0.9); }
-  60%  { opacity: 0; transform: scale(1.1); }
-  100% { opacity: 1; transform: scale(1); }
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  40% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  60% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
+
 .animate-scaleFadeSwap {
   animation: scaleFadeSwap 4s ease-in-out infinite;
 }
 
 /* 5. Word-by-word fade swap */
 @keyframes wordFadeSwap {
-  0%   { opacity: 1; }
-  25%  { opacity: 0; }
-  50%  { opacity: 1; }
-  75%  { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
 }
+
 .animate-wordFadeSwap span {
   opacity: 0;
   animation: wordFadeSwap 6s ease-in-out infinite;
 }
-.animate-wordFadeSwap span:nth-child(1) { animation-delay: 0s; }
-.animate-wordFadeSwap span:nth-child(2) { animation-delay: 3s; }
+
+.animate-wordFadeSwap span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.animate-wordFadeSwap span:nth-child(2) {
+  animation-delay: 3s;
+}
+
+
+/* GetAQuote Form responsive styles based on breakpoints  */

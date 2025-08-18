@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Navbar from "../Navbar";
+import Navbar from "../../../Components/Navbar";
 
 export default function ProductsPage(){
     const projects = [

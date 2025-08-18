@@ -26,20 +26,20 @@ export default function GetAQuoteForm() {
   const isError = (field) => touched[field] && !formData[field];
 
   return (
-    <div className="relative flex flex-col items-center justify-center h-screen overflow-y-hidden rounded-lg px-4">
+    <div className="relative flex flex-col items-center justify-center h-screen overflow-y-hidden rounded-lg px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-20">
       <div className="relative w-full max-w-5xl rounded-3xl h-full flex flex-col justify-center">
         
         {/* Background image */}
-        <div className="absolute left-[-9rem] bottom-[-120px] z-0 w-[1000px] h-[900px]  bg-no-repeat bg-contain bg-bottom"
+        <div className="absolute 2xl:left-[-9rem]  2xl:bottom-[-120px] z-0 w-[1000px] h-[900px] bg-no-repeat bg-contain bg-bottom"
         style={{ backgroundImage: "url('/contact/Form-background.png')",}}></div>
 
 
         {/* Big Background Text */}
-        <div className="relative z-1 flex justify-center items-end gap-6 pointer-events-none w-full scale-90 md:scale-100">
-          <h1 className="text-[8rem] md:text-[15rem] text-gray-400 leading-none mr-4">
+        <div className="relative z-1 flex justify-center items-end gap-6 pointer-events-none w-full scale-90 md:scale-100 border-2 border-red-400">
+          <h1 className="text-[8rem] md:text-[15rem] text-gray-400 leading-none mr-4 xl:text-[10rem] 2xl:text-[15rem]">
             Let&apos;s
           </h1>
-          <h1 className="text-[8rem] md:text-[15rem] text-blue-300 leading-none">
+          <h1 className="text-[8rem] md:text-[15rem] text-blue-300 leading-none xl:text-[10rem] 2xl:text-[15rem]">
             Discuss
           </h1>
         </div>
@@ -137,3 +137,5 @@ export default function GetAQuoteForm() {
     </div>
   );
 }
+
+

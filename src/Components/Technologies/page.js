@@ -1,6 +1,6 @@
 import Footer from "../../../Components/Footer";
-import Navbar from "../Navbar";
 import Image from "next/image";
+import Navbar from "../../../Components/Navbar";
 
 export default function ObjectTechnologiesPagee() {
   return (

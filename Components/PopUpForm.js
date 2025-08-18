@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 
-export default function GetAQuoteModal({ isOpen, onClose }) {
+export default function PopUpForm({ isOpen, onClose }) {
   const [formData, setFormData] = useState({
     name: "",
     email: "",

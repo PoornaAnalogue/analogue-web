@@ -1,8 +1,5 @@
 import { Urbanist } from "next/font/google";
 import "./globals.css";
-import Navbar from "../../Components/Navbar";
-import MainHomeScreen from "../../Components/MainHomeScreen";
-
 
 const urbanist = Urbanist({
   subsets: ["latin"],

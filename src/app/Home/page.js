@@ -25,52 +25,26 @@ export default function Home() {
     { id: 6, name: "Youtube", src: "/link6.png", link: "https://www.youtube.com/@AnalogueITSolutions" }
   ];
 
-  // const line1Options = [
-  //   { text: "Mobile App", style: "bg-gradient-to-r from-blue-600 to-blue-400" },
-  //   { text: "Digital", style: "bg-gradient-to-r from-red-500 to-orange-400" },
-  //   { text: "Website", style: "bg-gradient-to-r from-green-500 to-blue-400" },
-  // ];
-
-  // const line2Options = [
-  //   { text: "Development", style: "bg-gradient-to-r from-blue-600 to-blue-400" },
-  //   { text: "Marketing", style: "bg-gradient-to-r from-red-500 to-orange-400" },
-  //   { text: "Development", style: "bg-gradient-to-r from-green-500 to-blue-400" },
-  // ];
-
-
   const headings = [
   { line1: "Mobile App", line2: "Development", style: "bg-gradient-to-r from-blue-600 to-blue-400" },
   { line1: "Digital", line2: "Marketing", style: "bg-gradient-to-r from-red-500 to-orange-400" },
   { line1: "Website", line2: "Development", style: "bg-gradient-to-r from-green-500 to-blue-400" },
 ];
 
-const [index, setIndex] = useState(0);
+    const [index, setIndex] = useState(0);
 
-useEffect(() => {
-  const interval = setInterval(() => {
-    setIndex((prev) => (prev + 1) % headings.length);
-  }, 3000);
-  return () => clearInterval(interval);
-}, []);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % headings.length);
+    }, 3000);
+    return () => clearInterval(interval);
+  }, []);
 
-const fadeClass = (isVisible) =>
-  `transition-all duration-1000 ease-in-out
-   ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95 absolute"}`;
+  const fadeClass = (isVisible) =>
+    `transition-all duration-1000 ease-in-out ${
+      isVisible ? "opacity-100 scale-100 translate-y-0" : "opacity-0 scale-95 translate-y-1 pointer-events-none"
+    }`;
 
-//   // 👇 replace your fade animation logic with this
-
-// const [index, setIndex] = useState(0);
-
-// useEffect(() => {
-//   const interval = setInterval(() => {
-//     setIndex((prev) => (prev + 1) % line1Options.length);
-//   }, 3000); // change every 3s
-//   return () => clearInterval(interval);
-// }, []);
-
-// const fadeClass = (isVisible) =>
-//   `transition-all duration-1000 ease-in-out
-//    ${isVisible ? "opacity-100 scale-100" : "opacity-0 scale-95 absolute"}`;
 
 
   return (
@@ -78,82 +52,61 @@ const fadeClass = (isVisible) =>
     <div className="main ">
       <div className="flex flex-col relative">
     {/* Hero */}
-    <div className="hero flex flex-col xl:flex-row bg-[#fafcfc] text-black pt-10 xl:px-20 relative">
+    <div className="hero flex flex-col xl:flex-row bg-[#FAFBFF] text-black relative border-2 border-blue-400 ">
 
   {/* Left Hero */}
-  <div className="left-hero w-full !bg-[#fafcfc] xl:w-1/2 px-6 md:px-10 flex flex-col justify-center">
-  
-    {/* <h1 className="text-3xl sm:text-4xl lg:text-5xl font-semibold text-black leading-tight relative">
-  Best{" "}
-  <span className="relative inline-block w-fit h-12">
-    {line1Options.map((item, i) => (
-      <span
-        key={i}
-        className={`${item.style} bg-clip-text text-transparent ${fadeClass(i === index)}`}
-      >
-        {item.text}
+  <div className="left-hero w-full !bg-[#FAFBFF] xl:w-1/2 pt-9 flex flex-col justify-center border-2 border-red-400 ">
+
+    <h1 className="text-3xl sm:text-4xl lg:text-5xl text-black font-medium leading-tight px-15">
+      Best{" "}
+      <span className="relative inline-block">
+        {headings.map((item, i) => (
+          <span
+            key={`line1-${i}`}
+            className={`${item.style} bg-clip-text text-transparent ${fadeClass(i === index)}`}
+            style={{
+              position: i === index ? "relative" : "absolute",
+              top: 0,
+              left: 0,
+              zIndex: i === index ? 10 : 0,
+              display: 'inline-block',
+              whiteSpace: 'nowrap',
+            }}
+          >
+            {item.line1}
+          </span>
+        ))}
+      </span>{" "}
+      <br />
+      <span className="relative inline-block">
+        {headings.map((item, i) => (
+          <span
+            key={`line2-${i}`}
+            className={`${item.style} bg-clip-text text-transparent ${fadeClass(i === index)}`}
+            style={{
+              position: i === index ? "relative" : "absolute",
+              top: 0,
+              left: 0,
+              zIndex: i === index ? 10 : 0,
+              display: 'inline-block',
+            }}
+          >
+            {item.line2}
+          </span>
+        ))}
       </span>
-    ))}
-  </span>
-  <br />
-  <span className="relative inline-block w-fit h-12">
-    {line2Options.map((item, i) => (
-      <span
-        key={i}
-        className={`${item.style} bg-clip-text text-transparent ${fadeClass(i === index)}`}
-      >
-        {item.text}
-      </span>
-    ))}
-  </span>
-  <br />
-  <span>Company in Hyderabad</span>
-</h1> */}
+      <br />
+      <span>Company in Hyderabad</span>
+    </h1>
 
 
-<h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-black leading-tight relative">
-  Best{" "}
-  <span className="relative inline-block w-fit h-12">
-    {headings.map((item, i) => (
-      <span
-        key={i}
-        className={`${item.style} bg-clip-text text-transparent ${fadeClass(
-          i === index
-        )}`}
-      >
-        {item.line1}
-      </span>
-    ))}
-  </span>
-  <br />
-  <span className="relative inline-block w-fit h-12">
-    {headings.map((item, i) => (
-      <span
-        key={i}
-        className={`${item.style} bg-clip-text text-transparent ${fadeClass(
-          i === index
-        )}`}
-      >
-        {item.line2}
-      </span>
-    ))}
-  </span>
-  <br />
-  <span>Company in Hyderabad</span>
-</h1>
-
-
-
-
-
-
-    <p className="mt-4 text-[#03153A] text-sm">ABOUT OUR COMPANY</p>
-    <p className="mt-4 text-[#7B7E86]">
+    <p className="mt-4 text-[#03153A] text-sm px-15">ABOUT OUR COMPANY</p>
+    <p className="mt-4 text-[#7B7E86] px-15">
       Analogue is a Best mobile app development company in Hyderabad that specialises in creating and enhancing user experience through the design and development of mobile and web applications. Our focus lies in helping businesses expand and reach their specific customer base by collaborating with individuals and organisations to conceptualise and promote their products.
     </p>
 
     {/* Logos grid + social icons */}
-    <div className="flex flex-col mt-10">
+    <div className="flex flex-col mt-10 px-15">
       <div className="grid gap-6 w-full xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-4">
         {[1, 2, 3, 4].map((id) => (
           <Image
@@ -185,19 +138,19 @@ const fadeClass = (isVisible) =>
   </div>
 
   {/* Right Hero */}
-  <div className="right-hero w-full rounded-2xl xl:w-1/2 flex justify-center items-center relative bg-[url(/Bg-image-of-home-page.png)] bg-cover bg-center mt-10 xl:mt-0">
-    <div className="relative w-[200px] sm:w-[250px] h-[400px] sm:h-[500px] flex justify-center items-center">
-      <Lottie animationData={animationData} loop={true} style={{ width: "70%", height: "70%" }} />
+  <div className="right-hero w-full xl:w-1/2 flex justify-center items-center relative bg-[url(/Bg-image-of-home-page.png)] bg-cover bg-center border-2 border-red-400 xl:mt-0">
+    <div className="relative w-[250px] sm:w-[250px] h-[700px] sm:h-[500px] flex justify-center items-center">
+      <Lottie animationData={animationData} loop={true} style={{ width: "90%", height: "90%" }} />
     </div>
 
     {/* Left Side Image */}
-    <div className="absolute left-5 sm:left-[40px] xl:left-[4rem] top-1/2 -translate-y-1/2 flex flex-col items-center">
-      <Image src="/logo12.png" alt="Mobile left image" width={200} height={150} />
+    <div className="absolute left-5 sm:left-[40px] top-1/2 -translate-y-1/2 flex flex-col items-center">
+      <Image src="/logo12.png" alt="Mobile left image" width={230} height={150} />
     </div>
 
     {/* Right Side Image */}
-    <div className="absolute right-2 sm:right-[15] top-1/2 -translate-y-1/2 flex flex-col items-center">
-      <Image src="/logo23.png" alt="Mobile right image" width={230} height={200} />
+    <div className="absolute right-2 sm:right-[18] top-1/2 -translate-y-1/2 flex flex-col items-center">
+      <Image src="/logo23.png" alt="Mobile right image" width={250} height={200} />
     </div>
   </div>
   
