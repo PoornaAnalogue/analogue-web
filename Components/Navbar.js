@@ -172,7 +172,7 @@ export default function Navbar() {
 
           {/* Phone + Quick Call + Free Quote */}
           <div className="hidden only-xl:flex items-center gap-4 ml-auto">
-            <Image src="/phone-icon.png" alt="Phone" width={20} height={20} />
+            <Image src="/phone-icon.jpg" alt="Phone" width={20} height={20} />
             <div className="flex flex-col">
             <span className="text-xs text-gray-500">Quick Call</span>
             <a href="tel:+918919088163" className="text-xs text-blue-700 hover:underline transition-colors duration-200"> +91 8919088163</a>

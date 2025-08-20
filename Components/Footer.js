@@ -1,5 +1,12 @@
 import Image from "next/image";
-import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn, FaWhatsapp, FaYoutube } from "react-icons/fa";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaTwitter,
+  FaLinkedinIn,
+  FaWhatsapp,
+  FaYoutube,
+} from "react-icons/fa";
 import { MdAccessTime, MdCall } from "react-icons/md";
 
 export default function Footer() {

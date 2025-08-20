@@ -1,18 +1,52 @@
 @import "tailwindcss";
 
-
-
 .hero {
   display: flex;
   /* flex-direction: row; */
   align-items: stretch;
-  /* makes left-hero fill height of right-hero */
-  /* background-color: oklch(31.214% 0.0392 225.829); */
+}
+
+html, body {
+  cursor: none; /* Hide default cursor */
+}
+
+/* globals.css */
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 3px #4165e6ff, 0 0 6px #4165e6ff;
+  }
+  50% {
+    text-shadow: 0 0 10px #4165e6ff, 0 0 20px #4165e6ff;
+  }
 }
 
 
-/* breakpoints for responsiveness */
+@keyframes braceMoveLeft {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); } /* left brace paiki */
+}
 
+@keyframes braceMoveRight {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); } /* right brace kindaki */
+}
+
+
+
+/* globals.css */
+@keyframes openClose {
+  0%, 100% { letter-spacing: -5px; }
+  50% { letter-spacing: 2px; }
+}
+
+
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* breakpoints for responsiveness */
 @theme {
   /* Your custom breakpoints */
   --breakpoint-xss: 320px;
@@ -31,8 +65,6 @@
   --tw-breakpoint-xl: var(--breakpoint-xl);
   --tw-breakpoint-2xl: var(--breakpoint-2xl);
 }
-
-
 
 /* globals.css */
 .bg-industry {
@@ -79,7 +111,6 @@
   flex-shrink: 0;
 }
 
-
 /* PUZZLE  */
 /* Hide scrollbar */
 .scrollbar-hide::-webkit-scrollbar {
@@ -90,14 +121,8 @@
   scrollbar-width: none; /* Firefox */
 }
 
-
-
-
 /* ======================= */
 /* CLIENT CAROUSEL STYLES  */
-
-
-
 /* For screens 480px and above only */
 @media (min-width: 480px) and (max-width: 639px) {
   .my-swiper {
@@ -298,7 +323,6 @@ body {
 .left-hero {
   background-color: oklch(97.593% 0.00604 224.239);
 }
-
 
 
 /* 2. Add xs: and 3xl: modifiers to Tailwind */
