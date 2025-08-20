@@ -1,19 +1,10 @@
-import MainPage from "@/Components/Home/page";
+
+import Image from "next/image";
 import IndustryPage from "@/Components/Industries/page";
-import Navbar from "@/Components/Navbar";
-import ProductsPage from "@/Components/Products/page";
-import ProductTesting from "@/Components/Products/producttesting";
-// import ProductTesting from "@/Components/Products/producttesting";
-import HomeTesting from "@/Components/Products/producttesting";
-import ServicePage from "@/Components/Services/page";
 import SingleProductPage from "@/Components/SingleProduct/page";
-import ObjectTechnologiesPagee from "@/Components/Technologies/page";
 import Contact from "./Contact/page";
 import Home from "./Home/page";
 import Services from "./Services/Android-App-Development/page";
-// import ServicePage from "./Testing/page";
-import Image from "next/image";
-import MainServicesPage from "./Services/Android-App-Development/page";
 import Footer from "../../Components/Footer";
 
 import Puzzle from "./puzzle/page";
@@ -22,28 +13,43 @@ import Guarantees from "./guarantees/page";
 import PuzzleRes from "./puzzleres/page";
 import AboutUs from "./aboutus/page";
 import ClientCarousel from "./Clientcorousel/page";
+import GetAQuoteForm from "../../Components/GetAQuoteForm";
+import Navbar from "../../Components/Navbar";
+import Responsive_Best_App from "./BestMobileApp/page";
+import Responsive_CalendarTest from "./BookAppointment/page";
+// import ClientCarousel from "./Clientcorousel/page";
+// import Guarantees from "./guarantees/page";
+// import Puzzle from "./Puzzle/page";
+import Responsive_ServicePage from "./ServicesPage/page";
+import Responsive_Testimonials from "./TestimonialsPage/page";
+
+import Responsive_India from "./India/page";
+
+import Responsive_AdobeTech from "@/app/Technologies/page";
+import Responsive_ProductsPage from "@/app/Products/page";
+import PuzzleTest from "./testclient/page";
+import SingleProductPageTesting from "@/Components/SingleProduct/testing";
+
 
 export default function App() {
   return (
     <>
-      <Home />
-
-      <ServicePage />
-
      
-      <ClientCarousel/>
+    
+    <Navbar />
+      <Home/>
+      <Responsive_ServicePage />
+      <ClientCarousel />
       <Guarantees />
-      <PuzzleRes/>
-      {/* <Puzzle /> */}
-      <Footer />
-      <MainServicesPage />
-      <ObjectTechnologiesPagee />
-      <IndustryPage />
-      <ProductTesting />
-     
-      <SingleProductPage />
-      <Contact />
-      <AboutUs/>
+      <Puzzle/>
+      <Responsive_Best_App />
+      <Responsive_Testimonials />
+      <Responsive_CalendarTest />
+      <Responsive_India />
+      <GetAQuoteForm />
+      <Footer/>
+
+
     </>
   );
 }
