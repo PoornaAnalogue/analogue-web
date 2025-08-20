@@ -6,9 +6,6 @@ import Contact from "./Contact/page";
 import Home from "./Home/page";
 import Services from "./Services/Android-App-Development/page";
 import Footer from "../../Components/Footer";
-
-import Puzzle from "./puzzle/page";
-
 import Guarantees from "./guarantees/page";
 import PuzzleRes from "./puzzleres/page";
 import AboutUs from "./aboutus/page";
@@ -41,7 +38,7 @@ export default function App() {
       <Responsive_ServicePage />
       <ClientCarousel />
       <Guarantees />
-      <Puzzle/>
+      <PuzzleRes />
       <Responsive_Best_App />
       <Responsive_Testimonials />
       <Responsive_CalendarTest />
