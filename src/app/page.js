@@ -15,11 +15,13 @@ import Services from "./Services/Android-App-Development/page";
 import Image from "next/image";
 import MainServicesPage from "./Services/Android-App-Development/page";
 import Footer from "../../Components/Footer";
-import ClientCorousel from "./Clientcorousel/page";
+
 import Puzzle from "./puzzle/page";
 
 import Guarantees from "./guarantees/page";
 import PuzzleRes from "./puzzleres/page";
+import AboutUs from "./aboutus/page";
+import ClientCarousel from "./Clientcorousel/page";
 
 export default function App() {
   return (
@@ -29,17 +31,19 @@ export default function App() {
       <ServicePage />
 
      
-       <ClientCorousel />
+      <ClientCarousel/>
       <Guarantees />
-      <Puzzle />
+      <PuzzleRes/>
+      {/* <Puzzle /> */}
       <Footer />
       <MainServicesPage />
       <ObjectTechnologiesPagee />
       <IndustryPage />
       <ProductTesting />
-     <PuzzleRes/>
+     
       <SingleProductPage />
       <Contact />
+      <AboutUs/>
     </>
   );
 }

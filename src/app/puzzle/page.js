@@ -18,28 +18,28 @@ export default function Puzzle() {
     {
       id: 1,
       title: "Requirements",
-      img: "/puzzle1.png",
+      img: "/puzzleimages/puzzle1.png",
       description:
         "Understand goals. Communicate with stakeholders and analyze current systems to identify essential features and functionalities. Gather both functional and non-functional requirements to form a complete picture of the project. Prioritize requirements and create a clear specification document to avoid confusion later.",
     },
     {
       id: 2,
       title: "Agreement",
-      img: "/puzzle2.png",
+      img: "/puzzleimages/puzzle2.png",
       description:
         "Finalize project scope, budget, and timelines with clients. Ensure all parties agree on deliverables and expectations before development starts. Draft a formal contract or agreement for clarity and transparency. Confirm milestones, payment terms, and communication channels to prevent misunderstandings.",
     },
     {
       id: 3,
       title: "UX / UI",
-      img: "/puzzle3.png",
+      img: "/puzzleimages/puzzle3.png",
       description:
         "Design intuitive interfaces that are visually appealing. Focus on usability, accessibility, and smooth user flows across all screens. Create wireframes, mockups, and prototypes to test ideas early. Conduct user testing sessions to gather feedback and refine designs before development.",
     },
     {
       id: 4,
       title: "Development",
-      img: "/puzzle4.png",
+      img: "/puzzleimages/puzzle4.png",
       description:
         "Build the application’s frontend and backend. Ensure code is clean, maintainable, and scalable while implementing all required features. Use best practices, version control, and modular architecture. Collaborate with the team regularly to ensure consistency and integration of components.",
     },
@@ -47,35 +47,35 @@ export default function Puzzle() {
     {
       id: 5,
       title: "Testing",
-      img: "/puzzle5.png",
+      img: "/puzzleimages/puzzle5.png",
       description:
         "Perform rigorous testing including unit tests, integration tests, and user acceptance tests. Identify bugs and fix them to ensure quality. Maintain a bug tracker and regression test frequently. Test performance, security, and cross-device compatibility to ensure a robust product.",
     },
     {
       id: 6,
       title: "Client Approval",
-      img: "/puzzle6.png",
+      img: "/puzzleimages/puzzle6.png",
       description:
         "Present the product to the client for review. Gather feedback and make necessary adjustments before final deployment. Conduct demonstrations and clarify any remaining questions. Document approval and finalize project sign-off to move forward confidently.",
     },
     {
       id: 7,
       title: "Deployment",
-      img: "/puzzle7.png",
+      img: "/puzzleimages/puzzle7.png",
       description:
         "Launch the application on the production server. Set up hosting, databases, and monitor initial performance to ensure smooth operation. Ensure proper security configurations and backups are in place. Prepare deployment notes for future reference and maintenance.",
     },
     {
       id: 8,
       title: "User Will Use",
-      img: "/puzzle8.png",
+      img: "/puzzleimages/puzzle8.png",
       description:
         "Monitor how users interact with the product. Collect analytics and user feedback to improve experience and fix issues. Track performance, errors, and user behavior to inform future updates. Engage with users to understand pain points and gather suggestions.",
     },
     {
       id: 9,
       title: "Analogue Monitor",
-      img: "/puzzle9.png",
+      img: "/puzzleimages/puzzle9.png",
       description:
         "Track and maintain the system performance. Provide regular updates and support to ensure long-term success and stability. Perform maintenance, update dependencies, and plan for feature enhancements. Ensure downtime is minimized and system reliability is maximized.",
     },

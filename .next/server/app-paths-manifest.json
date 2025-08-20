@@ -1,9 +1,0 @@
-{
-  "/Clientcorousel/page": "app/Clientcorousel/page.js",
-  "/_not-found/page": "app/_not-found/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/page": "app/page.js",
-  "/puzzle/page": "app/puzzle/page.js",
-  "/puzzleres/page": "app/puzzleres/page.js",
-  "/sample/page": "app/sample/page.js"
-}

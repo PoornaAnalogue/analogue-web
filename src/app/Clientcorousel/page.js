@@ -1,3 +1,5 @@
+
+
 "use client";
 
 import { useRef, useState } from "react";
@@ -9,7 +11,7 @@ import "swiper/css";
 
 export default function ClientCarousel() {
   const companies = [
-    { logo: "/flythlogo.png", phone: "/flythimg.png" },
+    { logo: "/carouselimages/flythlogo.png", phone: "/flythimg.png" },
     { logo: "/aarishlogo.png", phone: "/aarishimg.png" },
     { logo: "/poshanalogo.png", phone: "/poshanaimg.png" },
     { logo: "/giftlogo.png", phone: "/giftimg.png" },
@@ -45,23 +47,24 @@ export default function ClientCarousel() {
       </p>
 
       <div className="relative max-w-7xl mx-auto space-y-10">
-        {/* Logo............... */}
-
+        {/* Logo Carousel............... */}
         <Swiper
           loop={true}
           loopedSlides={companies.length}
           autoplay={{ delay: 2500, disableOnInteraction: false }}
           speed={800}
-          slidesPerView={5}
           centeredSlides={true}
           spaceBetween={24}
           modules={[Controller, Autoplay]}
           breakpoints={{
-            360: { slidesPerView: 1.5, spaceBetween: 10 },
-            480: { slidesPerView: 2.5, spaceBetween: 12 },
-            640: { slidesPerView: 3.5, spaceBetween: 16 },
-            768: { slidesPerView: 4, spaceBetween: 20 },
-            1024: { slidesPerView: 5, spaceBetween: 24 },
+            360: { slidesPerView: 1, spaceBetween: 10 }, // xs
+            480: { slidesPerView: 2, spaceBetween: 12 },
+            540: { slidePerView: 2, spaceBetween: 14 }, // sm
+            640: { slidesPerView: 3, spaceBetween: 16 }, // md
+            768: { slidesPerView: 3, spaceBetween: 20 }, // lg
+            1024: { slidesPerView: 5, spaceBetween: 28 }, // xl
+            1280: { slidesPerView: 5, spaceBetween: 28 }, // 2xl
+            1536: { slidesPerView: 6, spaceBetween: 32 }, // 3xl
           }}
         >
           {companies.concat(companies).map((c, i) => (
@@ -86,23 +89,24 @@ export default function ClientCarousel() {
         </Swiper>
 
         {/* Phone Carousel..............*/}
-        
-        <div className="w-full flex justify-center    translate-x-10  mx-auto">
+        <div className="w-full flex justify-center mx-auto   phone-section   translate-x-10 pt-20 sm:pt-8">
           <Swiper
-            className="client-swiper w-full  mx-auto mr-8 "
+            className="client-swiper w-full  mx-auto"
             loop={true}
             centeredSlides={true}
             autoplay={{ delay: 2500, disableOnInteraction: false }}
             speed={800}
-            slidesPerView={5}
             spaceBetween={10}
             modules={[Autoplay, Controller]}
             breakpoints={{
-              360: { slidesPerView: 1.2, spaceBetween: 10 },
-              480: { slidesPerView: 1.5, spaceBetween: 12 },
-              640: { slidesPerView: 2, spaceBetween: 14 },
-              768: { slidesPerView: 3, spaceBetween: 16 },
-              1024: { slidesPerView: 5, spaceBetween: 20 },
+              360: { slidesPerView: 1, spaceBetween: 10 }, // xs
+              480: { slidesPerView: 1.2, spaceBetween: 12 }, // sm
+              540: { slidePerView: 2, spaceBetween: 10 },
+              640: { slidesPerView: 2, spaceBetween: 14 }, // md
+              768: { slidesPerView: 3, spaceBetween: 16 }, // lg
+              1024: { slidesPerView: 5, spaceBetween: 24 }, // xl
+              1280: { slidesPerView: 5, spaceBetween: 24 }, // 2xl
+              1536: { slidesPerView: 5, spaceBetween: 28 }, // 3xl
             }}
             onSwiper={(swiper) => {
               phoneSwiperRef.current = swiper;
@@ -129,6 +133,7 @@ export default function ClientCarousel() {
       </div>
 
       {/* Styles .............*/}
+
       <style jsx global>{`
         .client-swiper .phone-wrapper {
           transform: scale(0.8) translateY(30px);
@@ -148,6 +153,19 @@ export default function ClientCarousel() {
         .client-swiper .prev-prev .phone-wrapper,
         .client-swiper .next-next .phone-wrapper {
           transform: scale(0.85) translateY(20px);
+        }
+
+        @media only screen and (device-width: 390px) and (device-height: 844px),
+          /* iPhone 12,
+          13,
+          14 */ only screen and (device-width: 414px) and (device-height: 896px),
+          /* iPhone 11,
+          XR */ only screen and (device-width: 375px) and (device-height: 812px),
+          /* iPhone 11 Pro */ only screen and (device-width: 412px) and (device-height: 915px),
+          /* OnePlus Nord 2 */ only screen and (device-width: 393px) and (device-height: 851px) /* Pixel 5 */ {
+          .phone-section {
+            padding-top: 5rem !important;
+          }
         }
       `}</style>
     </div>

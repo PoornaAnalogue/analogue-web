@@ -65,6 +65,9 @@
 @layer theme {
   :root {
     /* Your custom breakpoints */
+      
+
+    --breakpoint-xss: 320px;
     --breakpoint-xs: 360px;
     --breakpoint-sm: 480px;
     --breakpoint-md: 640px;
