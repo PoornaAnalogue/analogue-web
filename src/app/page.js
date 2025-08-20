@@ -41,7 +41,7 @@ export default function App() {
       <Responsive_ServicePage />
       <ClientCarousel />
       <Guarantees />
-      <Puzzle/>
+      <PuzzleRes/>
       <Responsive_Best_App />
       <Responsive_Testimonials />
       <Responsive_CalendarTest />

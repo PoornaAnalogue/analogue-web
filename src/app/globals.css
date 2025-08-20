@@ -49,7 +49,9 @@ html, body {
 /* breakpoints for responsiveness */
 @theme {
   /* Your custom breakpoints */
+  
   --breakpoint-xss: 320px;
+   --breakpoint-xxs: 344px;
   --breakpoint-xs: 360px;
   --breakpoint-sm: 480px;
   --breakpoint-md: 640px;
@@ -119,15 +121,26 @@ html, body {
 
 /* ======================= */
 /* CLIENT CAROUSEL STYLES  */
-/* For screens 480px and above only */
-@media (min-width: 480px) and (max-width: 639px) {
-  .my-swiper {
-    padding-left: 50px; 
-    padding-top: 50px;/* only applied in this range */
-  }
+.phone-section {
+  overflow: hidden;
+}
+.client-swiper .swiper-wrapper {
+  overflow-x: hidden !important;
 }
 
 
+
+ 
+
+/* For screens 480px and above only */
+/* @media (min-width: 480px) and (max-width: 639px) {
+  .my-swiper {
+    padding-left: 50px; 
+    padding-top: 50px;/* only applied in this range */
+  /* } */
+/* }  */
+
+/*  */
 
 
 

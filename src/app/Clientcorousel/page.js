@@ -1,5 +1,3 @@
-
-
 "use client";
 
 import { useRef, useState } from "react";
@@ -11,11 +9,26 @@ import "swiper/css";
 
 export default function ClientCarousel() {
   const companies = [
-    { logo: "/carouselimages/flythlogo.png", phone: "/flythimg.png" },
-    { logo: "/aarishlogo.png", phone: "/aarishimg.png" },
-    { logo: "/poshanalogo.png", phone: "/poshanaimg.png" },
-    { logo: "/giftlogo.png", phone: "/giftimg.png" },
-    { logo: "/healrlogo.png", phone: "/aarishimg1.png" },
+    {
+      logo: "/carouselimages/flythlogo.png",
+      phone: "/carouselimages/flythimg.png",
+    },
+    {
+      logo: "/carouselimages/aarishlogo.png",
+      phone: "/carouselimages/aarishimg.png",
+    },
+    {
+      logo: "/carouselimages/poshanalogo.png",
+      phone: "/carouselimages/poshanaimg.png",
+    },
+    {
+      logo: "/carouselimages/giftlogo.png",
+      phone: "/carouselimages/giftimg.png",
+    },
+    {
+      logo: "/carouselimages/healrlogo.png",
+      phone: "/carouselimages/aarishimg1.png",
+    },
   ];
 
   const phoneSwiperRef = useRef(null);
@@ -35,7 +48,7 @@ export default function ClientCarousel() {
   };
 
   return (
-    <div className="w-full px-4 sm:px-8 md:px-12 lg:px-16 ">
+    <div className="w-full px-4 sm:px-8 md:px-12  lg:px-16 overflow-x-hidden ">
       {/* Featured Projects....... */}
       <h2 className="text-2xl sm:text-3xl mt-5 md:text-5xl lg:text-6xl text-center text-[#7B7E86] mb-6 sm:mb-8 md:mb-10">
         <span className="text-blue-400">O</span>
@@ -46,7 +59,7 @@ export default function ClientCarousel() {
         Our Clients
       </p>
 
-      <div className="relative max-w-7xl mx-auto space-y-10">
+      <div className="relative max-w-7xl mx-auto   space-y-5 xs:mt-0">
         {/* Logo Carousel............... */}
         <Swiper
           loop={true}
@@ -57,7 +70,7 @@ export default function ClientCarousel() {
           spaceBetween={24}
           modules={[Controller, Autoplay]}
           breakpoints={{
-            360: { slidesPerView: 1, spaceBetween: 10 }, // xs
+            360: { slidesPerView: 1, spaceBetween: 0}, // xs 
             480: { slidesPerView: 2, spaceBetween: 12 },
             540: { slidePerView: 2, spaceBetween: 14 }, // sm
             640: { slidesPerView: 3, spaceBetween: 16 }, // md
@@ -89,7 +102,8 @@ export default function ClientCarousel() {
         </Swiper>
 
         {/* Phone Carousel..............*/}
-        <div className="w-full flex justify-center mx-auto   phone-section   translate-x-10 pt-20 sm:pt-8">
+          <div className="w-full flex justify-center mx-auto phone-section pt-20 px-4 mt-10 xs:ml-10  sm:px-6 md:px-12 lg:ml-12 overflow-hidden">
+
           <Swiper
             className="client-swiper w-full  mx-auto"
             loop={true}
@@ -99,7 +113,9 @@ export default function ClientCarousel() {
             spaceBetween={10}
             modules={[Autoplay, Controller]}
             breakpoints={{
+              344: { slidesPerView: 1, spaceBetween: 10 },
               360: { slidesPerView: 1, spaceBetween: 10 }, // xs
+              
               480: { slidesPerView: 1.2, spaceBetween: 12 }, // sm
               540: { slidePerView: 2, spaceBetween: 10 },
               640: { slidesPerView: 2, spaceBetween: 14 }, // md
@@ -120,10 +136,10 @@ export default function ClientCarousel() {
                 <div className="phone-wrapper flex justify-center">
                   <Image
                     src={c.phone}
-                    alt={`Phone ${i}`}
+                    alt="phone image"
                     width={260}
                     height={520}
-                    className="object-contain w-[70%] sm:w-3/4 md:w-60 lg:w-64"
+                    className="object-contain w-[80%] sm:w-3/4 md:w-60 lg:w-64  xxs:max-w-[200px]"
                   />
                 </div>
               </SwiperSlide>
@@ -135,6 +151,18 @@ export default function ClientCarousel() {
       {/* Styles .............*/}
 
       <style jsx global>{`
+        .client-swiper .phone-wrapper {
+          transform: scale(0.8) translateY(30px);
+          transition: transform 0.5s ease;
+          padding-top: 2rem;
+        }
+
+        @media (min-width: 480px) {
+          .client-swiper .swiper-slide-active .phone-wrapper {
+            transform: scale(1.2) translateY(0);
+          }
+        }
+
         .client-swiper .phone-wrapper {
           transform: scale(0.8) translateY(30px);
           transition: transform 0.5s ease;
