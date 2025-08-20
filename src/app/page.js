@@ -1,16 +1,9 @@
 import Image from "next/image";
-// import MainPage from "@/Components/Home/page";
 import IndustryPage from "@/Components/Industries/page";
-// import Navbar from "@/Components/Navbar";
-import ProductsPage from "@/Components/Products/page";
-import ProductTesting from "@/Components/Products/producttesting";
-import HomeTesting from "@/Components/Products/producttesting";
 import SingleProductPage from "@/Components/SingleProduct/page";
-import ObjectTechnologiesPagee from "@/Components/Technologies/page";
 import Contact from "./Contact/page";
 import Home from "./Home/page";
 import Services from "./Services/Android-App-Development/page";
-// import MainServicesPage from "./Services/Android-App-Development/page";
 import Footer from "../../Components/Footer";
 import Lottie from "lottie-react";
 import GetAQuoteForm from "../../Components/GetAQuoteForm";
@@ -18,58 +11,61 @@ import MyLottie from "../../Components/Lottie";
 import Navbar from "../../Components/Navbar";
 
 
-
-
-
 import Responsive_Testimonials from "./TestimonialsPage/page";
 import Responsive_ServicePage from "./ServicesPage/page";
 import Responsive_Best_App from "./BestMobileApp/page";
 import Responsive_India from "./India/page";
-import Responsive_CalendarTest from "@/app/BookAppointment/page";
+import Responsive_CalendarTest from "./BookAppointment/page";
+
+import Responsive_AdobeTech from "@/app/Technologies/page";
+import Responsive_ProductsPage from "@/app/Products/page";
+
 import ClientCarousel from "./Clientcorousel/page";
+import Guarantees from "./guarantees/page";
+import Puzzle from "./puzzle/page";
+import PuzzleTest from "./testclient/page";
+import SingleProductPageTesting from "@/Components/SingleProduct/testing";
 
 
 export default function App() {
   return (
     <>
+    {/* <Nav */}
       {/* Madhavika */}
-      {/* <Responsive_Testimonials /> */}
-      {/* <Responsive_Best_App /> */}
-      {/* <Responsive_CalendarTest /> */}
-      {/* <Responsive_India /> */}
+      <Responsive_Testimonials />
+      <Responsive_ServicePage />
+      <Responsive_Best_App />
+      <Responsive_CalendarTest />
+      <Responsive_India />
+      
 
+      {/* <Responsive_AdobeTech />  */}
+      {/* <Responsive_ProductsPage /> */}
 
-      {/* <ObjectTechnologiesPagee /> */}
+      
       {/* <IndustryPage /> */}
-
-
-      {/* <ProductTesting /> */}
       {/* <SingleProductPage />  */}
+      {/* <SingleProductPageTesting /> */}
+      {/* <PuzzleTest /> */}
 
 
 
 
       {/* Remaining */}
-      <Navbar />
+      {/* <Navbar />
       <Home />
       <Responsive_ServicePage />
        <ClientCarousel/>
-      <Footer />
-      {/* <MainServicesPage /> */}
-      {/* <Contact /> */}
+       <Guarantees />
+       <Puzzle />
+       <Responsive_Best_App />
+       <Responsive_Testimonials />
+       <Responsive_CalendarTest />
+       <Responsive_India />
+       <GetAQuoteForm /> 
+       
+      <Footer /> */}
 
-  
-
-      
-
-      
-      
-
-
-
-
-
-      
 
     </>
   );

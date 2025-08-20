@@ -53,10 +53,10 @@ export default function Home() {
     <div className="main ">
       <div className="flex flex-col relative">
     {/* Hero */}
-    <div className="hero flex flex-col xl:flex-row bg-[#FAFBFF] text-black relative border-2 border-blue-400 ">
+    <div className="hero flex flex-col xl:flex-row bg-[#FAFBFF] text-black relative  ">
 
   {/* Left Hero */}
-  <div className="left-hero w-full !bg-[#FAFBFF] xl:w-1/2 pt-9 flex flex-col justify-center border-2 border-red-400 ">
+  <div className="left-hero w-full !bg-[#FAFBFF] xl:w-1/2 pt-9 flex flex-col justify-center ">
 
     <h1 className="text-3xl sm:text-4xl lg:text-5xl text-black font-medium leading-tight px-15">
       Best{" "}
@@ -139,7 +139,7 @@ export default function Home() {
   </div>
 
   {/* Right Hero */}
-  <div className="right-hero w-full xl:w-1/2 flex justify-center items-center relative bg-[url(/Bg-image-of-home-page.png)] bg-cover bg-center border-2 border-red-400 xl:mt-0">
+  <div className="right-hero w-full xl:w-1/2 flex justify-center items-center relative bg-[url(/Bg-image-of-home-page.png)] bg-cover bg-center xl:mt-0">
     <div className="relative w-[250px] sm:w-[250px] h-[700px] sm:h-[500px] flex justify-center items-center">
       <Lottie animationData={animationData} loop={true} style={{ width: "90%", height: "90%" }} />
     </div>

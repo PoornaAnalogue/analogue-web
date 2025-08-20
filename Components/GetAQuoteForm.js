@@ -35,7 +35,7 @@ export default function GetAQuoteForm() {
 
 
         {/* Big Background Text */}
-        <div className="relative z-1 flex justify-center items-end gap-6 pointer-events-none w-full scale-90 md:scale-100 border-2 border-red-400">
+        <div id="form-section" className="relative z-1 flex justify-center items-end gap-6 pointer-events-none w-full scale-90 md:scale-100 ">
           <h1 className="text-[8rem] md:text-[15rem] text-gray-400 leading-none mr-4 xl:text-[10rem] 2xl:text-[15rem]">
             Let&apos;s
           </h1>

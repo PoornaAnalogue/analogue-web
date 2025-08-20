@@ -2,158 +2,187 @@
 import React from 'react';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
-// import Navbar from '../Navbar';
-import Footer from '../../../Components/Footer';
-import Navbar from '../../../Components/Navbar';
 
-export default function ProductTesting() {
+export default function Responsive_ProductsPage() {
   const router = useRouter();
   const cards = [
     {
       title: "Mahaboob",
       description: "E-commerce App and Static Website",
-      image: "/ProductImg14.png",
+      image: "/Product-Images/ProductImg14.png",
       bgColor:"bg-[#E67E20]",
       link: "/mahaboob",
       objectfit : "",
+      width: 350
     },
     {
       title: "Allonzy",
       description: "E-commerce App and Static Website",
-      image: "/ProductImg13.png",
+      image: "/Product-Images/ProductImg13.png",
       bgColor: "bg-[#44689C]",
       link: "/allonzy",
       objectfit : "",
+      width: 350
     },
     {
       title: "Cake Factory",
       description: "E-commerce App and Static Website",
-      image: "/ProductImg12.png",
+      image: "/Product-Images/ProductImg12.png",
       bgColor: "bg-[#E6C1D3]",
       link: "/cakefactory",
       objectfit : "",
+      width: 350
     },
     {
       title: "Flythru",
       description: "E-commerce App and Static Website",
-      image: "/ProductImg11.png",
+      image: "/Product-Images/ProductImg11.png",
       bgColor:"bg-[#164E8E]",
       link: "/mahaboob",
       objectfit : "",
+      width: 350
     },
     {
       title: "Care Credle",
       description: "E-commerce App and Static Website",
-      image: "/ProductImg10.png",
+      image: "/Product-Images/ProductImg10.png",
       bgColor: "bg-[#6169FF]  ",
       link: "/allonzy",
       objectfit : "object-contain",
+      width: 250,
+      paddingy : "pt-8",
+      res_size : "xss:pl-13"
     },
     {
       title: "My Flat info",
       description: "E-commerce App and Static Website",
-      image: "/ProductImg9.png",
+      image: "/Product-Images/ProductImg9.png",
       bgColor: "bg-[#283E71]",
       link: "/cakefactory",
       objectfit : "object-contain",
+      width: 250,
+      paddingy : "pt-8",
+      res_size : "xss:pl-13"
     },
     {
       title: "Yaarishhh",
       description: "E-commerce App and Static Website",
-      image: "/ProductImg8.png",
+      image: "/Product-Images/ProductImg8.png",
       bgColor:"bg-[#2A9D8F]",
       link: "/mahaboob",
       objectfit : "object-contain",
+      width: 250,
+      paddingy : "pt-8",
+      res_size : "xss:pl-13"
     },
     {
       title: "Giftyu",
       description: "E-commerce App and Static Website",
-      image: "/ProductImg7.png",
+      image: "/Product-Images/ProductImg7.png",
       bgColor: "bg-[#FF6757]",
       link: "/allonzy",
       objectfit : "object-contain",
+      width: 350,
+      paddingy : "py-7"
     },
-
-
     {
       title: "Buykeyz",
       description: "E-commerce App and Static Website",
-      image: "/ProductImg6.png",
+      image: "/Product-Images/ProductImg6.png",
       bgColor: "bg-[#3AA9FF]",
       link: "/cakefactory",
       objectfit : "object-contain",
+      width: 250,
+      paddingy : "pt-8",
+      res_size : "xss:pl-13"
     },
     {
       title: "Cinepass",
       description: "E-commerce App and Static Website",
-      image: "/ProductImg5.png",
+      image: "/Product-Images/ProductImg5.png",
       bgColor:"bg-[#FFB300]",
       link: "/mahaboob",
       objectfit : "",
+      width: 350
     },
     {
       title: "TGNPDCL",
       description: "E-commerce App and Static Website",
-      image: "/ProductImg4.png",
+      image: "/Product-Images/ProductImg4.png",
       bgColor: "bg-[#2023BA]",
       link: "/allonzy",
       objectfit : "object-contain",
+      width: 250,
+      paddingy : "pt-8",
+      res_size : "xss:pl-13"
     },
     {
       title: "Poshana",
       description: "E-commerce App and Static Website",
-      image: "/ProductImg3.png",
+      image: "/Product-Images/ProductImg3.png",
       bgColor: "bg-[#007A8F]",
       link: "/cakefactory",
       objectfit : "object-contain",
+      width: 250,
+      paddingy : "pt-8",
+      res_size : "xss:pl-13"
     },
     {
       title: "Healr",
       description: "E-commerce App and Static Website",
-      image: "/ProductImg2.png",
+      image: "/Product-Images/ProductImg2.svg",
       bgColor:"bg-[#2EDED3]",
       link: "/mahaboob",
-      objectfit : "object-contain",
+      objectfit : "object-cover",
+      width: 350,
+      // paddingy : "ml-0"
     },
     {
       title: "Naukari",
       description: "E-commerce App and Static Website",
-      image: "/ProductImg1.png",
+      image: "/Product-Images/ProductImg1.png",
       bgColor: "bg-[#E1DBFF]",
       link: "/allonzy",
       objectfit : "",
+      width: 350
     },
     {
       title: "Intellect Ignite",
       description: "E-commerce App and Static Website",
-      image: "/ProductImg18.png",
+      image: "/Product-Images/ProductImg18.png",
       bgColor: "bg-[#114465]",
       link: "/cakefactory",
       objectfit : "",
+      width: 350
     },
     {
       title: "Gvathi Party",
       description: "E-commerce App and Static Website",
-      image: "/ProductImg17.png",
+      image: "/Product-Images/ProductImg17.png",
       bgColor:"bg-[#E31E25]",
       link: "/mahaboob",
       objectfit : "object-contain",
+      width: 350,
+      paddingy : "py-7"
     },
     {
       title: "Zipik",
       description: "E-commerce App and Static Website",
-      image: "/ProductImg16.png",
+      image: "/Product-Images/ProductImg16.png",
       bgColor: "bg-[#788F55]",
       link: "/allonzy",
       objectfit : "object-contain",
+      width: 350,
+      paddingy : "py-7"
     },
     {
       title: "JSE",
       description: "E-commerce App and Static Website",
-      image: "/ProductImg15.png",
+      image: "/Product-Images/ProductImg15.png",
       bgColor: "bg-[#E2B35B]",
       link: "/cakefactory",
       objectfit : "",
+      width: 350
     }
  ];
 
@@ -168,10 +197,10 @@ export default function ProductTesting() {
         <div className="h-auto " >
                     {/* <Navbar /> */}
                     <div className=" bg-white flex h-full justify-center relative ">
-                        <Image src="/AbstractDesign.jpg" width={500} height={600} alt="Abstract design background" />
+                        <Image src="/AdobeTech-Images/AbstractDesign.jpg" width={500} height={600} alt="Abstract design background" />
                         <div className="bg-white absolute top-14  ">
                             <h1 className="text-3xl bg-white text-violet-950 font-bold">Our Products</h1>
-                            <p className="bg-white leading-loose text-sm text-center mt-3">Stories of Success</p>
+                            <p className="bg-white text-[#071637] leading-loose text-sm text-center mt-3">Stories of Success</p>
                         </div>
         
         
@@ -179,9 +208,8 @@ export default function ProductTesting() {
                     </div>
         </div>
 
-
         <div className="flex justify-center items-center min-h-screen bg-white">
-            <div className="grid grid-cols-1  md:grid-cols-3 gap-8  m-25">
+            <div className="grid grid-cols-1 md:grid-cols-2  xl:grid-cols-3 gap-8 xl:gap-10 3xl:gap-20 xss:m-10 xs:mx-15 sm:mx-25 lg:mx-22 md:mx-7 xl:mx-13  3xl:mx-10">
             {cards.map((card, index) => (
           <div
             key={index}
@@ -189,13 +217,13 @@ export default function ProductTesting() {
             onClick={() => handleClick(card.link)}
           >
             <div className="flex flex-col items-center">
-              <div className={`${card.bgColor} rounded-t-3xl    w-full`}>
+              <div className={`${card.bgColor} rounded-t-3xl flex xs:justify-center justify-end items-center     w-full`}>
                 <Image
                   src={card.image}
                   alt={card.title}
-                  width={350}
+                  width={card.width}
                   height={160}
-                  className={`h-80  transition-opacity duration-300 hover:opacity-90 ${card.objectfit}`}
+                  className={`h-80 xss:h-65   sm:h-70 xl:h-75 ${card.res_size}  ${card.paddingy}  transition-opacity duration-300 hover:opacity-90  ${card.objectfit}`}
                 />
               </div>
               <div className="mx-4 mb-2 text-start flex gap-5 p-2  justify-center items-center w-full">
@@ -227,7 +255,6 @@ export default function ProductTesting() {
         ))}
       </div>
     </div>
-    <Footer />
     </div>
   );
 }

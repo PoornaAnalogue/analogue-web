@@ -1,5 +1,6 @@
 import { Urbanist } from "next/font/google";
 import "./globals.css";
+import CustomCursor from "./CustomCursor";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
@@ -16,6 +17,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head><link rel="icon" href="/favicon.png" sizes="any" /></head>
       <body className={urbanist.className} >
+        <CustomCursor />
         {children}
       </body>
     </html>

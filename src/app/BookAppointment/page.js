@@ -1,5 +1,4 @@
 'use client';
-
 import { useState } from 'react';
 import dayjs from 'dayjs';
 import TooltipBox from './Tooltip';
@@ -34,8 +33,8 @@ const Responsive_CalendarTest = () => {
 
   return (
     <>
-    <div className="3xl:pb-10  w-full  px-6 h-auto flex flex-col xl:flex-row xl:h-screen  xl:gap-10 bg-calendar bg-center bg-cover bg-no-repeat box-border  ">
-      <div className="   self-center mx-2 xs:mx-3 md:mx-4 lg:mx-6 xl:mx-8 2xl:mx-10 py-2  xl:py-7  flex flex-col gap-2 sm:gap-4 xl:gap-8 w-full xs:w-full sm:w-10/12 md:w-9/12 lg:w-8/12 xl:w-5/12 3xl:py-12 max-w-full">
+    <div className="md:px-0 3xl:pb-10  w-full  px-6 h-auto flex flex-col xl:flex-row xl:h-auto  xl:gap-10 bg-calendar bg-center bg-cover bg-no-repeat box-border  ">
+      <div className="  self-center mx-2 xs:mx-3 md:mx-4 lg:mx-6 xl:mx-8 2xl:mx-10 py-2  xl:py-7  flex flex-col gap-2 sm:gap-4 xl:gap-8 w-full xs:w-full sm:w-10/12 md:w-9/12 lg:w-8/12 xl:w-5/12 3xl:py-12 max-w-full">
         <p className="text-white font-bold text-lg xs:text-lg sm:text-lg md:text-2xl lg:text-3xl xl:text-[2.25rem] 2xl:text-5xl 3xl:text-7xl leading-tight">
           Book Appointment <br /> for free.
         </p>
@@ -46,9 +45,9 @@ const Responsive_CalendarTest = () => {
           <br /> Our expert team leverages the latest technologies to deliver exceptional mobile app development services across Android, iOS, and hybrid platforms. With a strong presence in Hyderabad, we are trusted by businesses globally for delivering high-quality and user-friendly apps. Partner with Analogue for unparalleled service and expertise that sets us apart as one of the best mobile app developers in the industry.
         </p>
       </div>
-      <div className="  self-center w-full  mb-3  sm:w-9/12 md:w-8/12 lg:w-8/12 xl:w-8/12 2xl:w-5/12 3xl:w-6/12 max-w-full bg-flower bg-contain bg-no-repeat bg-right xl:h-7/10 ">
+      <div className="self-center w-full  mb-3  sm:w-9/12 md:w-8/12 lg:w-8/12 xl:w-8/12 2xl:w-5/12 3xl:w-6/12 max-w-full bg-flower bg-contain bg-no-repeat bg-right xl:h-7/10   ">
         <div className="  min-h-fit bg-ellipse bg-contain bg-left bg-bottom bg-no-repeat">
-          <div className=" xs:bottom-[20px] xl:right-[30px]  items-center    mx-2 xs:mx-3 sm:mx-4 md:mx-6 lg:mx-8 xl:mx-2 2xl:mx-10 3xl:mx-14  xs:mt-5 sm:mt-6 md:mt-8 xl:mt-15  relative p-1 xs:p-2 sm:p-3 md:p-4 xl:bottom-[80px] 3xl:bottom-[50px]  bg-white rounded-md shadow-xl box-border  w-[240px] xs:w-[180px] sm:w-[200px] md:w-[240px] lg:w-[260px] xl:w-[300px] 3xl:w-[400px]   xs:h-[150px] sm:h-[155px] md:h-[200px] lg:h-[220px] xl:h-[250px] 3xl:h-[360px] ">
+          <div className=" xs:bottom-[20px] xl:right-[30px]  items-center    mx-2 xs:mx-3 sm:mx-4 md:mx-6 lg:mx-8 xl:mx-2 2xl:mx-10 3xl:mx-14  xs:mt-5 sm:mt-6 md:mt-8 xl:mt-15  relative p-1 xs:p-2 sm:p-3 md:p-4 xl:bottom-[80px] 3xl:bottom-[50px]  bg-white rounded-md shadow-xl box-border  w-[240px] xss:w-[170px] xs:w-[180px] sm:w-[200px] md:w-[240px] lg:w-[260px] xl:w-[300px] 3xl:w-[400px]   xs:h-[150px] sm:h-[155px] md:h-[200px] lg:h-[220px] xl:h-[250px] 3xl:h-[360px] ">
             <div className="h-1 xs:h-1 mb-1 xs:mb-1 xl:h-2 xl:mb-2 bg-dots bg-left bg-contain bg-no-repeat"></div>
             {/* Header with month and navigation */}
             <div className="w-full flex justify-between text-black items-center mb-1 xs:mb-2 ">
@@ -105,57 +104,8 @@ const Responsive_CalendarTest = () => {
         </div>
       </div>
     </div>
-    
-    
-    
-    
-    {/* <section id="form-section" className="w-full xs:w-full sm:w-10/12 md:w-9/12 lg:w-8/12 xl:w-6/12 2xl:w-5/12 3xl:w-4/12 max-w-full mx-auto mt-8 xs:mt-10 sm:mt-12 md:mt-14 lg:mt-16 xl:mt-18 2xl:mt-20 3xl:mt-24 p-4 xs:p-5 sm:p-6 md:p-7 lg:p-8 xl:p-9 2xl:p-10 3xl:p-12 bg-white rounded-md shadow-xl">
-        <h2 className="text-lg xs:text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-[2.25rem] 2xl:text-[2.5rem] 3xl:text-5xl font-bold mb-4 xs:mb-5 sm:mb-6 md:mb-7 lg:mb-8 xl:mb-9 2xl:mb-10 3xl:mb-12">
-          Appointment Form
-        </h2>
-        <form className="flex flex-col gap-4 xs:gap-5 sm:gap-6 md:gap-7 lg:gap-8 xl:gap-9 2xl:gap-10 3xl:gap-12">
-          <div>
-            <label
-              htmlFor="name"
-              className="block text-[0.625rem] xs:text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-[1.125rem] 3xl:text-[1.25rem] font-medium"
-            >
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              className="w-full p-2 xs:p-3 sm:p-4 md:p-5 lg:p-6 xl:p-7 2xl:p-8 3xl:p-9 border rounded-md"
-              placeholder="Your Name" />
-          </div>
-          <div>
-            <label
-              htmlFor="date"
-              className="block text-[0.625rem] xs:text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl 2xl:text-[1.125rem] 3xl:text-[1.25rem] font-medium"
-            >
-              Selected Date
-            </label>
-            <input
-              type="text"
-              id="date"
-              value={selectedDate.format('YYYY-MM-DD')}
-              readOnly
-              className="w-full p-2 xs:p-3 sm:p-4 md:p-5 lg:p-6 xl:p-7 2xl:p-8 3xl:p-9 border rounded-md bg-gray-100" />
-          </div>
-          <button
-            type="submit"
-            className="bg-[#2D6096] text-white p-2 xs:p-3 sm:p-4 md:p-5 lg:p-6 xl:p-7 2xl:p-8 3xl:p-9 rounded-md hover:bg-[#1e4a6e]"
-          >
-            Submit
-          </button>
-        </form>
-      </section> */}
-
     </>
   );
 };
-
-
-
-
 
 export default Responsive_CalendarTest;
