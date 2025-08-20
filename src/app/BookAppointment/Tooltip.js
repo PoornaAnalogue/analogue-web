@@ -24,7 +24,7 @@ import React from 'react';
 const TooltipBox = ({ date }) => {
   return (
     <div className=" absolute w-full top-0 left-1/2 -translate-x-1/2 h-auto pointer-events-none">
-      <div className=" text-white bg-[#2D6096] animate-triangle-path text-xs leading-relaxed flex flex-col items-center gap-1 xs:gap-1  p-1 md:p-3  rounded-xl xs:w-[70px] sm:w-[80px] md:w-[100px] lg:w-[150px] xl:w-[160px] 2xl:w-[170px] 3xl:w-[180px] shadow-md transform-origin-center">
+      <div className=" text-white bg-[#2D6096] animate-triangle-path text-xs leading-relaxed flex flex-col items-center gap-1 xs:gap-1 p-1 md:p-3  rounded-xl xs:w-[70px] sm:w-[80px] md:w-[100px] lg:w-[150px] xl:w-[160px] 2xl:w-[170px] 3xl:w-[180px] shadow-md transform-origin-center">
         <div className="font-semibold text-[0.5rem] md:text-xs lg:text-sm mb-0.5 xs:mb-0.5  md:mb-1  underline decoration-white underline-offset-4 xs:underline-offset-4 sm:underline-offset-5 md:underline-offset-6 lg:underline-offset-8 xl:underline-offset-8 2xl:underline-offset-12 ">
           Free Booking
         </div>

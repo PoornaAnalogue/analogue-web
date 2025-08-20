@@ -4,7 +4,7 @@
 
 .hero {
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   align-items: stretch;
   /* makes left-hero fill height of right-hero */
   /* background-color: oklch(31.214% 0.0392 225.829); */
@@ -15,6 +15,7 @@
 
 @theme {
   /* Your custom breakpoints */
+  --breakpoint-xss: 320px;
   --breakpoint-xs: 360px;
   --breakpoint-sm: 480px;
   --breakpoint-md: 640px;
@@ -47,20 +48,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@theme {
-    --breakpoint-xs: 360px;
-    --breakpoint-sm: 480px;
-    --breakpoint-md: 640px;
-    --breakpoint-lg: 768px;
-    --breakpoint-xl: 1024px;
-    --breakpoint-2xl: 1280px;
-    --breakpoint-3xl: 1536px;
-    --tw-breakpoint-sm: var(--breakpoint-sm);
-    --tw-breakpoint-md: var(--breakpoint-md);
-    --tw-breakpoint-lg: var(--breakpoint-lg);
-    --tw-breakpoint-xl: var(--breakpoint-xl);
-    --tw-breakpoint-2xl: var(--breakpoint-2xl);
-}
 
 @layer utilities {
   @media (min-width: var(--breakpoint-xs)) {
@@ -119,46 +106,6 @@
   }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* ======================= */
-
-
-
-
-/* RESPONSIVENESS ...... */
-/* 1. Override Tailwind's theme breakpoints */
-@layer theme {
-  :root {
-    /* Your custom breakpoints */
-    --breakpoint-xs: 360px;
-    --breakpoint-sm: 480px;
-    --breakpoint-md: 640px;
-    --breakpoint-lg: 768px;
-    --breakpoint-xl: 1024px;
-    --breakpoint-2xl: 1280px;
-    --breakpoint-3xl: 1536px;
- 
-    /* Map them to Tailwind's internal vars */
-    
-    --tw-breakpoint-sm: var(--breakpoint-sm);
-    --tw-breakpoint-md: var(--breakpoint-md);
-    --tw-breakpoint-lg: var(--breakpoint-lg);
-    --tw-breakpoint-xl: var(--breakpoint-xl);
-    --tw-breakpoint-2xl: var(--breakpoint-2xl);
-    
-  }
-}
 
 
 
@@ -607,5 +554,9 @@ body {
   .Navbar-main {
     background-color: #c0d0f0;
   }
+}
+
+.Form-img{
+  background-image: url('/contact/Form-background.png');
 }
 
