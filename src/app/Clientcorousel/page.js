@@ -11,11 +11,11 @@ import "swiper/css";
 
 export default function ClientCarousel() {
   const companies = [
-    { logo: "/carouselimages/flythlogo.png", phone: "/flythimg.png" },
-    { logo: "/aarishlogo.png", phone: "/aarishimg.png" },
-    { logo: "/poshanalogo.png", phone: "/poshanaimg.png" },
-    { logo: "/giftlogo.png", phone: "/giftimg.png" },
-    { logo: "/healrlogo.png", phone: "/aarishimg1.png" },
+    { logo: "/carouselimages/flythlogo.png", phone: "/carouselimages/flythimg.png" },
+    { logo: "/carouselimages/aarishlogo.png", phone: "/carouselimages/aarishimg.png" },
+    { logo: "/carouselimages/poshanalogo.png", phone: "/carouselimages/poshanaimg.png" },
+    { logo: "/carouselimages/giftlogo.png", phone: "/carouselimages/giftimg.png" },
+    { logo: "/carouselimages/healrlogo.png", phone: "/carouselimages/aarishimg1.png" },
   ];
 
   const phoneSwiperRef = useRef(null);
