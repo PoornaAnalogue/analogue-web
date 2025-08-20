@@ -79,7 +79,7 @@ export default function ClientCarousel() {
                   alt={`Logo ${i}`}
                   width={120}
                   height={100}
-                  className="object-contain "
+                  className="object-contain  "
                 />
               </div>
             </SwiperSlide>
