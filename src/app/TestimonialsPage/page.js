@@ -90,7 +90,7 @@ export default function Responsive_Testimonials() {
                   {/* Quote Section */}
                   <div className="bg-[#E3ECFF] px-3 xs:px-4 sm:px-5 md:px-6 py-2 xs:py-3 flex-grow flex flex-col">
                     <span className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl text-start w-full font-medium text-black">“</span>
-                    <p className="3xl:h-[8rem] xss:h-[7rem] xs:h-[10rem] md:h-[19rem] lg:h-[13rem] xl:h-[10rem] 2xl:h-[12rem] text-[#071637] text-[10px] xs:text-xs sm:text-sm md:text-base lg:text-base xl:text-base leading-4 xs:leading-5 sm:leading-6  font-medium text-justify">
+                    <p className="3xl:h-[8rem] xss:h-[7rem] xs:h-[10rem] md:h-[19rem] lg:h-[13rem] xl:h-[10rem] 2xl:h-[12rem] 3xl:h-[14rem] text-[#071637] text-[10px] xs:text-xs sm:text-sm md:text-base lg:text-base xl:text-base leading-4 xs:leading-5 sm:leading-6  font-medium text-justify">
                       {t.text}
                     </p>
                   </div>
