@@ -124,9 +124,9 @@ html, body {
 .phone-section {
   overflow: hidden;
 }
-.client-swiper .swiper-wrapper {
+/* .client-swiper .swiper-wrapper {
   overflow-x: hidden !important;
-}
+} */
 
 
 

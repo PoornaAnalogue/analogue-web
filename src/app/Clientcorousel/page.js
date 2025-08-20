@@ -44,7 +44,7 @@ export default function ClientCarousel() {
         Our Clients
       </p>
 
-      <div className="relative max-w-7xl mx-auto space-y-10 border-2 border-red-500 ">
+      <div className="relative max-w-7xl mx-auto space-y-10 ">
         {/* Logo Carousel............... */}
         <Swiper
           loop={true}
@@ -89,7 +89,7 @@ export default function ClientCarousel() {
         {/* Phone Carousel..............*/}
         <div className="w-full flex justify-center mx-auto   phone-section pt-20  sm:pt-8 xs:overflow-hidden">
           <Swiper
-            className="client-swiper w-full  mx-auto border-2 border-green-500 "
+            className="client-swiper w-full  mx-auto  "
             loop={true}
             centeredSlides={true}
             autoplay={{ delay: 2500, disableOnInteraction: false }}
