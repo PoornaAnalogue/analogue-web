@@ -36,12 +36,12 @@ export default function App() {
     <>
      
     
-    <Navbar />
+      <Navbar />
       <Home/>
       <Responsive_ServicePage />
       <ClientCarousel />
       <Guarantees />
-      <Puzzle/>
+      <PuzzleRes />
       <Responsive_Best_App />
       <Responsive_Testimonials />
       <Responsive_CalendarTest />

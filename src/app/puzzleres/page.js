@@ -147,7 +147,7 @@ const steps = [
       {/* Puzzle Section */}
       <div
         ref={containerRef}
-        className="puzzle-container h-screen w-full flex items-center justify-center bg-[#071637] text-white"
+        className="puzzle-container py-2 text-center h-auto xl:py-7 text-start w-full flex items-center justify-center bg-[#071637] text-white"
       >
         <div className="grid grid-cols-1 md:grid-cols-2 w-11/12 max-w-6xl gap-6 items-start">
           {/* Left Side Content */}
@@ -178,7 +178,7 @@ const steps = [
           </div>
 
           {/* Right Side Puzzle */}
-          <div className="relative w-[360px] h-[360px] mx-auto">
+          <div className="relative w-[330px] h-[360px] mx-auto ml-7 xss:ml-5">
             {steps.map((step, idx) => (
               <AnimatePresence key={step.id}>
                 {idx < stepIndex && (

@@ -1,5 +1,3 @@
-
-
 "use client";
 
 import { useRef, useState } from "react";
@@ -46,7 +44,7 @@ export default function ClientCarousel() {
         Our Clients
       </p>
 
-      <div className="relative max-w-7xl mx-auto space-y-10">
+      <div className="relative max-w-7xl mx-auto space-y-10 border-2 border-red-500 ">
         {/* Logo Carousel............... */}
         <Swiper
           loop={true}
@@ -70,7 +68,7 @@ export default function ClientCarousel() {
           {companies.concat(companies).map((c, i) => (
             <SwiperSlide key={`logo-${i}`} onClick={() => onLogoClick(i)}>
               <div
-                className={`flex justify-center transition-transform duration-300 cursor-pointer ${
+                className={`flex justify-center transition-transform duration-300 cursor-pointer   ${
                   activeIndex === i
                     ? "scale-125 opacity-100"
                     : "scale-90 opacity-50"
@@ -81,7 +79,7 @@ export default function ClientCarousel() {
                   alt={`Logo ${i}`}
                   width={120}
                   height={100}
-                  className="object-contain"
+                  className="object-contain "
                 />
               </div>
             </SwiperSlide>
@@ -89,9 +87,9 @@ export default function ClientCarousel() {
         </Swiper>
 
         {/* Phone Carousel..............*/}
-        <div className="w-full flex justify-center mx-auto   phone-section   translate-x-10 pt-20 sm:pt-8">
+        <div className="w-full flex justify-center mx-auto   phone-section pt-20  sm:pt-8 xs:overflow-hidden">
           <Swiper
-            className="client-swiper w-full  mx-auto"
+            className="client-swiper w-full  mx-auto border-2 border-green-500 "
             loop={true}
             centeredSlides={true}
             autoplay={{ delay: 2500, disableOnInteraction: false }}
