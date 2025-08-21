@@ -2,8 +2,8 @@ import Image from "next/image";
 import IndustryPage from "@/Components/Industries/page";
 // import SingleProductPage from "@/Components/SingleProduct/page";
 import Contact from "./Contact/page";
+import SingleProductPage from "@/Components/SingleProduct/page";
 import Home from "./Home/page";
-import Services from "./Services/Android-App-Development/page";
 import Footer from "../../Components/Footer";
 import Guarantees from "./guarantees/page";
 import PuzzleRes from "./puzzleres/page";
@@ -88,10 +88,21 @@ export default function App() {
 
       {/* <SingleProductPagetest2 /> */}
       {/* <SingleProductPagetest2res /> */}
+      <Navbar />
+      <Home />
+      <Responsive_ServicePage_Mobile />
+      <ClientCarousel />
+      <Guarantees />
+      <PuzzleRes />
+      <Responsive_Best_App />
+      <Responsive_Testimonials />
+      <Responsive_CalendarTestPast />
+      <Responsive_India />
+      <GetAQuoteForm />
+      <Footer />
       
 
       
-
 
     </>
   );

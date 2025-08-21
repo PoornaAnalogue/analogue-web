@@ -108,7 +108,7 @@ export default function Navbar() {
     menuOpen ? "hidden xl:block" : ""}`}>
   <div className="max-w-[1600px] flex items-center gap-10 px-4 sm:px-10 w-full xl:gap-5">
     {/* Logo */}
-    <Image src="/Analogue-navbar-logo.png" alt="Logo" width={150} height={48} className="flex-shrink-0 xl:w-[120px]"/>
+    <Image src="/Navbar/Analogue-navbar-logo.png" alt="Logo" width={150} height={48} className="flex-shrink-0 xl:w-[120px]"/>
 
           {/* Desktop Menu */}
           <ul className="hidden xl:flex items-center justify-center gap-10 text-black flex-grow">
@@ -145,7 +145,7 @@ export default function Navbar() {
                       {/* Icon container (takes no space until hover) */}
                       <span className="overflow-hidden w-0 group-hover:w-4 transition-all duration-200 flex justify-center text-violet-600">
                         <span className="overflow-hidden w-0 group-hover:w-4 transition-all duration-200 flex justify-center text-violet-600">
-                      <Image src="/navbar-hover-icon.png" alt="arrow" width={20} height={20} className="object-contain"/></span>
+                      <Image src="/Navbar/navbar-hover-icon.png" alt="arrow" width={20} height={20} className="object-contain"/></span>
                       </span>
 
             {/* Text — flush left, moves right only when icon appears */}
@@ -215,7 +215,7 @@ export default function Navbar() {
     {/* Rectangle behind logo */}
     <div className="bg-blue-100 w-full flex items-center justify-center lg:pt-8">
       <Image
-        src="/Analogue-navbar-logo.png"
+        src="/Navbar/Analogue-navbar-logo.png"
         alt="Logo"
         width={300}
         height={150}
@@ -344,14 +344,14 @@ export default function Navbar() {
 </div>
 
 
-      {/* Mobile Quick Call + Free Quote */}
-      <div className="flex xl:hidden 2xl:hidden 3xl:hidden xs:justify-center items-center gap-4 px-4 py-3 bg-gray-50 mt-4">
-        <Image src="/phone-icon.png" alt="Phone" width={16} height={16} />
+      {/* in screens less than lg - Mobile Quick Call + Free Quote */}
+      <div className="flex xl:hidden 2xl:hidden 3xl:hidden xss:justify-center items-center gap-4 px-4 py-3 bg-gray-50 mt-4">
+        <Image src="/Navbar/phone-icon.png" alt="Phone" width={16} height={16} />
         <div className="flex flex-col">
           <span className="xss:text-[0.6rem] lg:text-xs text-gray-500">Quick Call</span>
           <span className="xss:text-[0.6rem] lg:text-xs text-blue-700">+91 8919088163</span>
         </div>
-        <button onClick={() => setIsOpen(true)} className="bg-blue-600 xss:text-[0.6rem] lg:text-xs xss:py-1 xss:px-2 text-white lg:px-3 lg:py-[1.5] rounded-full hover:bg-blue-700 transition">
+        <button onClick={() => setIsOpen(true)} className="bg-blue-600 xss:text-[0.6rem] lg:text-xs xss:py-1 xss:px-2 text-white lg:px-3 lg:py-1 rounded-full hover:bg-blue-700 transition">
           Free Quote
         </button>
       </div>
