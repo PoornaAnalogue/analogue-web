@@ -119,14 +119,21 @@ export default function Footer() {
   <div className="col-span-3 grid grid-cols-1 xl:grid-cols-3 gap-8 ">
     {/* Location */}
     <div className="flex items-start gap-4">
-      <Image
-        src="/Footer/Location.png"
-        alt="Location"
-        width={0}
-        height={0}
-        sizes="100vw"
-        className="w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] 2xl:w-[80px] 2xl:h-[80px] object-contain"
-      />
+      <a
+        href="https://maps.app.goo.gl/P858gAyx5vH8GaTQ7?g_st=ac"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Open location in Google Maps"
+      >
+        <Image
+          src="/Footer/Location.png"
+          alt="Location"
+          width={0}
+          height={0}
+          sizes="100vw"
+          className="w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] 2xl:w-[80px] 2xl:h-[80px] object-contain cursor-pointer"
+        />
+      </a>
       <div className="flex flex-col">
         <h2>LOCATION</h2>
         <p className="text-gray-500 text-sm mt-2">

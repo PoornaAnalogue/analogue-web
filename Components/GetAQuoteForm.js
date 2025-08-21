@@ -28,7 +28,7 @@ export default function GetAQuoteForm() {
   const isError = (field) => touched[field] && !formData[field];
 
   return (
-    <div className="main-container min-h-[600px] xl:min-h-[700px] 2xl:min-h-screen relative flex flex-col items-center justify-center rounded-lg px-4 xl:mt-[-6rem] xs:px-6 xss:py-10 xl:py-0 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-20">
+    <div id ="form-section"  className="main-container min-h-[600px] xl:min-h-[700px] 2xl:min-h-screen relative flex flex-col items-center justify-center rounded-lg px-4 xl:mt-[-6rem] xs:px-6 xss:py-10 xl:py-0 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-20">
       {/* Background Image Layer */}
       <div
         className="Form-img absolute z-0 
@@ -57,7 +57,7 @@ export default function GetAQuoteForm() {
         </div>
 
         {/* Glassmorphic Form */}
-        <div className="relative z-20 xl:p-6 xl:mt-[-2.7rem] 2xl:mt-[-2.3rem] 3xl:mt-[-1.5rem] xss:mt-[-2.3rem] xs:mt-[-2.2rem] sm:mt-[-2.4rem] md:mt-[-2rem] lg:mt-[-2.5rem] w-full p-5 border-gray-300 border-2
+        <div id ="form-section" className="relative z-20 xl:p-6 xl:mt-[-2.7rem] 2xl:mt-[-2.3rem] 3xl:mt-[-1.5rem] xss:mt-[-2.3rem] xs:mt-[-2.2rem] sm:mt-[-2.4rem] md:mt-[-2rem] lg:mt-[-2.5rem] w-full p-5 border-gray-300 border-2
                         2xl:w-[90%] xl:w-[75%] lg:w-[80%] md:w-[80%] sm:w-[75%] xs:w-[75%] xs:p-3 xss:w-[80%]
                         rounded-3xl backdrop-blur-3xl shadow-lg 
                         bg-gradient-to-br from-white/40 via-white/50 to-transparent">

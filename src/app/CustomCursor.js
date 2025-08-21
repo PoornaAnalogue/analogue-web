@@ -16,7 +16,8 @@ export default function CustomCursor() {
       const tag = target.tagName.toLowerCase();
       const isClickable =
         target.closest("a, button, input, textarea, select, [role='button']") ||
-        target.getAttribute("onclick") !== null ||
+        target.getAttribute("onclick") !== null || 
+        window.getComputedStyle(target).cursor === "not-allowed" ||
         window.getComputedStyle(target).cursor === "pointer";
 
       setHide(isClickable);

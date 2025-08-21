@@ -1,57 +1,21 @@
+/* globals.css */
 @import "tailwindcss";
-
-.hero {
-  display: flex;
-  /* flex-direction: row; */
-  align-items: stretch;
-}
-
-html, body {
-  cursor: none; /* Hide default cursor */
-}
-
-/* globals.css */
-@keyframes glow {
-  0%, 100% {
-    text-shadow: 0 0 3px #4165e6ff, 0 0 6px #4165e6ff;
-  }
-  50% {
-    text-shadow: 0 0 10px #4165e6ff, 0 0 20px #4165e6ff;
-  }
-}
-
-
-@keyframes braceMoveLeft {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); } /* left brace paiki */
-}
-
-@keyframes braceMoveRight {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(6px); } /* right brace kindaki */
-}
-
-
-
-/* globals.css */
-@keyframes openClose {
-  0%, 100% { letter-spacing: -5px; }
-  50% { letter-spacing: 2px; }
-}
-
-
-
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* breakpoints for responsiveness */
+/* Remove duplicate html, body declaration */
+html, body {
+  cursor: none;
+  background: var(--background, #ffffff);
+  color: var(--foreground, #000000);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Define custom breakpoints */
 @theme {
-  /* Your custom breakpoints */
-  
   --breakpoint-xss: 320px;
-   --breakpoint-xxs: 344px;
+  --breakpoint-xxs: 344px;
   --breakpoint-xs: 360px;
   --breakpoint-sm: 480px;
   --breakpoint-md: 640px;
@@ -60,144 +24,20 @@ html, body {
   --breakpoint-2xl: 1280px;
   --breakpoint-3xl: 1536px;
 
-  /* Map them to Tailwind's internal vars */
+    /* Map them to Tailwind's internal vars */
   --tw-breakpoint-sm: var(--breakpoint-sm);
   --tw-breakpoint-md: var(--breakpoint-md);
   --tw-breakpoint-lg: var(--breakpoint-lg);
   --tw-breakpoint-xl: var(--breakpoint-xl);
   --tw-breakpoint-2xl: var(--breakpoint-2xl);
+
 }
 
-/* globals.css */
+/* Background images */
 .bg-industry {
   background-image: url('/IndustryBg.jpg');
 }
 
-.animate-scroll {
-  display: flex;
-  animation: scroll 30s linear infinite;
-  gap: 16px;
-}
-
-@layer utilities {
-  @media (min-width: var(--breakpoint-xs)) {
-    .xs\:block { display: block; }
-    .xs\:hidden { display: none; }
-  }
-  @media (min-width: var(--breakpoint-3xl)) {
-    .\33 xl\:block { display: block; }
-    .\33 xl\:hidden { display: none; }
-  }
-}
-
-.carousel-wrapper {
-  overflow: hidden;
-  width: 100%;
-  max-width: 72rem;
-}
-
-.animate-scroll,
-.animate-scrollLap {
-  display: flex;
-  gap: 16px;
-  width: max-content;
-  animation: none; /* Will be set dynamically */
-}
-
-.animate-scroll > div,
-.animate-scrollLap > div {
-  flex-shrink: 0;
-}
-
-/* PUZZLE  */
-/* Hide scrollbar */
-.scrollbar-hide::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Edge */
-}
-.scrollbar-hide {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
-/* ======================= */
-/* CLIENT CAROUSEL STYLES  */
-.phone-section {
-  overflow: hidden;
-}
-/* .client-swiper .swiper-wrapper {
-  overflow-x: hidden !important;
-} */
-
-
-
- 
-
-/* For screens 480px and above only */
-/* @media (min-width: 480px) and (max-width: 639px) {
-  .my-swiper {
-    padding-left: 50px; 
-    padding-top: 50px;/* only applied in this range */
-  /* } */
-/* }  */
-
-/*  */
-
-
-
-
-
-
-
-
-
-
-
-/* ======================= */
-
-
-
-
-/* RESPONSIVENESS ...... */
-/* 1. Override Tailwind's theme breakpoints */
-@layer theme {
-  :root {
-    /* Your custom breakpoints */
-    --breakpoint-xs: 360px;
-    --breakpoint-sm: 480px;
-    --breakpoint-md: 640px;
-    --breakpoint-lg: 768px;
-    --breakpoint-xl: 1024px;
-    --breakpoint-2xl: 1280px;
-    --breakpoint-3xl: 1536px;
- 
-    /* Map them to Tailwind's internal vars */
-    
-    --tw-breakpoint-sm: var(--breakpoint-sm);
-    --tw-breakpoint-md: var(--breakpoint-md);
-    --tw-breakpoint-lg: var(--breakpoint-lg);
-    --tw-breakpoint-xl: var(--breakpoint-xl);
-    --tw-breakpoint-2xl: var(--breakpoint-2xl);
-    
-  }
-}
-
-@keyframes scrollLap {
-  0% { transform: translateX(var(--total-width)); }
-  100% { transform: translateX(0); }
-}
-
-.animate-scroll {
-  animation: scroll 30s linear infinite;
-}
-
-.animate-scrollLap {
-  animation: scrollLap 30s linear infinite;
-}
-
-.animate-scroll:hover,
-.animate-scrollLap:hover {
-  animation-play-state: paused;
-}
 
 .bg-calendar {
   background-image: url('/Calendar-Images/calendar-bg.jpg');
@@ -215,6 +55,165 @@ html, body {
   background-image: url('/Calendar-Images/Ellipse.png');
 }
 
+.Form-img {
+  background-image: url('/contact/Form-background.png');
+}
+
+/* Carousel animations */
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(var(--total-width)); }
+}
+
+@keyframes scrollLap {
+  0% { transform: translateX(var(--total-width)); }
+  100% { transform: translateX(0); }
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  max-width: 72rem;
+}
+
+.animate-scroll,
+.animate-scrollLap {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  animation-duration: 30s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  will-change: transform;
+}
+
+.animate-scroll {
+  animation-name: scroll;
+}
+
+.animate-scrollLap {
+  animation-name: scrollLap;
+}
+
+.animate-scroll > div,
+.animate-scrollLap > div {
+  flex-shrink: 0;
+}
+
+.animate-scroll:hover,
+.animate-scrollLap:hover {
+  animation-play-state: paused;
+}
+
+@media (max-width: 768px) {
+  .animate-scroll > div {
+    min-width: 120px;
+    height: 200px;
+  }
+
+  .animate-scrollLap > div {
+    min-width: 100px;
+    height: 180px;
+  }
+}
+
+/* Glow animation */
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 3px #4165e6, 0 0 6px #4165e6;
+  }
+  50% {
+    text-shadow: 0 0 10px #4165e6, 0 0 20px #4165e6;
+  }
+}
+
+/* Brace animations */
+@keyframes braceMoveLeft {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes braceMoveRight {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+/* Open-close animation */
+@keyframes openClose {
+  0%, 100% { letter-spacing: -5px; }
+  50% { letter-spacing: 2px; }
+}
+
+/* Crossfade text animation */
+@keyframes crossfadeTexts {
+  0%, 45% { opacity: 1; }
+  50%, 95% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.animate-crossfadeTexts {
+  animation: crossfadeTexts 4s ease-in-out infinite;
+}
+
+/* Fade swap animation */
+@keyframes fadeSwap {
+  0% { opacity: 1; }
+  40% { opacity: 0; }
+  60% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.animate-fadeSwap {
+  animation: fadeSwap 3s ease-in-out infinite;
+}
+
+/* Slide + fade swap animation */
+@keyframes slideFadeSwap {
+  0% { opacity: 1; transform: translateX(0); }
+  40% { opacity: 0; transform: translateX(-30px); }
+  60% { opacity: 0; transform: translateX(30px); }
+  100% { opacity: 1; transform: translateX(0); }
+}
+
+.animate-slideFadeSwap {
+  animation: slideFadeSwap 4s ease-in-out infinite;
+}
+
+/* Scale + fade swap animation */
+@keyframes scaleFadeSwap {
+  0% { opacity: 1; transform: scale(1); }
+  40% { opacity: 0; transform: scale(0.9); }
+  60% { opacity: 0; transform: scale(1.1); }
+  100% { opacity: 1; transform: scale(1); }
+}
+
+.animate-scaleFadeSwap {
+  animation: scaleFadeSwap 4s ease-in-out infinite;
+}
+
+/* Word-by-word fade swap */
+@keyframes wordFadeSwap {
+  0% { opacity: 1; }
+  25% { opacity: 0; }
+  50% { opacity: 1; }
+  75% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.animate-wordFadeSwap span {
+  opacity: 0;
+  animation: wordFadeSwap 6s ease-in-out infinite;
+}
+
+.animate-wordFadeSwap span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.animate-wordFadeSwap span:nth-child(2) {
+  animation-delay: 3s;
+}
+
+/* Swiper controls */
 .swiper-controls .swiper-button-prev,
 .swiper-controls .swiper-button-next {
   transform: none !important;
@@ -248,6 +247,7 @@ html, body {
   background-color: #071637 !important;
 }
 
+/* Triangle path animation */
 @layer utilities {
   @keyframes triangle-path {
     0% { transform: translate(150px, 80px); }
@@ -313,14 +313,87 @@ html, body {
   .animate-triangle-path {
     animation: triangle-path 3s linear infinite;
   }
+
+  /* Custom breakpoint utilities */
+  @media (min-width: var(--breakpoint-xs)) {
+    .xs\:block { display: block; }
+    .xs\:hidden { display: none; }
+  }
+
+  @media (min-width: var(--breakpoint-3xl)) {
+    .3xl\:block { display: block; }
+    .3xl\:hidden { display: none; }
+  }
+
+  /* Hamburger and desktop menu */
+  @media (min-width: 1024px) {
+    .hamburger { display: none !important; }
+    .desktop-menu { display: flex !important; }
+  }
+
+  @media (max-width: 1023px) {
+    .hamburger { display: block !important; }
+    .desktop-menu { display: none !important; }
+  }
+
+  /* Free Quote: visible only from 1024–1279px */
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    .free-quote-lg-only { display: flex !important; }
+  }
+
+  @media (max-width: 1023px), (min-width: 1280px) {
+    .free-quote-lg-only { display: none !important; }
+  }
+
+  /* Phone + Quick Call block: visible only 1280px+ */
+  @media (min-width: 1280px) {
+    .only-xl\:flex { display: flex !important; }
+  }
+
+  @media (max-width: 1279px) {
+    .only-xl\:flex { display: none !important; }
+  }
 }
 
+/* Navbar background colors */
+@layer utilities {
+  @media (min-width: 310px) and (max-width: 480px) {
+    .Navbar-main {
+      background-color: #e0e0e0;
+    }
+  }
+
+  @media (min-width: 481px) and (max-width: 768px) {
+    .Navbar-main {
+      background-color: #d0d0f0;
+    }
+  }
+
+  @media (min-width: 769px) and (max-width: 1023px) {
+    .Navbar-main {
+      background-color: #c0d0f0;
+    }
+  }
+}
+
+/* Scrollbar hiding */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Component styles */
 @layer components {
   .btn-primaryyy {
     @apply bg-blue-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-700;
   }
 }
 
+/* Theme colors */
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -335,297 +408,6 @@ html, body {
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-@media (max-width: 768px) {
-  .animate-scroll>div {
-    min-width: 120px;
-    height: 200px;
-  }
-
-  .animate-scroll img {
-    width: 120px;
-    height: 200px;
-  }
-  .animate-scrollLap > div {
-    min-width: 100px;
-    height: 180px;
-  }
-  .animate-scrollLap img {
-    width: 100px;
-    height: 180px;
-  }
-}
-
 .left-hero {
   background-color: oklch(97.593% 0.00604 224.239);
 }
-
-
-/* 2. Add xs: and 3xl: modifiers to Tailwind */
-@layer utilities {
-
-  /* xs: modifier */
-  @media (min-width: var(--breakpoint-xs)) {
-    .xs\:block {
-      display: block;
-    }
-
-    .xs\:hidden {
-      display: none;
-    }
-
-    /* Add more xs: utilities as needed */
-  }
-
-  /* 3xl: modifier */
-  @media (min-width: var(--breakpoint-3xl)) {
-    .\33 xl\:block {
-      display: block;
-    }
-
-    .\33 xl\:hidden {
-      display: none;
-    }
-
-    /* Add more 3xl: utilities as needed */
-  }
-
-
-
-  /* globals.css additions */
-  /* Hide hamburger and show desktop menu from 1024px upward */
-  @media (min-width: 1024px) {
-    .hamburger {
-      display: none !important;
-    }
-
-    .desktop-menu {
-      display: flex !important;
-    }
-  }
-
-  /* Show hamburger and hide desktop menu below 1024px */
-  @media (max-width: 1023px) {
-    .hamburger {
-      display: block !important;
-    }
-
-    .desktop-menu {
-      display: none !important;
-    }
-  }
-
-  /* Free Quote: visible only from 1024–1279px */
-  @media (min-width: 1024px) and (max-width: 1279px) {
-    .free-quote-lg-only {
-      display: flex !important;
-    }
-  }
-
-  @media (max-width: 1023px),
-  (min-width: 1280px) {
-    .free-quote-lg-only {
-      display: none !important;
-    }
-  }
-
-  /* Phone + Quick Call block: visible only 1280px+ */
-  @media (min-width: 1280px) {
-    .only-xl\:flex {
-      display: flex !important;
-    }
-  }
-
-  @media (max-width: 1279px) {
-    .only-xl\:flex {
-      display: none !important;
-    }
-  }
-}
-
-
-
-
-/* sample testing */
-
-/* ======================
-   MULTI-TEXT FADE EFFECTS
-   ====================== */
-
-/* 1. Crossfade between 2 texts in home page title */
-@keyframes crossfadeTexts {
-
-  0%,
-  45% {
-    opacity: 1;
-  }
-
-  50%,
-  95% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-@media (min-width: 310px) and (max-width: 480px) {
-  .Navbar-main {
-    background-color: #f0f0f0;
-  }
-}
-  }
-}
-
-@media (min-width: 350px) and (max-width: 480px) {
-  .Navbar-main {
-    background-color: #e0e0e0;
-  }
-}
-
-@media (min-width: 481px) and (max-width: 768px) {
-  .Navbar-main {
-    background-color: #d0d0f0;
-  }
-}
-
-.animate-crossfadeTexts {
-  animation: crossfadeTexts 4s ease-in-out infinite;
-}
-
-.animate-crossfadeTexts {
-  animation: crossfadeTexts 4s ease-in-out infinite;
-}
-
-/* 2. Fade Out then Fade In */
-@keyframes fadeSwap {
-  0% {
-    opacity: 1;
-  }
-
-  40% {
-    opacity: 0;
-  }
-
-  60% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.animate-fadeSwap {
-  animation: fadeSwap 3s ease-in-out infinite;
-}
-
-/* 3. Slide + Fade Swap (Left to Right) */
-@keyframes slideFadeSwap {
-  0% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  40% {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-
-  60% {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.animate-slideFadeSwap {
-  animation: slideFadeSwap 4s ease-in-out infinite;
-}
-
-/* 4. Scale + Fade Swap */
-@keyframes scaleFadeSwap {
-  0% {
-    opacity: 1;
-    transform: scale(1);
-  }
-
-  40% {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-
-  60% {
-    opacity: 0;
-    transform: scale(1.1);
-  }
-
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.animate-scaleFadeSwap {
-  animation: scaleFadeSwap 4s ease-in-out infinite;
-}
-
-/* 5. Word-by-word fade swap */
-@keyframes wordFadeSwap {
-  0% {
-    opacity: 1;
-  }
-
-  25% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  75% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.animate-wordFadeSwap span {
-  opacity: 0;
-  animation: wordFadeSwap 6s ease-in-out infinite;
-}
-
-.animate-wordFadeSwap span:nth-child(1) {
-  animation-delay: 0s;
-}
-
-.animate-wordFadeSwap span:nth-child(2) {
-  animation-delay: 3s;
-}
-
-
-/* GetAQuote Form responsive styles based on breakpoints  */
-@media (min-width: 769px) and (max-width: 1023px) {
-  .Navbar-main {
-    background-color: #c0d0f0;
-  }
-}
-
-.Form-img{
-  background-image: url('/contact/Form-background.png');
-}
-
-
-/* poorna's new lines */
-
-

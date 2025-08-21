@@ -2,7 +2,7 @@
 import { useEffect } from "react";
 import Image from "next/image";
 
-export default function Responsive_AdobeTech() {
+export default function Responsive_VueJsTech() {
   useEffect(() => {
     const scrollCarousel = document.querySelector(".animate-scroll");
     const scrollLapCarousel = document.querySelector(".animate-scrollLap");
@@ -57,10 +57,10 @@ export default function Responsive_AdobeTech() {
         <div className="flex flex-col xl:flex-row justify-center items-center w-full bg-white px-4 xss:px-6 xs:px-8 sm:px-10 md:px-14 lg:px-16 xl:px-20 2xl:px-24 3xl:px-32 pt-0 pb-6">
           <div className="w-full xl:w-3/5 font-medium xl:pl-10">
             <p className="text-2xl xss:text-[1.2rem] xs:text-[1.5rem] sm:text-[1.7rem] font-semibold text-black underline underline-offset-[12px] sm:underline-offset-[16px] decoration-[#0D6EFD] decoration-4 p-2">
-              Adobe XD
+              Vue JS
             </p>
             <p className="text-lg xss:text-lg xs:text-[1.3rem] sm:text-[1.5rem] font-medium text-[#0E59F2] p-2 pl-3 mt-2 sm:mt-3">
-              We design using Adobe XD
+              We design using Vue JS
             </p>
             <p className="text-xs xss:text-sm xs:text-base sm:text-md pr-6 text-[#7B7E86] leading-6 pl-3">
               Analogue is a Best mobile app development company in Hyderabad that
@@ -73,7 +73,7 @@ export default function Responsive_AdobeTech() {
           </div>
           <div className="w-full xl:w-2/5 flex justify-center xl:justify-end mb-6 xl:mb-0">
             <Image
-              src="/AdobeTech-Images/Tech-Adobe.png"
+              src="/AdobeTech-Images/VueJs-Tech.png"
               width={400}
               height={450}
               alt="Adobe Tech image"
@@ -145,7 +145,7 @@ export default function Responsive_AdobeTech() {
               ].map((image, index) => (
                 <div
                   key={index}
-                  className="flex justify-center items-center min-w-[200px] xss:min-w-[220px] xs:min-w-[240px] sm:min-w-[260px] md:min-w-[300px] md-lg:min-w-[340px] lg:min-w-[300px] xl:min-w-[320px] 3xl:min-w-[340px] h-80 xss:h-88 xs:h-96 sm:h-[26rem] md:h-[28rem] md-lg:h-[27rem] lg:h-[15rem] xl:h-[16rem] 3xl:h-[17rem] bg-white"
+                  className="flex justify-center items-center min-w-[200px] xss:min-w-[200px] xs:min-w-[240px] sm:min-w-[260px] md:min-w-[300px] md-lg:min-w-[340px] lg:min-w-[300px] xl:min-w-[320px] 3xl:min-w-[340px] h-80 xss:h-88 xs:h-96 sm:h-[26rem] md:h-[28rem] md-lg:h-[27rem] lg:h-[15rem] xl:h-[16rem] 3xl:h-[17rem] bg-white"
                 >
                   <Image
                     src={image.src}

@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function SingleProductPage() {
+export default function SingleProductPagetest2() {
     return (
         <>
             <div className="h-full w-full bg-white">
@@ -26,7 +26,7 @@ export default function SingleProductPage() {
                     <p className="text-3xl text-black">Buykeyz</p>
                 </div>
                 <div className=" py-5  bg-white w-full flex text-center justify-center h-full">
-                    <div className="w-1/2 flex justify-end items-start gap-5  pl-10 pr-0">
+                    {/* <div className="w-1/2 flex justify-end items-start gap-5  pl-10 pr-0">
                     <div className="">
                         <Image src="/SingleProduct-Images/img1.jpg" width={170} height={450} alt="Buykeyz product image" className=" object-cover"/>
                         <p className="text-lg text-[#7B7E86] font-semibold">Paper Sketches</p>
@@ -40,6 +40,9 @@ export default function SingleProductPage() {
                         <p className="text-start text-lg text-[#7B7E86] font-semibold">Final UI Design</p>
                     </div>           
                   
+                    </div> */}
+                    <div className="w-1/2 text-center flex justify-center items-center ">
+                        <Image src="/image.png" width={550} height={250} alt="Combine image" className="object-contain "/>
                     </div>
 
                     <div className="w-1/2 px-10 flex flex-col  justify-start items-start">

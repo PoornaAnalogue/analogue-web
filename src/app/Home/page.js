@@ -38,7 +38,7 @@ export default function Home() {
 
   return (
     <div className="main !bg-[#FAFBFF] ">
-      <div className="flex flex-col relative min-h-[calc(100vh-64px)] lg:min-h-[calc(80vh-64px)] xl:min-h-[calc(85vh-64px)] 2xl:min-h-[calc(90vh-64px)]">
+      <div className="flex flex-col relative xss:min-h-[calc(10vh-64px)] lg:min-h-[calc(80vh-64px)] xl:min-h-[calc(85vh-64px)] 2xl:min-h-[calc(90vh-64px)]">
         {/* Hero */}
         <div className="hero flex flex-col xs:flex-col sm:flex-col md:flex-col lg:flex-col xl:flex-row !bg-[#FAFBFF] text-black relative">
           {/* Left Hero */}
