@@ -2,9 +2,7 @@
 import Image from "next/image";
 import IndustryPage from "@/Components/Industries/page";
 import SingleProductPage from "@/Components/SingleProduct/page";
-import Contact from "./Contact/page";
 import Home from "./Home/page";
-import Services from "./Services/Android-App-Development/page";
 import Footer from "../../Components/Footer";
 import Guarantees from "./guarantees/page";
 import PuzzleRes from "./puzzleres/page";
@@ -45,7 +43,6 @@ export default function App() {
       <Responsive_India />
       <GetAQuoteForm />
       <Footer/>
-
 
     </>
   );

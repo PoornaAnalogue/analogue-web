@@ -328,6 +328,10 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.NewFont{
+  font-family: 'Archivo', sans-serif;
+}
+
 @media (max-width: 768px) {
   .animate-scroll>div {
     min-width: 120px;

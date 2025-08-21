@@ -165,11 +165,12 @@ export default function Footer() {
       />
       <div className="flex flex-col">
         <h2>CONTACT US</h2>
-        <p className="text-gray-500 text-sm mt-2">
+        <a href="https://mail.google.com/mail/?view=cm&to=info@analogueitsolutions.com" className="hover:underline text-gray-500 text-sm">
           info@analogueitsolutions.com
-          <br />
+        </a>
+        <a href="tel:+918919088163" className="hover:underline text-gray-500 text-sm">
           +91 89190 88163
-        </p>
+        </a>
       </div>
     </div>
   </div>
