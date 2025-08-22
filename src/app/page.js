@@ -2,7 +2,7 @@ import Image from "next/image";
 import IndustryPage from "@/Components/Industries/page";
 // import SingleProductPage from "@/Components/SingleProduct/page";
 import Contact from "./Contact/page";
-import SingleProductPage from "@/Components/SingleProduct/page";
+import SingleProductPage from "@/app/SingleProduct/page";
 import Home from "./Home/page";
 import Footer from "../../Components/Footer";
 import Guarantees from "./guarantees/page";
@@ -39,8 +39,10 @@ import Responsive_NextTech from "./Tech-Next/page";
 import Responsive_ReactNTech from "./Tech-ReactN/page";
 import Responsive_PHPTech from "./Tech-PHP/page";
 import Responsive_VueJsTech from "./Tech-Vue/page";
-import SingleProductPagetest2 from "@/Components/SingleProduct/page";
-import SingleProductPagetest2res from "@/Components/SingleProduct/test2";
+import Responsive_SingleProductPage from "@/app/SingleProduct/page";
+import IndustryPagetest from "./Indus-News/page";
+import Responsive_IndusNews from "./Indus-News/page";
+import Responsive_IndusWeb from "./Indus-News copy/page";
 
 
 export default function App() {
@@ -86,9 +88,12 @@ export default function App() {
       <Responsive_VueJsTech /> */}
 
 
-      {/* <SingleProductPagetest2 /> */}
-      {/* <SingleProductPagetest2res /> */}
-      <Navbar />
+      {/* <Responsive_SingleProductPage /> */}
+      {/* <Responsive_IndusNews /> */}
+      {/* <Responsive_IndusWeb /> */}
+
+      
+      {/* <Navbar />
       <Home />
       <Responsive_ServicePage_Mobile />
       <ClientCarousel />
@@ -99,7 +104,9 @@ export default function App() {
       <Responsive_CalendarTestPast />
       <Responsive_India />
       <GetAQuoteForm />
-      <Footer />
+      <Footer /> */}
+
+      {/* <GetAQuoteForm /> */}
       
 
       

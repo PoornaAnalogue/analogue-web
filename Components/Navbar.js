@@ -20,7 +20,6 @@ export default function Navbar() {
   }
 }, [menuOpen]);
 
-
   let hideTimeout;
 
   const mainMenu = [
@@ -208,7 +207,7 @@ export default function Navbar() {
 
 {/** Sidebar */}
 <div
-  className={` xl:hidden fixed top-0 left-0 h-full w-[70%] bg-white shadow-lg z-[300] overflow-y-auto transform transition-transform duration-500 ease-in-out
+  className={`text-black xl:hidden fixed top-0 left-0 h-full w-[70%] bg-white shadow-lg z-[300] overflow-y-auto transform transition-transform duration-500 ease-in-out
     ${menuOpen ? "translate-x-0" : "-translate-x-full pointer-events-none"}`}>
   {/* Sidebar Header */}
   <div className="relative flex flex-col items-center">
@@ -277,7 +276,7 @@ export default function Navbar() {
       <div key={i}>
         <button
           onClick={() => toggleDropdown(menu.label)}
-          className="flex justify-between items-center xss:text-xs lg:text-md w-full py-3 px-2 border-b leading-[2rem]"
+          className="flex justify-between items-center xss:text-xs lg:text-md w-full py-3 px-2 border-b leading-[2rem] text-black"
         >
           <span className="flex items-center">
             {/* Chevron that rotates */}
@@ -349,7 +348,7 @@ export default function Navbar() {
         <Image src="/Navbar/phone-icon.png" alt="Phone" width={16} height={16} />
         <div className="flex flex-col">
           <span className="xss:text-[0.6rem] lg:text-xs text-gray-500">Quick Call</span>
-          <span className="xss:text-[0.6rem] lg:text-xs text-blue-700">+91 8919088163</span>
+            <a href="tel:+918919088163" className="text-xs text-blue-700 hover:underline transition-colors duration-200"> +91 8919088163</a>
         </div>
         <button onClick={() => setIsOpen(true)} className="bg-blue-600 xss:text-[0.6rem] lg:text-xs xss:py-1 xss:px-2 text-white lg:px-3 lg:py-1 rounded-full hover:bg-blue-700 transition">
           Free Quote
@@ -357,7 +356,6 @@ export default function Navbar() {
       </div>
           <PopUpForm isOpen={isOpen} onClose={() => setIsOpen(false)} />
     </div>
-    
   );
 }
 

@@ -1,5 +1,53 @@
 /* globals.css */
 @import "tailwindcss";
+@import "./nandini.css";
+
+.hero {
+  display: flex;
+  /* flex-direction: row; */
+  align-items: stretch;
+}
+
+html, body {
+  cursor: none;
+ 
+  overflow-x: hidden;
+
+ /* Hide default cursor */
+}
+
+/* globals.css */
+@keyframes glow {
+  0%, 100% {
+    text-shadow: 0 0 3px #4165e6ff, 0 0 6px #4165e6ff;
+  }
+  50% {
+    text-shadow: 0 0 10px #4165e6ff, 0 0 20px #4165e6ff;
+  }
+}
+
+
+@keyframes braceMoveLeft {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); } /* left brace paiki */
+}
+
+@keyframes braceMoveRight {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); } /* right brace kindaki */
+}
+
+
+
+/* globals.css */
+@keyframes openClose {
+  0%, 100% { letter-spacing: -5px; }
+  50% { letter-spacing: 2px; }
+}
+
+
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -38,6 +86,102 @@ html, body {
   background-image: url('/IndustryBg.jpg');
 }
 
+.animate-scroll {
+  display: flex;
+  animation: scroll 30s linear infinite;
+  gap: 16px;
+}
+
+@layer utilities {
+  @media (min-width: var(--breakpoint-xs)) {
+    .xs\:block { display: block; }
+    .xs\:hidden { display: none; }
+  }
+  @media (min-width: var(--breakpoint-3xl)) {
+    .\33 xl\:block { display: block; }
+    .\33 xl\:hidden { display: none; }
+  }
+}
+
+.carousel-wrapper {
+  overflow: hidden;
+  width: 100%;
+  max-width: 72rem;
+}
+
+.animate-scroll,
+.animate-scrollLap {
+  display: flex;
+  gap: 16px;
+  width: max-content;
+  animation: none; /* Will be set dynamically */
+}
+
+.animate-scroll > div,
+.animate-scrollLap > div {
+  flex-shrink: 0;
+}
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+/* ======================= */
+
+
+
+
+/* RESPONSIVENESS ...... */
+/* 1. Override Tailwind's theme breakpoints */
+@layer theme {
+  :root {
+    /* Your custom breakpoints */
+    --breakpoint-xs: 360px;
+    --breakpoint-sm: 480px;
+    --breakpoint-md: 640px;
+    --breakpoint-lg: 768px;
+    --breakpoint-xl: 1024px;
+    --breakpoint-2xl: 1280px;
+    --breakpoint-3xl: 1536px;
+ 
+    /* Map them to Tailwind's internal vars */
+    
+    --tw-breakpoint-sm: var(--breakpoint-sm);
+    --tw-breakpoint-md: var(--breakpoint-md);
+    --tw-breakpoint-lg: var(--breakpoint-lg);
+    --tw-breakpoint-xl: var(--breakpoint-xl);
+    --tw-breakpoint-2xl: var(--breakpoint-2xl);
+    
+  }
+}
+
+@keyframes scrollLap {
+  0% { transform: translateX(var(--total-width)); }
+  100% { transform: translateX(0); }
+}
+
+.animate-scroll {
+  animation: scroll 30s linear infinite;
+}
+
+.animate-scrollLap {
+  animation: scrollLap 30s linear infinite;
+}
+
+.animate-scroll:hover,
+.animate-scrollLap:hover {
+  animation-play-state: paused;
+}
 
 .bg-calendar {
   background-image: url('/Calendar-Images/calendar-bg.jpg');

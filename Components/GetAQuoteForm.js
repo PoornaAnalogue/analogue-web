@@ -75,7 +75,7 @@ export default function GetAQuoteForm() {
           <form className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 xs:gap-2 overflow-hidden">
             {[
               { name: "name", type: "text", placeholder: "Your Name*" },
-              { name: "email", type: "email", placeholder: "Your Email*" },
+              { name: "email", type: "email", placeholder: "Your Email" },
               { name: "subject", type: "text", placeholder: "Subject" },
             ].map((field, i) => (
               <div key={i}>
@@ -86,7 +86,7 @@ export default function GetAQuoteForm() {
                   onBlur={handleBlur}
                   className={`bg-transparent border-b focus:outline-none text-gray-800 placeholder-black text-xs py-2 w-full ${
                     isError(field.name)
-                      ? "border-red-500 text-red-600"
+                      ? "border-black-500 text-blue-600"
                       : "border-gray-800"
                   }`}
                 />
@@ -97,8 +97,7 @@ export default function GetAQuoteForm() {
                 )}
               </div>
             ))}
-
-            {/* Phone Number with Flag */}
+ 
             <div>
               <PhoneInput
                 country={"in"}
@@ -108,22 +107,17 @@ export default function GetAQuoteForm() {
                 enableSearch={true}
                 inputClass="!bg-transparent !border-none !focus:outline-none !text-xs !w-full !pl-12 !text-gray-800 placeholder-black"
                 buttonClass="!bg-transparent !border-none !outline-none"
-                containerClass={`!border-b !pb-1 ${
-                  isError("phone")
-                    ? "!border-red-500 !text-red-600"
-                    : "!border-gray-800"
-                }`}
+                containerClass={`!border-b !pb-1 ${isError("phone") || (formData.phone && formData.phone.replace(/^\+91/, '').length < 10) ? "!border-red-500 !text-red-600" : "!border-gray-800"}`}
                 dropdownClass="!bg-white !text-xs"
                 placeholder="Phone Number*"
               />
-              {isError("phone") && (
+              {(isError("phone") || (formData.phone && formData.phone.replace(/^\+91/, '').length < 10)) && (
                 <p className="text-xs text-red-500 mt-1">
-                  Phone Number is required.
+                  Please enter a valid number.
                 </p>
               )}
             </div>
-
-            {/* Select */}
+ 
             <div className="md:col-span-2">
               <select
                 name="reach"
@@ -132,7 +126,7 @@ export default function GetAQuoteForm() {
                 onBlur={handleBlur}
                 className={`bg-transparent border-b focus:outline-none text-gray-800 text-xs placeholder-black py-2 w-full ${
                   isError("reach")
-                    ? "border-red-500 text-red-600"
+                    ? "border-black-500 text-black-600"
                     : "border-gray-800"
                 }`}
               >
@@ -149,8 +143,7 @@ export default function GetAQuoteForm() {
                 </p>
               )}
             </div>
-
-            {/* Textarea */}
+ 
             <div className="md:col-span-2">
               <textarea
                 name="message"
@@ -171,8 +164,7 @@ export default function GetAQuoteForm() {
                 </p>
               )}
             </div>
-
-            {/* Button */}
+ 
             <div className="col-span-1 md:grid-cols-2 flex justify-start mt-2">
               <button
                 type="submit"
