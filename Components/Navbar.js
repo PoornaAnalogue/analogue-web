@@ -349,7 +349,7 @@ export default function Navbar() {
         <Image src="/Navbar/phone-icon.png" alt="Phone" width={16} height={16} />
         <div className="flex flex-col">
           <span className="xss:text-[0.6rem] lg:text-xs text-gray-500">Quick Call</span>
-          <span className="xss:text-[0.6rem] lg:text-xs text-blue-700">+91 8919088163</span>
+            <a href="tel:+918919088163" className="text-xs text-blue-700 hover:underline transition-colors duration-200"> +91 8919088163</a>
         </div>
         <button onClick={() => setIsOpen(true)} className="bg-blue-600 xss:text-[0.6rem] lg:text-xs xss:py-1 xss:px-2 text-white lg:px-3 lg:py-1 rounded-full hover:bg-blue-700 transition">
           Free Quote
