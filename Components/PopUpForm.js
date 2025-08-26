@@ -22,9 +22,23 @@ export default function PopUpForm({ isOpen, onClose }) {
     setFormData((s) => ({ ...s, [name]: value }));
   };
 
-  const handleBlur = (e) => setTouched((s) => ({ ...s, [e.target.name]: true }));
-  const isError = (field) => touched[field] && !formData[field];
+const handleBlur = (e) => {
+  const { name } = e.target;
+  setTouched((s) => ({ ...s, [name]: true }));
+};
+
+const isError = (field) => touched[field] && !formData[field];
   
+
+const isValidPhone = (phone) => {
+  // Remove +91 or 91 and non-digits
+  const num = phone.replace(/^\+?91/, "").replace(/\D/g, "");
+  console.log("isValidPhone input:", phone, "cleaned:", num); // Debug log
+  // Must be exactly 10 digits, starting with 6–9
+  return /^[6-9]\d{9}$/.test(num);
+};
+
+
     // capcha generation
      const [captcha, setCaptcha] = useState("");
      const [captchaError, setCaptchaError] = useState(""); 
@@ -46,11 +60,10 @@ export default function PopUpForm({ isOpen, onClose }) {
 const handleSubmit = (e) => {
   e.preventDefault();
 
-  // Required fields (excluding captchaInput here)
   const requiredFields = ["name", "phone", "subject", "reach", "message"];
   let hasError = false;
 
-  // Mark all empty required fields as touched
+  // check empty fields
   requiredFields.forEach((field) => {
     if (!formData[field]) {
       setTouched((prev) => ({ ...prev, [field]: true }));
@@ -58,12 +71,18 @@ const handleSubmit = (e) => {
     }
   });
 
-  // ✅ Check normal fields first
-  if (hasError) {
-    return; // stop submission
+  // phone validation (force touched)
+  if (!isValidPhone(formData.phone)) {
+    setTouched((prev) => ({ ...prev, phone: true }));
+    hasError = true; // <-- important
   }
 
-  // ✅ Special captcha validation
+  if (hasError) {
+    console.log("❌ Invalid input, form blocked");
+    return;
+  }
+
+  // captcha validation
   if (!formData.captchaInput) {
     setCaptchaError("Enter captcha");
     return;
@@ -72,16 +91,12 @@ const handleSubmit = (e) => {
   if (formData.captchaInput !== captcha) {
     setCaptchaError("Enter valid captcha");
     generateCaptcha();
-    console.log("❌ Wrong captcha");
     return;
   }
 
-  setCaptchaError(""); // clear captcha error
-
-  // ✅ Success
-  console.log("✅ Form submitted successfully", formData);
+  setCaptchaError("");
   onClose();
-  router.push("/Dummy"); // change to your success page
+  router.push("/Dummy");
 };
 
       if (!isOpen) return null;
@@ -111,7 +126,7 @@ const handleSubmit = (e) => {
               onClose();
             }}
             type="button"
-            className="absolute top-3 right-3 text-gray-700 hover:text-black focus:outline-none z-10"
+            className="absolute top-3 cursor-pointer right-3 text-gray-700 hover:text-black focus:outline-none z-10"
           >
             ✕
           </button>
@@ -154,35 +169,33 @@ const handleSubmit = (e) => {
               </div>
             ))}
 
-           <div>
-  <PhoneInput
-    country={"in"}
-    value={formData.phone}
-    onChange={(phone) => setFormData((prev) => ({ ...prev, phone }))}
-    countryCodeEditable={false}
-    enableSearch={true}
-    inputClass="!bg-transparent !border-none !focus:outline-none !text-xs !w-full !pl-12 !text-gray-800 placeholder-black"
-    buttonClass="!bg-transparent !border-none !outline-none"
-    containerClass={`!border-b !pb-1 ${
-      isError("phone") ||
-      (formData.phone &&
-        (formData.phone.replace(/^\+91/, '').length !== 10 ||
-         !/^[6-9]/.test(formData.phone.replace(/^\+91/, ''))))
-        ? "!border-red-500 !text-red-600"
-        : "!border-gray-800"
-    }`}
-    dropdownClass="!bg-white !text-xs"
-    placeholder="Phone Number*"
-  />
-  {(isError("phone") ||
-    (formData.phone &&
-      (formData.phone.replace(/^\+91/, '').length !== 10 ||
-       !/^[6-9]/.test(formData.phone.replace(/^\+91/, ''))))) && (
-    <p className="text-xs text-red-500 mt-1">
-      Please enter a valid number.
-    </p>
-  )}
-</div>
+
+            <div>
+              <PhoneInput
+                country={"in"}
+                value={formData.phone}
+                onChange={(phone) => {
+                  setFormData((prev) => ({ ...prev, phone }));
+                  setTouched((prev) => ({ ...prev, phone: true }));
+                }}
+                countryCodeEditable={false}
+                enableSearch={true}
+                inputClass="!bg-transparent !border-none !focus:outline-none !text-xs !w-full !pl-12 !text-gray-800 placeholder-black"
+                buttonClass="!bg-transparent !border-none !outline-none"
+                containerClass={`!border-b !pb-1 ${
+                  touched.phone && formData.phone && !isValidPhone(formData.phone)
+                    ? "!border-red-500 !text-red-600"
+                    : "!border-gray-800"
+                }`}
+                dropdownClass="!bg-white !text-xs"
+                placeholder="Phone Number*"
+                onBlur={() => setTouched((prev) => ({ ...prev, phone: true }))}
+              />
+              {touched.phone && formData.phone && !isValidPhone(formData.phone) && (
+                <p className="text-xs text-red-500 mt-1">Please enter a valid number.</p>
+              )}
+            </div>
+
 
 
             <div className="md:col-span-2">
@@ -230,7 +243,7 @@ const handleSubmit = (e) => {
             {/* Captcha Section */}
             <div className="md:col-span-2 flex flex-col gap-2">
               {/* Row 1: Captcha text */}
-              <span className="text-black px-4 py-2 bg-white rounded-md font-mono xss:text-sm lg:text-lg w-fit tracking-widest">
+              <span className="px-4 py-2 text-black bg-white rounded-md font-mono xss:text-sm lg:text-lg w-fit tracking-widest">
                 {captcha}
               </span>
 

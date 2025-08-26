@@ -8,6 +8,23 @@
   align-items: stretch;
 }
 
+/* poorna */
+
+/* Flip card custom utilities */
+.perspective {
+  perspective: 1000px;
+}
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+
 html, body {
   cursor: none;
  
@@ -105,6 +122,29 @@ html, body {
   --text-small--line-height: 1rem; /* leading-5 */
  
   --text-subsmall: 0.45rem;
+
+  --text-subbigheading: 2.25rem; /* text-4xl*/
+  --text-subbigheading--line-height: 3rem;
+
+  --text-normal: 1.875rem; /* text-3xl*/
+  --text-normal--line-height: 3rem;
+
+  --text-subheading: 1.5rem; /* text-2xl*/
+  --text-subheading--line-height: 3rem;
+
+  --text-subnormal: 1.25rem; /* text-xl*/
+  --text-subnormal--line-height: 2.4rem;
+
+  --text-body: 1.125rem; /* text-lg*/
+  --text-body--line-height: 2rem;
+
+  --text-subbody: 0.9rem; /* text-sm*/
+  --text-subbody--line-height: 1.1rem; /* leading-7 */
+
+  --text-small: 0.75rem; /* text-xs*/
+  --text-small--line-height: 1rem; /* leading-5 */
+
+  --text-subsmall: 0.45rem; 
   --text-subsmall--line-height: 0.8rem;
 
 }
@@ -485,22 +525,14 @@ html, body {
       66% { transform: translate(420px, 130px); }
       100% { transform: translate(300px, 220px); }
     }
-  }
+  }}
 
   .animate-triangle-path {
     animation: triangle-path 3s linear infinite;
   }
 
   /* Custom breakpoint utilities */
-  @media (min-width: var(--breakpoint-xs)) {
-    .xs\:block { display: block; }
-    .xs\:hidden { display: none; }
-  }
 
-  @media (min-width: var(--breakpoint-3xl)) {
-    .3xl\:block { display: block; }
-    .3xl\:hidden { display: none; }
-  }
 
   /* Hamburger and desktop menu */
   @media (min-width: 1024px) {
@@ -530,7 +562,7 @@ html, body {
   @media (max-width: 1279px) {
     .only-xl\:flex { display: none !important; }
   }
-}
+
 
 /* Navbar background colors */
 @layer utilities {

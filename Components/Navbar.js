@@ -90,17 +90,35 @@ export default function Navbar() {
   return (
     <div className="Navbar-main overflow-visible !bg-[#FAFBFF]">
       {/* Top Strip */}
-      <div className="2xl:py-3 py-3 px-4 sm:px-6 lg:px-40 xl:py-2 flex justify-between border-b text-xs bg-gray-100 text-black">
-      <h1 className="hidden sm:block">Timings : 24 / 7</h1>
-      <Link
-        href="https://mail.google.com/mail/?view=cm&to=info@analogueitsolutions.com"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="w-full text-center sm:w-auto xss:justify-center sm:text-left flex items-center gap-2 hover:text-blue-600 hover:underline transition-colors duration-200">
-        <FaEnvelope className="text-gray-700" />
-        info@analogueitsolutions.com
-      </Link>
-    </div>
+<div className="2xl:py-3 py-3 px-4 sm:px-6 lg:px-40 xl:py-2 flex justify-between border-b text-xs bg-gray-100 text-black">
+  <div className="hidden sm:flex items-center gap-2">
+    <span className="w-2 h-2 rounded-full bg-green-500 animate-blink"></span>
+    <h1>Timings: 24 / 7</h1>
+  </div>
+  <Link
+    href="https://mail.google.com/mail/?view=cm&to=info@analogueitsolutions.com"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="w-full text-center sm:w-auto xss:justify-center sm:text-left flex items-center gap-2 hover:text-blue-600 hover:underline transition-colors duration-200"
+  >
+    <FaEnvelope className="text-gray-700" />
+    info@analogueitsolutions.com
+  </Link>
+
+  <style jsx>{`
+    .animate-blink {
+      animation: blink 1s infinite;
+    }
+    @keyframes blink {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0;
+      }
+    }
+  `}</style>
+</div>
 
       {/* Navbar */}
 <div className={`bg-white z-[100] relative py-2 shadow-lg xl:my-2 lg:my-4 2xl:mx-10 xl:mx-5 ${

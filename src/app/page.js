@@ -51,6 +51,9 @@ import Responsive_Calendar from "./BookAppointment/page";
 // import Calendarchecking from "../../Components/Calendarcheck";
 // import Calendarchecking from "../../Components/Calendarcheck";
 
+// import SingleProductPageTesting from "@/Components/SingleProduct/testing";
+// import Contact from "./Contact/page";
+import AndroidAppDevelopment from "./Services/Android-App-Development/page";
 
 
 export default function App() {
@@ -123,6 +126,7 @@ export default function App() {
 
       
 
+{/* <AndroidAppDevelopment /> */}
     </>
   );
 }

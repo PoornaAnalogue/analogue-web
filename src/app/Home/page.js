@@ -7,14 +7,6 @@ import { ShieldCheck } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
-  // const socialIcons = [
-  //   { id: 1, name: "Facebook", src: "/link1.png", link: "https://www.facebook.com/analogueitsolutions" },
-  //   { id: 2, name: "Instagram", src: "/link2.png", link: "https://www.instagram.com/analogueitsolutions/" },
-  //   { id: 3, name: "Twitter", src: "/link3.png", link: "https://x.com/AnalogueIt" },
-  //   { id: 4, name: "LinkedIn", src: "/link4.png", link: "https://www.linkedin.com/authwall?trk=bf&trkInfo=AQEs803CAduhbAAAAZixIkGIyObVOiAq-Ce1HzOEqg6I2v4ruuEuDanfC7Jt4yWS3CQF3jW8zk7DRS7BVmOcdtaKSX7-3E5KwhA3KY1z3jWbn8EmRSxx__sn9vRt0_cAV0yXU_I=&original_referer=&sessionRedirect=https%3A%2F%2Fwww.linkedin.com%2Fcompany%2Fanalogueitsolutions%2F" },
-  //   { id: 5, name: "Whatsapp", src: "/link5.png", link: "https://api.whatsapp.com/send/?phone=%2B918919088163&text=Hello%2Cbro+edhi+default+message+&type=phone_number&app_absent=0" },
-  //   { id: 6, name: "Youtube", src: "/link6.png", link: "https://www.youtube.com/@AnalogueITSolutions" },
-  // ];
 
   const headings = [
     { line1: "Mobile App", line2: "Development", style: "bg-gradient-to-r from-blue-600 to-blue-400" },
@@ -43,52 +35,55 @@ export default function Home() {
         <div className="hero flex flex-col xs:flex-col sm:flex-col md:flex-col lg:flex-col xl:flex-row !bg-[#FAFBFF] text-black relative">
           {/* Left Hero */}
           <div className="left-hero w-full xl:w-1/2 pt-3 flex flex-col justify-center !bg-[#FAFBFF]">
-            <h1 className="text-3xl xs:text-2xl xss:text-xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-4xl 2xl:text-4xl 3xl:text-5xl text-black font-medium leading-tight px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-15">
-              Best{" "}
-              <span className="relative inline-block">
-                {headings.map((item, i) => (
-                  <span
-                    key={`line1-${i}`}
-                    className={`${item.style} bg-clip-text text-transparent ${fadeClass(i === index)}`}
-                    style={{
-                      position: i === index ? "relative" : "absolute",
-                      top: 0,
-                      left: 0,
-                      zIndex: i === index ? 10 : 0,
-                      display: "inline-block",
-                      whiteSpace: "nowrap",
-                    }}
-                  >
-                    {item.line1}
-                  </span>
-                ))}
-              </span>{" "}
-              <br />
-              <span className="relative inline-block">
-                {headings.map((item, i) => (
-                  <span
-                    key={`line2-${i}`}
-                    className={`${item.style} bg-clip-text text-transparent ${fadeClass(i === index)}`}
-                    style={{
-                      position: i === index ? "relative" : "absolute",
-                      top: 0,
-                      left: 0,
-                      zIndex: i === index ? 10 : 0,
-                      display: "inline-block",
-                    }}
-                  >
-                    {item.line2}
-                  </span>
-                ))}
-              </span>
-              <br />
-              <span>Company in Hyderabad</span>
-            </h1>
+            <h1 className="text-bigheading xss:text-subheading sm:text-normal md:text-normal xl:text-subbigheading 3xl:text-bigheading text-black font-medium leading-tight px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-15">
 
-            <p className="mt-4 text-[#03153A] xl:text-xs xs:text-[0.5rem] 2xl:text-[0.7rem] sm:text-xs xss:text-xs md:text-base lg:text-1xl xl:text-base 3xl:text-sm px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-15">
+                {/* SEO-friendly hidden heading */}
+                <span className="sr-only">Best Mobile App Development Company in Hyderabad</span>
+                Best{" "}
+                <span className="relative inline-block">
+                  {headings.map((item, i) => (
+                    <span
+                      key={`line1-${i}`}
+                      className={`${item.style} bg-clip-text text-transparent ${fadeClass(i === index)}`}
+                      style={{
+                        position: i === index ? "relative" : "absolute",
+                        top: 0,
+                        left: 0,
+                        zIndex: i === index ? 10 : 0,
+                        display: "inline-block",
+                        whiteSpace: "nowrap",
+                      }}
+                    >
+                      {item.line1}
+                    </span>
+                  ))}
+                </span>{" "}
+                <br />
+                <span className="relative inline-block">
+                  {headings.map((item, i) => (
+                    <span
+                      key={`line2-${i}`}
+                      className={`${item.style} bg-clip-text text-transparent ${fadeClass(i === index)}`}
+                      style={{
+                        position: i === index ? "relative" : "absolute",
+                        top: 0,
+                        left: 0,
+                        zIndex: i === index ? 10 : 0,
+                        display: "inline-block",
+                      }}
+                    >
+                      {item.line2}
+                    </span>
+                  ))}
+                </span>
+                <br />
+                <span>Company in Hyderabad</span>
+              </h1>
+
+            <p className="mt-4 text-[#03153A] xl:text-small xss:text-small md:text-small lg:text-subbody 3xl:text-body px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-15">
               ABOUT OUR COMPANY
             </p>
-            <p className="mt-4 text-[#7B7E86] xs:text-[0.5rem] 2xl:leading-relaxed lg:text-sm px-4 xl:text-xs 2xl:text-[0.9rem] 3xl:text-[1rem] sm:text-xs xss:text-xs xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-15">
+            <p className="mt-4 text-[#7B7E86] xss:text-subsmall md:text-small 2xl:text-body lg:text-subbody px-4 xl:text-small 2xl:text-subbody 2xl:leading-relaxed 3xl:text-body xss:text-small xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-15">
               Analogue is a Best mobile app development company in Hyderabad that specialises in creating and enhancing user experience through the design and development of mobile and web applications. Our focus lies in helping businesses expand and reach their specific customer base by collaborating with individuals and organisations to conceptualise and promote their products.
             </p>
 
@@ -109,7 +104,7 @@ export default function Home() {
 
 
               <div className="xss:my-2 lg:my-5 xl:my-3 flex xl:justify-start lg:justify-center xss:justify-center xl:ml-7">
-              <span className="flex items-center gap-2 text-gray-700 text-center xss:text-[0.5rem] xl:text-[0.8rem] 2xl:text-[0.8rem] 3xl:text-[1rem] lg:text-lg xl:text-xs">
+              <span className="flex items-center gap-2 text-gray-700 text-center xss:text-subsmall xl:text-subbody 3xl:text-body lg:text-lg xl:text-xs">
                 <ShieldCheck className="lg:w-4 lg:h-4 xss:w-3 xss:h-3 xl:w-4 xl:h-4 2xl:h-4 2xl:w-4 3xl:w-5 3xl:h-5 text-blue-600" /> 
                 Trusted Technology Partner for Government Initiatives
               </span>
@@ -125,12 +120,12 @@ export default function Home() {
 
             {/* Left Side Image */}
             <div className="absolute left-2 w-[40vw] max-w-[230px] xss:w-[28vw] xss:left-7 sm:left-7 sm:w-[28vw] md:left-15 md:w-[25vw] lg:left-20 lg:w-[28vw] xl:left-0 xl:w-[17vw] 2xl:left-8 2xl:w-[14vw] 3xl:left-8 3xl:w-[35vw] top-1/2 -translate-y-1/2 flex flex-col items-center">
-              <Image src="/Home/logo12.png" alt="Mobile left image" width={230} height={200} />
+              <Image src="/Home/logo12.svg" alt="Mobile left image" width={230} height={200} />
             </div>
 
             {/* Right Side Image */}
             <div className="absolute right-2 w-[22vw] max-w-[250px] xss:w-[28vw] xss:right-4 sm:right-4 sm:w-[30vw] md:right-8 md:w-[28vw] lg:right-10 lg:w-[30vw] xl:right-0 xl:w-[17.5vw] 2xl:right-3 2xl:w-[16vw] 3xl:right-6 3xl:w-[40vw] top-1/2 -translate-y-1/2 flex flex-col items-center">
-              <Image src="/Home/logo23.png" alt="Mobile right image" width={250} height={200} />
+              <Image src="/Home/logo23.svg" alt="Mobile right image" width={250} height={200} />
             </div>
           </div>
         </div>

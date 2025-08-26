@@ -20,23 +20,28 @@ export default function GetAQuoteForm() {
 
   const [touched, setTouched] = useState({});
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
-  };
+const handleChange = (e) => {
+  const { name, value } = e.target;
+  setFormData({ ...formData, [name]: value });
+};
 
-  const handleBlur = (e) => {
-    const { name } = e.target;
-    setTouched({ ...touched, [name]: true });
-  };
+const handleBlur = (e) => {
+  const { name } = e.target;
+  setTouched((prev) => ({ ...prev, [name]: true }));
+};
 
   const isError = (field) => touched[field] && !formData[field];
 
-    const isValidPhone = (phone) => {
-    // Remove country code and any non-digit characters
-    const num = phone.replace(/^\+91/, "").replace(/\D/g, "");
-    return /^[6-9]\d{9}$/.test(num); // must be exactly 10 digits, starting 6–9
-  };
+const getDigitsOnly = (phone) => phone.replace(/\D/g, "");
+
+const isValidPhone = (phone) => {
+  // Remove +91 or 91 and non-digits
+  const num = phone.replace(/^\+?91/, "").replace(/\D/g, "");
+  console.log("isValidPhone input:", phone, "cleaned:", num); // Debug log
+  // Must be exactly 10 digits, starting with 6–9
+  return /^[6-9]\d{9}$/.test(num);
+};
+
 
   // capcha generation
    const [captcha, setCaptcha] = useState("");
@@ -56,13 +61,17 @@ export default function GetAQuoteForm() {
     setCaptcha(code);
   };
 
+
+
+
+
 const handleSubmit = (e) => {
   e.preventDefault();
 
   const requiredFields = ["name", "phone", "subject", "reach", "message"];
   let hasError = false;
 
-  // mark empty fields
+  // check empty fields
   requiredFields.forEach((field) => {
     if (!formData[field]) {
       setTouched((prev) => ({ ...prev, [field]: true }));
@@ -70,18 +79,18 @@ const handleSubmit = (e) => {
     }
   });
 
-  // 🔴 strict phone validation (8 or 9 digits won’t pass here)
-  if (formData.phone && !isValidPhone(formData.phone)) {
-  setTouched((prev) => ({ ...prev, phone: true }));
-  hasError = true;
-}
+  // phone validation (force touched)
+  if (!isValidPhone(formData.phone)) {
+    setTouched((prev) => ({ ...prev, phone: true }));
+    hasError = true; // <-- important
+  }
 
   if (hasError) {
     console.log("❌ Invalid input, form blocked");
     return;
   }
 
-  // captcha check
+  // captcha validation
   if (!formData.captchaInput) {
     setCaptchaError("Enter captcha");
     return;
@@ -101,9 +110,8 @@ const handleSubmit = (e) => {
 
 
 
-
   return (
-    <div className="main-container min-h-[600px] xl:min-h-[700px] 2xl:min-h-screen relative flex flex-col items-center justify-center rounded-lg px-4 xl:mt-[-6rem] xs:px-6 xss:py-10 xl:py-0 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-20">
+    <div id="form-section" className="main-container min-h-[600px] xl:min-h-[700px] 2xl:min-h-screen relative flex flex-col items-center justify-center rounded-lg px-4 xl:mt-[-6rem] 3xl:mt-[-3rem] 2xl:mt-[-2rem] xs:px-6 xss:py-10 xl:pb-8 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-20">
       {/* Background Image Layer */}
       <div
         className="Form-img absolute z-0 
@@ -114,8 +122,8 @@ const handleSubmit = (e) => {
                       sm:w-[75vw] sm:h-[70vh] sm:max-w-[600px] sm:max-h-[800px] sm:left-[2.8rem] sm:bottom-[-1.5rem]
                       md:w-[75vw] md:h-[75vh] md:max-w-[700px] md:max-h-[800px] md:left-[2rem] md:bottom-[-2rem]
                       lg:w-[70vw] lg:h-[72vh] lg:max-w-[800px] lg:max-h-[900px] lg:left-[3rem] lg:bottom-[-4rem]
-                      xl:w-[70vw] xl:h-[80vh] xl:max-w-[900px] xl:max-h-[900px] xl:left-[6rem] xl:bottom-[-2rem]
-                      2xl:w-[75vw] 2xl:h-[75vh] 2xl:max-w-[1000px] 2xl:max-h-[1000px] 2xl:left-[5rem] 2xl:bottom-[-3rem]
+                      xl:w-[70vw] xl:h-[80vh] xl:max-w-[900px] xl:max-h-[900px] xl:left-[7rem] xl:bottom-[-1.8rem]
+                      2xl:w-[75vw] 2xl:h-[75vh] 2xl:max-w-[1000px] 2xl:max-h-[1000px] 2xl:left-[7rem] 2xl:bottom-[-0.3rem]
                       3xl:w-[75vw] 3xl:h-[75vh] 3xl:max-w-[1000px] 3xl:max-h-[1000px] 3xl:left-[12rem] 3xl:bottom-[-4rem]
                       bg-no-repeat bg-contain bg-left-bottom"
       ></div>
@@ -139,7 +147,7 @@ const handleSubmit = (e) => {
           <div className="absolute inset-0 bg-gradient-to-br from-gray-500/20 via-gray-800/20 to-transparent rounded-3xl pointer-events-none"></div>
 
           {/* Form Header */}
-          <h2 className="text-lg text-blue-700 font-semibold mb-1 xs:text-sm">
+          <h2 className="text-lg text-blue-700 font-semibold mb-1 xs:text-sm xss:text-xs">
             Let Us Elevate Your Projects With Our Skills
           </h2>
           <p className="text-xs text-gray-700 mb-4">
@@ -175,37 +183,32 @@ const handleSubmit = (e) => {
               </div>
             ))}
 
-            {/* Phone Number with Flag */}
             <div>
               <PhoneInput
                 country={"in"}
                 value={formData.phone}
                 onChange={(phone) => {
-                  // Store raw phone input and clean for validation
                   setFormData((prev) => ({ ...prev, phone }));
                   setTouched((prev) => ({ ...prev, phone: true }));
                 }}
-                onBlur={() => setTouched((prev) => ({ ...prev, phone: true }))}
                 countryCodeEditable={false}
                 enableSearch={true}
                 inputClass="!bg-transparent !border-none !focus:outline-none !text-xs !w-full !pl-12 !text-gray-800 placeholder-black"
                 buttonClass="!bg-transparent !border-none !outline-none"
                 containerClass={`!border-b !pb-1 ${
-                  isError("phone")
+                  touched.phone && formData.phone && !isValidPhone(formData.phone)
                     ? "!border-red-500 !text-red-600"
                     : "!border-gray-800"
                 }`}
                 dropdownClass="!bg-white !text-xs"
                 placeholder="Phone Number*"
+                onBlur={() => setTouched((prev) => ({ ...prev, phone: true }))}
               />
-              {isError("phone") && (
-                <p className="text-xs text-red-500 mt-1">
-                  Phone Number is required.
-                </p>
+              {touched.phone && formData.phone && !isValidPhone(formData.phone) && (
+                <p className="text-xs text-red-500 mt-1">Please enter a valid number.</p>
               )}
             </div>
 
-            {/* Select */}
             <div className="md:col-span-2">
               <select
                 name="reach"
@@ -251,7 +254,7 @@ const handleSubmit = (e) => {
             {/* Captcha Section */}
             <div className="md:col-span-2 flex flex-col gap-2">
               {/* Row 1: Captcha text */}
-              <span className="text-black px-4 py-2 bg-white rounded-md font-mono xss:text-sm lg:text-lg w-fit tracking-widest">
+              <span className="px-4 py-2 bg-white text-black rounded-md font-mono xss:text-sm lg:text-lg w-fit tracking-widest">
                 {captcha}
               </span>
 
