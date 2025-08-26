@@ -226,7 +226,7 @@ export default function Navbar() {
 
 {/** Sidebar */}
 <div
-  className={` xl:hidden fixed top-0 left-0 h-full w-[70%] bg-white shadow-lg z-[300] overflow-y-auto transform transition-transform duration-500 ease-in-out
+  className={` xl:hidden fixed top-0 text-black left-0 h-full w-[70%] bg-white shadow-lg z-[300] overflow-y-auto transform transition-transform duration-500 ease-in-out
     ${menuOpen ? "translate-x-0" : "-translate-x-full pointer-events-none"}`}>
   {/* Sidebar Header */}
   <div className="relative flex flex-col items-center">

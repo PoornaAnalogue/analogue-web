@@ -156,10 +156,10 @@ export default function Contact(){
                     className="mt-[-2rem] xss:mt-[-2.5rem] xs:mt-[-3rem] sm:mt-[-3.5rem] md:mt-[-4rem] lg:mt-[-5rem] xl:mt-[-10rem] 2xl:mt-[-10rem] ml-[-1rem] xss:ml-[-1.2rem] xs:ml-[-1.5rem] sm:ml-[-2rem] md:ml-[-2.5rem] lg:ml-[-3rem] xl:ml-[-3.8rem] 2xl:ml-[-3.8rem] w-16 xss:w-18 xs:w-20 sm:w-24 md:w-28 lg:w-32 xl:w-44 2xl:w-48"
                   />
                   <div className="mt-4 md:mt-0 md:ml-4 lg:ml-6 xl:ml-8 flex-1">
-                    <h1 className="text-lg xs:text-xl sm:text-2xl md:text-2xl lg:text-3xl leading-relaxed">
+                    <h1 className="text-lg text-black xs:text-xl sm:text-2xl md:text-2xl lg:text-3xl leading-relaxed">
                       Are you ready to bring your vision to life with cutting-edge web and app development?
                     </h1>
-                    <p className="text-xs xs:text-sm sm:text-sm md:text-base text-gray-600 mt-2 xs:mt-3 sm:mt-4">
+                    <p className="text-xs xs:text-sm text-black sm:text-sm md:text-base text-gray-600 mt-2 xs:mt-3 sm:mt-4">
                       Visit us at Analogue IT Solutions and let us help you with a customized quotation for your needs.
                     </p>
                   </div>

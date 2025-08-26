@@ -123,8 +123,8 @@ const handleSubmit = (e) => {
                       md:w-[75vw] md:h-[75vh] md:max-w-[700px] md:max-h-[800px] md:left-[2rem] md:bottom-[-2rem]
                       lg:w-[70vw] lg:h-[72vh] lg:max-w-[800px] lg:max-h-[900px] lg:left-[3rem] lg:bottom-[-4rem]
                       xl:w-[70vw] xl:h-[80vh] xl:max-w-[900px] xl:max-h-[900px] xl:left-[7rem] xl:bottom-[-1.8rem]
-                      2xl:w-[75vw] 2xl:h-[75vh] 2xl:max-w-[1000px] 2xl:max-h-[1000px] 2xl:left-[7rem] 2xl:bottom-[-0.3rem]
-                      3xl:w-[75vw] 3xl:h-[75vh] 3xl:max-w-[1000px] 3xl:max-h-[1000px] 3xl:left-[12rem] 3xl:bottom-[-4rem]
+                      2xl:w-[75vw] 2xl:h-[75vh] 2xl:max-w-[1000px] 2xl:max-h-[1000px] 2xl:left-[11rem] 2xl:bottom-[-2rem]
+                      3xl:w-[70vw] 3xl:h-[85vh] 3xl:max-w-[1000px] 3xl:max-h-[1000px] 3xl:left-[14rem] 3xl:bottom-[-4rem]
                       bg-no-repeat bg-contain bg-left-bottom"
       ></div>
 
@@ -141,7 +141,7 @@ const handleSubmit = (e) => {
 
         {/* Glassmorphic Form */}
         <div className="relative z-20 xl:p-6 xl:mt-[-2.7rem] 2xl:mt-[-2.3rem] 3xl:mt-[-1.5rem] xss:mt-[-2.3rem] xs:mt-[-2.2rem] sm:mt-[-2.4rem] md:mt-[-2rem] lg:mt-[-2.5rem] w-full p-5 border-gray-300 border-2
-                        2xl:w-[90%] xl:w-[75%] lg:w-[80%] md:w-[80%] sm:w-[75%] xs:w-[75%] xs:p-3 xss:w-[80%]
+                        2xl:w-[75%] 3xl:w-[88%] xl:w-[75%] lg:w-[80%] md:w-[80%] sm:w-[75%] xs:w-[75%] xs:p-3 xss:w-[80%]
                         rounded-3xl backdrop-blur-3xl shadow-lg 
                         bg-gradient-to-br from-white/40 via-white/50 to-transparent">
           <div className="absolute inset-0 bg-gradient-to-br from-gray-500/20 via-gray-800/20 to-transparent rounded-3xl pointer-events-none"></div>
