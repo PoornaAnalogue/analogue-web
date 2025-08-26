@@ -24,6 +24,8 @@ import Responsive_AdobeTech from "@/app/Technologies/page";
 import Responsive_ProductsPage from "@/app/Products/page";
 import PuzzleTest from "./testclient/page";
 import SingleProductPageTesting from "@/Components/SingleProduct/testing";
+import Contact from "./Contact/page";
+import AndroidAppDevelopment from "./Services/Android-App-Development/page";
 
 
 export default function App() {
@@ -43,7 +45,7 @@ export default function App() {
       <Responsive_India />
       <GetAQuoteForm />
       <Footer/>
-
+{/* <AndroidAppDevelopment /> */}
     </>
   );
 }

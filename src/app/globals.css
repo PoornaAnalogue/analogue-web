@@ -6,6 +6,23 @@
   align-items: stretch;
 }
 
+/* poorna */
+
+/* Flip card custom utilities */
+.perspective {
+  perspective: 1000px;
+}
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+
 html, body {
   cursor: none; /* Hide default cursor */
 }
@@ -64,6 +81,35 @@ html, body {
   --tw-breakpoint-lg: var(--breakpoint-lg);
   --tw-breakpoint-xl: var(--breakpoint-xl);
   --tw-breakpoint-2xl: var(--breakpoint-2xl);
+
+  /* global text and font sizes along with line heights */
+  --text-bigheading: 3rem; /* text-5xl*/
+  --text-bigheading--line-height: 3rem;
+
+  --text-subbigheading: 2.25rem; /* text-4xl*/
+  --text-subbigheading--line-height: 3rem;
+
+  --text-normal: 1.875rem; /* text-3xl*/
+  --text-normal--line-height: 3rem;
+
+  --text-subheading: 1.5rem; /* text-2xl*/
+  --text-subheading--line-height: 3rem;
+
+  --text-subnormal: 1.25rem; /* text-xl*/
+  --text-subnormal--line-height: 2.4rem;
+
+  --text-body: 1.125rem; /* text-lg*/
+  --text-body--line-height: 2rem;
+
+  --text-subbody: 0.9rem; /* text-sm*/
+  --text-subbody--line-height: 1.1rem; /* leading-7 */
+
+  --text-small: 0.75rem; /* text-xs*/
+  --text-small--line-height: 1rem; /* leading-5 */
+
+  --text-subsmall: 0.45rem; 
+  --text-subsmall--line-height: 0.8rem;
+
 }
 
 /* globals.css */
