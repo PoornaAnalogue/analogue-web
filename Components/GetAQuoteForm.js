@@ -4,6 +4,7 @@ import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import Dummy from "../src/app/Dummy/page";
 import { useRouter } from "next/navigation";
+import { FiRefreshCcw } from "react-icons/fi"; 
 
 
 export default function GetAQuoteForm() {
@@ -60,10 +61,6 @@ const isValidPhone = (phone) => {
     }
     setCaptcha(code);
   };
-
-
-
-
 
 const handleSubmit = (e) => {
   e.preventDefault();
@@ -131,10 +128,10 @@ const handleSubmit = (e) => {
       <div className="relative w-full max-w-5xl rounded-3xl min。由min-h-[600px] xl:min-h-[700px] 2xl:min-h-[800px] flex flex-col justify-center items-center z-10">
         {/* Big Background Text */}
         <div className="relative z-10 flex justify-center items-end gap-6 pointer-events-none w-full xss:scale-[0.4] xs:scale-[0.45] sm:scale-[0.5] md:scale-[0.6] lg:scale-[0.7] xl:scale-[0.8] 2xl:scale-[0.9] 3xl:scale-120">
-          <h1 className="text-[6rem] sm:text-[7rem] md:text-[8rem] lg:text-[9rem] xl:text-[10rem] 2xl:text-[11rem] 3xl:text-[12rem] text-gray-400 leading-none">
+          <h1 className="text-[6rem] sm:text-[7rem] md:text-[8rem] lg:text-[9rem] xl:text-[10rem] 2xl:text-[11rem] text-gray-400 leading-none">
             Let&apos;s
           </h1>
-          <h1 className="text-[6rem] sm:text-[7rem] md:text-[8rem] lg:text-[9rem] xl:text-[10rem] 2xl:text-[11rem] 3xl:text-[12rem] text-blue-300 leading-none">
+          <h1 className="text-[6rem] sm:text-[7rem] md:text-[8rem] lg:text-[9rem] xl:text-[10rem] 2xl:text-[11rem] text-blue-300 leading-none">
             Discuss
           </h1>
         </div>
@@ -253,10 +250,20 @@ const handleSubmit = (e) => {
 
             {/* Captcha Section */}
             <div className="md:col-span-2 flex flex-col gap-2">
-              {/* Row 1: Captcha text */}
+              {/* Row 1: Captcha text + Refresh button */}
+            <div className="flex items-center gap-2">
               <span className="px-4 py-2 bg-white text-black rounded-md font-mono xss:text-sm lg:text-lg w-fit tracking-widest">
                 {captcha}
               </span>
+              <button
+                type="button"
+                onClick={generateCaptcha}
+                className="px-2 py-2 bg-gray-200 bg-white text-black rounded-md xss:text-sm lg:text-lg font-bold hover:bg-gray-300"
+              >
+                <FiRefreshCcw className="text-black xss:text-sm lg:text-base rounded-full font-semibold" />
+              </button>
+            </div>
+
 
               {/* Row 2: Input field */}
               <input

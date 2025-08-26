@@ -3,6 +3,7 @@ import React, { useState,useEffect } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import { useRouter } from "next/navigation";
+import { FiRefreshCcw } from "react-icons/fi"; 
 
 export default function PopUpForm({ isOpen, onClose }) {
   const router = useRouter();
@@ -104,7 +105,7 @@ const handleSubmit = (e) => {
 
   return (
     <div
-      className="fixed inset-0 z-[1000] flex items-center justify-center bg-black/30 backdrop-blur-[2px] px-4"
+      className="fixed inset-0 z-[1000] flex items-center border-white justify-center bg-black/30 backdrop-blur-[2px] px-4"
       aria-modal="true"
       role="dialog"
       onClick={(e) => {
@@ -242,10 +243,19 @@ const handleSubmit = (e) => {
 
             {/* Captcha Section */}
             <div className="md:col-span-2 flex flex-col gap-2">
-              {/* Row 1: Captcha text */}
-              <span className="px-4 py-2 text-black bg-white rounded-md font-mono xss:text-sm lg:text-lg w-fit tracking-widest">
-                {captcha}
-              </span>
+              {/* Row 1: Captcha text + Refresh button */}
+              <div className="flex items-center gap-2">
+                <span className="px-4 py-2 bg-white text-black rounded-md font-mono xss:text-sm lg:text-lg w-fit tracking-widest">
+                  {captcha}
+                </span>
+                <button
+                  type="button"
+                  onClick={generateCaptcha}
+                  className="px-2 py-2 bg-gray-200 bg-white text-black rounded-md xss:text-sm lg:text-lg font-bold hover:bg-gray-300"
+                >
+                  <FiRefreshCcw className="text-black xss:text-sm lg:text-base rounded-full font-semibold" />
+                </button>
+              </div>
 
               {/* Row 2: Input field */}
               <input
