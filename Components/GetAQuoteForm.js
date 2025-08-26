@@ -168,7 +168,8 @@ const handleSubmit = (e) => {
                   {...field}
                   value={formData[field.name]}
                   onChange={handleChange}
-                  onBlur={handleBlur}
+                  onBlur={handleBlur} 
+                  suppressHydrationWarning
                   className={`bg-transparent border-b focus:outline-none text-gray-800 placeholder-black text-xs py-2 w-full ${
                     isError(field.name)
                       ? "border-black-500 text-blue-600"

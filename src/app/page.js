@@ -1,25 +1,21 @@
 import Image from "next/image";
-import IndustryPage from "@/Components/Industries/page";
-// import SingleProductPage from "@/Components/SingleProduct/page";
-import Contact from "./Contact/page";
-import SingleProductPage from "@/app/SingleProduct/page";
+import { Scroll } from "lucide-react";
+
 import Home from "./Home/page";
 import Footer from "../../Components/Footer";
 import Guarantees from "./guarantees/page";
-import PuzzleRes from "./puzzleres/page";
 import AboutUs from "./aboutus/page";
-import ClientCarousel from "./Clientcorousel/page";
 import GetAQuoteForm from "../../Components/GetAQuoteForm";
-import Responsive_CalendarTestPast from "./BookAppointment/test";
 import Navbar from "../../Components/Navbar";
 import Responsive_Best_App from "./BestMobileApp/page";
 import Responsive_ServicePage from "./ServicesPage/page";
 import Responsive_Testimonials from "./TestimonialsPage/page";
 import Responsive_India from "./India/page";
-import Responsive_ProductsPage from "@/app/Products/page";
 import PuzzleTest from "./testclient/page";
-// import SingleProductPageTesting from "@/Components/SingleProduct/testing";
 import Responsive_ServicePage_Mobile from "./ServicesPage/page";
+import Responsive_Calendar from "./BookAppointment/page";
+import PuzzleScrollSection from "./puzzlescroll/page";
+import ClientCarousel from "./Clientcorousel/page";
 
 
 import Responsive_AdobeTech from "./Tech-Adobe/page";
@@ -40,31 +36,23 @@ import Responsive_ReactNTech from "./Tech-ReactN/page";
 import Responsive_PHPTech from "./Tech-PHP/page";
 import Responsive_VueJsTech from "./Tech-Vue/page";
 import Responsive_SingleProductPage from "@/app/SingleProduct/page";
-import IndustryPagetest from "./Indus-News/page";
 import Responsive_IndusNews from "./Indus-News/page";
 import Responsive_IndusWeb from "./Indus-News copy/page";
-import Calendarcheck from "../../Components/Check";
-import Check from "../../Components/Check";
-import Responsive_CalendarTest from "./BookAppointment/test";
-import Responsive_CalendarTest2 from "./BookAppointment/page";
-import Responsive_Calendar from "./BookAppointment/page";
-// import Calendarchecking from "../../Components/Calendarcheck";
-// import Calendarchecking from "../../Components/Calendarcheck";
+import Responsive_ProductsPage from "@/app/Products/page";
 
-// import SingleProductPageTesting from "@/Components/SingleProduct/testing";
-// import Contact from "./Contact/page";
+import Contact from "./Contact/page";
 import AndroidAppDevelopment from "./Services/Android-App-Development/page";
-
 
 export default function App() {
   return (
     <>
+
       <Navbar />
       <Home/>
       <Responsive_ServicePage_Mobile />
       <ClientCarousel />
       <Guarantees />
-      <PuzzleRes />
+      <PuzzleScrollSection/>
       <Responsive_Best_App />
       <Responsive_Testimonials />
       <Responsive_Calendar />
@@ -73,14 +61,18 @@ export default function App() {
       <Footer/>
 
 
-        {/* <Responsive_India /> */}
-        {/* <GetAQuoteForm /> */}
-        {/* <Footer/> */}
-        {/* <Responsive_Testimonials /> */}
-        {/* <Responsive_India /> */}
-        {/* <Responsive_Calendar /> */}
 
-      {/* <Responsive_AdobeTech />
+        {/* 
+      <Responsive_SingleProductPage />
+      <Responsive_AngularTech />
+      <Responsive_IndusNews />
+      <AndroidAppDevelopment />
+      <Responsive_ProductsPage />
+      <Contact /> 
+      */}
+      
+    {/* 
+      <Responsive_AdobeTech />
       <Responsive_AngularTech />
       <Responsive_AWSTech />
       <Responsive_PyTech />
@@ -96,37 +88,10 @@ export default function App() {
       <Responsive_NextTech />
       <Responsive_ReactNTech />
       <Responsive_PHPTech />
-      <Responsive_VueJsTech /> */}
+      <Responsive_VueJsTech />
+      <Responsive_IndusWeb /> 
+    */}
 
-
-      {/* <Responsive_SingleProductPage /> */}
-      {/* <Responsive_IndusNews /> */}
-      {/* <Responsive_IndusWeb /> */}
-
-{/*       
-      <Navbar />
-      <Home />
-      <Responsive_ServicePage_Mobile />
-      <ClientCarousel />
-      <Guarantees />
-      <PuzzleRes />
-      <Responsive_Best_App />
-      <Responsive_Testimonials />
-      <Responsive_CalendarTestPast />
-      <Responsive_India />
-      <GetAQuoteForm />
-      <Footer /> */}
-
-      {/* <GetAQuoteForm /> */}
-
-      {/* <Responsive_ServicePage_Mobile /> */}
-      {/* <Check /> */}
-      
-      
-
-      
-
-{/* <AndroidAppDevelopment /> */}
     </>
   );
 }

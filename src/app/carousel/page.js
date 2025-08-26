@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useRef, useState, useEffect } from "react";
@@ -9,7 +8,7 @@ import Image from "next/image";
 
 import "swiper/css";
 
-export default function Sample() {
+export default function NewCarousel() {
   const companies = [
     {
       logo: "/carouselimages/flythlogo.png",
@@ -103,10 +102,7 @@ export default function Sample() {
           autoplay={{ delay: 2500, disableOnInteraction: false }}
           speed={800}
           centeredSlides={true}
-            grabCursor={true} // <- add this
- 
-  controller={{ control: phoneSwiperRef.current }}
-          spaceBetween={0}
+          spaceBetween={10}
           modules={[Controller, Autoplay]}
           breakpoints={{
             360: { slidesPerView: 1, spaceBetween: 10 },
@@ -115,7 +111,7 @@ export default function Sample() {
             768: { slidesPerView: 3, spaceBetween: 16 },
             1024: { slidesPerView: 5, spaceBetween: 24 },
             1280: { slidesPerView: 5, spaceBetween: 24 },
-            1536: { slidesPerView: 5, spaceBetween: 24 },
+            1536: { slidesPerView: 6, spaceBetween: 28 },
           }}
         >
           {companies.concat(companies).map((c, i) => (
@@ -140,7 +136,7 @@ export default function Sample() {
         </Swiper>
 
         {/* Phone Carousel */}
-        <div className="w-full flex justify-center phone-section mx-auto   md:px-12 ">
+        <div className="w-full flex justify-center phone-section   md:px-12 ">
           <Swiper
             className="client-swiper  w-full ml-auto   "
             loop={true}
@@ -149,7 +145,6 @@ export default function Sample() {
             speed={800}
             spaceBetween={30}
             modules={[Autoplay, Controller]}
-            
             breakpoints={{
               344: { slidesPerView: 1, spaceBetween: 10 },
               360: { slidesPerView: 1, spaceBetween: 10 },
@@ -175,7 +170,7 @@ export default function Sample() {
                     alt="phone image"
                     width={260}
                     height={520}
-                    className=""
+                    className="object-contain w-[60%] sm:w-3/4 md:w-60 lg:w-64"
                   />
                 </div>
               </SwiperSlide>
@@ -187,18 +182,25 @@ export default function Sample() {
       {/* Styles    */}
       <style jsx global>{`
   /* === Main Swiper wrapper styling === */
-  
+  .client-swiper {
+    display: flex; 
+    gap: 20px; /* Adds equal spacing between slides (left + right spacing) */
+  }
 
   /* === Default phone wrapper styling === */
   .client-swiper .phone-wrapper {
     transform: scale(0.8) translateY(30px); /* Make phones smaller & pushed down by default */
     transition: transform 0.5s ease; /* Smooth scaling/translation effect */
-    padding-top: 3rem; 
-    padding-bottom: 2.5rem; 
+    padding-top: 3rem; /* Space above phone */
+    padding-bottom: 2.5rem; /* Space below phone */
   }
 
   /* === Active slide phones (bigger + centered on larger screens) === */
-  
+  @media (min-width: 480px) {
+    .client-swiper .swiper-slide-active .phone-wrapper {
+      transform: scale(1.2) translateY(0); /* Enlarge active phone & reset vertical shift */
+    }
+  }
 
   /* === Extra adjustment for active phone (all screen sizes) === */
   .client-swiper .swiper-slide-active .phone-wrapper {
@@ -213,10 +215,9 @@ export default function Sample() {
   }
 
   /* === Farther Previous & Next phones (smaller + pushed more down) === */
-
   .client-swiper .prev-prev .phone-wrapper,
   .client-swiper .next-next .phone-wrapper {
-    transform: scale(0.95) translateY(15px); /* Smallest scale for depth effect */
+    transform: scale(0.85) translateY(20px); /* Smallest scale for depth effect */
   }
 
   /* === Responsive: Landscape mode for tablets & small laptops === */
@@ -226,7 +227,11 @@ export default function Sample() {
       transform: translateX(0) !important; /* Reset unwanted horizontal shifts */
     }
 
-   
+    .client-swiper .phone-wrapper {
+      width: 80% !important; /* Shrink phone width */
+      transform: scale(0.7) translateY(20px) !important; /* Smaller scale + slightly lower */
+    }
+
     .client-swiper .swiper-slide-active .phone-wrapper {
       transform: scale(1) translateY(0) !important; /* Active phone should appear centered & normal */
     }
@@ -240,24 +245,23 @@ export default function Sample() {
 
     .client-swiper .swiper-slide-prev .phone-wrapper,
     .client-swiper .swiper-slide-next .phone-wrapper {
-      transform: scale(0.80) translateY(10px) !important; /* Side phones smaller & slightly down */
+      transform: scale(0.85) translateY(10px) !important; /* Side phones smaller & slightly down */
     }
   }
 
-  
+  /* === Device-specific hacks for popular phones === */
+  //@media only screen and (device-width: 390px) and (device-height: 844px), /* iPhone 12, 13, 14 */
+  //       only screen and (device-width: 414px) and (device-height: 896px), /* iPhone 11, XR */
+  //       only screen and (device-width: 375px) and (device-height: 812px), /* iPhone 11 Pro */
+  //       only screen and (device-width: 412px) and (device-height: 915px), /* OnePlus Nord 2 */
+  //       only screen and (device-width: 393px) and (device-height: 851px)  /* Pixel 5 */
+  {
+    .phone-section {
+      padding-top: 5rem !important; /* Add extra top padding for these specific devices */
+    }
+  }
 `}</style>
 
     </div>
   );
-}
-
-
-
-
-
-
-
-
-
-
-
+}  

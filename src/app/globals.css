@@ -2,6 +2,11 @@
 @import "tailwindcss";
 @import "./nandini.css";
 
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 .hero {
   display: flex;
   /* flex-direction: row; */
@@ -44,38 +49,6 @@ html, body {
 }
 
 
-@keyframes braceMoveLeft {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-6px); } /* left brace paiki */
-}
-
-@keyframes braceMoveRight {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(6px); } /* right brace kindaki */
-}
-
-
-
-/* globals.css */
-@keyframes openClose {
-  0%, 100% { letter-spacing: -5px; }
-  50% { letter-spacing: 2px; }
-}
-
-
-
-
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Remove duplicate html, body declaration */
-html, body {
-  cursor: none;
-  background: var(--background, #ffffff);
-  color: var(--foreground, #000000);
-  font-family: Arial, Helvetica, sans-serif;
-}
 
 /* Define custom breakpoints */
 @theme {
@@ -117,29 +90,6 @@ html, body {
  
   --text-subbody: 0.9rem; /* text-sm*/
   --text-subbody--line-height: 1.1rem; /* leading-7 */
- 
-  --text-small: 0.75rem; /* text-xs*/
-  --text-small--line-height: 1rem; /* leading-5 */
- 
-  --text-subsmall: 0.45rem;
-
-  --text-subbigheading: 2.25rem; /* text-4xl*/
-  --text-subbigheading--line-height: 3rem;
-
-  --text-normal: 1.875rem; /* text-3xl*/
-  --text-normal--line-height: 3rem;
-
-  --text-subheading: 1.5rem; /* text-2xl*/
-  --text-subheading--line-height: 3rem;
-
-  --text-subnormal: 1.25rem; /* text-xl*/
-  --text-subnormal--line-height: 2.4rem;
-
-  --text-body: 1.125rem; /* text-lg*/
-  --text-body--line-height: 2rem;
-
-  --text-subbody: 0.9rem; /* text-sm*/
-  --text-subbody--line-height: 1.1rem; /* leading-7 */
 
   --text-small: 0.75rem; /* text-xs*/
   --text-small--line-height: 1rem; /* leading-5 */
@@ -147,17 +97,6 @@ html, body {
   --text-subsmall: 0.45rem; 
   --text-subsmall--line-height: 0.8rem;
 
-}
-
-/* Background images */
-.bg-industry {
-  background-image: url('/IndustryBg.jpg');
-}
-
-.animate-scroll {
-  display: flex;
-  animation: scroll 30s linear infinite;
-  gap: 16px;
 }
 
 @layer utilities {
@@ -191,44 +130,11 @@ html, body {
 }
 
 
-
-
-
- 
-
-
-
-
-
-
-
-
-
 /* ======================= */
 
 /* RESPONSIVENESS ...... */
 /* 1. Override Tailwind's theme breakpoints */
-@layer theme {
-  :root {
-    /* Your custom breakpoints */
-    --breakpoint-xs: 360px;
-    --breakpoint-sm: 480px;
-    --breakpoint-md: 640px;
-    --breakpoint-lg: 768px;
-    --breakpoint-xl: 1024px;
-    --breakpoint-2xl: 1280px;
-    --breakpoint-3xl: 1536px;
- 
-    /* Map them to Tailwind's internal vars */
-    
-    --tw-breakpoint-sm: var(--breakpoint-sm);
-    --tw-breakpoint-md: var(--breakpoint-md);
-    --tw-breakpoint-lg: var(--breakpoint-lg);
-    --tw-breakpoint-xl: var(--breakpoint-xl);
-    --tw-breakpoint-2xl: var(--breakpoint-2xl);
-    
-  }
-}
+
 
 @keyframes scrollLap {
   0% { transform: translateX(var(--total-width)); }
@@ -248,12 +154,9 @@ html, body {
   animation-play-state: paused;
 }
 
-.bg-calendar {
-  background-image: url('/Calendar-Images/calendar-effect.svg');
-}
 
 .bg-dots {
-  background-image: url('/Calendar-Images/Style-Dots.png');
+  background-image: url('/Calendar-Images/Style-Dots.svg');
 }
 
 .bg-flower {
@@ -262,9 +165,9 @@ html, body {
 
   @media (min-width: 320px) and (max-width: 1023px) {
   .bg-calendar {
-    background-image: url('/Calendar-Images/calendar-bg.jpg');
+    background-image: url('/Calendar-Images/calendar-bg.svg');
   }
-}
+  }
 
 @media (min-width: 1024px) {
   .bg-calendar {
@@ -472,7 +375,7 @@ html, body {
     66% { transform: translate(170px, 60px); }
     100% { transform: translate(100px, 70px); }
   }
-
+}
   @media (min-width: 480px) {
     @keyframes triangle-path {
       0% { transform: translate(160px, 90px); }
@@ -525,14 +428,19 @@ html, body {
       66% { transform: translate(420px, 130px); }
       100% { transform: translate(300px, 220px); }
     }
-  }}
+  }
 
   .animate-triangle-path {
     animation: triangle-path 3s linear infinite;
   }
 
   /* Custom breakpoint utilities */
+  @media (min-width: var(--breakpoint-xs)) {
+    .xs\:block { display: block; }
+    .xs\:hidden { display: none; }
+  }
 
+ 
 
   /* Hamburger and desktop menu */
   @media (min-width: 1024px) {
@@ -595,12 +503,7 @@ html, body {
   scrollbar-width: none;
 }
 
-/* Component styles */
-@layer components {
-  .btn-primaryyy {
-    @apply bg-blue-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-700;
-  }
-}
+
 
 /* Theme colors */
 @theme inline {

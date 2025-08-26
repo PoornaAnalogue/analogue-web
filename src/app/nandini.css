@@ -3,8 +3,11 @@
 
 /* PUZZLE  */
 /* Hide scrollbar for all browsers */
+
+
+/* Hide scrollbar but allow scrolling */
 .scrollbar-hide::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Edge */
+  display: none;
 }
 .scrollbar-hide {
   -ms-overflow-style: none; /* IE and Edge */

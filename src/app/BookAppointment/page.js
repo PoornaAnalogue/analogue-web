@@ -60,6 +60,7 @@ const Responsive_Calendar = () => {
             {/* Header with month and navigation */}
             <div className="w-full flex justify-between text-black items-center mb-1 xs:mb-2 ">
               <button
+              suppressHydrationWarning
                 onClick={handlePrevMonth}
                 className="text-[0.5rem]  md:text-xs 3xl:text-lg  px-1 xs:px-2 sm:px-2 md:px-3 xl:px-4 2xl:px-4 3xl:px-5 py-0.5 xs:py-1 sm:py-1  bg-gray-200 rounded hover:bg-gray-300"
               >
@@ -69,6 +70,7 @@ const Responsive_Calendar = () => {
                 {currentMonth.format('MMMM YYYY')}
               </h2>
               <button
+              suppressHydrationWarning
                 onClick={handleNextMonth}
                 className="text-[0.5rem]  md:text-xs lg:text-sm 3xl:text-lg   px-1 xs:px-2 sm:px-2 md:px-3 xl:px-4 2xl:px-4 3xl:px-5 py-0.5 xs:py-1 sm:py-1  bg-gray-200 rounded hover:bg-gray-300"
               >
