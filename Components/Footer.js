@@ -86,23 +86,23 @@ export default function Footer() {
           <div className="grid grid-cols-1">
             <div className="flex items-center gap-2 lg:p-1 lg:min-w-[100px] ">
               <span className="text-gray-500 lg:text-sm xss:text-lg">Hyderabad, India</span>
-              <Image src="/Flags/India-Flag.png" width={20} height={20} alt="India" className="w-full h-auto max-w-[25px] max-h-[16px]" />
+              <Image src="/Flags/India-Flag.svg" width={20} height={20} alt="India" className="w-full h-auto max-w-[25px] max-h-[16px]" />
             </div>
             <div className="flex items-center gap-2 p-1 min-w-[100px]">
               <span className="text-gray-500 lg:text-sm xss:text-lg">Dubai</span>
-              <Image src="/Flags/Uae-Flag.png" width={20} height={20} alt="UAE" className="w-full h-auto max-w-[25px] max-h-[25px]" />
+              <Image src="/Flags/Uae-Flag.svg" width={20} height={20} alt="UAE" className="w-full h-auto max-w-[25px] max-h-[25px]" />
             </div>
             <div className="flex items-center gap-2 p-1 min-w-[100px]">
               <span className="text-gray-500 lg:text-sm xss:text-lg">California</span>
-              <Image src="/Flags/California-republic.png" width={28} height={14} alt="USA" className="w-full h-auto max-w-[28px] max-h-[25px]" />
+              <Image src="/Flags/California-republic.svg" width={28} height={14} alt="USA" className="w-full h-auto max-w-[28px] max-h-[25px]" />
             </div>
             <div className="flex items-center gap-2 p-1 min-w-[100px]">
               <span className="text-gray-500 lg:text-sm xss:text-lg">Denmark</span>
-              <Image src="/Flags/Denmark-Flag.png" width={28} height={14} alt="Denmark" className="w-full h-auto max-w-[28px] max-h-[24px]" />
+              <Image src="/Flags/Denmark-Flag.svg" width={28} height={14} alt="Denmark" className="w-full h-auto max-w-[28px] max-h-[24px]" />
             </div>
             <div className="flex items-center gap-2 p-1 min-w-[100px]">
               <span className="text-gray-500 lg:text-sm xss:text-lg">Qatar</span>
-              <Image src="/Flags/Qatar-Flag.png" width={28} height={14} alt="Qatar" className="w-full h-auto max-w-[28px] max-h-[24px]" />
+              <Image src="/Flags/Qatar-Flag.svg" width={28} height={14} alt="Qatar" className="w-full h-auto max-w-[28px] max-h-[24px]" />
             </div>
           </div>
         </div>
@@ -120,7 +120,7 @@ export default function Footer() {
           {/* Location */}
           <div className="flex items-start gap-4">
             <Image
-              src="/Footer/Location.png"
+              src="/Footer/Location.svg"
               alt="Location"
               width={0}
               height={0}
@@ -144,7 +144,7 @@ export default function Footer() {
           {/* Working Hours */}
           <div className="flex items-start gap-4">
             <Image
-              src="/Footer/Working-Hours.png"
+              src="/Footer/Working-Hours.svg"
               alt="Working Hours"
               width={0}
               height={0}
@@ -162,7 +162,7 @@ export default function Footer() {
           {/* Contact Us */}
           <div className="flex items-start gap-4">
             <Image
-              src="/Footer/Contact.png"
+              src="/Footer/Contact.svg"
               alt="Contact"
               width={0}
               height={0}
