@@ -20,6 +20,7 @@ import Responsive_CalendarTest from "./BookAppointment/page";
 // import ClientCarousel from "./Clientcorousel/page";
 // import Guarantees from "./guarantees/page";
 // import Puzzle from "./Puzzle/page";
+import Carousel from "./carousel/page";
 import Responsive_ServicePage from "./ServicesPage/page";
 import Responsive_Testimonials from "./TestimonialsPage/page";
 
@@ -29,7 +30,12 @@ import Responsive_AdobeTech from "@/app/Technologies/page";
 import Responsive_ProductsPage from "@/app/Products/page";
 import PuzzleTest from "./testclient/page";
 import SingleProductPageTesting from "@/Components/SingleProduct/testing";
+import { Scroll } from "lucide-react";
+import PuzzleScrollSection from "./puzzlescroll/page";
+import Trail from "./trail/page";
+import Sample from "./sample/page";
 
+import NewCarousel from "./carousel/page";
 
 export default function App() {
   return (
@@ -41,12 +47,14 @@ export default function App() {
       <Responsive_ServicePage />
       <ClientCarousel />
       <Guarantees />
-      <PuzzleRes/>
+      {/* <PuzzleRes/> */}
+      <PuzzleScrollSection/>
       <Responsive_Best_App />
       <Responsive_Testimonials />
       <Responsive_CalendarTest />
       <Responsive_India />
       <GetAQuoteForm />
+      <Sample/>
       <Footer/>
 
 

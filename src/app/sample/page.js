@@ -1,24 +1,42 @@
+
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Controller } from "swiper/modules";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 import "swiper/css";
 
-export default function ClientCarousel() {
-   const companies = [
-    { logo: "carouselimages/flythlogo.png", phone: "carouselimages/flythimg.png" },
-    { logo: "carouselimages/aarishlogo.png", phone: "carouselimages/aarishimg.png" },
-    { logo: "carouselimages/poshanalogo.png", phone: "carouselimages/poshanaimg.png" },
-    { logo: "carouselimages/giftlogo.png", phone: "carouselimages/giftimg.png" },
-    { logo: "carouselimages/healrlogo.png", phone: "carouselimages/aarishimg1.png" },
+export default function Sample() {
+  const companies = [
+    {
+      logo: "/carouselimages/flythlogo.png",
+      phone: "/carouselimages/flythimg.png",
+    },
+    {
+      logo: "/carouselimages/aarishlogo.png",
+      phone: "/carouselimages/aarishimg.png",
+    },
+    {
+      logo: "/carouselimages/poshanalogo.png",
+      phone: "/carouselimages/poshanaimg.png",
+    },
+    {
+      logo: "/carouselimages/giftlogo.png",
+      phone: "/carouselimages/giftimg.png",
+    },
+    {
+      logo: "/carouselimages/healrlogo.png",
+      phone: "/carouselimages/aarishimg1.png",
+    },
   ];
 
   const phoneSwiperRef = useRef(null);
   const logoSwiperRef = useRef(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const [inView, setInView] = useState(false);
 
   const onPhoneSlideChange = (swiper) => {
     const totalSlides = companies.length;
@@ -32,36 +50,72 @@ export default function ClientCarousel() {
     }
   };
 
+  // Intersection Observer for heading animation
+  useEffect(() => {
+    const section = document.getElementById("featured-heading");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) setInView(true);
+      },
+      { threshold: 0.3 }
+    );
+    if (section) observer.observe(section);
+    return () => section && observer.unobserve(section);
+  }, []);
+
+  const heading = "Our Featured Projects".split(""); // keep spacing intact
+
+  const letterVariants = {
+    hidden: { color: "#7B7E86" }, // gray
+    visible: { color: "#3C6FA2" }, // blue
+  };
+
   return (
-    <div className="w-full px-4 sm:px-8 md:px-12 lg:px-16 ">
-      {/* Featured Projects....... */}
-      <h2 className="text-2xl sm:text-3xl mt-5 md:text-5xl lg:text-6xl text-center text-[#7B7E86] mb-6 sm:mb-8 md:mb-10">
-        <span className="text-blue-400">O</span>
-        <span className="text-gray-300">ur Featured Projects</span>
+    <div className="w-full px-4 sm:px-8 md:px-12 overflow-x-hidden lg:px-16">
+      {/* Animated Heading */}
+      <h2
+        id="featured-heading"
+        className="font-['Urbanist'] text-2xl sm:text-3xl mt-5 md:text-5xl lg:text-6xl text-center text-[#7B7E86] mb-6 sm:mb-8 md:mb-10"
+      >
+        {heading.map((char, i) => (
+          <motion.span
+            key={i}
+            variants={letterVariants}
+            initial="hidden"
+            whileInView="visible" //
+            viewport={{ once: false, amount: 0.6 }} //  play again whenever visible
+            transition={{ delay: i * 0.1, duration: 0.4 }}
+            className="inline-block"
+          >
+            {char === " " ? "\u00A0" : char}
+          </motion.span>
+        ))}
       </h2>
 
       <p className="text-xs sm:text-sm md:text-lg lg:text-xl text-center font-normal mb-6 sm:mb-8 md:mb-10 text-[#071637]">
         Our Clients
       </p>
 
-      <div className="relative max-w-7xl mx-auto space-y-10">
-        {/* Logo Carousel............... */}
+      <div className="relative max-w-7xl mx-auto space-y-2 xs:mt-0">
+        {/* Logo Carousel */}
         <Swiper
           loop={true}
-          loopedSlides={companies.length}
           autoplay={{ delay: 2500, disableOnInteraction: false }}
           speed={800}
           centeredSlides={true}
-          spaceBetween={24}
+            grabCursor={true} // <- add this
+ 
+  controller={{ control: phoneSwiperRef.current }}
+          spaceBetween={0}
           modules={[Controller, Autoplay]}
           breakpoints={{
-            360: { slidesPerView: 1, spaceBetween: 10 },   // xs
-            480: { slidesPerView: 2, spaceBetween: 12 },   // sm
-            640: { slidesPerView: 3, spaceBetween: 16 },   // md
-            768: { slidesPerView: 3, spaceBetween: 20 },   // lg
-            1024: { slidesPerView: 4, spaceBetween: 24 },  // xl
-            1280: { slidesPerView: 5, spaceBetween: 28 },  // 2xl
-            1536: { slidesPerView: 6, spaceBetween: 32 },  // 3xl
+            360: { slidesPerView: 1, spaceBetween: 10 },
+            480: { slidesPerView: 2, spaceBetween: 12 },
+            640: { slidesPerView: 3, spaceBetween: 14 },
+            768: { slidesPerView: 3, spaceBetween: 16 },
+            1024: { slidesPerView: 5, spaceBetween: 24 },
+            1280: { slidesPerView: 5, spaceBetween: 24 },
+            1536: { slidesPerView: 5, spaceBetween: 24 },
           }}
         >
           {companies.concat(companies).map((c, i) => (
@@ -78,31 +132,33 @@ export default function ClientCarousel() {
                   alt={`Logo ${i}`}
                   width={120}
                   height={100}
-                  className="object-contain"
+                  className="object-contain w-[50px] h-[30px] sm:w-[70px] sm:h-[40px] md:w-[90px] md:h-[55px] lg:w-[110px] lg:h-[70px]"
                 />
               </div>
             </SwiperSlide>
           ))}
         </Swiper>
 
-        {/* Phone Carousel..............*/}
-        <div className="w-full flex justify-center  translate-x-10  mx-auto">
+        {/* Phone Carousel */}
+        <div className="w-full flex justify-center phone-section mx-auto   md:px-12 ">
           <Swiper
-            className="client-swiper w-full  mx-auto"
+            className="client-swiper  w-full ml-auto   "
             loop={true}
             centeredSlides={true}
             autoplay={{ delay: 2500, disableOnInteraction: false }}
             speed={800}
-            spaceBetween={10}
+            spaceBetween={30}
             modules={[Autoplay, Controller]}
+            
             breakpoints={{
-              360: { slidesPerView: 1, spaceBetween: 10 },   // xs
-              480: { slidesPerView: 1.2, spaceBetween: 12 }, // sm
-              640: { slidesPerView: 2, spaceBetween: 14 },   // md
-              768: { slidesPerView: 3, spaceBetween: 16 },   // lg
-              1024: { slidesPerView: 4, spaceBetween: 20 },  // xl
-              1280: { slidesPerView: 5, spaceBetween: 24 },  // 2xl
-              1536: { slidesPerView: 5, spaceBetween: 28 },  // 3xl
+              344: { slidesPerView: 1, spaceBetween: 10 },
+              360: { slidesPerView: 1, spaceBetween: 10 },
+              480: { slidesPerView: 1.2, spaceBetween: 12 },
+              640: { slidesPerView: 2, spaceBetween: 14 },
+              768: { slidesPerView: 3, spaceBetween: 16 },
+              1024: { slidesPerView: 5, spaceBetween: 24 },
+              1280: { slidesPerView: 5, spaceBetween: 24 },
+              1536: { slidesPerView: 5, spaceBetween: 28 },
             }}
             onSwiper={(swiper) => {
               phoneSwiperRef.current = swiper;
@@ -116,10 +172,10 @@ export default function ClientCarousel() {
                 <div className="phone-wrapper flex justify-center">
                   <Image
                     src={c.phone}
-                    alt={`Phone ${i}`}
+                    alt="phone image"
                     width={260}
                     height={520}
-                    className="object-contain w-[70%] sm:w-3/4 md:w-60 lg:w-64"
+                    className=""
                   />
                 </div>
               </SwiperSlide>
@@ -128,28 +184,80 @@ export default function ClientCarousel() {
         </div>
       </div>
 
-      {/* Styles .............*/}
+      {/* Styles    */}
       <style jsx global>{`
-        .client-swiper .phone-wrapper {
-          transform: scale(0.8) translateY(30px);
-          transition: transform 0.5s ease;
-          padding-top: 2rem; /* keep padding same for all */
-        }
+  /* === Main Swiper wrapper styling === */
+  
 
-        .client-swiper .swiper-slide-active .phone-wrapper {
-          transform: scale(1.2) translateY(0);
-        }
+  /* === Default phone wrapper styling === */
+  .client-swiper .phone-wrapper {
+    transform: scale(0.8) translateY(30px); /* Make phones smaller & pushed down by default */
+    transition: transform 0.5s ease; /* Smooth scaling/translation effect */
+    padding-top: 3rem; 
+    padding-bottom: 2.5rem; 
+  }
 
-        .client-swiper .swiper-slide-prev .phone-wrapper,
-        .client-swiper .swiper-slide-next .phone-wrapper {
-          transform: scale(0.95) translateY(15px);
-        }
+  /* === Active slide phones (bigger + centered on larger screens) === */
+  
 
-        .client-swiper .prev-prev .phone-wrapper,
-        .client-swiper .next-next .phone-wrapper {
-          transform: scale(0.85) translateY(20px);
-        }
-      `}</style>
+  /* === Extra adjustment for active phone (all screen sizes) === */
+  .client-swiper .swiper-slide-active .phone-wrapper {
+    transform: scale(1.2) translateY(0) translateX(10px); /* Enlarge + shift slightly to the right */
+    margin-right: 20px; /* Add spacing on right side of active phone */
+  }
+
+  /* === Previous & Next slide phones (slightly bigger than default) === */
+  .client-swiper .swiper-slide-prev .phone-wrapper,
+  .client-swiper .swiper-slide-next .phone-wrapper {
+    transform: scale(0.95) translateY(15px); /* Smaller than active but larger than background */
+  }
+
+  /* === Farther Previous & Next phones (smaller + pushed more down) === */
+
+  .client-swiper .prev-prev .phone-wrapper,
+  .client-swiper .next-next .phone-wrapper {
+    transform: scale(0.95) translateY(15px); /* Smallest scale for depth effect */
+  }
+
+  /* === Responsive: Landscape mode for tablets & small laptops === */
+  @media (orientation: landscape) and (max-width: 1024px) {
+    .phone-section {
+      padding-top: 2rem !important; /* Adjust spacing at top in landscape */
+      transform: translateX(0) !important; /* Reset unwanted horizontal shifts */
+    }
+
+   
+    .client-swiper .swiper-slide-active .phone-wrapper {
+      transform: scale(1) translateY(0) !important; /* Active phone should appear centered & normal */
+    }
+  }
+
+  /* === Responsive: Smaller devices in landscape (phones sideways) === */
+  @media (orientation: landscape) and (max-width: 768px) {
+    .client-swiper .phone-wrapper {
+      width: 90% !important; /* Phones fill more width */
+    }
+
+    .client-swiper .swiper-slide-prev .phone-wrapper,
+    .client-swiper .swiper-slide-next .phone-wrapper {
+      transform: scale(0.80) translateY(10px) !important; /* Side phones smaller & slightly down */
+    }
+  }
+
+  
+`}</style>
+
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
