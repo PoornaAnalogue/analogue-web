@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <head><link rel="icon" href="/favicon.png" sizes="any" /></head>
       <body className={urbanist.className} >
-        <ModalPopUp />
+        {/* <ModalPopUp /> */}
         <CustomCursor />
         {children}
         {/* <ModalPopUp /> */}

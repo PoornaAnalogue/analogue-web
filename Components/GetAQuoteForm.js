@@ -1,9 +1,13 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import Dummy from "../src/app/Dummy/page";
+import { useRouter } from "next/navigation";
+
 
 export default function GetAQuoteForm() {
+   const router = useRouter();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -11,6 +15,7 @@ export default function GetAQuoteForm() {
     subject: "",
     reach: "",
     message: "",
+    captchaInput: "" 
   });
 
   const [touched, setTouched] = useState({});
@@ -27,8 +32,78 @@ export default function GetAQuoteForm() {
 
   const isError = (field) => touched[field] && !formData[field];
 
+    const isValidPhone = (phone) => {
+    // Remove country code and any non-digit characters
+    const num = phone.replace(/^\+91/, "").replace(/\D/g, "");
+    return /^[6-9]\d{9}$/.test(num); // must be exactly 10 digits, starting 6–9
+  };
+
+  // capcha generation
+   const [captcha, setCaptcha] = useState("");
+   const [captchaError, setCaptchaError] = useState(""); 
+
+  // Generate captcha on mount
+  useEffect(() => {
+    generateCaptcha();
+  }, []);
+
+  const generateCaptcha = () => {
+    const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    let code = "";
+    for (let i = 0; i < 6; i++) {
+      code += chars.charAt(Math.floor(Math.random() * chars.length));
+    }
+    setCaptcha(code);
+  };
+
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  const requiredFields = ["name", "phone", "subject", "reach", "message"];
+  let hasError = false;
+
+  // mark empty fields
+  requiredFields.forEach((field) => {
+    if (!formData[field]) {
+      setTouched((prev) => ({ ...prev, [field]: true }));
+      hasError = true;
+    }
+  });
+
+  // 🔴 strict phone validation (8 or 9 digits won’t pass here)
+  if (formData.phone && !isValidPhone(formData.phone)) {
+  setTouched((prev) => ({ ...prev, phone: true }));
+  hasError = true;
+}
+
+  if (hasError) {
+    console.log("❌ Invalid input, form blocked");
+    return;
+  }
+
+  // captcha check
+  if (!formData.captchaInput) {
+    setCaptchaError("Enter captcha");
+    return;
+  }
+
+  if (formData.captchaInput !== captcha) {
+    setCaptchaError("Enter valid captcha");
+    generateCaptcha();
+    return;
+  }
+
+  setCaptchaError("");
+  console.log("✅ Form submitted successfully", formData);
+  router.push("/Dummy");
+};
+
+
+
+
+
   return (
-    <div id ="form-section"  className="main-container min-h-[600px] xl:min-h-[700px] 2xl:min-h-screen relative flex flex-col items-center justify-center rounded-lg px-4 xl:mt-[-6rem] xs:px-6 xss:py-10 xl:py-0 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-20">
+    <div className="main-container min-h-[600px] xl:min-h-[700px] 2xl:min-h-screen relative flex flex-col items-center justify-center rounded-lg px-4 xl:mt-[-6rem] xs:px-6 xss:py-10 xl:py-0 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-20">
       {/* Background Image Layer */}
       <div
         className="Form-img absolute z-0 
@@ -36,12 +111,12 @@ export default function GetAQuoteForm() {
                       left-[-1rem] bottom-[-2rem]
                       xss:w-[70vw] xss:h-[70vh] xss:max-w-[600px] xss:max-h-[800px] xss:left-[1rem] xss:bottom-[-0.3rem]
                       xs:w-[75vw] xs:h-[70vh] xs:max-w-[600px] xs:max-h-[800px] xs:left-[2rem] xs:bottom-[-0.3rem]
-                      sm:w-[75vw] sm:h-[70vh] sm:max-w-[600px] sm:max-h-[800px] sm:left-[2rem] sm:bottom-[-1.5rem]
+                      sm:w-[75vw] sm:h-[70vh] sm:max-w-[600px] sm:max-h-[800px] sm:left-[2.8rem] sm:bottom-[-1.5rem]
                       md:w-[75vw] md:h-[75vh] md:max-w-[700px] md:max-h-[800px] md:left-[2rem] md:bottom-[-2rem]
-                      lg:w-[75vw] lg:h-[72vh] lg:max-w-[800px] lg:max-h-[900px] lg:left-[2.8rem] lg:bottom-[-3rem]
-                      xl:w-[80vw] xl:h-[80vh] xl:max-w-[900px] xl:max-h-[900px] xl:left-[7rem] xl:bottom-[-1rem]
-                      2xl:w-[75vw] 2xl:h-[75vh] 2xl:max-w-[1000px] 2xl:max-h-[1000px] 2xl:left-[5rem] 2xl:bottom-[-0.8rem]
-                      3xl:w-[75vw] 3xl:h-[75vh] 3xl:max-w-[1000px] 3xl:max-h-[1000px] 3xl:left-[13rem] 3xl:bottom-[-2rem]
+                      lg:w-[70vw] lg:h-[72vh] lg:max-w-[800px] lg:max-h-[900px] lg:left-[3rem] lg:bottom-[-4rem]
+                      xl:w-[70vw] xl:h-[80vh] xl:max-w-[900px] xl:max-h-[900px] xl:left-[6rem] xl:bottom-[-2rem]
+                      2xl:w-[75vw] 2xl:h-[75vh] 2xl:max-w-[1000px] 2xl:max-h-[1000px] 2xl:left-[5rem] 2xl:bottom-[-3rem]
+                      3xl:w-[75vw] 3xl:h-[75vh] 3xl:max-w-[1000px] 3xl:max-h-[1000px] 3xl:left-[12rem] 3xl:bottom-[-4rem]
                       bg-no-repeat bg-contain bg-left-bottom"
       ></div>
 
@@ -71,11 +146,13 @@ export default function GetAQuoteForm() {
             Get a Quote from a Top Mobile App Development Company
           </p>
 
-          {/* Form Fields */}
-          <form className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 xs:gap-2 overflow-hidden">
+
+           {/* Form Fields */}
+       <form onSubmit={handleSubmit}
+        className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-2 2xl:gap-5 xs:gap-2 overflow-hidden">
             {[
               { name: "name", type: "text", placeholder: "Your Name*" },
-              { name: "email", type: "email", placeholder: "Your Email" },
+              { name: "email", type: "email", placeholder: "Your Email*" },
               { name: "subject", type: "text", placeholder: "Subject" },
             ].map((field, i) => (
               <div key={i}>
@@ -97,27 +174,38 @@ export default function GetAQuoteForm() {
                 )}
               </div>
             ))}
- 
+
+            {/* Phone Number with Flag */}
             <div>
               <PhoneInput
                 country={"in"}
                 value={formData.phone}
-                onChange={(phone) => setFormData((prev) => ({ ...prev, phone }))}
+                onChange={(phone) => {
+                  // Store raw phone input and clean for validation
+                  setFormData((prev) => ({ ...prev, phone }));
+                  setTouched((prev) => ({ ...prev, phone: true }));
+                }}
+                onBlur={() => setTouched((prev) => ({ ...prev, phone: true }))}
                 countryCodeEditable={false}
                 enableSearch={true}
                 inputClass="!bg-transparent !border-none !focus:outline-none !text-xs !w-full !pl-12 !text-gray-800 placeholder-black"
                 buttonClass="!bg-transparent !border-none !outline-none"
-                containerClass={`!border-b !pb-1 ${isError("phone") || (formData.phone && formData.phone.replace(/^\+91/, '').length < 10) ? "!border-red-500 !text-red-600" : "!border-gray-800"}`}
+                containerClass={`!border-b !pb-1 ${
+                  isError("phone")
+                    ? "!border-red-500 !text-red-600"
+                    : "!border-gray-800"
+                }`}
                 dropdownClass="!bg-white !text-xs"
                 placeholder="Phone Number*"
               />
-              {(isError("phone") || (formData.phone && formData.phone.replace(/^\+91/, '').length < 10)) && (
+              {isError("phone") && (
                 <p className="text-xs text-red-500 mt-1">
-                  Please enter a valid number.
+                  Phone Number is required.
                 </p>
               )}
             </div>
- 
+
+            {/* Select */}
             <div className="md:col-span-2">
               <select
                 name="reach"
@@ -143,7 +231,8 @@ export default function GetAQuoteForm() {
                 </p>
               )}
             </div>
- 
+
+            {/* Textarea */}
             <div className="md:col-span-2">
               <textarea
                 name="message"
@@ -153,29 +242,47 @@ export default function GetAQuoteForm() {
                 onChange={handleChange}
                 onBlur={handleBlur}
                 className={`bg-transparent border-b focus:outline-none text-gray-800 text-xs placeholder-black py-2 w-full ${
-                  isError("message")
-                    ? "border-red-500 text-red-600"
-                    : "border-gray-800"
+                  isError("message") ? "border-red-500 text-red-600" : "border-gray-800"
                 }`}
               />
-              {isError("message") && (
-                <p className="text-xs text-red-500 mt-1">
-                  Message is required.
-                </p>
-              )}
+              {isError("message") && <p className="text-xs text-red-500 mt-1">Message is required.</p>}
             </div>
- 
+
+            {/* Captcha Section */}
+            <div className="md:col-span-2 flex flex-col gap-2">
+              {/* Row 1: Captcha text */}
+              <span className="text-black px-4 py-2 bg-white rounded-md font-mono xss:text-sm lg:text-lg w-fit tracking-widest">
+                {captcha}
+              </span>
+
+              {/* Row 2: Input field */}
+              <input
+                type="text"
+                name="captchaInput"
+                value={formData.captchaInput}
+                onChange={handleChange}
+                placeholder="Enter Captcha"
+                className={`border-b bg-transparent focus:outline-none text-xs text-gray-800 placeholder-black py-2 xss:w-1/2 md:w-1/4 xl:w-1/8 ${captchaError ? "border-red-500 text-red-600" : ""}`}
+              />
+              {/* Error message below input */}
+              {captchaError && <p className="text-xs text-red-500">{captchaError}</p>}
+            </div>
+
+            {/* Button */}
             <div className="col-span-1 md:grid-cols-2 flex justify-start mt-2">
-              <button
-                type="submit"
-                className="px-4 py-2 bg-blue-500 rounded-full text-white hover:bg-blue-600 transition text-sm"
-              >
+              <button type="submit" className="px-4 py-2 bg-blue-500 rounded-full text-white hover:bg-blue-600 transition xss:text-xs lg:text-sm">
                 Get A Quote
               </button>
             </div>
           </form>
+
+
+          
         </div>
       </div>
     </div>
   );
 }
+
+
+

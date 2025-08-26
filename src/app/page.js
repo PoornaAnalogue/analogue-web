@@ -10,7 +10,7 @@ import PuzzleRes from "./puzzleres/page";
 import AboutUs from "./aboutus/page";
 import ClientCarousel from "./Clientcorousel/page";
 import GetAQuoteForm from "../../Components/GetAQuoteForm";
-import Responsive_CalendarTestPast from "./BookAppointment/page";
+import Responsive_CalendarTestPast from "./BookAppointment/test";
 import Navbar from "../../Components/Navbar";
 import Responsive_Best_App from "./BestMobileApp/page";
 import Responsive_ServicePage from "./ServicesPage/page";
@@ -43,12 +43,20 @@ import Responsive_SingleProductPage from "@/app/SingleProduct/page";
 import IndustryPagetest from "./Indus-News/page";
 import Responsive_IndusNews from "./Indus-News/page";
 import Responsive_IndusWeb from "./Indus-News copy/page";
+import Calendarcheck from "../../Components/Check";
+import Check from "../../Components/Check";
+import Responsive_CalendarTest from "./BookAppointment/test";
+import Responsive_CalendarTest2 from "./BookAppointment/page";
+import Responsive_Calendar from "./BookAppointment/page";
+// import Calendarchecking from "../../Components/Calendarcheck";
+// import Calendarchecking from "../../Components/Calendarcheck";
+
 
 
 export default function App() {
   return (
     <>
-      {/* <Navbar />
+      <Navbar />
       <Home/>
       <Responsive_ServicePage_Mobile />
       <ClientCarousel />
@@ -56,18 +64,18 @@ export default function App() {
       <PuzzleRes />
       <Responsive_Best_App />
       <Responsive_Testimonials />
-      <Responsive_CalendarTest />
+      <Responsive_Calendar />
       <Responsive_India />
       <GetAQuoteForm />
-      <Footer/> */}
+      <Footer/>
 
 
-
-        {/* <Responsive_CalendarTest /> */}
-        {/* <Responsive_CalendarTestPast /> */}
         {/* <Responsive_India /> */}
         {/* <GetAQuoteForm /> */}
         {/* <Footer/> */}
+        {/* <Responsive_Testimonials /> */}
+        {/* <Responsive_India /> */}
+        {/* <Responsive_Calendar /> */}
 
       {/* <Responsive_AdobeTech />
       <Responsive_AngularTech />
@@ -92,8 +100,8 @@ export default function App() {
       {/* <Responsive_IndusNews /> */}
       {/* <Responsive_IndusWeb /> */}
 
-      
-      {/* <Navbar />
+{/*       
+      <Navbar />
       <Home />
       <Responsive_ServicePage_Mobile />
       <ClientCarousel />
@@ -107,6 +115,10 @@ export default function App() {
       <Footer /> */}
 
       {/* <GetAQuoteForm /> */}
+
+      {/* <Responsive_ServicePage_Mobile /> */}
+      {/* <Check /> */}
+      
       
 
       
