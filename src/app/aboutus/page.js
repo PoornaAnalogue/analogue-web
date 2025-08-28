@@ -1,4 +1,3 @@
-
 "use client";
 import Image from "next/image";
 import CountUp from "react-countup";
@@ -48,10 +47,7 @@ export default function AboutPage() {
                 Analogue is a Best mobile app development company in Hyderabad
                 that specialises in creating and enhancing user experience
                 through the design and development of mobile and web
-                applications. Our focus lies in helping businesses expand and
-                reach their specific customer base by collaborating with
-                individuals and organisations to conceptualise and promote their
-                products.
+                applications.
               </p>
             </div>
           </div>
@@ -168,55 +164,48 @@ export default function AboutPage() {
 
       {/* SECTION 2 */}
       <section className="w-full bg-white">
-    
-         
-         
+        {/* SECTION 2 */}
 
-          {/* SECTION 2 */}
+        <div className="relative w-full lg:">
+          {/* Background Image */}
+          <Image
+            src="/aboutimages/section2bgimg.jpg"
+            alt="Section Background"
+            width={1920}
+            height={1080}
+            className="w-full h-auto   object-cover "
+            
+          />
 
-          <div className="relative w-full">
-            {/* Background Image */}
-            <Image
-              src="/aboutimages/section2bgimg.jpg"
-              alt="Section Background"
-              width={1920}
-              height={1080}
-              className="w-full h-auto object-cover"
-            />
-
-            {/* Overlay Text */}
-            <div className="absolute inset-0 flex flex-col justify-center items-start px-6 sm:px-12 lg:px-20 text-white rounded-lg">
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-                Create an effective <br /> web and app Design
-              </h2>
-              <p className="text-sm sm:text-base md:text-lg mb-6 max-w-xl leading-6 sm:leading-7">
-                Analogue is a Best mobile app development company in Hyderabad
-                that specialises in creating and enhancing user experience
-                through the design and development of mobile and web
-                applications. Our focus lies in helping businesses expand and
-                reach their specific customer base by collaborating with
-                individuals and organisations to conceptualise and promote their
-                products.
-              </p>
-              <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition">
-                Contact Us
-              </button>
-            </div>
-
-            {/* Decorative Rectangle */}
-            <div className="absolute right-4 sm:right-6 lg:right-8 -bottom-[70px]">
-              <Image
-                src="/aboutimages/Rectangle.svg"
-                alt="Rectangle"
-                width={300}
-                height={200}
-                className="h-auto w-full max-w-xs sm:max-w-sm lg:max-w-md"
-              />
-            </div>
+          {/* Overlay Text */}
+          <div className="absolute inset-0 flex flex-col justify-center items-start px-6 sm:px-12 lg:px-20 text-white rounded-lg">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
+              Create an effective <br /> web and app Design
+            </h2>
+            <p className="text-sm sm:text-base md:text-lg mb-6 max-w-xl   leading-6   sm:leading-7">
+              Analogue is a Best mobile app development company in Hyderabad
+              that specialises in creating and enhancing user experience through
+              the design and development of mobile and web applications. Our
+              focus lies in helping businesses expand and reach their specific
+              customer base by collaborating with individuals and organisations
+              to conceptualise and promote their products.
+            </p>
+            <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-md font-medium transition">
+              Contact Us
+            </button>
           </div>
 
-          
-        
+          {/* Decorative Rectangle */}
+          <div className="absolute right-4 sm:right-6 lg:right-8 -bottom-[90px] ">
+            <Image
+              src="/aboutimages/Rectangle.svg"
+              alt="Rectangle"
+              width={300}
+              height={200}
+              className="h-auto w-full max-w-xs sm:max-w-sm lg:max-w-md lg:max-w-md  2xl:w-full "
+            />
+          </div>
+        </div>
 
         <div className="h-20 sm:h-32"></div>
 

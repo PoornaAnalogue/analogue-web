@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useRef, useState, useEffect } from "react";
@@ -29,7 +28,7 @@ export default function ClientCarousel() {
     },
     {
       logo: "/carouselimages/healrlogo.png",
-      phone: "/carouselimages/aarishimg1.png",
+      phone: "/carouselimages/healrimg.png",
     },
   ];
 
@@ -108,22 +107,22 @@ export default function ClientCarousel() {
         <Swiper
           loop={true}
           centeredSlides={true}
-            slidesPerView={1}
+          slidesPerView={1}
           speed={800}
           spaceBetween={10}
           modules={[Controller, Autoplay]}
           onSwiper={(swiper) => (logoSwiperRef.current = swiper)}
           // slidesPerView={5}
           breakpoints={{
-  344: { slidesPerView: 1, spaceBetween: 5 },
-  480: { slidesPerView: 1.2, spaceBetween: 6 },
-  640: { slidesPerView: 3, spaceBetween: 10 },
-  768: { slidesPerView: 3, spaceBetween: 12 },
-  1024: { slidesPerView: 5, spaceBetween: 16 },  // ✅ equal gap
-  1280: { slidesPerView: 5, spaceBetween: 24 },
-  1536: { slidesPerView: 5, spaceBetween: 28 },
-}}
-  
+            344: { slidesPerView: 1, spaceBetween: 5 },
+            360: { slidesPerView: 1, spaceBetween: 5 },
+            480: { slidesPerView: 1.2, spaceBetween: 6 },
+            640: { slidesPerView: 3, spaceBetween: 5 },
+            768: { slidesPerView: 3, spaceBetween: 12 },
+            1024: { slidesPerView: 5, spaceBetween: 16 }, // ✅ equal gap
+            1280: { slidesPerView: 5, spaceBetween: 24 },
+            1536: { slidesPerView: 5, spaceBetween: 28 },
+          }}
         >
           {companies.concat(companies).map((c, i) => (
             <SwiperSlide key={`logo-${i}`} onClick={() => onLogoClick(i)}>
@@ -166,6 +165,7 @@ export default function ClientCarousel() {
             onSlideChange={onPhoneSlideChange}
             // slidesPerView={3}
             breakpoints={{
+               320: { slidesPerView: 1, spaceBetween: 5 },
               344: { slidesPerView: 1, spaceBetween: 5 },
               360: { slidesPerView: 1, spaceBetween: 5 },
               480: { slidesPerView: 1.2, spaceBetween: 6 },
@@ -184,7 +184,7 @@ export default function ClientCarousel() {
                     alt="phone image"
                     width={260}
                     height={520}
-                    className="object-contain w-[60%] sm:w-3/4 md:w-60 lg:w-64"
+                    className="object-contain w-[60%] sm:w-3/4 md:w-60 lg:w-64 xl:phone-xl  phone-img"
                   />
                 </div>
               </SwiperSlide>
@@ -194,74 +194,181 @@ export default function ClientCarousel() {
       </div>
 
       {/* Styles */}
-    <style jsx global>{`
-  /* 🔹 Default phone wrapper animation styles */
-  .client-swiper .phone-wrapper {
-    transform: scale(0.8) translateY(30px); /* smaller & pushed down by default */
-    transition: transform 0.5s ease;        /* smooth scaling animation */
-    padding-top: 3rem;                      /* top spacing */
-                 
+      <style jsx global>{`
+
+      // ..............640
+
+      /* 🔹 Faster but smooth animation */
+.client-swiper .phone-wrapper {
+  transition: transform 0.2s ease !important;
+}
+.client-swiper .swiper-slide {
+  transition: transform 0.2s ease, opacity 0.2s ease !important;
+}
+
+/* 🔹 Height adjustments */
+@media (max-width: 480px) {
+  .client-swiper .phone-wrapper img {
+    height: 250px !important;
+    width: auto !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .client-swiper .phone-wrapper img {
+    height: 280px !important;
+    width: auto !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .client-swiper .phone-wrapper img {
+    height: 320px !important;
+    width: auto !important;
+  }
+}
+ 
+        /* 🔹 Default phone wrapper animation styles */
+
+        /* Farthest left slide */
+        .client-swiper .swiper-slide-prev-prev .phone-wrapper {
+          transform: translateX(-20px); /* move it left */
+        }
+
+        /* Farthest right slide */
+        .client-swiper .swiper-slide-next-next .phone-wrapper {
+          transform: translateX(-20px); /* move it right */
+        }
+
+        /* 🔹 Small screen adjustments */
+        @media (max-width: 640px) {
+          .client-carousel-container {
+            padding-left: 0.5rem !important; /* reduce side padding */
+            padding-right: 0.5rem !important;
+          }
+        }
+
+        /* 🔹 Very small devices (≤360px) → reduce top margin for phone section */
+        @media (max-width: 360px) {
+          .phone-section {
+            margin-top: 1rem !important; /* smaller gap */
+          }
+        }
+
+        /* 🔹 Mobile landscape mode → reduce vertical gap further */
+        @media (orientation: landscape) and (max-width: 767px) {
+          .phone-section {
+            margin-top: 0.5rem !important;
+          }
+        }
+        // ,..................
+        /* Center slide bigger */
+        .client-swiper .swiper-slide-active .phone-wrapper img {
+          transform: scale(1);
+          z-index: 10;
+        }
+
+        /* First left and first right neighbors slightly bigger */
+        .client-swiper .swiper-slide-prev .phone-wrapper img,
+        .client-swiper .swiper-slide-next .phone-wrapper img {
+          transform: scale(1.05);
+          z-index: 5;
+        }
+        .client-swiper .swiper-slide-next .phone-wrapper img {
+          transform: scale(1.05);
+          z-index: 5;
+        
+        }
+        .client-swiper .swiper-slide-prev .phone-wrapper img {
+          
+        }
+
+        /* Reduce extra space around first left and first right neighbors */
+        .client-swiper .swiper-slide-prev .phone-wrapper {
+        }
+
+        .client-swiper .swiper-slide-next .phone-wrapper {
+          /* reduces space on right of right neighbor */
+        }
+
+
+        
+        /* 1024px breakpoint (xl) /..................*/
+
+        @media (min-width: 1024px) and (max-width: 1279px) {
+          .client-swiper .swiper-slide {
+            display: flex;
+            align-items: center; /* vertically center */
+            justify-content: center;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            
+          }
+
+          .client-swiper .swiper-slide-next .phone-wrapper img {
+          transform: scale(1.05);
+          z-index: 5;
+          margin-right: -20px;
+        }
+        .client-swiper .swiper-slide-prev .phone-wrapper img {
+          margin-left: -20px;
+        } 
+      }
+
+
+        // 1280.............
+
+
+        /* 1280px – 1536px (2xl) */
+@media (min-width: 1280px) and (max-width: 1536px) {
+  .client-swiper .swiper-slide {
+    display: flex;
+    align-items: center; /* vertically center */
+    justify-content: center;
+    transition: transform 0.3s ease, opacity 0.3s ease;
   }
 
-  /* 🔹 Active slide (center) → enlarge and reset position */
-  .client-swiper .swiper-slide-active .phone-wrapper {
-    transform: scale(1.2) translateY(); /* bigger when active */
+  .client-swiper .swiper-slide-next .phone-wrapper img {
+    transform: scale(1.05);
+    z-index: 5;
+    margin-right: -30px; /* bigger margin for bigger screens */
   }
 
-  /* 🔹 Immediate neighbors (prev & next) → slightly bigger than default */
-  .client-swiper .swiper-slide-prev .phone-wrapper,
-  .client-swiper .swiper-slide-next .phone-wrapper {
-    transform: scale(0.95) translateY(0px);
+  .client-swiper .swiper-slide-prev .phone-wrapper img {
+    margin-left: -30px;
   }
+}
+ 
 
-  /* 🔹 2 steps away (prev-prev & next-next) → smaller */
-  .client-swiper .prev-prev .phone-wrapper,
-  .client-swiper .next-next .phone-wrapper {
-    transform: scale(0.95) translateY();
+       
+            480...... PHONE  //  
+/* 🔹 Apply only for 480px and below */
+@media (max-width: 480px) {
+  .client-swiper .phone-wrapper img {
+    height: 250px !important;  /* smaller height */
+    width: auto !important;    /* keep aspect ratio */
   }
+}
 
-  /* 🔹 Small screen adjustments */
-  @media (max-width: 640px) {
-    .client-carousel-container {
-      padding-left: 0.5rem !important;  /* reduce side padding */
-      padding-right: 0.5rem !important;
-    }
-  }
+ 
+           
 
-  /* 🔹 Very small devices (≤360px) → reduce top margin for phone section */
-  @media (max-width: 360px) {
-    .phone-section {
-      margin-top: 1rem !important; /* smaller gap */
-    }
-  }
 
-  /* 🔹 Mobile landscape mode → reduce vertical gap further */
-  @media (orientation: landscape) and (max-width: 767px) {
-    .phone-section {
-      margin-top: 0.5rem !important;
-    }
-  }
+        
 
-  /* 🔹 Large tablets/small desktops (1024px–1279px) → active slide scales more */
-  @media (min-width: 1024px) and (max-width: 1279px) {
-    .client-swiper .swiper-slide-active .phone-wrapper {
-      transform: scale(1.5);              /* bigger scaling */
-      transform-origin: center center;    /* expand from center */
-    }
-  }
+        // .................
 
-  /* 🔹 Mobile landscape fine-tuning (padding tweaks) */
-  @media (orientation: landscape) and (max-width: 767px) {
-    .phone-section {
-      margin-top: 0.3rem !important; /* even smaller gap */
-    }
-    .client-swiper .phone-wrapper {
-      padding-top: 0.5rem !important;   /* less padding */
-      padding-bottom: 1rem !important;
-    }
-  }
-`}</style>
+        /* 🔹 Large tablets/small desktops (1024px – 1279px ) → active slide scales more */
 
+        /* 🔹 Mobile landscape fine-tuning (padding tweaks) */
+        @media (orientation: landscape) and (max-width: 767px) {
+          .phone-section {
+            margin-top: 0.3rem !important; /* even smaller gap */
+          }
+          .client-swiper .phone-wrapper {
+            padding-top: 0.5rem !important; /* less padding */
+          }
+        }
+      `}</style>
     </div>
   );
 }
