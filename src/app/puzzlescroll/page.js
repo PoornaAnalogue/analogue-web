@@ -555,43 +555,59 @@ export default function PuzzleScroll() {
   };
 
 
+
+  // Detect when container hits the top of viewport
+
+
+  
+ 
   const handleScrollChange = (direction) => {
   if (scrollLock.current) return;
 
-  // Scroll down normally
+  // Scroll down → go forward in puzzle
   if (direction === "down" && currentStep < maxStep) {
     setCurrentStep((prev) => prev + 1);
     lockScrollTemporarily();
   } 
-  // Scroll up only if not at first step
+  // At last step + scroll down → unlock and leave puzzle
+  else if (direction === "down" ) {
+    setIsLocked(false);
+  } 
+  // Scroll up → go backward in puzzle
   else if (direction === "up" && currentStep > minStep) {
     setCurrentStep((prev) => prev - 1);
-    lockScrollTemporarily();
+  
   } 
-  // Unlock scroll if at step 1 and user scrolls up
-  else if (direction === "up" && currentStep === minStep) {
-    setIsLocked(false); // release scroll
-  } 
-  // Unlock scroll if at last step and user scrolls down
-  else if (direction === "down" && currentStep === maxStep) {
+  // At step 1 + scroll up → unlock and leave puzzle
+  else if (direction === "up" ) {
     setIsLocked(false);
   }
 };
-
+  
  
 
+  
+  // Track scroll position for direction
+const lastScrollY = useRef(0);
 
-  // Detect when container hits the top of viewport
-
-  useEffect(() => {
+useEffect(() => {
   const observer = new IntersectionObserver(
     (entries) => {
       const entry = entries[0];
-      // Lock scroll only when top of container touches viewport top
+
+      // detect scroll direction
+      const currentY = window.scrollY;
+      const direction = currentY > lastScrollY.current ? "down" : "up";
+      lastScrollY.current = currentY;
+
       if (entry.boundingClientRect.top <= 0 && entry.isIntersecting) {
-        setIsLocked(true);
+        if (direction === "down") {
+          setIsLocked(true);   // lock only on DOWN
+        } else {
+          setIsLocked(false);  // unlock when coming from bottom (UP)
+        }
       } else {
-        setIsLocked(false); // unlock when container is above or not visible
+        setIsLocked(false); // unlock outside section
       }
     },
     { threshold: 0, rootMargin: "0px 0px -100% 0px" }
@@ -603,12 +619,9 @@ export default function PuzzleScroll() {
     if (containerRef.current) observer.unobserve(containerRef.current);
   };
 }, []);
+ 
 
-
-  // Prevent outer scroll when locked
-  
-  // Mobile & desktop scroll lock
-useEffect(() => {
+  useEffect(() => {
   const preventTouch = (e) => {
     if (isLocked) e.preventDefault(); // Stops touch scrolling on mobile
   };
