@@ -8,7 +8,7 @@ export default function Responsive_IndusNews() {
         {/* Header Section */}
                 <div className="relative flex justify-center w-full bg-white ">
                   <Image
-                    src="/AdobeTech-Images/AbstractDesign.jpg"
+                    src="/AdobeTech-Images/Abstract Design.svg"
                     width={480}
                     height={180}
                     alt="Abstract design background"
@@ -48,7 +48,7 @@ export default function Responsive_IndusNews() {
         </div>
 
         {/* Methodology Section */}
-        <div className="bg-[url('/Calendar-Images/calendar-bg.jpg')] bg-cover bg-center w-full min-h-[280px] xss:min-h-[300px] sm:min-h-[350px] md:min-h-[380px] lg:min-h-[400px]  relative p-4 xss:p-2 sm:p-8 md:p-10 lg:p-12 xl:p-16 2xl:p-20">
+        <div className="bg-[url('/Calendar-Images/calendar-bg.svg')] bg-cover bg-center w-full min-h-[280px] xss:min-h-[300px] sm:min-h-[350px] md:min-h-[380px] lg:min-h-[400px]  relative p-4 xss:p-2 sm:p-8 md:p-10 lg:p-12 xl:p-16 2xl:p-20">
           <div className="max-w-full xss:max-w-[90%]  sm:max-w-3xl md:max-w-4xl lg:max-w-5xl xl:max-w-6xl mx-auto text-white px-4 xss:px-2 sm:pl-6 md:pl-12 lg:pl-14 ">
             <h2 className="text-lg xss:text-sm sm:text-xl md:text-2xl xl:text-3xl  font-bold leading-tight">
               A proven methodology for successful project delivery from conception to deployment.
@@ -63,7 +63,7 @@ export default function Responsive_IndusNews() {
           <div className="xss:hidden xl:block absolute bottom-0  xl:-bottom-22 right-4 xss:right-5 xs:right-6 sm:right-8 md:right-10 lg:right-12 xl:right-10 2xl:right-20 3xl:-bottom-30 w-[120px] xl:w-[450px] 3xl:w-[530px] h-auto">
             <Image
               className="rounded-lg w-full h-auto"
-              src="/Industry-Images/Indus-News-2.png"
+              src="/Industry-Images/Indus-common.svg"
               alt="Industry Image"
               width={700}
               height={600}
@@ -74,7 +74,7 @@ export default function Responsive_IndusNews() {
         <div className="w-full p-3 xl:hidden">
             <Image
               className="rounded-lg w-full h-auto"
-              src="/Industry-Images/Indus-News-2.png"
+              src="/Industry-Images/Indus-common.svg"
               alt="Industry Image"
               width={700}
               height={600}

@@ -65,7 +65,7 @@ export default function Guarantees() {
   };
 
   const renderRow = (items, startIndex) => (
-    <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+    <div className="mt-4 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-6">
       {items.map((item, idx) => {
         const globalIndex = startIndex + idx;
         const isFlipped = flippedIndex === globalIndex;
@@ -73,7 +73,7 @@ export default function Guarantees() {
         return (
           <div
             key={globalIndex}
-            className="w-full xss:h-[3rem] md:h-[4rem] xl:h-[5rem] 2xl:h-[110px] cursor-pointer perspective group"
+            className="w-full xss:h-[3rem] md:h-[4rem] xl:h-[5rem] cursor-pointer perspective group"
             onClick={() => handleCardClick(globalIndex)}
           >
             <div
@@ -107,7 +107,7 @@ export default function Guarantees() {
         {/* Main Heading */}
         <h1
           className="
-            text-lg sm:text-xl md:text-2xl lg:text-subheading xl:text-normal
+            text-lg xss:text-xs sm:text-base md:text-xl lg:text-subnormal xl:text-subnormal 3xl:text-subheading
             font-medium text-[#0D6EFD] leading-snug
             text-center lg:text-left
             whitespace-normal
@@ -120,7 +120,7 @@ export default function Guarantees() {
         {/* Paragraph */}
         <p
           className="
-            mt-4 text-subsmall sm:text-small md:text-body lg:text-subbody xl:text-[1.1rem] 3xl:text-body
+            mt-4 text-subsmall sm:text-small md:text-subbody lg:text-subbody xl:text-tracking-wide 2xl:text-md 2xl:leading-8 3xl:text-subbody
             text-[#7B7E86] leading-relaxed font-medium
             text-justify sm:text-left">
           Analogue has achieved the name and fame of being the best mobile app
@@ -135,7 +135,7 @@ export default function Guarantees() {
           a blend of essential design patterns and sophisticated style elements.
           Being the premier mobile app development company in Hyderabad, India.
         </p><br/><br />
-      <h2 className="text-2xl font-semibold text-center text-blue-600 mb-8">
+      <h2 className="text-2xl xss:text-xs xss:mt-[-1rem] lg:text-lg sm:text-base font-semibold text-center lg:text-2xl xss:text-lg text-blue-600 mb-8">
         Analogue Guarantees the following : 
       </h2>
 
@@ -144,7 +144,7 @@ export default function Guarantees() {
       {renderRow(row2, 3)}
 
       {/* Third row - last 2 items, centered */}
-      <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-3xl mx-auto">
+      <div className="mt-4 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
         {row3.map((item, idx) => {
           const globalIndex = 6 + idx;
           const isFlipped = flippedIndex === globalIndex;
@@ -152,7 +152,7 @@ export default function Guarantees() {
           return (
             <div
               key={globalIndex}
-              className="w-full xss:h-[3rem] md:h-[4rem] xl:h-[5rem] 2xl:h-[110px] cursor-pointer perspective group"
+              className="w-full xss:h-[3rem] md:h-[4rem] xl:h-[5rem] cursor-pointer perspective group"
               onClick={() => handleCardClick(globalIndex)}
             >
               <div

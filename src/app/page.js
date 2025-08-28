@@ -18,7 +18,6 @@ import PuzzleScrollSection from "./puzzlescroll/page";
 import ClientCarousel from "./Clientcorousel/page";
 
 
-import Responsive_AdobeTech from "./Tech-Adobe/page";
 import Responsive_AngularTech from "./Tech-Angular/page";
 import Responsive_AWSTech from "./Tech-AWS/page";
 import Responsive_PyTech from "./Tech-Py/page";
@@ -42,12 +41,13 @@ import Responsive_ProductsPage from "@/app/Products/page";
 
 import Contact from "./Contact/page";
 import AndroidAppDevelopment from "./Services/Android-App-Development/page";
+import Responsive_AdobeTech from "./Tech-Adobe/page";
 
 export default function App() {
   return (
     <>
 
-      <Navbar />
+      {/* <Navbar />
       <Home/>
       <Responsive_ServicePage_Mobile />
       <ClientCarousel />
@@ -58,14 +58,21 @@ export default function App() {
       <Responsive_Calendar />
       <Responsive_India />
       <GetAQuoteForm />
-      <Footer/>
+      <Footer/> */}
 
 
+
+
+      {/* <Responsive_SingleProductPage /> */}
+      {/* <Responsive_AngularTech /> */}
+      <Responsive_AdobeTech />
+
+      {/* <Responsive_IndusNews /> */}
 
         {/* 
-      <Responsive_SingleProductPage />
-      <Responsive_AngularTech />
-      <Responsive_IndusNews />
+       
+      
+      
       <AndroidAppDevelopment />
       <Responsive_ProductsPage />
       <Contact /> 

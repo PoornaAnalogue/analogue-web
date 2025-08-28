@@ -1,8 +1,10 @@
 "use client";
+                    // sizes="(max-width: 320px) 200px, (max-width: 360px) 220px, (max-width: 480px) 240px, (max-width: 640px) 260px, (max-width: 704px) 250px, (max-width: 768px) 340px, (max-width: 1024px) 380px, (max-width: 1280px) 420px, (max-width: 1536px) 440px, 500px"
+
 import { useEffect } from "react";
 import Image from "next/image";
 
-export default function Responsive_AdobeTech() {
+export default function Responsive_AdobeTechImg() {
   useEffect(() => {
     const scrollCarousel = document.querySelector(".animate-scroll");
     const scrollLapCarousel = document.querySelector(".animate-scrollLap");
@@ -34,24 +36,24 @@ export default function Responsive_AdobeTech() {
     <>
       <div className="min-h-screen w-full bg-white flex flex-col items-center">
         {/* Header Section */}
-        <div className="relative flex justify-center w-full bg-white">
-          <Image
-            src="/AdobeTech-Images/AbstractDesign.jpg"
-            width={480}
-            height={180}
-            alt="Abstract design background"
-            className="object-contain w-full h-auto max-w-[300px] xss:max-w-[320px] xs:max-w-[360px] sm:max-w-[480px] md:max-w-[550px] "
-            sizes="(max-width: 320px) 300px, (max-width: 360px) 320px, (max-width: 480px) 360px, (max-width: 640px) 450px, (max-width: 768px) 640px, 768px"
-          />
-          <div className="absolute top-12 xss:top-10 xs:top-10 sm:top-20 md:top-15 bg-white px-4">
-            <h1 className="text-xl xss:text-2xl xs:text-3xl sm:text-4xl md:text-[2.5rem] font-bold text-violet-950 text-center">
-              Technologies
-            </h1>
-            <p className="text-xs xss:text-xs xs:text-base sm:text-lg text-black leading-loose text-center mt-2 sm:mt-3">
-              Crafted with love since 2017
-            </p>
-          </div>
-        </div>
+        <div className="relative flex justify-center w-full bg-white ">
+                          <Image
+                            src="/AdobeTech-Images/Abstract Design.svg"
+                            width={480}
+                            height={180}
+                            alt="Abstract design background"
+                            className="object-contain w-full h-auto max-w-[300px] xss:max-w-[320px] xs:max-w-[360px] sm:max-w-[450px] "
+                            sizes="(max-width: 320px) 300px, (max-width: 360px) 320px, (max-width: 480px) 360px, (max-width: 640px) 450px, (max-width: 768px) 640px, 768px"
+                          />
+                          <div className="absolute top-12 xss:top-10 xs:top-10 sm:top-20 md:top-10 bg-white px-4">
+                            <h1 className="text-xl xss:text-2xl xs:text-3xl sm:text-4xl md:text-[2rem] font-bold text-violet-950 text-center">
+                              Industries
+                            </h1>
+                            <p className="text-xs xss:text-xs md:text-sm text-black leading-loose text-center mt-2 sm:mt-2">
+                              Crafted with love since 2017
+                            </p>
+                          </div>
+                        </div>
 
         {/* Adobe XD Section */}
         <div className="flex flex-col xl:flex-row justify-center items-center w-full bg-white px-4 xss:px-6 xs:px-8 sm:px-10 md:px-14 lg:px-16 xl:px-20 2xl:px-24 3xl:px-32 pt-0 pb-6">
@@ -88,7 +90,7 @@ export default function Responsive_AdobeTech() {
           <p className="text-lg xss:text-[1.3rem] xs:text-2xl sm:text-3xl md:text-4xl font-medium text-[#071637] text-center my-6 sm:my-10">
             Our Works
           </p>
-          <div className="carousel-wrapper pt-4 sm:pt-5">
+          <div className=" carousel-wrapper ">
             <div className="flex w-max animate-scroll gap-2 xss:gap-3 xs:gap-4 sm:gap-6">
               {[
                 { src: "/AdobeTech-Images/Mockup (1).svg", alt: "Project 1 screenshot" },
@@ -101,7 +103,6 @@ export default function Responsive_AdobeTech() {
                 { src: "/AdobeTech-Images/Mockup (8).svg", alt: "Project 8 screenshot" },
                 { src: "/AdobeTech-Images/Mockup (9).svg", alt: "Project 9 screenshot" },
                 { src: "/AdobeTech-Images/Mockup (10).svg", alt: "Project 10 screenshot" },
-
                 { src: "/AdobeTech-Images/Mockup (1).svg", alt: "Project 1 screenshot" },
                 { src: "/AdobeTech-Images/Mockup (2).svg", alt: "Project 2 screenshot" },
                 { src: "/AdobeTech-Images/Mockup (3).svg", alt: "Project 3 screenshot" },
@@ -113,7 +114,7 @@ export default function Responsive_AdobeTech() {
               ].map((image, index) => (
                 <div
                   key={index}
-                  className="flex justify-end items-center min-w-[100px] xss:min-w-[120px] xs:min-w-[140px] sm:min-w-[150px] h-48 xss:h-56 xs:h-64 sm:h-72 bg-white p-5"
+                  className="flex justify-end items-center  xss:w-[70px] xs:min-w-[140px] sm:min-w-[150px]  xss:h-56 xs:h-64 sm:h-72 bg-white xss:p-5"
                 >
                   <Image
                     src={image.src}
@@ -128,8 +129,8 @@ export default function Responsive_AdobeTech() {
             </div>
           </div>
 
-          <div className="carousel-wrapper pt-4 sm:pt-5 overflow-visible">
-            <div className="flex w-max animate-scrollLap gap-4 xss:gap-5 xs:gap-6 sm:gap-7 md:gap-8 md-lg:gap-9 lg:gap-10 xl:gap-12 3xl:gap-16">
+          <div className="border-2 border-red-300 carousel-wrapper sm:pt-5 overflow-visible">
+            <div className="border-2 border-black flex w-max animate-scrollLap gap-4 xss:gap-5 xs:gap-6 sm:gap-7 md:gap-8 md-lg:gap-9 lg:gap-10 xl:gap-12 3xl:gap-16">
               {[
                 { src: "/AdobeTech-Images/ZenBook Duo 54.svg", alt: "Project 1 screenshot" },
                 { src: "/AdobeTech-Images/ZenBook Duo 55.svg", alt: "Project 2 screenshot" },
@@ -146,15 +147,14 @@ export default function Responsive_AdobeTech() {
               ].map((image, index) => (
                 <div
                   key={index}
-                  className="flex justify-center items-center min-w-[200px] xss:min-w-[200px] xs:min-w-[240px] sm:min-w-[260px] md:min-w-[300px] md-lg:min-w-[340px] lg:min-w-[300px] xl:min-w-[320px] 3xl:min-w-[340px] h-80 xss:h-88 xs:h-96 sm:h-[26rem] md:h-[28rem] md-lg:h-[27rem] lg:h-[15rem] xl:h-[16rem] 3xl:h-[17rem] bg-white"
+                  className="border-2 w-full  flex justify-center items-center  xss:w-[200px] xs:min-w-[240px] sm:min-w-[260px] md:min-w-[300px] md-lg:min-w-[340px] lg:min-w-[180px] xl:min-w-[120px] 3xl:min-w-[340px] h-80 xss:h-[25rem] xs:h-96 sm:h-[26rem] md:h-[28rem] md-lg:h-[27rem] lg:h-[15rem] xl:h-[16rem] 3xl:h-[17rem] bg-white"
                 >
                   <Image
                     src={image.src}
                     width={500}
                     height={800}
                     alt={image.alt}
-                    className="w-full h-full object-contain transition-transform duration-300 hover:scale-105 sm:hover:scale-110 hover:z-10"
-                    sizes="(max-width: 320px) 200px, (max-width: 360px) 220px, (max-width: 480px) 240px, (max-width: 640px) 260px, (max-width: 704px) 250px, (max-width: 768px) 340px, (max-width: 1024px) 380px, (max-width: 1280px) 420px, (max-width: 1536px) 440px, 500px"
+                    className="border-2 border-blue-300 w-full h-full object-contain transition-transform duration-300 hover:scale-105 sm:hover:scale-110 hover:z-10 xss:w-full xss:h-full  bg-blue-200"
                   />
                 </div>
               ))}

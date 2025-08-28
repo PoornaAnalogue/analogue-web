@@ -34,7 +34,7 @@ export default function Home() {
         {/* Hero */}
         <div className="hero flex flex-col xs:flex-col sm:flex-col md:flex-col lg:flex-col xl:flex-row !bg-[#FAFBFF] text-black relative">
           {/* Left Hero */}
-          <div className="left-hero w-full xl:w-1/2 pt-3 flex flex-col justify-center !bg-[#FAFBFF]">
+          <div className="left-hero w-full xl:w-1/2 xl:mt-[-0.5rem] pt-3 flex flex-col justify-center !bg-[#FAFBFF]">
             <h1 className="text-bigheading xss:text-subheading sm:text-normal md:text-normal xl:text-subbigheading 3xl:text-bigheading text-black font-medium leading-tight px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-15">
 
                 {/* SEO-friendly hidden heading */}
@@ -113,7 +113,7 @@ export default function Home() {
           </div>
 
           {/* Right Hero */}
-          <div className="right-hero w-full xl:w-1/2 flex justify-center 2xl:mt-[-3] xl:mt-[-2] xs:mt-10 md:mt-10 xss:mt-10 items-center relative bg-[url(/Home/Bg-image-of-home-page.png)] bg-cover bg-center bg-no-repeat">
+          <div className="right-hero w-full xl:w-1/2 flex justify-center 2xl:mt-[-0.55rem] xl:mt-[-0.45rem] xs:mt-10 md:mt-10 xss:mt-10 items-center relative bg-[url(/Home/Bg-image-of-home-page.png)] bg-cover bg-center bg-no-repeat">
             <div className="relative w-[55vw] max-w-[400px] h-auto aspect-[4/5] xss:w-[45vw] sm:w-[50vw] md:w-[41vw] lg:w-[41vw] xl:w-[40vw] 2xl:w-[30vw] xl:ml-[-0.6rem] 2xl:ml-[-0.6rem] 3xl:h-[28rem] xl:w-[80%] xl:h-[22rem] xl: w-[80%] 2xl:h-[22rem] max-w-[400px] aspect-[4/5] flex justify-center items-center">
               <Lottie animationData={animationData} loop={true} style={{ width: "90%", height: "90%" }} />
             </div>

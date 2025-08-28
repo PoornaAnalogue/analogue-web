@@ -50,10 +50,10 @@ export default function Responsive_Testimonials() {
   return (
     <section className="bg-white w-full h-auto flex flex-col xs:items-center xs:justify-center sm:items-center sm:justify-center md:items-center md:justify-center lg:items-center lg:justify-center xl:items-center xl:justify-center 2xl:items-center 2xl:justify-center 3xl:items-center 3xl:justify-center py-5 xs:py-3 sm:py-4 xl:py-5 3xl:py-25">
       <div className="w-full max-w-[360px] xs:max-w-[480px] sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1536px] mx-auto px-2 xs:px-3 sm:px-4 md:px-6">
-        <h2 className="font-bold text-[#071637] text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-[40px] mb-4 xs:mb-5 sm:mb-6 md:mb-4 lg:mb-3 text-center">
+        <h2 className="font-bold text-[#071637] text-xl xss:text-xl sm:text-2xl md:text-3xl  mb-4 xs:mb-5 sm:mb-6 md:mb-4 lg:mb-3 text-center">
           Our Testimonials
         </h2>
-        <p className="text-[#7B7E86] text-xs xs:text-sm sm:text-base md:text-lg lg:text-xl mb-6 xs:mb-8 sm:mb-10 md:mb-8 lg:mb-6 xl:mb-10 text-center">
+        <p className="text-[#7B7E86] text-xs xs:text-sm sm:text-base  mb-6 xs:mb-8 sm:mb-10 md:mb-8 lg:mb-6 xl:mb-10 text-center">
           Our satisfied clients share their success stories and experiences with us.
         </p>
 
@@ -90,7 +90,7 @@ export default function Responsive_Testimonials() {
                   {/* Quote Section */}
                   <div className="bg-[#E3ECFF] px-3 xs:px-4 sm:px-5 md:px-6 py-2 xs:py-3 flex-grow flex flex-col">
                     <span className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl text-start w-full font-medium text-black">“</span>
-                    <p className="3xl:h-[8rem] xss:h-[7rem] xs:h-[10rem] md:h-[19rem] lg:h-[13rem] xl:h-[10rem] 2xl:h-[12rem] 3xl:h-[14rem] text-[#071637] text-[10px] xs:text-xs sm:text-sm md:text-base lg:text-base xl:text-base leading-4 xs:leading-5 sm:leading-6  font-medium text-justify">
+                    <p className="xss:h-[8rem] xxs:h-[7rem] xs:h-[8rem] test:h-[7rem] sm:h-[9rem] test2:h-[7rem] md:h-[12rem]  lg:h-[10rem] test4:h-[10rem] xl:h-[9rem] 2xl:h-[10rem] 3xl:h-[8rem] text-[#071637] text-[10px] xss:text-xs sm:text-sm md:text-sm   leading-4 xs:leading-5 sm:leading-6  font-light text-justify">
                       {t.text}
                     </p>
                   </div>

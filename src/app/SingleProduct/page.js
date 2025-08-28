@@ -38,7 +38,7 @@ export default function Responsive_SingleProductPage() {
           {/* Image Section */}
           <div className=" w-full xl:w-1/2 flex justify-center items-center px-4 xss:px-6 xs:px-8 sm:px-10 md:px-12 lg:px-14 xl:px-5 ">
             <Image
-              src="/SingleProd-Images/SinglePro-Buy.png"
+              src="/SingleProd-Images/SinglePro-Buy.svg"
               width={650}
               height={280}
               alt="Combine image"

@@ -55,9 +55,12 @@ html, body {
   --breakpoint-xss: 320px;
   --breakpoint-xxs: 344px;
   --breakpoint-xs: 360px;
+  --breakpoint-test: 426px;
   --breakpoint-sm: 480px;
+  --breakpoint-test2: 600px;
   --breakpoint-md: 640px;
   --breakpoint-lg: 768px;
+  --breakpoint-test4:853px;
   --breakpoint-xl: 1024px;
   --breakpoint-2xl: 1280px;
   --breakpoint-3xl: 1536px;
