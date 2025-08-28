@@ -47,7 +47,7 @@ export default function App() {
   return (
     <>
 
-      {/* <Navbar />
+      <Navbar />
       <Home/>
       <Responsive_ServicePage_Mobile />
       <ClientCarousel />
@@ -58,22 +58,23 @@ export default function App() {
       <Responsive_Calendar />
       <Responsive_India />
       <GetAQuoteForm />
-      <Footer/> */}
+      <Footer/>
 
 
 
 
       {/* <Responsive_SingleProductPage /> */}
       {/* <Responsive_AngularTech /> */}
-      <Responsive_AdobeTech />
+      {/* <Responsive_AdobeTech /> */}
 
       {/* <Responsive_IndusNews /> */}
+      {/* <AndroidAppDevelopment /> */}
 
         {/* 
        
       
       
-      <AndroidAppDevelopment />
+      
       <Responsive_ProductsPage />
       <Contact /> 
       */}

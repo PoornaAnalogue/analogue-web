@@ -121,11 +121,11 @@ export default function Navbar() {
 </div>
 
       {/* Navbar */}
-<div className={`bg-white z-[100] relative py-2 shadow-lg xl:my-2 lg:my-4 2xl:mx-10 xl:mx-5 ${
+<div className={`bg-white z-[100] relative lg:py-2 xss:py-0 xss:pt-2 shadow-lg xl:my-2 lg:my-4 2xl:mx-10 xl:mx-5 ${
     menuOpen ? "hidden xl:block" : ""}`}>
   <div className="max-w-[1600px] flex items-center gap-10 px-4 sm:px-10 w-full xl:gap-5">
     {/* Logo */}
-    <Image src="/Navbar/Analogue-navbar-logo.png" alt="Logo" width={150} height={48} className="flex-shrink-0 xl:w-[120px]"/>
+    <Image src="/Navbar/Analogue-navbar-logo.svg" alt="Logo" width={100} height={100} className="flex-shrink-0 xl:w-[180px]"/>
 
           {/* Desktop Menu */}
           <ul className="hidden xl:flex items-center justify-center gap-10 text-black flex-grow">
@@ -143,7 +143,7 @@ export default function Navbar() {
                 onMouseLeave={() => {
                   hideTimeout = setTimeout(() => setOpenDropdown(null), 150);
                 }}>
-              <div className="flex items-center gap-1  xss:text-xs xl:text-sm cursor-pointer">
+              <div className="flex items-center gap-1  xss:text-xs xl:text-sm cursor-pointer" onClick={() => toggleDropdown(menu.label)}>
                 {menu.label}
                 <FaChevronDown
                   className={`transition-transform duration-200 ${
@@ -154,7 +154,7 @@ export default function Navbar() {
               </div>
 
               {openDropdown === menu.label && (
-                <ul className="absolute top-full left-0 mt-5 w-[480px]  font-semibold grid grid-cols-2 gap-1 border shadow-lg p-2 bg-white">
+                <ul className="absolute top-full left-0 mt-5 w-[480px]  font-semibold grid grid-cols-2 gap-1 border-2 border-blue-100 rounded-lg shadow-lg p-2 bg-white">
                   {menu.items.map((item, idx) => (
                     <li
                       key={idx}
@@ -162,7 +162,7 @@ export default function Navbar() {
                       {/* Icon container (takes no space until hover) */}
                       <span className="overflow-hidden w-0 group-hover:w-4 transition-all duration-200 flex justify-center text-violet-600">
                         <span className="overflow-hidden w-0 group-hover:w-4 transition-all duration-200 flex justify-center text-violet-600">
-                      <Image src="/Navbar/navbar-hover-icon.png" alt="arrow" width={20} height={20} className="object-contain"/></span>
+                      <Image src="/Navbar/navbar-hover-icon.svg" alt="arrow" width={20} height={20} className="object-contain"/></span>
                       </span>
 
             {/* Text — flush left, moves right only when icon appears */}
@@ -189,8 +189,8 @@ export default function Navbar() {
 
           {/* Phone + Quick Call + Free Quote */}
           <div className="hidden only-xl:flex items-center gap-4 ml-auto">
-            <Image src="/Navbar/Phone-icon.png" alt="Phone" width={20} height={20} />
-            <div className="flex flex-col">
+            <Image src="/Navbar/Phone-icon.svg" alt="Phone" width={32} height={25} />
+            <div className="flex flex-col ml-[-0.3rem]">
             <span className="text-xs text-gray-500">Quick Call</span>
             <a href="tel:+918919088163" className="text-xs text-blue-700 hover:underline transition-colors duration-200"> +91 8919088163</a>
           </div>
@@ -201,9 +201,9 @@ export default function Navbar() {
           </div>
 
           {/* Hamburger Icon */}
-          <div className="xl:hidden ml-auto text-black">
+          <div className="xl:hidden ml-auto text-black bg-blue-200 border-white border-2 p-1 rounded-md">
             <FaBars
-              size={22}
+              size={19  }
               onClick={() => setMenuOpen(true)}
               className="cursor-pointer"
             />
@@ -232,7 +232,7 @@ export default function Navbar() {
     {/* Rectangle behind logo */}
     <div className="bg-blue-100 w-full flex items-center justify-center lg:pt-8">
       <Image
-        src="/Navbar/Analogue-navbar-logo.png"
+        src="/Navbar/Analogue-navbar-logo.svg"
         alt="Logo"
         width={300}
         height={150}
@@ -363,7 +363,7 @@ export default function Navbar() {
 
       {/* in screens less than lg - Mobile Quick Call + Free Quote */}
       <div className="flex xl:hidden 2xl:hidden 3xl:hidden xss:justify-center items-center gap-4 px-4 py-3 bg-gray-50 mt-4">
-        <Image src="/Navbar/phone-icon.png" alt="Phone" width={16} height={16} />
+        <Image src="/Navbar/Phone-icon.svg" alt="Phone" width={16} height={16} />
         <div className="flex flex-col">
           <span className="xss:text-[0.6rem] lg:text-xs text-gray-500">Quick Call</span>
             <a href="tel:+918919088163" className="text-xs text-blue-700 hover:underline transition-colors duration-200"> +91 8919088163</a>

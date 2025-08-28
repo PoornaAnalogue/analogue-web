@@ -556,3 +556,269 @@ body {
 .left-hero {
   background-color: oklch(97.593% 0.00604 224.239);
 }
+
+
+
+/* 2. Add xs: and 3xl: modifiers to Tailwind */
+@layer utilities {
+
+  /* xs: modifier */
+  @media (min-width: var(--breakpoint-xs)) {
+    .xs\:block {
+      display: block;
+    }
+
+    .xs\:hidden {
+      display: none;
+    }
+
+    /* Add more xs: utilities as needed */
+  }
+
+  /* 3xl: modifier */
+  @media (min-width: var(--breakpoint-3xl)) {
+    .\33 xl\:block {
+      display: block;
+    }
+
+    .\33 xl\:hidden {
+      display: none;
+    }
+
+    /* Add more 3xl: utilities as needed */
+  }
+
+
+
+  /* globals.css additions */
+  /* Hide hamburger and show desktop menu from 1024px upward */
+  @media (min-width: 1024px) {
+    .hamburger {
+      display: none !important;
+    }
+
+    .desktop-menu {
+      display: flex !important;
+    }
+  }
+
+  /* Show hamburger and hide desktop menu below 1024px */
+  @media (max-width: 1023px) {
+    .hamburger {
+      display: block !important;
+    }
+
+    .desktop-menu {
+      display: none !important;
+    }
+  }
+
+  /* Free Quote: visible only from 1024–1279px */
+  @media (min-width: 1024px) and (max-width: 1279px) {
+    .free-quote-lg-only {
+      display: flex !important;
+    }
+  }
+
+  @media (max-width: 1023px),
+  (min-width: 1280px) {
+    .free-quote-lg-only {
+      display: none !important;
+    }
+  }
+
+  /* Phone + Quick Call block: visible only 1280px+ */
+  @media (min-width: 1280px) {
+    .only-xl\:flex {
+      display: flex !important;
+    }
+  }
+
+  @media (max-width: 1279px) {
+    .only-xl\:flex {
+      display: none !important;
+    }
+  }
+}
+
+
+
+
+/* sample testing */
+
+/* ======================
+   MULTI-TEXT FADE EFFECTS
+   ====================== */
+
+/* 1. Crossfade between 2 texts in home page title */
+@keyframes crossfadeTexts {
+
+  0%,
+  45% {
+    opacity: 1;
+  }
+
+  50%,
+  95% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+@media (min-width: 310px) and (max-width: 480px) {
+  .Navbar-main {
+    background-color: #f0f0f0;
+  }
+}
+  }
+}
+
+@media (min-width: 350px) and (max-width: 480px) {
+  .Navbar-main {
+    background-color: #e0e0e0;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .Navbar-main {
+    background-color: #d0d0f0;
+  }
+}
+
+.animate-crossfadeTexts {
+  animation: crossfadeTexts 4s ease-in-out infinite;
+}
+
+.animate-crossfadeTexts {
+  animation: crossfadeTexts 4s ease-in-out infinite;
+}
+
+/* 2. Fade Out then Fade In */
+@keyframes fadeSwap {
+  0% {
+    opacity: 1;
+  }
+
+  40% {
+    opacity: 0;
+  }
+
+  60% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-fadeSwap {
+  animation: fadeSwap 3s ease-in-out infinite;
+}
+
+/* 3. Slide + Fade Swap (Left to Right) */
+@keyframes slideFadeSwap {
+  0% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  40% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+
+  60% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slideFadeSwap {
+  animation: slideFadeSwap 4s ease-in-out infinite;
+}
+
+/* 4. Scale + Fade Swap */
+@keyframes scaleFadeSwap {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  40% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+
+  60% {
+    opacity: 0;
+    transform: scale(1.1);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.animate-scaleFadeSwap {
+  animation: scaleFadeSwap 4s ease-in-out infinite;
+}
+
+/* 5. Word-by-word fade swap */
+@keyframes wordFadeSwap {
+  0% {
+    opacity: 1;
+  }
+
+  25% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-wordFadeSwap span {
+  opacity: 0;
+  animation: wordFadeSwap 6s ease-in-out infinite;
+}
+
+.animate-wordFadeSwap span:nth-child(1) {
+  animation-delay: 0s;
+}
+
+.animate-wordFadeSwap span:nth-child(2) {
+  animation-delay: 3s;
+}
+
+
+/* GetAQuote Form responsive styles based on breakpoints  */
+@media (min-width: 769px) and (max-width: 1023px) {
+  .Navbar-main {
+    background-color: #c0d0f0;
+  }
+}
+
+.Form-img{
+  background-image: url('/contact/Form-background.svg');
+}
+
+
+/* poorna's new lines */
+
+
