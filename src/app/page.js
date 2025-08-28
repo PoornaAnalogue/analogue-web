@@ -52,7 +52,7 @@ export default function App() {
       <Responsive_ServicePage_Mobile />
       <ClientCarousel />
       <Guarantees />
-      <PuzzleScrollSection/>
+     <PuzzleScrollSection/>
       <Responsive_Best_App />
       <Responsive_Testimonials />
       <Responsive_Calendar />
