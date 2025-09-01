@@ -156,7 +156,7 @@ export default function Responsive_ProductsPage() {
       width: 350
     },
     {
-      title: "Gvathi Party",
+      title: "Gavathi Party",
       description: "E-commerce App and Static Website",
       image: "/Product-Images/ProductImg17.png",
       bgColor:"bg-[#E31E25]",
