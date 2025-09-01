@@ -121,11 +121,11 @@ export default function Navbar() {
 </div>
 
       {/* Navbar */}
-<div className={`bg-white z-[100] relative lg:py-2 xss:py-0 xss:pt-2 shadow-lg xl:my-2 lg:my-4 2xl:mx-10 xl:mx-5 ${
+<div className={`bg-white z-[100] relative lg:py-2 xss:py-0 xss:pt-2 shadow-lg xl:my-2 md:mx-5 lg:my-4 2xl:mx-10 xl:mx-5 ${
     menuOpen ? "hidden xl:block" : ""}`}>
   <div className="max-w-[1600px] flex items-center gap-10 px-4 sm:px-10 w-full xl:gap-5">
     {/* Logo */}
-    <Image src="/Navbar/Analogue-navbar-logo.svg" alt="Logo" width={100} height={100} className="flex-shrink-0 xl:w-[180px]"/>
+    <Image src="/Navbar/Analogue-navbar-logo.svg" alt="Logo" width={300} height={80} className="flex-shrink-0 xss:w-[100px] xl:w-[180px] h-auto "/>
 
           {/* Desktop Menu */}
           <ul className="hidden xl:flex items-center justify-center gap-10 text-black flex-grow">
@@ -201,9 +201,9 @@ export default function Navbar() {
           </div>
 
           {/* Hamburger Icon */}
-          <div className="xl:hidden ml-auto text-black bg-blue-200 border-white border-2 p-1 rounded-md">
+          <div className="xl:hidden ml-auto text-black border-white border-2 p-1 rounded-md">
             <FaBars
-              size={19  }
+              size={16}
               onClick={() => setMenuOpen(true)}
               className="cursor-pointer"
             />
@@ -236,7 +236,7 @@ export default function Navbar() {
         alt="Logo"
         width={300}
         height={150}
-        className="z-10 mt-2 xss:w-[12rem] lg:w-[300px]"
+        className="z-10 mt-2 xss:w-[10rem] xs:w-[12rem] lg:w-[300px]"
       />
     </div>
 

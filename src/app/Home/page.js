@@ -88,8 +88,8 @@ export default function Home() {
             </p>
 
             {/* Logos grid + social icons */}
-            <div className="flex flex-col xss:mt-3 lg:mt-10 lg:justify-start lg:items-start px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-15 xl:mt-[-2] xss:justify-center xss:items-center">
-              <div className="grid gap-5 w-full xs:w-[20rem] 3xl:w-[35rem] xs:justify-center xs:items-center xs:grid-cols-4 md:grid-cols-4 xss:grid-cols-4 xss:gap-2 xss:w-[18rem] 2xl:mt-8 xss:justify-center xss:items-center lg:grid-cols-4 lg:w-[42rem] xl:grid-cols-4 xl:w-[25rem] 2xl:w-[22rem] xl:mb-2 sm:grid-cols-4 sm:w-[25rem]  lg:grid-cols-4">
+            <div className="flex flex-col xss:mt-3 lg:mt-10 lg:justify-start lg:items-center xl:items-start px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-15 xl:mt-[-2] xss:justify-center xss:items-center">
+              <div className="grid gap-5 w-full xs:w-[20rem] lg:w-[37rem] 3xl:w-[35rem] xs:justify-center xs:items-center xs:grid-cols-4 md:grid-cols-4 xss:grid-cols-4 xss:gap-2 xss:w-[18rem] 2xl:mt-8 xss:justify-center xss:items-center lg:grid-cols-4 xl:grid-cols-4 xl:w-[25rem] 2xl:w-[22rem] xl:mb-2 sm:grid-cols-4 sm:w-[25rem]">
               {[1, 2, 3, 4].map((id) => (
                 <Image
                   key={id}
