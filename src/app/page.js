@@ -36,6 +36,7 @@ import Trail from "./trail/page";
 import Sample from "./sample/page";
 
 import NewCarousel from "./carousel/page";
+import Game from "./game/page";
 
 export default function App() {
   return (
@@ -48,7 +49,8 @@ export default function App() {
       <ClientCarousel />
       <Guarantees />
       {/* <PuzzleRes/> */}
-     <PuzzleScrollSection/>
+     {/* <PuzzleScrollSection/> */}
+     <Game/>
       <Responsive_Best_App />
       <Responsive_Testimonials />
       <Responsive_CalendarTest />

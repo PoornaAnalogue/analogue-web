@@ -490,6 +490,7 @@ const steps = [
     description:
       "This is where concept turns into code. Our skilled developers translate the approved designs into a fully functional mobile application. We emphasize performance, security, and scalability while using modern frameworks such as React Native, Flutter, Swift, and Kotlin. By following a structured development cycle, we ensure your app is robust, reliable, and ready to scale as your business grows.",
   },
+
   {
     id: 5,
     title: "Testing",
@@ -601,7 +602,7 @@ useEffect(() => {
       const direction = currentY > lastScrollY.current ? "down" : "up";
       lastScrollY.current = currentY;
 
-      if (entry.boundingClientRect.top <= 0 && entry.isIntersecting) {
+      if (entry.boundingClientRect.top <= 1 && entry.isIntersecting) {
         if (direction === "down") {
           setIsLocked(true);   // lock only on DOWN
         } else {
@@ -657,7 +658,7 @@ useEffect(() => {
 
     window.addEventListener("wheel", handleWheel, { passive: false });
     return () => window.removeEventListener("wheel", handleWheel);
-  }, [currentStep, isLocked]);
+  }, [currentStep, isLocked]); 
 
   // Touch scroll
   useEffect(() => {

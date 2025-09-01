@@ -77,7 +77,7 @@ export default function ClientCarousel() {
   };
 
   return (
-    <div className="w-full px-4 sm:px-8 md:px-12 overflow-x-hidden lg:px-16">
+    <div className="w-full px-4 sm:px-8 md:px-12 overflow-x-hidden  lg:px-16">
       {/* Animated Heading */}
       <h2
         id="featured-heading"
@@ -146,7 +146,7 @@ export default function ClientCarousel() {
         </Swiper>
 
         {/* Phone Carousel */}
-        <div className="w-full flex justify-center phone-section md:px-12">
+        <div className="w-full flex justify-center h-auto  phone-section md:px-12">
           <Swiper
             className="client-swiper w-full"
             loop={true}
@@ -165,7 +165,7 @@ export default function ClientCarousel() {
             onSlideChange={onPhoneSlideChange}
             // slidesPerView={3}
             breakpoints={{
-               320: { slidesPerView: 1, spaceBetween: 5 },
+              320: { slidesPerView: 1, spaceBetween: 5 },
               344: { slidesPerView: 1, spaceBetween: 5 },
               360: { slidesPerView: 1, spaceBetween: 5 },
               480: { slidesPerView: 1.2, spaceBetween: 6 },
@@ -184,7 +184,7 @@ export default function ClientCarousel() {
                     alt="phone image"
                     width={260}
                     height={520}
-                    className="object-contain w-[60%] sm:w-3/4 md:w-60 lg:w-64 xl:phone-xl  phone-img"
+                    className="object-contain w-[60%] sm:w-3/4 md:w-60 lg:w-64 xl:phone-xl  h-auto  phone-img"
                   />
                 </div>
               </SwiperSlide>
@@ -195,49 +195,48 @@ export default function ClientCarousel() {
 
       {/* Styles */}
       <style jsx global>{`
+        // ..............640
 
-      // ..............640
+        /* 🔹 Faster but smooth animation */
+        .client-swiper .phone-wrapper {
+          transition: transform 0.2s ease !important;
+        }
+        .client-swiper .swiper-slide {
+          transition: transform 0.2s ease, opacity 0.2s ease !important;
+        }
 
-      /* 🔹 Faster but smooth animation */
-.client-swiper .phone-wrapper {
-  transition: transform 0.2s ease !important;
-}
-.client-swiper .swiper-slide {
-  transition: transform 0.2s ease, opacity 0.2s ease !important;
-}
+        /* 🔹 Height adjustments */
+        @media (max-width: 480px) {
+          .client-swiper .phone-wrapper img {
+            height: 250px !important;
+            width: auto !important;
+          }
+        }
 
-/* 🔹 Height adjustments */
-@media (max-width: 480px) {
-  .client-swiper .phone-wrapper img {
-    height: 250px !important;
-    width: auto !important;
-  }
-}
+        @media (max-width: 640px) {
+          .client-swiper .phone-wrapper img {
+            height: 280px !important;
+            width: auto !important;
+          }
+        }
 
-@media (max-width: 640px) {
-  .client-swiper .phone-wrapper img {
-    height: 280px !important;
-    width: auto !important;
-  }
-}
+        @media (max-width: 768px) {
+          .client-swiper .phone-wrapper img {
+            height: 320px !important;
+            width: auto !important;
+          }
+        }
 
-@media (max-width: 768px) {
-  .client-swiper .phone-wrapper img {
-    height: 320px !important;
-    width: auto !important;
-  }
-}
- 
         /* 🔹 Default phone wrapper animation styles */
 
         /* Farthest left slide */
         .client-swiper .swiper-slide-prev-prev .phone-wrapper {
-          transform: translateX(-20px); /* move it left */
+          transform: scale(1.5) translateX(-20px); /* move it left */
         }
 
         /* Farthest right slide */
         .client-swiper .swiper-slide-next-next .phone-wrapper {
-          transform: translateX(-20px); /* move it right */
+          transform: scale(1.5) translateX(-20px); /* move it right */
         }
 
         /* 🔹 Small screen adjustments */
@@ -261,6 +260,7 @@ export default function ClientCarousel() {
             margin-top: 0.5rem !important;
           }
         }
+
         // ,..................
         /* Center slide bigger */
         .client-swiper .swiper-slide-active .phone-wrapper img {
@@ -277,10 +277,8 @@ export default function ClientCarousel() {
         .client-swiper .swiper-slide-next .phone-wrapper img {
           transform: scale(1.05);
           z-index: 5;
-        
         }
         .client-swiper .swiper-slide-prev .phone-wrapper img {
-          
         }
 
         /* Reduce extra space around first left and first right neighbors */
@@ -291,8 +289,6 @@ export default function ClientCarousel() {
           /* reduces space on right of right neighbor */
         }
 
-
-        
         /* 1024px breakpoint (xl) /..................*/
 
         @media (min-width: 1024px) and (max-width: 1279px) {
@@ -300,60 +296,58 @@ export default function ClientCarousel() {
             display: flex;
             align-items: center; /* vertically center */
             justify-content: center;
+
             transition: transform 0.3s ease, opacity 0.3s ease;
-            
+          }
+
+          // ....IMAGEE..
+
+          .client-swiper .phone-wrapper img {
+            max-height: 80vh; /* always take up to 80% of viewport height */
+            height: auto;
+            width: auto;
           }
 
           .client-swiper .swiper-slide-next .phone-wrapper img {
-          transform: scale(1.05);
-          z-index: 5;
-          margin-right: -20px;
+            transform: scale(1.05);
+            z-index: 5;
+            margin-right: -20px;
+          }
+          .client-swiper .swiper-slide-prev .phone-wrapper img {
+            margin-left: -20px;
+          }
         }
-        .client-swiper .swiper-slide-prev .phone-wrapper img {
-          margin-left: -20px;
-        } 
-      }
-
 
         // 1280.............
 
-
         /* 1280px – 1536px (2xl) */
-@media (min-width: 1280px) and (max-width: 1536px) {
-  .client-swiper .swiper-slide {
-    display: flex;
-    align-items: center; /* vertically center */
-    justify-content: center;
-    transition: transform 0.3s ease, opacity 0.3s ease;
-  }
+        @media (min-width: 1280px) and (max-width: 1536px) {
+          .client-swiper .swiper-slide {
+            display: flex;
+            align-items: center; /* vertically center */
+            justify-content: center;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+          }
 
-  .client-swiper .swiper-slide-next .phone-wrapper img {
-    transform: scale(1.05);
-    z-index: 5;
-    margin-right: -30px; /* bigger margin for bigger screens */
-  }
+          .client-swiper .swiper-slide-next .phone-wrapper img {
+            transform: scale(1.05);
+            z-index: 5;
+            margin-right: -30px; /* bigger margin for bigger screens */
+          }
 
-  .client-swiper .swiper-slide-prev .phone-wrapper img {
-    margin-left: -30px;
-  }
-}
- 
+          .client-swiper .swiper-slide-prev .phone-wrapper img {
+            margin-left: -30px;
+          }
+        }
 
-       
-            480...... PHONE  //  
+        480...... PHONE  //  
 /* 🔹 Apply only for 480px and below */
 @media (max-width: 480px) {
-  .client-swiper .phone-wrapper img {
-    height: 250px !important;  /* smaller height */
-    width: auto !important;    /* keep aspect ratio */
-  }
-}
-
- 
-           
-
-
-        
+          .client-swiper .phone-wrapper img {
+            height: 250px !important; /* smaller height */
+            width: auto !important; /* keep aspect ratio */
+          }
+        }
 
         // .................
 

@@ -106,7 +106,7 @@ html, body {
   display: flex;
   gap: 16px;
   width: max-content;
-  animation: none; /* Will be set dynamically */
+  animation: none;   /* Will be set dynamically */
 }
 
 .animate-scroll > div,
