@@ -26,15 +26,15 @@ export default function Navbar() {
     {
       label: "Services",
       items: [
-        { name: "Android App Development", link: "/services/android" },
-        { name: "Flutter App Development", link: "/services/flutter" },
-        { name: "Digital Marketing", link: "/services/digital-marketing" },
-        { name: "GPS Vehicle Tracking", link: "/services/gps-tracking" },
-        { name: "Web Development", link: "/services/web" },
-        { name: "IOS App Development", link: "/services/ios" },
-        { name: "UI/UX Development", link: "/services/ui-ux" },
-        { name: "AI & ML", link: "/services/ai-ml" },
-        { name: "Chrome Extension", link: "/services/chrome-extension" },
+        { name: "Android App Development", link: "/Services/android-app-development-company-in-hyderabad" },
+        { name: "Flutter App Development", link: "/Services/flutter-app-development-company-in-hyderabad" },
+        { name: "Digital Marketing", link: "/Services/digital-marketing-agency-in-hyderabad" },
+        { name: "GPS Vehicle Tracking", link: "/Services/gps-vehicle-tracking-company-in-hyderabad" },
+        { name: "Web Development", link: "/Services/web-design-company-in-hyderabad" },
+        { name: "IOS App Development", link: "/Services/ios-app-development-company-in-hyderabad" },
+        { name: "UI/UX Development", link: "/Services/ui-ux-design-company-in-hyderabad" },
+        { name: "AI & ML", link: "/Services/ai-ml-company-in-hyderabad" },
+        { name: "Chrome Extension", link: "/Services/chrome-browser-extension-company-in-hyderabad" },
       ],
     },
     {
@@ -125,7 +125,7 @@ export default function Navbar() {
     menuOpen ? "hidden xl:block" : ""}`}>
   <div className="max-w-[1600px] flex items-center gap-10 px-4 sm:px-10 w-full xl:gap-5">
     {/* Logo */}
-    <Image src="/Navbar/Analogue-navbar-logo.svg" alt="Logo" width={300} height={80} className="flex-shrink-0 xss:w-[100px] xl:w-[180px] h-auto "/>
+    <Image src="/Navbar/Analogue-navbar-logo.svg" alt="Logo" width={300} height={80} className="flex-shrink-0 xss:w-[100px] xl:w-[180px] 2xl:w-[140px] 3xl:w-[180px] h-auto "/>
 
           {/* Desktop Menu */}
           <ul className="hidden xl:flex items-center justify-center gap-10 text-black flex-grow">
@@ -166,7 +166,7 @@ export default function Navbar() {
                       </span>
 
             {/* Text — flush left, moves right only when icon appears */}
-                  <Link href={item.link} className="ml-0 group-hover:ml-1 transition-all duration-200 group-hover:text-blue-600">{item.name}</Link>
+                  <Link href={item.link} onClick={() => setOpenDropdown(null)}  className="ml-0 group-hover:ml-1 transition-all  group-hover:text-blue-600">{item.name}</Link>
                 </li>))}
                 </ul>
               )}

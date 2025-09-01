@@ -1,5 +1,7 @@
 import { FaChevronDown } from "react-icons/fa";
 import Image from "next/image";
+import Navbar from "../../../Components/Navbar";
+import Footer from "../../../Components/Footer";
 
 
 export default function AndroidAppDevelopment(){
@@ -29,7 +31,8 @@ export default function AndroidAppDevelopment(){
     const DesignIcons = ["/service-icons/Figma-logo.png","/service-icons/Png-logo.png","/service-icons/Ai-logo.png","/service-icons/Jitter-logo.png","/service-icons/Lottiefiles-logo.png","/service-icons/Search-logo.png"];
 
     return (
-        <div className="hero flex flex-col justify-center items-center">
+        <>
+        <div className="hero flex flex-col justify-center items-center bg-white">
             <div className="relative flex justify-center w-full bg-white">
           <Image
             src="/AbstractDesign.png"
@@ -50,21 +53,21 @@ export default function AndroidAppDevelopment(){
         </div>
             
             <div className="px-4 xss:px-6 xs:px-8 sm:px-10 md:px-12 lg:px-16 xl:px-20 flex flex-col space-y-4">
-                <h1 className="text-lg xss:text-sm xs:text-lg sm:text-xl md:text-2xl lg:text-2xl 3xl:text-[2rem] font-semibold underline xss:underline-offset-6 lg:underline-offset-14 xss:underline-offset-1 xs:underline-offset-12 sm:underline-offset-10 md:underline-offset-15 decoration-2 xss:decoration-2 xs:decoration-2 sm:decoration-4 md:decoration-4 lg:decoration-4 decoration-blue-600 leading-snug">Android App Development</h1>
-                <h3 className="NewFont text-base xss:text-sm xs:text-sm  sm:text-base md:text-xl lg:text-xl 3xl:text-2xl text-blue-500 font-medium leading-snug mt-2 xss:mt-3 xs:mt-2 sm:mt-4 md:mt-5 lg:mt-5">We are the best Android App Development Company in Hyderabad, India</h3>
-                <p className="text-gray-500 leading-relaxed text-xs xss:text-xs xs:text-xs sm:text-sm md:text-base lg:text-subbody 3xl:text-base mt-2 xss:mt-1 xs:mt-2 sm:mt-4 md:mt-5 lg:mt-5">Analogue is a Best mobile app development company in Hyderabad that specialises in creating and enhancing user experience through the design and development of mobile and web applications. Our focus lies in helping businesses expand and reach their specific customer base by collaborating with individuals and organisations to conceptualise and promote their products. Analogue is a Best mobile ain helping businesses expand and reach their specific customer base by co</p>
-                <p className="text-gray-500 leading-relaxed text-xs xss:text-xs xs:text-xs sm:text-sm md:text-base lg:text-subbody 3xl:text-base mt-2 xss:mt-3 xs:mt-2 sm:mt-4 md:mt-5 lg:mt-5">Analogue is a Best mobile app development company in Hyderabad that specialises in creating and enhancing user experience through the design and development of mobile and web applications. Our focus lies in helping businesses expand and reach their specific customer base by collaborating with individuals and organisations to conceptualise and promote their products. Analogue is a Best mobile ain helping businesses expand and reach their specific customer base by co. Analogue is a Best mobile app development company in Hyderabad that specialises in creating and enhancing user experience through the design and development of mobile and web applications. Our focus lies in helping businesses expand and reach their specific customer base by collaborating with individuals and organisations to conceptualise and promote their products. Analogue is a Best mobile ain helping businesses expand and reach their specific customer base by co Analogue is a Best mobile app development company in Hyderabad that specialises in creating and enhancing user experience through the design and development of mobile and web applications. Our focus lies in.</p>
+                <h1 className="text-lg xss:text-md xs:text-lg sm:text-xl md:text-2xl lg:text-2xl 3xl:text-[1.6rem] font-semibold underline xss:underline-offset-6 lg:underline-offset-14 xss:underline-offset-1 text-black xs:underline-offset-12 sm:underline-offset-10 md:underline-offset-15 decoration-2 xss:decoration-2 xs:decoration-2 sm:decoration-4 md:decoration-4 lg:decoration-4 decoration-blue-600 leading-snug">Android App Development</h1>
+                <h3 className="NewFont text-base xss:text-[0.8rem] sm:text-base md:text-lg lg:text-xl text-blue-500 font-medium leading-snug mt-2 xss:mt-3 xs:mt-2 sm:mt-4 md:mt-5 lg:mt-5">We are the best Android App Development Company in Hyderabad, India</h3>
+                <p className="text-gray-500 leading-relaxed text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base mt-2 xss:mt-1 xs:mt-2 sm:mt-4 md:mt-5 lg:mt-5">Analogue is a Best mobile app development company in Hyderabad that specialises in creating and enhancing user experience through the design and development of mobile and web applications. Our focus lies in helping businesses expand and reach their specific customer base by collaborating with individuals and organisations to conceptualise and promote their products. Analogue is a Best mobile ain helping businesses expand and reach their specific customer base by co</p>
+                <p className="text-gray-500 leading-relaxed text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base mt-2 xss:mt-3 xs:mt-2 sm:mt-4 md:mt-5 lg:mt-5">Analogue is a Best mobile app development company in Hyderabad that specialises in creating and enhancing user experience through the design and development of mobile and web applications. Our focus lies in helping businesses expand and reach their specific customer base by collaborating with individuals and organisations to conceptualise and promote their products. Analogue is a Best mobile ain helping businesses expand and reach their specific customer base by co. Analogue is a Best mobile app development company in Hyderabad that specialises in creating and enhancing user experience through the design and development of mobile and web applications. Our focus lies in helping businesses expand and reach their specific customer base by collaborating with individuals and organisations to conceptualise and promote their products. Analogue is a Best mobile ain helping businesses expand and reach their specific customer base by co Analogue is a Best mobile app development company in Hyderabad that specialises in creating and enhancing user experience through the design and development of mobile and web applications. Our focus lies in.</p>
             </div>
 
             {/* middle group mobiles and contact us button section */}
             <div className="mt-4 xss:mt-6 xs:mt-8 sm:mt-10 md:mt-12 lg:mt-15">
                             <div className="relative w-full h-auto min-h-[200px] xss:min-h-[250px] xs:min-h-[200px] sm:min-h-[350px] md:min-h-[400px] lg:h-[400px] bg-[url('/service-icons/app-dev-bg.jpg')] bg-cover bg-center flex flex-col lg:flex-row justify-end items-center">
                                 <div className="w-full lg:w-[48%] 2xl:w-[50%] lg:absolute lg:inset-y-0 lg:left-0 p-4 xss:p-6 xs:p-8 sm:p-10 md:p-12 lg:p-11 xl:p-9 2xl:p-10">
-                                    <h1 className="text-white text-lg xss:text-xl xs:text-xl sm:text-3xl md:text-3xl lg:text-2xl xl:text-3xl 2xl:text-4xl font-bold leading-tight">Crafting Exceptional Android Apps for Your Business</h1>
+                                    <h1 className="text-white text-lg xss:text-md xs:text-lg sm:text-xl md:text-xl xl:text-2xl 3xl:text-[1.6rem] font-bold xss:leading-tight 2xl:leading-loose">Crafting Exceptional Android Apps for <br/> Your Business</h1>
                                     <p className="text-white text-xs xss:text-xs xs:text-xs sm:text-sm md:text-sm lg:text-[0.75rem] xl:text-sm 3xl:text-base xss:leading-5 xl:leading-7 mt-2 xss:mt-3 xs:mt-4 sm:mt-4 md:mt-5 lg:mt-3 xl:mt-4 2xl:mt-5">At Analogue IT Solutions, we specialise in expert Android app development, employing advanced technologies such as React Native and Flutter. Whether you need a robust e-commerce platform or a tailored mobile solution, our team is dedicated to delivering high-quality Android applications that enhance user experience and drive business success. Trust us to bring your app vision to life with precision and innovation</p>
                                     <button className="bg-blue-700 text-white rounded p-2 xss:p-2 xs:p-2 sm:p-3 md:p-3 lg:p-2 xl:p-2 2xl:p-3 mt-2 lg:mt-4 xss:mt-3 xs:mt-4 sm:mt-4 md:mt-4 lg:mt-2 xl:mt-3 2xl:mt-4 text-xs xss:text-xs xs:text-sm sm:text-sm md:text-sm lg:text-[0.65rem] xl:text-xs 2xl:text-sm">Contact Us</button>
                                 </div>
-                                <div className="w-full lg:w-[50%] h-[200px] xss:h-[250px] xs:h-[300px] sm:h-[350px] md:h-[400px] lg:h-full">
+                                <div className="w-full lg:w-[50%] 2xl:w-[45%] h-[200px] xss:h-[250px] sm:h-[250px] md:h-[400px]">
                                     <Image 
                                         src="/service-icons/group-mobiles.png" 
                                         alt="Group mobiles" 
@@ -100,13 +103,14 @@ export default function AndroidAppDevelopment(){
                             alt={`Icon ${index + 1}`}
                             width={index === 0 || index >= DesignIcons.length - 2 ? 20 : 40}
                             height={index === 0 || index >= DesignIcons.length - 2 ? 20 : 40}
-                            className="object-contain w-[20px] h-[20px] xss:w-[20px] xss:h-[20px] xs:w-[25px] xs:h-[25px] sm:w-[25px] sm:h-[25px] md:w-[25px] md:h-[25px] lg:w-[25px] lg:h-[25px]"
+                            className="object-contain w-[20px] h-[20px] xss:w-[25px] xss:h-[25px] sm:w-[25px] sm:h-[25px] md:w-[25px] md:h-[25px] lg:w-[35px] lg:h-[35px]"
                         />
                     ))}
                 </div>
-                <p className="text-gray-500 text-xs xss:text-xs xs:text-xs sm:text-sm md:text-base lg:text-subbody 3xl:text-base lg:leading-6 mt-4 xss:mt-6 xs:mt-8 sm:mt-8 md:mt-10 lg:mt-10">Analogue is a Best mobile app development company in Hyderabad that specialises in creating and enhancing user experience through the design and development of mobile and web applications. Our focus lies in helping businesses expand and reach their specific customer base by collaborating with individuals and organisations to conceptualise and promote their products. Analogue is a Best mobile ain helping businesses expand and reach their specific customer base by co Analogue is a Best mobile app development company in Hyderabad that specialises in creating and enhancing user experience through the design and development of mobile and web applications. Our focus lies in helping businesses expand and reach their specific customer base by collaborating with individuals and organisations to conceptualise and promote their products. Analogue is a Best mobile ain helping businesses expand and reach their specific customer base by co</p>
+                <p className="text-gray-500 text-xs xss:text-xs xs:text-xs sm:text-sm md:text-sm lg:text-subbody 3xl:text-base lg:leading-6 mt-4 xss:mt-6 xs:mt-8 sm:mt-8 md:mt-10 lg:mt-10">Analogue is a Best mobile app development company in Hyderabad that specialises in creating and enhancing user experience through the design and development of mobile and web applications. Our focus lies in helping businesses expand and reach their specific customer base by collaborating with individuals and organisations to conceptualise and promote their products. Analogue is a Best mobile ain helping businesses expand and reach their specific customer base by co Analogue is a Best mobile app development company in Hyderabad that specialises in creating and enhancing user experience through the design and development of mobile and web applications. Our focus lies in helping businesses expand and reach their specific customer base by collaborating with individuals and organisations to conceptualise and promote their products. Analogue is a Best mobile ain helping businesses expand and reach their specific customer base by co</p>
             </div>
         </div> 
+        </>
     )
 }
 

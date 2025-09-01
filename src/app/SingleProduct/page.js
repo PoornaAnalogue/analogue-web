@@ -1,7 +1,7 @@
 'use client';
 import Image from "next/image";
-import Footer from "../../../Components/Footer";
-import Navbar from "../../../Components/Navbar";
+import Footer from "../../Components/Footer";
+import Navbar from "../../Components/Navbar";
 
 export default function Responsive_SingleProductPage() {
   return (

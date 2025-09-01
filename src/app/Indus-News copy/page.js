@@ -1,4 +1,4 @@
-import Footer from "../../../Components/Footer";
+import Footer from "../../Components/Footer";
 import Image from "next/image";
 
 export default function Responsive_IndusWeb() {

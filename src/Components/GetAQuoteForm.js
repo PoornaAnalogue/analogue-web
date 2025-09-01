@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-import Dummy from "../src/app/Dummy/page";
+import Dummy from "../app/Dummy/page";
 import { useRouter } from "next/navigation";
 import { FiRefreshCcw } from "react-icons/fi"; 
 

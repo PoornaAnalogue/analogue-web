@@ -22,7 +22,7 @@ export default function Footer() {
     <>
     <footer className="relative bg-[#0c1a38] text-white overflow-hidden ">
       {/* Main Content Container */}
-      <div className="max-w-7xl mx-auto px-4 py-12 px-15">
+      <div className="max-w-7xl mx-auto px-4 py-12 xss:px-7 xl:px-5 3xl:px-8">
         {/* Top Section */}
 
       <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-12">
@@ -109,17 +109,17 @@ export default function Footer() {
       </div>
 
               {/* Middle Section */}
-      <div className="grid grid-cols-1 xl:grid-cols-4 gap-6 xl:px-10">
+      <div className="grid grid-cols-1 xl:grid-cols-4 gap-6 xl:px-10 2xl:px-7">
         {/* Copyright */}
-        <div className="text-start text-sm text-gray-200 xl:mx-[-2rem] hidden xl:block">
+        <div className="text-start text-sm text-gray-200 xl:mx-[-1.5rem] hidden xl:block">
           Copyright© 2023 Tronix. All Rights Reserved.
         </div>
 
         {/* address, working hours, contact Details */}
-        <div className="col-span-3 grid grid-cols-1 xl:grid-cols-3 gap-8">
+        <div className="col-span-3 grid grid-cols-1 xl:grid-cols-3 xss:gap-4 xl:gap-2 2xl:gap-5 xl:ml-[-1rem] 2xl:ml-0">
   {/* Location */}
-  <div className="flex items-start gap-4">
-    <div className="relative w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] 2xl:w-[80px] 2xl:h-[80px]">
+  <div className="flex items-start gap-2">
+    <div className="relative w-[50px] h-[50px] xss:w-[150px] xss:h-[50px] sm:w-[130px] sm:ml-[-0.8rem] md:ml-[-0.15rem] md:w-[4.5rem] md:h-[4rem] xs:ml-[-0.4rem] sm:h-[60px] xl:w-[250px] xl:h-[60px] xl:ml-0 3xl:w-[180px]">
       <Image src="/Footer/Location.svg" alt="Location" fill className="object-contain" />
     </div>
     <div className="flex flex-col">
@@ -139,7 +139,7 @@ export default function Footer() {
 
   {/* Working Hours */}
   <div className="flex items-start gap-4">
-    <div className="relative w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] 2xl:w-[80px] 2xl:h-[80px]">
+    <div className="relative w-[50px] h-[50px] xss:w-[50px] xss:h-[50px] sm:w-[60px] sm:h-[60px]">
       <Image src="/Footer/Working-Hours.svg" alt="Working Hours" fill className="object-contain" />
     </div>
     <div className="flex flex-col">
@@ -151,8 +151,8 @@ export default function Footer() {
   </div>
 
   {/* Contact Us */}
-  <div className="flex items-start gap-4">
-    <div className="relative w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] 2xl:w-[80px] 2xl:h-[80px]">
+  <div className="flex items-start gap-4 xl:w-[15.5rem] 2xl:ml-[-1.2rem]">
+    <div className="relative w-[50px] h-[50px] xss:w-[50px] xss:h-[80px] sm:w-[60px] sm:h-[60px] xl:w-[250px] xl:h-[60px] 3xl:w-[200px]">
       <Image src="/Footer/Contact.svg" alt="Contact" fill className="object-contain" />
     </div>
     <div className="flex flex-col">
