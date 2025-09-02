@@ -1,9 +1,3 @@
-
-
-
-
-
-
 "use client";
 
 import { useRef, useEffect, useState } from "react";
@@ -213,7 +207,7 @@ const [visibleSteps, setVisibleSteps] = useState([1]); // step 1 always visible
   const heading = "Our Process".split("");
   const letterVariants = {
     hidden: { color: "#7B7E86" },
-    visible: { color: "#3C6FA2" },
+    visible: { color: "#071637" },
   };
 
   return (
@@ -269,38 +263,37 @@ const [visibleSteps, setVisibleSteps] = useState([1]); // step 1 always visible
         </div>
 
         {/* Right Puzzle */}
-        <div className="flex justify-center lg:justify-start relative 2xl:pl-10 xl:pl-2 lg:pt-10 ">
-          <div className="w-[280px] sm:w-[320px] md:w-[360px] h-[350px] md:h-[400px] relative  ">
-           
-           
-           
-           {steps.map((step, idx) => (
-  <AnimatePresence key={step.id}>
-    {(idx === 0 || idx < currentStep) && (
-      <motion.div
-        key={step.id}
-        initial={{ y: 50, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        exit={{ y: -50, opacity: 0 }}
-        transition={{ duration: 0 }}
-        className="absolute w-[120px] h-[120px] z-10 cursor-pointer hover:scale-105 transition-transform"
-        style={positions[idx]}
-        onClick={() => setSelectedStep(step.id)}
-      >
-        <Image
-          src={step.img}
-          alt={step.title}
-          width={120}
-          height={120}
-          className="object-contain"
-        />
-      </motion.div>
-    )}
-  </AnimatePresence>
-))}
+       
 
-          </div>
-        </div>
+        <div className="flex justify-center lg:justify-center relative 2xl:pl-10 xl:pl-2 lg:pt-10">
+  <div className="relative w-[280px] h-[350px] sm:w-[360px] sm:h-[420px] scale-90 xs:scale-100 sm:ml-15 ">
+    {steps.map((step, idx) => (
+      <AnimatePresence key={step.id}>
+        {(idx === 0 || idx < currentStep) && (
+          <motion.div
+            key={step.id}
+            initial={{ y: 50, opacity: 0 }} 
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -50, opacity: 0 }}
+            transition={{ duration: 0 }}
+            className="absolute w-[120px] h-[120px] z-10 cursor-pointer hover:scale-105 transition-transform"
+            style={positions[idx]}
+            onClick={() => setSelectedStep(step.id)} 
+          >
+            <Image
+              src={step.img}
+              alt={step.title}
+              width={120}
+              height={120}
+              className="object-contain"
+            />
+          </motion.div>
+        )}
+      </AnimatePresence>
+    ))}
+  </div>
+</div>
+
       </div>
     </div>
   );
