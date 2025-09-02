@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Scroll } from "lucide-react";
 
 import Home from "./Home/page";
-import Footer from "../Components/Footer";
+import Footer from "../components/Footer";
 import Guarantees from "./guarantees/page";
 import AboutUs from "./aboutus/page";
 import GetAQuoteForm from "../../Components/GetAQuoteForm";

@@ -1,8 +1,8 @@
 import { Urbanist } from "next/font/google";
 import "./globals.css";
-import ModalPopUp from "../Components/Modal-PopUp";
+import ModalPopUp from "../components/Modal-PopUp";
 import CustomCursor from "./CustomCursor";
-import Navbar from "@/Components/Navbar";
+import Navbar from "@/components/Navbar";
 import Footer from "@/Components/Footer";
 
 const urbanist = Urbanist({

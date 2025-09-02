@@ -1,7 +1,7 @@
 import { FaChevronDown } from "react-icons/fa";
 import Image from "next/image";
-import Navbar from "../../../Components/Navbar";
-import Footer from "../../../Components/Footer";
+import Navbar from "../../../components/Navbar";
+import Footer from "../../../components/Footer";
 
 
 export default function AndroidAppDevelopment(){
