@@ -129,8 +129,8 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <ul className="hidden xl:flex items-center justify-center gap-10 text-black flex-grow">
-            <li className="hover:text-blue-600 cursor-pointer xss:text-xs xl:text-sm"><Link href={}>Home</Link></li>
-            <li className="hover:text-blue-600 cursor-pointer xss:text-xs xl:text-sm">About</li>
+            <li className="hover:text-blue-600 cursor-pointer xss:text-xs xl:text-sm"><Link href="/" className="block w-full h-full">Home</Link></li>
+            <li className="hover:text-blue-600 cursor-pointer xss:text-xs xl:text-sm"><Link href="/aboutus" className="block w-full h-full">About</Link></li>
 
             {mainMenu.map((menu, i) => (
               <li
@@ -172,8 +172,8 @@ export default function Navbar() {
               )}
             </li>
           ))}
-            <li className="hover:text-blue-600 cursor-pointer xss:text-xs xl:text-sm">Blog</li>
-            <li className="hover:text-blue-600 cursor-pointer xss:text-xs xl:text-sm">Contact</li>
+            <li className="hover:text-blue-600 cursor-pointer xss:text-xs xl:text-sm"><Link href="/blogs" className="block w-full h-full">Blog</Link></li>
+            <li className="hover:text-blue-600 cursor-pointer xss:text-xs xl:text-sm"><Link href="/contact" className="block w-full h-full">Contact</Link></li>
           </ul>
 
           {/* Free Quote */}

@@ -38,7 +38,7 @@ import Responsive_IndusNews from "./Indus-News/page";
 import Responsive_IndusWeb from "./Indus-News copy/page";
 import Responsive_ProductsPage from "@/app/Products/page";
 
-import Contact from "./Contact/page";
+import Contact from "./contact/page";
 import AndroidAppDevelopment from "./Services/android-app-development-company-in-hyderabad/page";
 import Responsive_AdobeTech from "./Tech-Adobe/page";
 import ClientCarousel from "./PoornaCarousal/page";
