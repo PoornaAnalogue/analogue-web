@@ -7,8 +7,6 @@ import { ShieldCheck } from "lucide-react";
 import Link from "next/link";
 
 export default function Home() {
-  
-
   const headings = [
     { line1: "Mobile App", line2: "Development", style: "bg-gradient-to-r from-blue-600 to-blue-400" },
     { line1: "Digital", line2: "Marketing", style: "bg-gradient-to-r from-red-500 to-orange-400" },

@@ -231,14 +231,14 @@ export default function Puzzle() {
       title: "Requirements",
       img: "/puzzleimages/puzzle1.png",
       description:
-        "Our process begins with understanding your vision. We work closely with you to gather detailed requirements, analyze your business goals, and identify the exact needs of your mobile app. This stage ensures we align the app’s features, design, and functionality with your target audience and objectives. By defining clear requirements, we lay a strong foundation for a successful app development journey.",
+        "Our process begins with understanding your vision. We work closely with you to gather detailed requirements, analyze your business goals, and identify the exact needs of your mobile app. This stage ensures we align the app's features, design, and functionality with your target audience and objectives. By defining clear requirements, we lay a strong foundation for a successful app development journey.",
     },
     {
       id: 2,
       title: "Agreement",
       img: "/puzzleimages/puzzle2.png",
       description:
-        "Once the requirements are clear, we move forward with a transparent agreement. This includes project scope, timeline, budget, and deliverables. Our goal is to ensure both parties are aligned from the very beginning. With a well-defined agreement in place, we create a smooth roadmap for development and build mutual trust that drives the project’s success.",
+        "Once the requirements are clear, we move forward with a transparent agreement. This includes project scope, timeline, budget, and deliverables. Our goal is to ensure both parties are aligned from the very beginning. With a well-defined agreement in place, we create a smooth roadmap for development and build mutual trust that drives the project's success.",
     },
     {
       id: 3,
@@ -266,7 +266,7 @@ export default function Puzzle() {
       title: "Client Approval",
       img: "/puzzleimages/puzzle6.png",
       description:
-        "At this stage, we hand over the tested app for your final review. We walk you through its features, design flow, and overall performance. Any adjustments or fine-tuning you suggest are carefully implemented. Once you’re fully satisfied, we secure your approval to move ahead with the launch.",
+        "At this stage, we hand over the tested app for your final review. We walk you through its features, design flow, and overall performance. Any adjustments or fine-tuning you suggest are carefully implemented. Once you're fully satisfied, we secure your approval to move ahead with the launch.",
     },
     {
       id: 7,
@@ -287,7 +287,7 @@ export default function Puzzle() {
       title: "Analogue Monitor",
       img: "/puzzleimages/puzzle9.png",
       description:
-        "We believe in long-term collaboration. After deployment, our team actively tracks your app’s performance, resolves issues, and rolls out updates. From maintaining system health to adding new features, we ensure your app remains reliable, secure, and aligned with user expectations helping your business grow continuously.",
+        "We believe in long-term collaboration. After deployment, our team actively tracks your app's performance, resolves issues, and rolls out updates. From maintaining system health to adding new features, we ensure your app remains reliable, secure, and aligned with user expectations helping your business grow continuously.",
     },
   ];
 
