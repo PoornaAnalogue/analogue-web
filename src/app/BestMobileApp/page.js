@@ -17,13 +17,13 @@ export default function Responsive_Best_App() {
                         The Best Mobile App Development Company.
                     </p>
                     <p className="text-[#7B7E86] xl:text-sm xl:leading-6 xl:tracking-wide xss:text-[0.5rem] xs:text-[0.5rem] sm:text-small sm:leading-4 md:text-[0.7rem] 3xl:text-base xs:leading-3 xs:leading-3 md:leading-5 3xl:leading-8 mb-2">
-                        We are a top-rated mobile app development company, committed to turning your app ideas into reality with the help of our expert team. Our professional and best app developers in Hyderabad work closely with you to ensure your app vision is brought to life with precision and quality. Whether it’s a simple app or a complex solution, we are your trusted partner in making it happen.
+                        We are a top-rated mobile app development company, committed to turning your app ideas into reality with the help of our expert team. Our professional and best app developers in Hyderabad work closely with you to ensure your app vision is brought to life with precision and quality. Whether it&apos;s a simple app or a complex solution, we are your trusted partner in making it happen.
                     </p>
                     <p className="text-[#7B7E86]  xl:text-sm xl:leading-6 xl:tracking-wide xss:text-[0.5rem] xs:text-[0.5rem] sm:text-small sm:leading-4  md:text-[0.7rem] 3xl:text-base xs:leading-3 xs:leading-3 md:leading-5 3xl:leading-8 mb-2">
                         At our company, we take pride in offering top-notch mobile application development services. As one of the best app developers in Hyderabad, we focus on crafting seamless, user-friendly apps tailored to your business needs. With years of experience, we ensure that each app is built to enhance functionality and performance.
                     </p>
                     <p className="text-[#7B7E86] xl:text-sm xl:leading-6 xl:tracking-wide xss:text-[0.5rem] xs:text-[0.5rem] sm:text-small sm:leading-4 md:text-[0.7rem] 3xl:text-base xs:leading-3 xs:leading-3 md:leading-5 3xl:leading-8 mb-2">
-                        When you choose us, you're partnering with a top-rated mobile app development company known for delivering exceptional results. We do top-notch mobile applications development, combining innovation, technology, and professionalism to help your business succeed. Let us help you bring your dream app to life and drive your business forward.
+                        When you choose us, you&apos;re partnering with a top-rated mobile app development company known for delivering exceptional results. We do top-notch mobile applications development, combining innovation, technology, and professionalism to help your business succeed. Let us help you bring your dream app to life and drive your business forward.
                     </p>
                 </div>
             </div>

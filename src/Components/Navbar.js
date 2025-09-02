@@ -60,25 +60,25 @@ export default function Navbar() {
       ],
     },
     {
-      label: "Our Products",
+      label: "Industries",
       items: [
-        { name: "E-Commerce App", link: "" },
-        { name: "Grocery Delivery App", link: "" },
-        { name: "Hotel Booking App", link: "" },
-        { name: "Laundry App", link: "" },
-        { name: "Real Estate Marketplace", link: "" },
-        { name: "Social Media App", link: "" },
-        { name: "Food Delivery App", link: "" },
-        { name: "Logistic Appp", link: "" },
-        { name: "Taxi Booking App", link: "" },
-        { name: "Live Streaming App", link: "" },
-        { name: "News App", link: "" },
-        { name: "CRM Development", link: "" },
-        { name: "ERP Development", link: "" },
-        { name: "Iot Development", link: "" }, 
-        { name: "Security Management App", link: "" },
-        { name: "Dr.Consultation App", link: "" },
-        { name: "GPS Tracking Devices", link: "" },
+        { name: "E-Commerce App", link: "/ecommerce-app-development-company" },
+        { name: "Grocery Delivery App", link: "/grocery-app-development-company" },
+        { name: "Hotel Booking App", link: "/hotel-booking-app-development-company" },
+        { name: "Laundry App", link: "/laundry-app-development-company" },
+        { name: "Real Estate Marketplace", link: "/real-estate-app-development-company" },
+        { name: "Social Media App", link: "/social-media-app-development-company" },
+        { name: "Food Delivery App", link: "/food-delivery-app-development-company" },
+        { name: "Logistic Appp", link: "/logistic-app-development-company" },
+        { name: "Taxi Booking App", link: "/taxi-booking-app-development-company" },
+        { name: "Live Streaming App", link: "/video-streaming-app-development" },
+        { name: "News App", link: "/news-app-development" },
+        { name: "CRM Development", link: "/crm-software-development-company" },
+        { name: "ERP Development", link: "/erp-software-development" },
+        { name: "Iot Development", link: "/iot-development-company" }, 
+        { name: "Security Management App", link: "/security-guard-app-development" },
+        { name: "Dr.Consultation App", link: "/doctor-appointment-app-development" },
+        { name: "GPS Tracking Devices", link: "/GPS-vehicle-tracking-development-company" },
       ],
     },
   ];
@@ -166,7 +166,7 @@ export default function Navbar() {
                       </span>
 
             {/* Text — flush left, moves right only when icon appears */}
-                  <Link href={item.link} onClick={() => setOpenDropdown(null)} className="ml-0 group-hover:ml-1 transition-all  group-hover:text-blue-600">{item.name}</Link>
+                  <Link href={item.link} onClick={() => setOpenDropdown(null)} prefetch={true} className="ml-0 group-hover:ml-1 transition-all  group-hover:text-blue-600">{item.name}</Link>
                 </li>))}
                 </ul>
               )}

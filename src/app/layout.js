@@ -1,9 +1,9 @@
 import { Urbanist } from "next/font/google";
 import "./globals.css";
-import ModalPopUp from "../Components/Modal-PopUp";
 import CustomCursor from "./CustomCursor";
-import Navbar from "@/Components/Navbar";
 import Footer from "@/Components/Footer";
+import ModalPopUp from "@/Components/Modal-PopUp";
+import Navbar from "@/Components/Navbar";
 
 const urbanist = Urbanist({
   subsets: ["latin"],

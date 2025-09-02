@@ -21,7 +21,7 @@ export default function Responsive_Testimonials() {
       stars: 5,
     },
     {
-      text: "If you’re searching for a reliable, highly skilled, and innovative development team, look no further than Analogue IT Solutions. Their expertise and commitment to excellence make them the ideal partner for building impactful apps.",
+      text: "If you're searching for a reliable, highly skilled, and innovative development team, look no further than Analogue IT Solutions. Their expertise and commitment to excellence make them the ideal partner for building impactful apps.",
       name: "Vijay Kumar reddy",
       image: "/Testimonial-Images/Male-logo.png",
       stars: 5,

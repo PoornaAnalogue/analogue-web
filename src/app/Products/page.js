@@ -135,7 +135,6 @@ export default function Responsive_ProductsPage() {
       link: "/mahaboob",
       objectfit : "object-cover",
       width: 350,
-      // paddingy : "ml-0"
     },
     {
       title: "Naukari",
@@ -156,7 +155,7 @@ export default function Responsive_ProductsPage() {
       width: 350
     },
     {
-      title: "Gvathi Party",
+      title: "Gavathi Party",
       description: "E-commerce App and Static Website",
       image: "/Product-Images/ProductImg17.png",
       bgColor:"bg-[#E31E25]",
@@ -193,23 +192,28 @@ export default function Responsive_ProductsPage() {
   return (
 
     <div className='w-full h-full bg-white'>
-
-        <div className="h-auto " >
-                    {/* <Navbar /> */}
-                    <div className=" bg-white flex h-full justify-center relative ">
-                        <Image src="/AdobeTech-Images/AbstractDesign.jpg" width={500} height={600} alt="Abstract design background" />
-                        <div className="bg-white absolute top-14  ">
-                            <h1 className="text-3xl bg-white text-violet-950 font-bold">Our Products</h1>
-                            <p className="bg-white text-[#071637] leading-loose text-sm text-center mt-3">Stories of Success</p>
-                        </div>
-        
-        
-                        
-                    </div>
+    
+        <div className="relative flex justify-center w-full bg-white ">
+                                  <Image
+                                    src="/AdobeTech-Images/Abstract Design.svg"
+                                    width={480}
+                                    height={180}
+                                    alt="Abstract design background"
+                                    className="object-contain w-full h-auto max-w-[300px] xss:max-w-[320px] xs:max-w-[360px] sm:max-w-[450px] "
+                                    sizes="(max-width: 320px) 300px, (max-width: 360px) 320px, (max-width: 480px) 360px, (max-width: 640px) 450px, (max-width: 768px) 640px, 768px"
+                                  />
+                                  <div className="absolute top-12 xss:top-10 xs:top-11 sm:top-14 md:top-15 bg-white px-4">
+                                    <h1 className="text-xl xss:text-2xl  sm:text-[1.7rem] md:text-[2rem] font-bold text-violet-950 text-center">
+                                      Our Products
+                                    </h1>
+                                    <p className="text-xs xss:text-xs md:text-sm text-black leading-loose text-center  sm:mt-2">
+                                      Stories of success
+                                    </p>
+                                  </div>
         </div>
-
+                    
         <div className="flex justify-center items-center min-h-screen bg-white">
-            <div className="grid grid-cols-1 md:grid-cols-2  xl:grid-cols-3 gap-8 xl:gap-10 3xl:gap-20 xss:m-10 xs:mx-15 sm:mx-25 lg:mx-22 md:mx-7 xl:mx-13  3xl:mx-10">
+            <div className=" grid grid-cols-1 md:grid-cols-2  xl:grid-cols-3 gap-8 lg:gap-10  xl:gap-10 2xl:gap-12 3xl:gap-20 xss:m-10 xs:mx-15 sm:mx-25 md:mx-10 lg:mx-20 md:mx-7 xl:mx-13 2xl:mx-19 3xl:mx-40 ">
             {cards.map((card, index) => (
           <div
             key={index}
@@ -223,15 +227,15 @@ export default function Responsive_ProductsPage() {
                   alt={card.title}
                   width={card.width}
                   height={160}
-                  className={`h-80 xss:h-65   sm:h-70 xl:h-75 ${card.res_size}  ${card.paddingy}  transition-opacity duration-300 hover:opacity-90  ${card.objectfit}`}
+                  className={`h-80 xss:h-45 sm:h-55  xl:h-60 2xl:h-65 ${card.res_size}  ${card.paddingy}  transition-opacity duration-300 hover:opacity-90  ${card.objectfit}`}
                 />
               </div>
               <div className="mx-4 mb-2 text-start flex gap-5 p-2  justify-center items-center w-full">
                 <div className="flex-1 ">
-                  <p className="text-lg font-bold ml-4 text-gray-800  underline decoration-blue-500 underline-offset-9 pb-2">
+                  <p className="xss:text-sm sm:text-subbody lg:text-base 3xl:text-base font-bold ml-2 sm:ml-4 text-gray-800  underline decoration-blue-500 underline-offset-9 pb-2 2xl:ml-6">
                     {card.title}
                   </p>
-                  <p className="text-gray-600 text-sm text-center">{card.description}</p>
+                  <p className="text-gray-600 text-xs xss:text-xs sm:text-sm lg:text-sm 3xl:text-base text-center xss:ml-1 md:ml-2 ">{card.description}</p>
                 </div>
                 <div className="flex items-center p-3 justify-center w-10 h-10 rounded-full bg-black transition-transform duration-300 hover:translate-x-1">
                   <svg

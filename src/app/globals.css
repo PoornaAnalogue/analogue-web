@@ -67,6 +67,7 @@ body {
   --breakpoint-test2: 600px;
   --breakpoint-md: 640px;
   --breakpoint-lg: 768px;
+  --breakpoint-lgg: 769px;
   --breakpoint-test4: 853px;
   --breakpoint-xl: 1024px;
   --breakpoint-2xl: 1280px;
@@ -668,19 +669,19 @@ body {
 @media (min-width: 1536px) {
   @keyframes triangle-path {
     0% {
-      transform: translate(300px, 220px);
+      transform: translate(250px, 220px);
     }
 
     33% {
-      transform: translate(300px, 90px);
+      transform: translate(250px, 90px);
     }
 
     66% {
-      transform: translate(420px, 130px);
+      transform: translate(380px, 130px);
     }
 
     100% {
-      transform: translate(300px, 220px);
+      transform: translate(250px, 220px);
     }
   }
 }
