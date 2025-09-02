@@ -15,7 +15,6 @@ import PuzzleTest from "./testclient/page";
 import Responsive_ServicePage_Mobile from "./ServicesPage/page";
 import Responsive_Calendar from "./BookAppointment/page";
 import PuzzleScrollSection from "./puzzlescroll/page";
-import ClientCarousel from "./Clientcorousel/page";
 
 
 import Responsive_AngularTech from "./Tech-Angular/page";
@@ -44,6 +43,7 @@ import AndroidAppDevelopment from "./Services/Android-App-Development/page";
 import Responsive_AdobeTech from "./Tech-Adobe/page";
 import Navbar from "../../Components/Navbar";
 import Responsive_SingleProductPage from "./SingleProduct/page";
+import ClientCarousel from "./PoornaCarousal/page";
 
 export default function App() {
   return (
@@ -68,13 +68,17 @@ export default function App() {
 
 
 
-      {/* <Responsive_SingleProductPage /> */}
-      {/* <Responsive_AngularTech /> */}
-      {/* <Responsive_AdobeTech /> */}
+      <Responsive_SingleProductPage />
+      <Responsive_AdobeTech />
+      <Responsive_ProductsPage />
+      <Responsive_IndusNews />
 
-      {/* <Responsive_IndusNews /> */}
+
+
+
+
+      {/* <Responsive_AngularTech /> */}
       {/* <AndroidAppDevelopment /> */}
-      {/* <Responsive_ProductsPage /> */}
 
         {/* 
       

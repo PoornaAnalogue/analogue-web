@@ -86,23 +86,23 @@ export default function Footer() {
           <div className="grid grid-cols-1">
             <div className="flex items-center gap-2 lg:p-1 lg:min-w-[100px] ">
               <span className="text-gray-500 lg:text-sm xss:text-lg">Hyderabad, India</span>
-              <Image src="/Flags/India-Flag.svg" width={20} height={20} alt="India" className="w-full h-auto max-w-[25px] max-h-[16px]" />
+              <Image src="/Flags/India-Flag.svg" width={20} height={20} alt="India" className="w-auto h-auto max-w-[25px] max-h-[16px]" />
             </div>
             <div className="flex items-center gap-2 p-1 min-w-[100px]">
               <span className="text-gray-500 lg:text-sm xss:text-lg">Dubai</span>
-              <Image src="/Flags/Uae-Flag.svg" width={20} height={20} alt="UAE" className="w-full h-auto max-w-[25px] max-h-[25px]" />
+              <Image src="/Flags/Uae-Flag.svg" width={28} height={20} alt="UAE" className="w-[28px]  h-[20px]" />
             </div>
             <div className="flex items-center gap-2 p-1 min-w-[100px]">
               <span className="text-gray-500 lg:text-sm xss:text-lg">California</span>
-              <Image src="/Flags/California-republic.svg" width={28} height={14} alt="USA" className="w-full h-auto max-w-[28px] max-h-[25px]" />
+              <Image src="/Flags/California-republic.svg" width={28} height={14} alt="USA" className="w-auto h-auto max-w-[28px] max-h-[25px]" />
             </div>
             <div className="flex items-center gap-2 p-1 min-w-[100px]">
               <span className="text-gray-500 lg:text-sm xss:text-lg">Denmark</span>
-              <Image src="/Flags/Denmark-Flag.svg" width={28} height={14} alt="Denmark" className="w-full h-auto max-w-[28px] max-h-[24px]" />
+              <Image src="/Flags/Denmark-Flag.svg" width={28} height={14} alt="Denmark" className="w-auto h-auto max-w-[28px] max-h-[24px]" />
             </div>
             <div className="flex items-center gap-2 p-1 min-w-[100px]">
               <span className="text-gray-500 lg:text-sm xss:text-lg">Qatar</span>
-              <Image src="/Flags/Qatar-Flag.svg" width={28} height={14} alt="Qatar" className="w-full h-auto max-w-[28px] max-h-[24px]" />
+              <Image src="/Flags/Qatar-Flag.svg" width={28} height={14} alt="Qatar" className="w-[28px]  h-[14px]" />
             </div>
           </div>
         </div>
@@ -116,70 +116,58 @@ export default function Footer() {
         </div>
 
         {/* address, working hours, contact Details */}
-        <div className="col-span-3 grid grid-cols-1 xl:grid-cols-3 gap-8 ">
-          {/* Location */}
-          <div className="flex items-start gap-4">
-            <Image
-              src="/Footer/Location.svg"
-              alt="Location"
-              width={0}
-              height={0}
-              sizes="100vw"
-              className="w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] 2xl:w-[80px] 2xl:h-[80px] object-contain"
-            />
-            <div className="flex flex-col">
-              <h2 className="xss:text-xs sm:text-md lg:text-[0.9rem] xl:text-md">LOCATION</h2>
-              <p className="text-gray-500 text-sm mt-2">
-                <a
-              href="https://maps.app.goo.gl/P858gAyx5vH8GaTQ7?g_st=ac"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="Open location in Google Maps">
-            1-98/4/64, Jaya Vijaya Plaza, Vittal Rao Nagar, Mindspace, Madhapur, Hyderabad-500081.
-            </a>
-              </p>
-            </div>
-          </div>
+        <div className="col-span-3 grid grid-cols-1 xl:grid-cols-3 gap-8">
+  {/* Location */}
+  <div className="flex items-start gap-4">
+    <div className="relative w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] 2xl:w-[80px] 2xl:h-[80px]">
+      <Image src="/Footer/Location.svg" alt="Location" fill className="object-contain" />
+    </div>
+    <div className="flex flex-col">
+      <h2 className="xss:text-xs sm:text-md lg:text-[0.9rem] xl:text-md">LOCATION</h2>
+      <p className="text-gray-500 text-sm mt-2">
+        <a
+          href="https://maps.app.goo.gl/P858gAyx5vH8GaTQ7?g_st=ac"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open location in Google Maps"
+        >
+          1-98/4/64, Jaya Vijaya Plaza, Vittal Rao Nagar, Mindspace, Madhapur, Hyderabad-500081.
+        </a>
+      </p>
+    </div>
+  </div>
 
-          {/* Working Hours */}
-          <div className="flex items-start gap-4">
-            <Image
-              src="/Footer/Working-Hours.svg"
-              alt="Working Hours"
-              width={0}
-              height={0}
-              sizes="100vw"
-              className="w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] 2xl:w-[80px] 2xl:h-[80px] object-contain"
-            />
-            <div className="flex flex-col">
-              <h2 className="xss:text-xs sm:text-md lg:text-[0.9rem] xl:text-md">WORKING HOURS</h2>
-              <p className="text-gray-500 text-sm mt-2">
-                Monday - Saturday <br /> 10am - 7pm
-              </p>
-            </div>
-          </div>
+  {/* Working Hours */}
+  <div className="flex items-start gap-4">
+    <div className="relative w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] 2xl:w-[80px] 2xl:h-[80px]">
+      <Image src="/Footer/Working-Hours.svg" alt="Working Hours" fill className="object-contain" />
+    </div>
+    <div className="flex flex-col">
+      <h2 className="xss:text-xs sm:text-md lg:text-[0.9rem] xl:text-md">WORKING HOURS</h2>
+      <p className="text-gray-500 text-sm mt-2">
+        Monday - Saturday <br /> 10am - 7pm
+      </p>
+    </div>
+  </div>
 
-          {/* Contact Us */}
-          <div className="flex items-start gap-4">
-            <Image
-              src="/Footer/Contact.svg"
-              alt="Contact"
-              width={0}
-              height={0}
-              sizes="100vw"
-              className="w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] 2xl:w-[80px] 2xl:h-[80px] object-contain"
-            />
-            <div className="flex flex-col">
-              <h2 className="xss:text-xs sm:text-md lg:text-[0.9rem] xl:text-md">CONTACT US</h2>
-              <a href="https://mail.google.com/mail/?view=cm&to=info@analogueitsolutions.com" className="hover:underline text-gray-500 text-sm">
-                info@analogueitsolutions.com
-              </a>
-              <a href="tel:+918919088163" className="hover:underline text-gray-500 text-sm">
-                +91 89190 88163
-              </a>
-            </div>
-          </div>
-        </div>
+  {/* Contact Us */}
+  <div className="flex items-start gap-4">
+    <div className="relative w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] 2xl:w-[80px] 2xl:h-[80px]">
+      <Image src="/Footer/Contact.svg" alt="Contact" fill className="object-contain" />
+    </div>
+    <div className="flex flex-col">
+      <h2 className="xss:text-xs sm:text-md lg:text-[0.9rem] xl:text-md">CONTACT US</h2>
+      <a href="mailto:info@analogueitsolutions.com" className="hover:underline text-gray-500 text-sm">
+        info@analogueitsolutions.com
+      </a>
+      <a href="tel:+918919088163" className="hover:underline text-gray-500 text-sm">
+        +91 89190 88163
+      </a>
+    </div>
+  </div>
+</div>
+
+
       </div>
       </div>
 

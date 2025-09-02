@@ -1,35 +1,32 @@
 'use client';
 import Image from "next/image";
-import Footer from "../../../Components/Footer";
-import Navbar from "../../../Components/Navbar";
 
 export default function Responsive_SingleProductPage() {
   return (
     <>
       <div className="w-full bg-white">
-        <Navbar />
         {/* Hero Section */}
         <div className="relative flex justify-center w-full bg-white ">
-                  <Image
-                    src="/AdobeTech-Images/AbstractDesign.jpg"
-                    width={480}
-                    height={180}
-                    alt="Abstract design background"
-                    className="object-contain w-full h-auto max-w-[300px] xss:max-w-[320px] xs:max-w-[360px] sm:max-w-[450px] "
-                    sizes="(max-width: 320px) 300px, (max-width: 360px) 320px, (max-width: 480px) 360px, (max-width: 640px) 450px, (max-width: 768px) 640px, 768px"
-                  />
-                  <div className="absolute top-12 xss:top-10 xs:top-10 sm:top-20 md:top-10 bg-white px-4">
-                    <h1 className="text-xl xss:text-2xl xs:text-3xl sm:text-4xl md:text-[2rem] font-bold text-violet-950 text-center">
-                      Our Products
-                    </h1>
-                    <p className="text-xs xss:text-xs md:text-sm text-black leading-loose text-center mt-2 sm:mt-2">
-                      Stories of success
-                    </p>
-                  </div>
-                </div>
+                          <Image
+                            src="/AdobeTech-Images/Abstract Design.svg"
+                            width={480}
+                            height={180}
+                            alt="Abstract design background"
+                            className="object-contain w-full h-auto max-w-[300px] xss:max-w-[320px] xs:max-w-[360px] sm:max-w-[450px] "
+                            sizes="(max-width: 320px) 300px, (max-width: 360px) 320px, (max-width: 480px) 360px, (max-width: 640px) 450px, (max-width: 768px) 640px, 768px"
+                          />
+                          <div className="absolute top-12 xss:top-10 xs:top-11 sm:top-14 md:top-15 bg-white px-4">
+                            <h1 className="text-xl xss:text-2xl  sm:text-[1.7rem] md:text-[2rem] font-bold text-violet-950 text-center">
+                              Our Products
+                            </h1>
+                            <p className="text-xs xss:text-xs md:text-sm text-black leading-loose text-center  sm:mt-2">
+                              Stories of success
+                            </p>
+                          </div>
+        </div>
 
         {/* Product Title */}
-        <div className="font-semibold text-2xl xss:text-2xl xs:text-3xl   3xl:text-4xl text-[#071637] px-4 xss:px-6 xs:px-8 sm:px-10 md:px-12 lg:px-14 xl:px-16 2xl:px-20 3xl:px-24 py-4 xss:py-5 sm:py-6 bg-white underline underline-offset-8 xss:underline-offset-10 sm:underline-offset-12 md:underline-offset-15 decoration-blue-500 decoration-4">
+        <div className="font-semibold text-2xl xss:text-xl sm:text-2xl md:text-[1.7rem]  3xl:text-4xl text-[#071637] px-4 xss:px-6 xs:px-8 sm:px-10 md:px-12 lg:px-14 xl:px-16 2xl:px-20 3xl:px-24 py-4 xss:py-5 sm:py-6 bg-white underline underline-offset-8 xss:underline-offset-10 sm:underline-offset-12 md:underline-offset-15 decoration-blue-500 decoration-4">
           <p>Buykeyz</p>
         </div>
 
@@ -54,22 +51,22 @@ export default function Responsive_SingleProductPage() {
                 width={250}
                 height={200}
                 alt="LogoImage"
-                className="w-[150px] xss:w-[160px] xs:w-[180px] sm:w-[180px] md:w-[220px] lg:w-[230px] xl:w-[240px] 2xl:w-[250px] 3xl:w-[280px] h-auto"
+                className="w-[150px] xss:w-[160px]  sm:w-[180px] md:w-[220px] lg:w-[230px] xl:w-[240px] 2xl:w-[250px] 3xl:w-[280px] h-auto"
               />
             </div>
-            <p className="text-[#0D6EFD] text-lg xss:text-xl sm:text-2xl md:text-2xl   font-bold mt-4">
+            <p className="text-[#0D6EFD] xss:text-base sm:text-lg lg:text-xl 2xl:text-2xl 3xl:text-[1.75rem] font-bold mt-4">
               Process we follow for
             </p>
-            <p className="text-[#0D6EFD] text-lg xss:text-xl  md:text-2xl  font-bold">
+            <p className="text-[#0D6EFD] xss:text-base sm:text-lg lg:text-xl 2xl:text-2xl 3xl:text-[1.75rem] font-bold">
               successful project
             </p>
-            <p className="text-[#7B7E86] text-xs xss:text-sm sm:text-base md:text-base 3xl:text-2xl text-start mt-3 pr-4 xss:pr-6 xs:pr-8 sm:pr-10 md:pr-12 lg:pr-14 xl:pr-16 2xl:pr-20 3xl:pr-24">
+            <p className="text-[#7B7E86]  text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-start mt-3 leading-5 sm:leading-6 mr-8 md:mr-15">
               Analogue is a Best mobile app development company in Hyderabad that specialises in creating and enhancing user experience
               through the design and development of mobile and web applications. Our focus lies in helping businesses expand and reach
               their specific customer base by collaborating with individuals and organisations to conceptualise and promote their products.
             </p>
             <div className="w-full xl:w-2/3  mt-4">
-              <p className="text-[#0D6EFD] text-sm xss:text-base sm:text-lg lg:text-xl 2xl:text-2xl 3xl:text-3xl font-bold text-start">
+              <p className="text-[#0D6EFD] text-sm xss:text-base sm:text-lg lg:text-xl 2xl:text-2xl 3xl:text-[1.75rem] font-bold text-start">
                 Development Tools We use:
               </p>
               <div className="grid grid-cols-2 xss:grid-cols-6 md:grid-cols-8 lg:grid-cols-9 xl:grid-cols-6 2xl:grid-cols-6 3xl:grid-cols-6 gap-2 xss:gap-3 xs:gap-4 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-2 2xl:gap-3 3xl:gap-4 mt-2">
@@ -90,7 +87,6 @@ export default function Responsive_SingleProductPage() {
           </div>
         </div>
       </div>
-      <Footer />
     </>
   );
 }

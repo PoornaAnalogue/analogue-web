@@ -35,12 +35,18 @@ const handleBlur = (e) => {
 
 const getDigitsOnly = (phone) => phone.replace(/\D/g, "");
 
-const isValidPhone = (phone) => {
-  // Remove +91 or 91 and non-digits
-  const num = phone.replace(/^\+?91/, "").replace(/\D/g, "");
-  console.log("isValidPhone input:", phone, "cleaned:", num); // Debug log
-  // Must be exactly 10 digits, starting with 6–9
-  return /^[6-9]\d{9}$/.test(num);
+const isValidPhone = (phone, country) => {
+  if (!country) return false;
+  // Remove all non-digits
+  let num = phone.replace(/\D/g, "");
+  if (country.dialCode === "91") {
+    // Remove the dial code prefix if it exists
+    if (num.startsWith("91")) {
+      num = num.slice(2);
+    }
+    return /^[6-9]\d{9}$/.test(num);  }
+  const expectedLength = (country.format.match(/\./g) || []).length;
+  return num.length === expectedLength;
 };
 
 
@@ -62,49 +68,93 @@ const isValidPhone = (phone) => {
     setCaptcha(code);
   };
 
-const handleSubmit = (e) => {
-  e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-  const requiredFields = ["name", "phone", "subject", "reach", "message"];
-  let hasError = false;
+    const requiredFields = ["name", "phone", "subject", "reach", "message"];
+    let hasError = false;
 
-  // check empty fields
-  requiredFields.forEach((field) => {
-    if (!formData[field]) {
-      setTouched((prev) => ({ ...prev, [field]: true }));
+    requiredFields.forEach((field) => {
+      if (!formData[field]) {
+        setTouched((prev) => ({ ...prev, [field]: true }));
+        hasError = true;
+      }
+    });
+
+    if (!isValidPhone(formData.phone)) {
+      setTouched((prev) => ({ ...prev, phone: true }));
       hasError = true;
     }
-  });
 
-  // phone validation (force touched)
-  if (!isValidPhone(formData.phone)) {
-    setTouched((prev) => ({ ...prev, phone: true }));
-    hasError = true; // <-- important
-  }
+    if (hasError) return;
 
-  if (hasError) {
-    console.log("❌ Invalid input, form blocked");
-    return;
-  }
+    if (!formData.captchaInput) {
+      setCaptchaError("Enter captcha");
+      return;
+    }
+    if (formData.captchaInput !== captcha) {
+      setCaptchaError("Enter valid captcha");
+      generateCaptcha();
+      return;
+    }
 
-  // captcha validation
-  if (!formData.captchaInput) {
-    setCaptchaError("Enter captcha");
-    return;
-  }
+    setCaptchaError("");
 
-  if (formData.captchaInput !== captcha) {
-    setCaptchaError("Enter valid captcha");
-    generateCaptcha();
-    return;
-  }
+    // ✅ API Call using GetQuotation
+    try {
+      const payload = {
+      name: formData.name,
+      email: formData.email,
+      phoneNumber: formData.phone,  // ✅ mapping
+      subject: formData.subject,
+      reachUs: formData.reach,      // ✅ mapping
+      message: formData.message,
+    };
 
-  setCaptchaError("");
-  console.log("✅ Form submitted successfully", formData);
-  router.push("/Dummy");
-};
+   // 👉 Second API (HelloLeads)
+    const countryData = {
+      dialCode: formData.dialCode,   // "91"
+      name: formData.countryName,    // "India"
+    };
 
+    try {
+  const response = await TestForm(payload);
+  console.log("✅ API Response:", response);
+} catch (err) {
+  console.error("❌ TestForm failed:", err);
+}
 
+try {
+  const crmResponse = await HelloLeadsAPI(payload, countryData);
+  console.log("✅ CRM API Response:", crmResponse);
+} catch (err) {
+  console.error("❌ HelloLeads failed:", err);
+}
+
+      toast.success("Your request has been submitted!", {
+        position: "bottom-center",
+        autoClose: 4000,
+      });
+
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        subject: "",
+        reach: "",
+        message: "",
+        captchaInput: "",
+      });
+      generateCaptcha();
+      onClose();
+      router.push("/Dummy"); // keep redirect
+    } catch (error) {
+      toast.error("Something went wrong. Please try again.", {
+        position: "bottom-center",
+        autoClose: 4000,
+      });
+    }
+  };
 
 
   return (
@@ -138,7 +188,7 @@ const handleSubmit = (e) => {
 
         {/* Glassmorphic Form */}
         <div className="relative z-20 xl:p-6 xl:mt-[-2.7rem] 2xl:mt-[-2.3rem] 3xl:mt-[-1.5rem] xss:mt-[-2.3rem] xs:mt-[-2.2rem] sm:mt-[-2.4rem] md:mt-[-2rem] lg:mt-[-2.5rem] w-full p-5 border-gray-300 border-2
-                        2xl:w-[75%] 3xl:w-[88%] xl:w-[75%] lg:w-[80%] md:w-[80%] sm:w-[75%] xs:w-[75%] xs:p-3 xss:w-[80%]
+                        2xl:w-[70%] 3xl:w-[88%] xl:w-[75%] lg:w-[80%] md:w-[80%] sm:w-[75%] xs:w-[75%] xs:p-3 xss:w-[80%]
                         rounded-3xl backdrop-blur-3xl shadow-lg 
                         bg-gradient-to-br from-white/40 via-white/50 to-transparent">
           <div className="absolute inset-0 bg-gradient-to-br from-gray-500/20 via-gray-800/20 to-transparent rounded-3xl pointer-events-none"></div>
@@ -186,9 +236,15 @@ const handleSubmit = (e) => {
                 country={"in"}
                 value={formData.phone}
                 onChange={(phone) => {
-                  setFormData((prev) => ({ ...prev, phone }));
-                  setTouched((prev) => ({ ...prev, phone: true }));
-                }}
+                  setFormData((prev) => ({
+                  ...prev,
+                  phone: value,             
+                  dialCode: country.dialCode,
+                  countryName: country.name,   
+                  countryFormat: country.format,
+                }));
+                setTouched((prev) => ({ ...prev, phone: true }));
+              }}
                 countryCodeEditable={false}
                 enableSearch={true}
                 inputClass="!bg-transparent !border-none !focus:outline-none !text-xs !w-full !pl-12 !text-gray-800 placeholder-black"
@@ -202,7 +258,7 @@ const handleSubmit = (e) => {
                 placeholder="Phone Number*"
                 onBlur={() => setTouched((prev) => ({ ...prev, phone: true }))}
               />
-              {touched.phone && formData.phone && !isValidPhone(formData.phone) && (
+              {touched.phone && formData.phone && !isValidPhone(formData.phone, { dialCode: formData.dialCode, format: formData.countryFormat }) && (
                 <p className="text-xs text-red-500 mt-1">Please enter a valid number.</p>
               )}
             </div>

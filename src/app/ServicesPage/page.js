@@ -224,7 +224,7 @@ const Responsive_ServicePage_Mobile = () => {
                     <div className="xs:pt-2 xss:mx-0 xss:px-0 font-bold text-lg xss:text-sm xs:text-lg xs:pb-2 sm:text-xl md:text-2xl lg:text-normal mb-2 xs:mb-3">
                       {container.title}
                     </div>
-                    <div className="font-light sm:text-[0.6rem] 2xl:text-subbody xss:text-subsmall md:text-small xl:text-[0.85rem] 2xl:text-subbody 3xl:text-[1.2rem] 3xl:leading-6
+                    <div className="font-light sm:text-[0.6rem] 2xl:text-subbody xss:text-subsmall md:text-small xl:text-[0.85rem] 2xl:text-subbody 3xl:text-base 3xl:leading-6
                     ">
                       {container.content}
                     </div>
