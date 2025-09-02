@@ -129,7 +129,7 @@ export default function Navbar() {
 
           {/* Desktop Menu */}
           <ul className="hidden xl:flex items-center justify-center gap-10 text-black flex-grow">
-            <li className="hover:text-blue-600 cursor-pointer xss:text-xs xl:text-sm">Home</li>
+            <li className="hover:text-blue-600 cursor-pointer xss:text-xs xl:text-sm"><Link href={}>Home</Link></li>
             <li className="hover:text-blue-600 cursor-pointer xss:text-xs xl:text-sm">About</li>
 
             {mainMenu.map((menu, i) => (
@@ -166,7 +166,7 @@ export default function Navbar() {
                       </span>
 
             {/* Text — flush left, moves right only when icon appears */}
-                  <Link href={item.link} onClick={() => setOpenDropdown(null)}  className="ml-0 group-hover:ml-1 transition-all  group-hover:text-blue-600">{item.name}</Link>
+                  <Link href={item.link} onClick={() => setOpenDropdown(null)} className="ml-0 group-hover:ml-1 transition-all  group-hover:text-blue-600">{item.name}</Link>
                 </li>))}
                 </ul>
               )}
