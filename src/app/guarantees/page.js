@@ -120,7 +120,7 @@ export default function Guarantees() {
         {/* Paragraph */}
         <p
           className="
-            mt-4 text-subsmall sm:text-small md:text-small lg:text-small xl:text-tracking-wide 2xl:text-md 2xl:leading-8 3xl:text-subbody
+            mt-4 text-subsmall sm:text-small md:text-small lg:text-small xl:text-sm 2xl:leading-8 3xl:text-base
             text-[#7B7E86] leading-relaxed font-medium
             text-justify sm:text-left">
           Analogue has achieved the name and fame of being the best mobile app

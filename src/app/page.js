@@ -2,11 +2,11 @@ import Image from "next/image";
 import { Scroll } from "lucide-react";
 
 import Home from "./Home/page";
-import Footer from "../../Components/Footer";
+import Footer from "../Components/Footer";
 import Guarantees from "./guarantees/page";
 import AboutUs from "./aboutus/page";
 import GetAQuoteForm from "../../Components/GetAQuoteForm";
-// import Navbar from "../../Components/Navbar";
+import Navbar from "../../Components/Navbar";
 import Responsive_Best_App from "./BestMobileApp/page";
 import Responsive_ServicePage from "./ServicesPage/page";
 import Responsive_Testimonials from "./TestimonialsPage/page";
@@ -39,18 +39,19 @@ import Responsive_IndusWeb from "./Indus-News copy/page";
 import Responsive_ProductsPage from "./Products/page";
 
 import Contact from "./Contact/page";
-import AndroidAppDevelopment from "./Services/Android-App-Development/page";
+import AndroidAppDevelopment from "./Services/android-app-development-company-in-hyderabad/page";
 import Responsive_AdobeTech from "./Tech-Adobe/page";
-import Navbar from "../../Components/Navbar";
+// import Navbar from "../../Components/Navbar";
 import Responsive_SingleProductPage from "./SingleProduct/page";
 import ClientCarousel from "./PoornaCarousal/page";
+import MainHomePage from "@/app/MainHomePage/page";
 
 export default function App() {
   return (
     <>
 
-    
-      <Navbar />
+      
+      {/* <AboutUs /> */}
       <Home/>
       <Responsive_ServicePage_Mobile />
       <ClientCarousel />
@@ -62,26 +63,23 @@ export default function App() {
       <Responsive_India />
       <GetAQuoteForm />
       <Footer/>
-      
-      
 
 
 
 
-      <Responsive_SingleProductPage />
-      <Responsive_AdobeTech />
-      <Responsive_ProductsPage />
-      <Responsive_IndusNews />
-
-
-
-
-
+      {/* <Responsive_SingleProductPage /> */}
       {/* <Responsive_AngularTech /> */}
+      {/* <Responsive_AdobeTech /> */}
+
+      {/* <Responsive_IndusNews /> */}
       {/* <AndroidAppDevelopment /> */}
 
         {/* 
+       
       
+      
+      
+      <Responsive_ProductsPage />
       <Contact /> 
       */}
       
