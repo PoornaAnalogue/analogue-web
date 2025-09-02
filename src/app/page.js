@@ -56,7 +56,7 @@ export default function App() {
       <Responsive_CalendarTest />
       <Responsive_India />
       <GetAQuoteForm />
-      <Sample/>
+      {/* <Sample/> */}
       <Footer/>
 
 
