@@ -1,4 +1,3 @@
-
 "use client";
 import Image from "next/image";
 import CountUp from "react-countup";
@@ -57,10 +56,7 @@ export default function AboutPage() {
                 Analogue is a Best mobile app development company in Hyderabad
                 that specialises in creating and enhancing user experience
                 through the design and development of mobile and web
-                applications. Our focus lies in helping businesses expand and
-                reach their specific customer base by collaborating with
-                individuals and organisations to conceptualise and promote their
-                products.
+                applications.
               </p>
             </div>
           </div>

@@ -40,22 +40,22 @@ const Responsive_Calendar = () => {
 
   return (
     <>
-    <div className="md:px-0 3xl:pb-10  w-full sm:px-0 px-6 h-auto flex flex-col xl:flex-row xl:h-auto lg:px-0  xl:gap-5 bg-calendar bg-center bg-cover bg-no-repeat box-border justify-center  ">
-      <div className="self-center mx-0 xs:mx-3 md:mx-2 lg:mx-0 xl:mx-8 2xl:mx-10 py-2  xl:py-7  flex flex-col gap-2 sm:gap-4 xl:gap-8 w-full xs:w-full sm:w-10/12 md:w-10/12 lg:w-10/12 xl:w-5/12 3xl:py-12 max-w-full">
+    <div className="md:px-0 3xl:pb-10  w-full sm:px-0 px-6 h-auto flex flex-col xl:flex-row xl:h-auto lg:px-0  xl:gap-5 2xl:gap-0 bg-calendar bg-center bg-cover bg-no-repeat box-border justify-center  ">
+      <div className=" self-center 2xl:mr-0 mx-0 xs:mx-3 md:mx-2 lg:mx-0 xl:mx-8 2xl:mx-15 py-2  xl:py-7  flex flex-col gap-2 sm:gap-4 xl:gap-2 3xl:gap-6  w-full xs:w-full sm:w-10/12 md:w-10/12 lg:w-10/12 xl:w-5/12 3xl:py-12 max-w-full 2xl:mx-0 3xl:ml-20 ">
         <p className="text-white font-bold text-lg xss:text-md sm:text-lg md:text-2xl  xl:text-3xl 3xl:text-4xl leading-tight">
           Book Appointment <br /> for free.
         </p>
         <p className='font-weight-400 xss:text-small md:text-base   xl:text-lg text-[#0D6EFD] 3xl:text-[1.3rem] '>Choose the Best Mobile App Developers in Hyderabad and Beyond</p>
         <p className="text-white text-start font-normal
-        text-[0.625rem] xss:text-[0.6rem] md:text-xs lg:text-md  2xl:text-subbody 3xl:text-base leading-4 xs:leading-4  sm:leading-4 md:leading-5   lg:leading-6  ">
+        text-[0.625rem] xss:text-[0.6rem] md:text-xs lg:text-md  2xl:text-subbody 3xl:text-base leading-4 xs:leading-4  sm:leading-4 md:leading-5   lg:leading-6 3xl:leading-7  ">
           <span className='font-medium'>Are you searching for top mobile app developers? Look no further than Analogue! As a leading app development company in Hyderabad, we offer innovative solutions tailored
             to your unique business needs, serving clients worldwide.</span>
           <br /><br /> Our expert team leverages the latest technologies to deliver exceptional mobile app development services across Android, iOS, and hybrid platforms. With a strong presence in Hyderabad, we are trusted by businesses globally for delivering high-quality and user-friendly apps. Partner with Analogue for unparalleled service and expertise that sets us apart as one of the best mobile app developers in the industry.
         </p>
       </div>
-      <div className="md:h-[20rem] xss:h-[15rem] xs:h-[16rem] sm:h-[18rem] md:h-[23rem] lg:h-[25rem] xl:mr-0 xl:pr-0 h-full w-full self-center w-full  mb-3  sm:w-9/12 md:w-8/12 lg:w-8/12 xl:w-6/12 2xl:w-6/12 3xl:w-6/12 max-w-full bg-flower bg-contain bg-no-repeat bg-right xl:h-[28rem] 2xl:h-[32rem] 3xl:h-[35rem]">
+      <div className=" test:mr-10 sm:mr-0  xss:pt-3 md:h-[20rem] xss:h-[15rem] xs:h-[16rem] sm:h-[18rem] md:h-[23rem] lg:h-[25rem] xl:mr-0 xl:pr-0 h-full w-full self-center w-full  mb-3  sm:w-9/12 md:w-8/12 lg:w-8/12 xl:w-6/12 2xl:w-6/12 3xl:w-6/12 max-w-full bg-flower  3xl:mr-30 bg-contain bg-no-repeat bg-right xl:h-[28rem] 2xl:h-[32rem] 3xl:h-[35rem] xll:mr-20">
         <div className="">
-          <div className=" xss:bottom-[5px] xss:right-[10px] xs:bottom-[20px] xs:right-[0px] sm:bottom-[15px] sm:right-[5px] md:right-[20px] lg:right-[0px] xl:right-[35px] 2xl:-right-[20px] 2xl:bottom-[10px]  items-center    mx-2 xs:mx-3 sm:mx-4 md:mx-6 lg:mx-8 xl:mx-2 2xl:mx-10 3xl:mx-14  xs:mt-5 sm:mt-6 md:mt-8 xl:mt-15  relative p-1 xs:p-2 sm:p-3 md:p-4 xl:bottom-[40px] 3xl:bottom-[30px] 3xl:left-[60px] bg-white rounded-md shadow-xl box-border  w-[240px] xss:w-[140px] xs:w-[160px] sm:w-[180px] md:w-[220px] lg:w-[260px] xl:w-[300px] 3xl:w-[330px] xss:h-[140px]   xs:h-[150px] sm:h-[160px] md:h-[200px] lg:h-[220px] xl:h-[250px] 3xl:h-[300px] ">
+          <div className="test:left-[70px] xss:bottom-[5px] xss:right-[0px] xxs:left-[30px] xs:bottom-[20px] xs:right-[0px] sm:bottom-[15px] sm:left-[25px] smm:left-[50px] test2:left-[110px] md:left-[0px] lg:left-[30px] test4:left-[60px] test5:left-[170px] xl:-left-[10px] xll:left-[20px] 2xl:-right-[20px] 2xl:bottom-[10px] 2xxl:left-[90px] items-center    mx-2 xs:mx-3 sm:mx-4 md:mx-6 lg:mx-8 xl:mx-2 2xl:mx-10 3xl:mx-14  xs:mt-5 sm:mt-6 md:mt-8 xl:mt-15  relative p-1 xs:p-2 sm:p-3 md:p-4 xl:bottom-[40px] 3xl:bottom-[0px] 3xl:left-[80px] bg-white rounded-md shadow-xl box-border  w-[240px] xss:w-[140px] xs:w-[160px] sm:w-[180px] md:w-[220px] lg:w-[260px] xl:w-[300px] 3xl:w-[330px] xss:h-[140px]   xs:h-[150px] sm:h-[160px] md:h-[200px] lg:h-[220px] xl:h-[250px] 3xl:h-[300px] ">
             <div className="h-1 xs:h-1 mb-1 xs:mb-1 xl:h-2 xl:mb-2 bg-dots bg-left bg-contain bg-no-repeat"></div>
             {/* Header with month and navigation */}
             <div className="w-full flex justify-between text-black items-center mb-1 xs:mb-2 ">

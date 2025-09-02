@@ -40,27 +40,27 @@ export default function Navbar() {
     {
       label: "Technologies",
       items: [
-        { name: "Adobe XD", link: "/technologies/adobe-xd" },
-        { name: "Angular Development", link: "/technologies/angular" },
-        { name: "AWS", link: "/technologies/aws" },
-        { name: "Photoshop", link: "/technologies/photoshop" },
-        { name: "Python", link: "/technologies/python" },
-        { name: "Figma", link: "/technologies/figma" },
-        { name: "Microsoft Azure", link: "/technologies/azure" },
-        { name: "Node.js", link: "/technologies/nodejs" },
-        { name: "NoSQL (MongoDB)", link: "/technologies/mongodb" },
-        { name: "Oracle, MySQL, SQL Server", link: "/technologies/sql" },
-        { name: "Web Frameworks", link: "/technologies/web-frameworks" },
-        { name: "Java", link: "/technologies/java" },
-        { name: "Google Cloud Platform", link: "/technologies/gcp" },
-        { name: "Next.js", link: "/technologies/nextjs" },
-        { name: "React Native", link: "/technologies/react-native" },
-        { name: "PHP", link: "/technologies/php" },
-        { name: "Vue JS", link: "/technologies/vue" },
+        { name: "Adobe XD", link: "/adobe-xd-design-company" },
+        { name: "Angular Development", link: "/angular-development-company" },
+        { name: "AWS", link: "/amazon-web-service-company" },
+        { name: "Photoshop", link: "/photoshop-design-company" },
+        { name: "Python", link: "/python-programming" },
+        { name: "Figma", link: "/figma-design-company" },
+        { name: "Microsoft Azure", link: "/microsoft-azure-design-company" },
+        { name: "Node.js", link: "/nodejs-app-development-company" },
+        { name: "NoSQL (MongoDB)", link: "/no-sql-development-company" },
+        { name: "Oracle, MySQL, SQL Server", link: "/oracle-mysql-sql-server-company" },
+        { name: "Web Frameworks", link: "/web-framework-development-company" },
+        { name: "Java", link: "/java-development-company" },
+        { name: "Google Cloud Platform", link: "/gcp" },
+        { name: "Next.js", link: "/nextjs-app-development-company" },
+        { name: "React Native", link: "/react-native-app-development-company" },
+        { name: "PHP", link: "/php-app-development-company" },
+        { name: "Vue JS", link: "/vuejs-website-development-company" },
       ],
     },
     {
-      label: "Our Products",
+      label: "Industries",
       items: [
         { name: "E-Commerce App", link: "" },
         { name: "Grocery Delivery App", link: "" },
@@ -172,6 +172,8 @@ export default function Navbar() {
               )}
             </li>
           ))}
+
+            <li className="hover:text-blue-600 cursor-pointer xss:text-xs xl:text-sm"><Link href="/Products" className="block w-full h-full">Our Products</Link></li>
             <li className="hover:text-blue-600 cursor-pointer xss:text-xs xl:text-sm">Blog</li>
             <li className="hover:text-blue-600 cursor-pointer xss:text-xs xl:text-sm">Contact</li>
           </ul>

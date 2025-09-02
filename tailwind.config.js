@@ -6,6 +6,7 @@
 // ],
 //   theme: {
 //     screens: {
+
 //       xs: "350px",
 //       sm: "480px",
 //       md: "640px",
@@ -24,6 +25,7 @@ export default {
   theme: {
     // Completely override default breakpoints
     screens: {
+      xxs:"320px",
       xs: "350px",
       sm: "480px",
       md: "640px",
