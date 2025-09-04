@@ -475,7 +475,7 @@ export default function CarousalServicePage() {
       {/* Animated Heading */}
       <h2
         id="featured-heading"
-        className="font-['Urbanist'] text-2xl sm:text-3xl mt-5 md:text-3xl text-center text-[#7B7E86] mb-6 sm:mb-8 md:mb-10 xl:py-5"
+        className="font-['Urbanist'] text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold text-center text-[#7B7E86] my-5 sm:mb-8 md:mb-10 xl:py-5"
       >
         {heading.map((char, i) => (
           <motion.span

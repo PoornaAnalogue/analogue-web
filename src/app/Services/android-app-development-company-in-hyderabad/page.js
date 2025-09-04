@@ -128,44 +128,44 @@ const faqArray = [
         </div>
             
             {/* heading and content section */}
-            <div className="px-4 xss:px-6 xs:px-8 sm:px-10 md:px-12 lg:px-16 xl:px-20 flex flex-col space-y-4">
+            <div className="px-4 xss:px-6 xs:px-8 sm:px-10 md:px-12 lg:px-16 xl:px-20 flex flex-col space-y-4 ">
                 {/* about our company on top */}
-                <div className="flex items-center">
+                <div className="flex items-center mb-1">
                 <span className="w-1 h-1 bg-black rounded-full mr-2"></span>
-                <span className="font-medium text-sm text-black">
+                <span className="font-medium text-xs xss:text-subsmall sm:text-xs xl:text-sm text-black">
                     ABOUT OUR COMPANY
                 </span>
                 </div>
-                <h1 className="text-lg xss:text-md xs:text-lg sm:text-xl md:text-2xl lg:text-2xl 3xl:text-[2rem] font-semibold text-black leading-snug">Best <span className="text-blue-500"> Android App Development </span>  Company in <br/> Hyderabad, India</h1>
+                <h1 className=" text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] xl:w-[55%] 2xl:w-[45%] font-semibold text-black leading-snug">Best <span className="text-blue-500"> Android App Development </span>  Company in Hyderabad, India</h1>
                 <p className="text-gray-500 leading-relaxed text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base">Are you in search of a Best Android App Development Company in Hyderabad? Look no further than Analogue IT Solutions! Our team is dedicated to developing innovative and tailored Android applications that resonate with your target audience. We combine cutting-edge technology with industry insights to create robust, high-performance Android apps that drive user engagement and business growth. Trust us to elevate your mobile presence and bring your app ideas to life!</p>
                 
                 {/* Free Quote button + Call us */}
-                <div className="xl:flex gap-4">
-                    <button suppressHydrationWarning onClick={() => setIsOpen(true)} className="bg-blue-600 text-sm text-white px-5 py-3 rounded-3xl hover:bg-blue-700 transition cursor-pointer">
+                <div className="lg:flex gap-4">
+                    <button suppressHydrationWarning onClick={() => setIsOpen(true)} className="bg-blue-600 xss:text-xs lg:text-sm text-white xss:px-2 xss:py-2 xl:px-5 xl:py-3 rounded-3xl hover:bg-blue-700 transition cursor-pointer">
                     Get Free Quote
                     </button>
-                    <div className="flex xss:flex-col xl:flex-row items-center ml-[-0.3rem]">
+                    <div className="flex xss:flex-col lg:flex-row lg:items-center xss:ml-2 lg:ml-[-0.3rem] xss:mt-2 lg:mt-0">
                     <span className="xss:text-xs lg:text-sm text-blue-500 mr-2">Call Us</span>
                     <a href="tel:+918919088163" className="xss:text-xs lg:text-sm text-blue-700 hover:underline transition-colors duration-200">+91 8919088163</a>
                 </div>
                 </div>
 
                 {/* Welcome to our company */}
-                <div className="flex items-center pt-8">
+                <div className="flex items-center xss:pt-3 xl:pt-8 xss:mb-1">
                 <span className="w-1 h-1 bg-black rounded-full mr-2"></span>
-                <span className="font-medium text-sm text-black ">
+                <span className="font-medium text-xs xss:text-subsmall sm:text-xs xl:text-sm text-black ">
                     WELCOME TO OUR COMPANY
                 </span>
                 </div>
-                <h5 className="text-lg xss:text-md xs:text-lg sm:text-xl md:text-2xl lg:text-2xl 3xl:text-[1.9rem] font-semibold leading-tight">Accelerating Business Growth with Top-Notch Android Development
+                <h5 className="text-lg text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] xl:w-[60%] font-semibold leading-tight">Accelerating Business Growth with Top-Notch Android Development
                 </h5>
-            <p className="text-gray-500 leading-relaxed text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base font-normal">
+            <p className="text-gray-500 leading-relaxed text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base">
                 As a top Android app development company in Hyderabad, we harness the latest technologies to accelerate your business growth. Our skilled team of Android app developers excels at crafting customized solutions that meet your specific requirements. With a commitment to quality and innovation, we empower businesses to thrive by delivering high-performance Android applications that enhance user engagement and streamline operations.
                 From intuitive <a className="text-blue-700 font-semibold" href="https://analogueitsolutions.com/ui-ux-design-company-in-hyderabad">UI/UX design</a> to seamless backend integration, we ensure every aspect of your app is built for efficiency and scalability. Whether you're a startup looking to launch your first mobile app or an enterprise seeking advanced solutions, our expertise covers everything from <a className="text-blue-700 font-semibold" href="https://analogueitsolutions.com/ecommerce-app-development-company">e-commerce</a> to fintech, healthcare, and beyond.
                 Our approach is customer-centric, focusing on delivering apps that are not only visually appealing but also robust, secure, and optimized for performance. Partner with us to turn your app idea into a reality and stay ahead in the competitive digital landscape.
             </p>
             <div className="my-2">
-              <button className="text-white bg-blue-700 px-5 py-3 rounded-full cursor-pointer ">
+              <button className="bg-blue-600 xss:text-xs lg:text-sm text-white xss:px-2 xss:py-2 xl:px-5 xl:py-3 rounded-3xl hover:bg-blue-700 transition cursor-pointer ">
                 <Link href="/aboutus">Discover More</Link>
               </button>
             </div>
@@ -198,15 +198,15 @@ const faqArray = [
                         </div>
 
                         {/* TECHNOLOGIES SECTION  WITH ICONS AND BG IMAGE */}
-                        <div className=" w-full h-auto bg-[url('/service-icons/app-dev-bg.jpg')] bg-cover bg-center flex flex-col lg:flex-row h-[35rem] sm:h-[35rem] mdl:h-[32rem] md:h-[32rem] lg:h-[32rem] xl:h-[26rem]">
-                            <div className=" pt-[4%] sm:pt-[5%] 3xl:w-[80%] w-[90%] mx-auto text-white">
-                            <h2 className="text-2xl font-bold mb-9">TECHNOLOGIES</h2>
+                        <div className=" w-full h-auto bg-[url('/service-icons/app-dev-bg.jpg')] bg-cover bg-center flex flex-col lg:flex-row h-[35rem] sm:h-[27rem] md:h-[32rem] lg:h-[32rem] xl:h-[26rem]">
+                            <div className=" pt-[4%] sm:pt-[5%] 3xl:w-[80%] w-[80%] mx-auto text-white">
+                            <h2 className="text-2xl xss:text-center lg:text-start xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold mb-9">TECHNOLOGIES</h2>
                             <div className="flex space-x-8 mb-6">
                                 {technologies.map((tech, index) => (
                                 <span
                                     key={index}
                                     onClick={() => setSelectedCategory(tech.category)}
-                                    className={`cursor-pointer pb-1 border-b-2 font-medium sm:text-sm lg:text-base  transition-all duration-500 ease-in-out ${
+                                    className={`cursor-pointer pb-1 border-b-2 font-medium xss:text-xs sm:text-sm lg:text-base  transition-all duration-500 ease-in-out ${
                                     selectedCategory === tech.category
                                         ? 'border-white text-[#0E59F2]'
                                         : 'border-transparent'
@@ -219,7 +219,7 @@ const faqArray = [
                             {/* Display selected category items */}
                             <div className="flex">
                                 <div className="w-full">
-                                <div className="grid grid-cols-6 xss:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 2xl:w-[60rem] xl:grid-cols-5">
+                                <div className="grid grid-cols-6 xss:grid-cols-2 sm:grid-cols-3 2xl:w-[60rem] xl:grid-cols-5">
                                     {selectedItems?.map((item, idx) => (
                                     <div
                                         key={idx}
@@ -228,13 +228,13 @@ const faqArray = [
                                         <img
                                         src={TechIcons.bgicon}
                                         alt="design"
-                                        className="sm:w-[120px] md:w-[120px] lg:w-[145px] flex justify-center items-center mx-auto"
+                                        className=" xss:w-[5.5rem] sm:w-[6.3rem] md:w-[120px] lg:w-[135px] flex justify-center items-center mx-auto"
                                         />
-                                        <div className="absolute inset-0 flex flex-col items-center justify-center">
+                                        <div className="absolute inset-0 xss:text-subsmall sm:text-xs flex flex-col items-center justify-center">
                                         <img
                                             src={item.icon}
                                             alt={item.name}
-                                            className="w-[65px] h-[65px] sm:w-[55px] sm:h-[50px] md:w-[55px] md:h-[50px] lg:w-[50px] lg:h-[55px] xl:w-[85px] xl:h-[75px]"
+                                            className="w-[65px] h-[65px] xss:w-[2.5rem] xss:h-[2rem] sm:w-[55px] sm:h-[50px] md:w-[60px] md:h-[50px] lg:w-[68px] lg:h-[55px] xl:w-[85px] xl:h-[75px]"
                                         />
                                         {item.name}
                                         </div>
@@ -251,22 +251,22 @@ const faqArray = [
                         sm:px-5 sm:py-7 md:px-6 md:py-8 lg:px-8 lg:py-10 xl:px-10 xl:py-8 xl:px-20"
                         >
                             <p className="text-[#071637] font-semibold text-body mb-3 font-600 underline decoration-[#0D6EFD] decoration-2 underline-offset-6
-                            xs:text-body xs:decoration-2 xs:underline-offset-7 xs:mb-4 xss:text-subbody
-                            sm:text-subnormal md:text-subnormal  xl:text-[1.65rem] 3xl:text-[1.75rem]
+                            xs:text-body xs:decoration-2 xs:underline-offset-7 xs:mb-4
+                            text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold
                             sm:decoration-3 md:decoration-3  xl:decoration-4 
                             sm:underline-offset-10 md:underline-offset-15 xl:underline-offset-[20px] 
                             sm:mb-2 md:mb-4 xl:mb-5">
                                 Start Work With Us
                             </p>
                             <div className=" p-1 xs:p-2 sm:p-3 md:p-4 lg:p-5 xl:px-4 ">
-                                <p className="text-[#0D6EFD] text-sm xss:text-small xs:text-subbody sm:text-lg md:text-body xl:text-subnormal 3xl:text-[1.5rem] font-medium mb-2 xs:mb-3  ">
+                                <p className="text-[#0D6EFD] text-lg xss:text-sm  sm:text-base md:text-lg 2xl:text-[1.2rem] font-medium mb-2 xs:mb-3  ">
                                     The Best Android App Development Company.
                                 </p>
-                                <p className="text-[#7B7E86] xl:text-sm xl:leading-6 xl:tracking-wide xss:text-[0.5rem] xs:text-[0.5rem] sm:text-small sm:leading-4 md:text-[0.7rem] 3xl:text-base xs:leading-3 xs:leading-3 md:leading-5 3xl:leading-8 mb-2">
+                                <p className="text-[#7B7E86] text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base xl:leading-6 sm:leading-4 xs:leading-3 xs:leading-3 md:leading-5 3xl:leading-8 mb-2">
                                     At Analogue IT Solutions, we are a premier Android app development company committed to turning your app ideas into reality. With our deep expertise and dedication to excellence, we collaborate closely with you to create exceptional Android app solutions that meet your unique needs and exceed expectations.</p>
-                                <p className="text-[#7B7E86]  xl:text-sm xl:leading-6 xl:tracking-wide xss:text-[0.5rem] xs:text-[0.5rem] sm:text-small sm:leading-4  md:text-[0.7rem] 3xl:text-base xs:leading-3 xs:leading-3 md:leading-5 3xl:leading-8 mb-2">
+                                <p className="text-[#7B7E86] text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base xl:leading-6 sm:leading-4 xs:leading-3 xs:leading-3 md:leading-5 3xl:leading-8 mb-2">
                                     Our team leverages the latest technologies and industry best practices to build high-performance, user-friendly apps tailored to your business goals. From intuitive UI/UX design to seamless functionality, we ensure that every app delivers a smooth and engaging experience. Whether you're a startup or an established business, our scalable solutions help you stay ahead in the competitive mobile landscape.</p>
-                                <p className="text-[#7B7E86] xl:text-sm xl:leading-6 xl:tracking-wide xss:text-[0.5rem] xs:text-[0.5rem] sm:text-small sm:leading-4 md:text-[0.7rem] 3xl:text-base xs:leading-3 xs:leading-3 md:leading-5 3xl:leading-8 mb-2">
+                                <p className="text-[#7B7E86] text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base xl:leading-6 sm:leading-4 xs:leading-3 xs:leading-3 md:leading-5 3xl:leading-8 mb-2">
                                     Beyond development, we offer ongoing support and updates to keep your app optimized and future-ready. Our goal is to not just build apps, but to create digital experiences that drive growth and enhance customer engagement. Partner with us to bring your Android app vision to life.</p>
                             </div>
                         </div>
@@ -278,10 +278,10 @@ const faqArray = [
 
                         {/* Android dev company in India */}
                         <div className="w-full h-auto bg-white xl:p-5 xl:px-20 xss:p-5 xs:p-5 sm:px-8 ">
-                        <p className='font-weight-400 font-semibold text-black xl:text-2xl xl:mb-4 xss:mb-1 xss:text-sm xs:mb-1 xs:text-lg sm:text-subnormal lg:text-xl md:text-[1.4rem] xl:text-normal 2xl:text-normal 3xl:text-subbigheading '>
+                        <p className='font-weight-400 font-semibold text-[#0E59F2] xss:mb-3 xl:text-2xl xl:mb-4 xss:mb-1text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold'>
                             Mobile App Development Company in India
                         </p>
-                        <div className="xl:text-sm text-[#7B7E86] xl:leading-6 xl:tracking-wide xss:text-[0.5rem] xs:text-[0.5rem] sm:text-small sm:leading-4 md:text-[0.7rem] 3xl:text-base xs:leading-3 xs:leading-3 md:leading-5 3xl:leading-8">
+                        <div className="xl:text-sm text-[#7B7E86] xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base xs:leading-3 xs:leading-3 md:leading-5 3xl:leading-8">
                             <p className="pb-2">As a leading Indian Android app development company, Analogue IT Solutions is dedicated to exploring the intricacies of Android applications and delivering top-notch solutions tailored to client needs. Our expertise focuses on Android app development, ensuring apps that meet the highest standards of quality and innovation. Recognized as one of the top Android app development companies in Hyderabad, we transform your ideas into cutting-edge solutions that exceed expectations.</p>
                             <p className="pb-2">Our handpicked Android app development professionals in Hyderabad are skilled in various platforms, including Flutter and iOS, with a primary focus on Android app development. Alongside app development, Analogue also offers digital marketing strategy design and business development strategy. Reach out to Analogue for comprehensive Android app solutions that propel your business to new heights.</p>
                             <p className="pb-2"> Our Android app development services in Hyderabad turn your ideas into reality, providing the finest user-friendly apps.</p>
@@ -377,7 +377,7 @@ const faqArray = [
                     </div>
 
                     {/* faqs section */}
-                    <div className="w-[86%] mx-auto mt-10 mdl:mt-5 md:mt-5">
+                    <div className="w-[86%] mx-auto pb-3 xss::mt-5">
                     <div>
                     <FrequentQuestions Question={faqArray} />
                     </div>
