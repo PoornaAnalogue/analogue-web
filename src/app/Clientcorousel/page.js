@@ -522,7 +522,9 @@ export default function ClientCarousel() {
             <SwiperSlide key={`logo-${i}`} onClick={() => onLogoClick(i)}>
               <div
                 className={`flex justify-center transition-transform duration-300 cursor-pointer ${
-                  activeIndex === i ? "scale-125 opacity-100" : "scale-90 opacity-50"
+                  activeIndex === i
+                    ? "scale-125 opacity-100"
+                    : "scale-90 opacity-50"
                 }`}
               >
                 <Image
@@ -545,12 +547,14 @@ export default function ClientCarousel() {
             centeredSlides={true}
             autoplay={{ delay: 2500, disableOnInteraction: false }}
             speed={800}
-               slidesPerView="auto" 
+            slidesPerView="auto"
             spaceBetween={10}
+            centeredSlidesBounds={true}
             modules={[Autoplay, Controller]}
             onSwiper={(swiper) => {
               phoneSwiperRef.current = swiper;
-              if (logoSwiperRef.current) swiper.controller.control = logoSwiperRef.current;
+              if (logoSwiperRef.current)
+                swiper.controller.control = logoSwiperRef.current;
             }}
             onSlideChange={onPhoneSlideChange}
             // slidesPerView={3}
@@ -559,9 +563,9 @@ export default function ClientCarousel() {
               344: { slidesPerView: 1, spaceBetween: 5 },
               360: { slidesPerView: 1, spaceBetween: 5 },
               480: { slidesPerView: 1.2, spaceBetween: 6 },
-              640: { slidesPerView: 2, spaceBetween: 10 },
-              768: { slidesPerView: 4, spaceBetween: 12 },
-              1024: { slidesPerView: 5, spaceBetween: 20 },
+              640: { slidesPerView: 3, spaceBetween: 5 },
+              768: { slidesPerView: 3, spaceBetween: 12 },
+              1024: { slidesPerView: 5, spaceBetween: 16 },
               1280: { slidesPerView: 5, spaceBetween: 24 },
               1536: { slidesPerView: 5, spaceBetween: 28 },
             }}
@@ -571,7 +575,7 @@ export default function ClientCarousel() {
                 <div className="phone-wrapper flex justify-center">
                   <Image
                     src={c.phone}
-                    alt={`Phone ${i}`}
+                    alt="phone image"
                     width={260}
                     height={520}
                     className="object-contain w-[60%] sm:w-3/4 md:w-60 lg:w-64 xl:phone-xl  h-auto  phone-img"
