@@ -4,7 +4,8 @@ import { FaChevronDown, FaBars, FaTimes, FaEnvelope } from "react-icons/fa";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import PopUpForm from "./PopUpForm";
+import PopUpForm from "@/Components/PopUpForm";
+
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -125,12 +126,12 @@ export default function Navbar() {
     menuOpen ? "hidden xl:block" : ""}`}>
   <div className="max-w-[1600px] flex items-center gap-10 px-4 sm:px-10 w-full xl:gap-5">
     {/* Logo */}
-    <Image src="/Navbar/Analogue-navbar-logo.svg" alt="Logo" width={300} height={80} className="flex-shrink-0 xss:w-[100px] xl:w-[180px] 2xl:w-[140px] 3xl:w-[180px] h-auto "/>
+    <Image src="/Navbar/Analogue-navbar-logo.svg" alt="Logo" width={300} height={80} className="flex-shrink-0 xss:w-[90px] xl:w-[140px] 3xl:w-[180px] h-auto "/>
 
           {/* Desktop Menu */}
-          <ul className="hidden xl:flex items-center justify-center gap-10 text-black flex-grow">
-            <li className="hover:text-blue-600 cursor-pointer xss:text-xs xl:text-sm"><Link href="/" className="block w-full h-full">Home</Link></li>
-            <li className="hover:text-blue-600 cursor-pointer xss:text-xs xl:text-sm"><Link href="/aboutus" className="block w-full h-full">About</Link></li>
+          <ul className="hidden xl:flex items-center justify-center xl:gap-6 3xl:gap-10 text-black flex-grow">
+            <li className="hover:text-blue-600 cursor-pointer xss:text-xs 2xl:text-sm"><Link href="/" className="block w-full h-full">Home</Link></li>
+            <li className="hover:text-blue-600 cursor-pointer xss:text-xs 2xl:text-sm"><Link href="/aboutus" className="block w-full h-full">About</Link></li>
 
             {mainMenu.map((menu, i) => (
               <li
@@ -143,7 +144,7 @@ export default function Navbar() {
                 onMouseLeave={() => {
                   hideTimeout = setTimeout(() => setOpenDropdown(null), 150);
                 }}>
-              <div className="flex items-center gap-1  xss:text-xs xl:text-sm cursor-pointer" onClick={() => toggleDropdown(menu.label)}>
+              <div className="flex items-center gap-1  xss:text-xs 2xl:text-sm cursor-pointer" onClick={() => toggleDropdown(menu.label)}>
                 {menu.label}
                 <FaChevronDown
                   className={`transition-transform duration-200 ${
@@ -154,7 +155,7 @@ export default function Navbar() {
               </div>
 
               {openDropdown === menu.label && (
-                <ul className="absolute top-full left-0 mt-5 w-[480px]  font-semibold grid grid-cols-2 gap-1 border-2 border-blue-100 rounded-lg shadow-lg p-2 bg-white">
+                <ul className="absolute top-full left-0 mt-5 w-[480px] font-semibold grid grid-cols-2 gap-1 border-2 border-blue-100 rounded-lg shadow-lg p-2 bg-white">
                   {menu.items.map((item, idx) => (
                     <li
                       key={idx}
@@ -165,7 +166,7 @@ export default function Navbar() {
                       <Image src="/Navbar/navbar-hover-icon.svg" alt="arrow" width={20} height={20} className="object-contain"/></span>
                       </span>
 
-            {/* Text — flush left, moves right only when icon appears */}
+                  {/* Text — flush left, moves right only when icon appears */}
                   <Link href={item.link} onClick={() => setOpenDropdown(null)} prefetch={true} className="ml-0 group-hover:ml-1 transition-all  group-hover:text-blue-600">{item.name}</Link>
                 </li>))}
                 </ul>
@@ -173,9 +174,9 @@ export default function Navbar() {
             </li>
           ))}
 
-            <li className="hover:text-blue-600 cursor-pointer xss:text-xs xl:text-sm"><Link href="/Products" className="block w-full h-full">Our Products</Link></li>
-            <li className="hover:text-blue-600 cursor-pointer xss:text-xs xl:text-sm"><Link href="/blogs" className="block w-full h-full">Blog</Link></li>
-            <li className="hover:text-blue-600 cursor-pointer xss:text-xs xl:text-sm"><Link href="/contact" className="block w-full h-full">Contact</Link></li>
+            <li className="hover:text-blue-600 cursor-pointer xss:text-xs 2xl:text-sm"><Link href="/Products" className="block w-full h-full">Our Products</Link></li>
+            <li className="hover:text-blue-600 cursor-pointer xss:text-xs 2xl:text-sm"><Link href="/blogs" className="block w-full h-full">Blog</Link></li>
+            <li className="hover:text-blue-600 cursor-pointer xss:text-xs 2xl:text-sm"><Link href="/contact" className="block w-full h-full">Contact</Link></li>
           </ul>
 
           {/* Free Quote */}
@@ -183,7 +184,7 @@ export default function Navbar() {
 
             <button
         onClick={() => setIsOpen(true)}
-        className="xl:px-3 xl:text-sm  xl:py-1 bg-blue-500 text-white rounded-full"
+        className="xl:px-3 xss:text-xs 2xl:text-sm  xl:py-1.5 2xl:py-1 bg-blue-500 text-white rounded-full"
       >
         Free Quote
       </button>            
@@ -214,166 +215,186 @@ export default function Navbar() {
       </div>
 
       {/* Sidebar Mobile Menu */}
-   {/** Backdrop */}
-   {showSidebar && (
-<div
-  className={`
-    fixed inset-0 bg-black transition-opacity duration-500 z-[200]
-    ${menuOpen ? "opacity-50 visible" : "opacity-0 invisible"}
-  `}
-  onClick={() => setMenuOpen(false)}
-></div>
-)}
+      {/** Backdrop */}
+      {showSidebar && (
+        <div
+          className={`
+            fixed inset-0 bg-black transition-opacity duration-500 z-[200]
+            ${menuOpen ? "opacity-50 visible" : "opacity-0 invisible"}
+          `}
+          onClick={() => setMenuOpen(false)}
+        ></div>
+        )}
 
-{/** Sidebar */}
-<div
-  className={` xl:hidden fixed top-0 text-black left-0 h-full w-[70%] bg-white shadow-lg z-[300] overflow-y-auto transform transition-transform duration-500 ease-in-out
-    ${menuOpen ? "translate-x-0" : "-translate-x-full pointer-events-none"}`}>
-  {/* Sidebar Header */}
-  <div className="relative flex flex-col items-center">
-    {/* Rectangle behind logo */}
-    <div className="bg-blue-100 w-full flex items-center justify-center lg:pt-8">
-      <Image
-        src="/Navbar/Analogue-navbar-logo.svg"
-        alt="Logo"
-        width={300}
-        height={150}
-        className="z-10 mt-2 xss:w-[10rem] xs:w-[12rem] lg:w-[300px]"
-      />
+    {/** Sidebar */}
+    <div className={` xl:hidden fixed top-0 text-black left-0 h-full w-[70%] bg-white shadow-lg z-[300] overflow-y-auto transform transition-transform duration-500 ease-in-out
+        ${menuOpen ? "translate-x-0" : "-translate-x-full pointer-events-none"}`}>
+      {/* Sidebar Header */}
+      <div className="relative flex flex-col items-center">
+        {/* Rectangle behind logo */}
+        <div className="bg-blue-100 w-full flex items-center justify-center lg:pt-8">
+          <Image
+            src="/Navbar/Analogue-navbar-logo.svg"
+            alt="Logo"
+            width={300}
+            height={150}
+            className="z-10 mt-2 xss:w-[10rem] xs:w-[12rem] lg:w-[300px]"
+          />
+        </div>
+
+        {/* Triangle below rectangle */}
+        <div className="w-full h-12 bg-blue-100 clip-triangle mt-[-0.1rem]"></div>
+
+        <style jsx>{`
+          .clip-triangle {
+            clip-path: polygon(0 0, 100% 0, 50% 100%);
+          }
+        `}</style>
+      </div>
+
+      {/* Close Button */}
+      <button
+        onClick={() => setMenuOpen(false)}
+        className="absolute xss:top-1 xss:right-2 lg:top-4 lg:right-4 lg:p-2 xss:p-1 rounded-full bg-blue-500 shadow-md z-[60]"
+      >
+        <FaTimes
+          size={22}
+          className="text-white xss:w-[0.7rem] xss:h-[0.7rem] lg:w-[1.2rem] lg:h-[1.2rem]"
+        />
+      </button>
+
+      {/* Sidebar Links */}
+      <div className="p-5 xss:space-y-1 md:space-y-3 mt-3">
+        {/* Normal Menu Items with Chevron */}
+        <p className="cursor-pointer border-b flex items-center xss:text-xs lg:text-md leading-[2rem]">
+          <svg
+            className="w-4 h-4 mr-2 text-gray-500"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+          <Link href="/" className="block w-full h-full" onClick={() => setMenuOpen(false)}>Home</Link>
+        </p>
+        <p className="cursor-pointer border-b pb-0 flex items-center xss:text-xs lg:text-md leading-[2rem]">
+          <svg
+            className="w-4 h-4 mr-2 text-gray-500"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+          <Link href="/aboutus" className="block w-full h-full" onClick={() => setMenuOpen(false)}>About</Link>
+        </p>
+
+        {/* Dropdown Menu */}
+        {mainMenu.map((menu, i) => (
+          <div key={i}>
+            <button
+              onClick={() => toggleDropdown(menu.label)}
+              className="flex justify-between items-center xss:text-xs lg:text-md w-full pr-3 border-b leading-[2rem] text-black">
+              <span className="flex items-center">
+                {/* Chevron that rotates */}
+                <svg
+                  className={`w-4 h-4 mr-2 text-gray-500 transform transition-transform duration-300 ${
+                    openDropdown === menu.label ? "rotate-90" : ""
+                  }`}
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+                {menu.label}
+              </span>
+              <span className="flex items-center justify-center xss:w-5 xss:h-5 md:w-6 md:h-6 rounded-full bg-gray-200 text-gray-700 text-sm font-bold">
+                {openDropdown === menu.label ? "-" : "+"}
+              </span>
+            </button>
+
+            {/* Submenu Items */}
+            {openDropdown === menu.label && (
+              <ul className="lg:pl-8 xss:pl-5 border-gray-300">
+                {menu.items.map((item, idx) => (
+                  <li
+                    key={idx}
+                    className="flex items-center text-gray-700 py-0 xss:text-xs lg:text-md leading-[1.8rem]">
+                    <span className="mr-2 text-gray-500">{">"}</span>
+                    <Link href={item.link} onClick={() => setMenuOpen(false)} prefetch={true} className="hover:text-blue-600 transition-colors">{item.name || item}</Link>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+        ))}
+
+        <p className="cursor-pointer border-b flex items-center xss:text-xs lg:text-md leading-[2rem]">
+          <svg
+            className="w-4 h-4 mr-2 text-gray-500"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+          <Link href="/blogs" className="block w-full h-full" onClick={() => setMenuOpen(false)}>Our Products</Link>
+        </p>
+        <p className="cursor-pointer border-b flex items-center xss:text-xs lg:text-md leading-[2rem]">
+          <svg
+            className="w-4 h-4 mr-2 text-gray-500"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+          <Link href="/blogs" className="block w-full h-full" onClick={() => setMenuOpen(false)}>Blogs</Link>
+        </p>
+        <p className="cursor-pointer border-b flex items-center xss:text-xs lg:text-md leading-[2rem]">
+          <svg
+            className="w-4 h-4 mr-2 text-gray-500"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth={2}
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+          </svg>
+          <Link href="/contact" className="block w-full h-full" onClick={() => setMenuOpen(false)}>Contact</Link>
+        </p>
+
+
+        <div className="flex xss:justify-start xs:justify-center items-center xss:gap-6 xs:px-4 xs:py-3 bg-gray-50 mt-4 rounded-md">
+          <div>
+      <Image src="/Navbar/Phone-icon.svg" alt="Phone" width={25} height={25} />
+      </div>
+      <div className="flex flex-col xss:ml-[-1rem]">
+        <span className="xss:text-[0.6rem] lg:text-xs text-gray-800">Quick Call</span>
+        <a
+          href="tel:+918919088163"
+          className=" xss:text-subsmall sm:text-small text-blue-700 hover:underline transition-colors duration-200">
+          +91 8919088163
+        </a>
+      </div>
+      <button
+          onClick={() => {
+          setMenuOpen(false); // Close sidebar
+          setIsOpen(true);    // Open form
+        }}
+        className="bg-blue-600 xss:text-[0.55rem] xs:text-[0.65rem] sm:text-[0.75rem] lg:text-xs xss:py-1 xss:px-2 text-white lg:px-3 lg:py-1 rounded-full hover:bg-blue-700 transition"
+      >
+        Free Quote
+      </button>
     </div>
 
-    {/* Triangle below rectangle */}
-    <div className="w-full h-12 bg-blue-100 clip-triangle mt-[-0.1rem]"></div>
-
-    <style jsx>{`
-      .clip-triangle {
-        clip-path: polygon(0 0, 100% 0, 50% 100%);
-      }
-    `}</style>
-  </div>
-
-  {/* Close Button */}
-  <button
-    onClick={() => setMenuOpen(false)}
-    className="absolute xss:top-1 xss:right-2 lg:top-4 lg:right-4 lg:p-2 xss:p-1 rounded-full bg-blue-500 shadow-md z-[60]"
-  >
-    <FaTimes
-      size={22}
-      className="text-white xss:w-[0.7rem] xss:h-[0.7rem] lg:w-[1.2rem] lg:h-[1.2rem]"
-    />
-  </button>
-
-  {/* Sidebar Links */}
-  <div className="p-5 xss:space-y-1 md:space-y-3 mt-3">
-    {/* Normal Menu Items with Chevron */}
-    <p className="cursor-pointer border-b pb-2 flex items-center xss:text-xs lg:text-md leading-[2rem]">
-      <svg
-        className="w-4 h-4 mr-2 text-gray-500"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth={2}
-        viewBox="0 0 24 24"
-      >
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-      </svg>
-      Home
-    </p>
-    <p className="cursor-pointer border-b pb-2 flex items-center xss:text-xs lg:text-md leading-[2rem]">
-      <svg
-        className="w-4 h-4 mr-2 text-gray-500"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth={2}
-        viewBox="0 0 24 24"
-      >
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-      </svg>
-      About
-    </p>
-
-    {/* Dropdown Menu */}
-    {mainMenu.map((menu, i) => (
-      <div key={i}>
-        <button
-          onClick={() => toggleDropdown(menu.label)}
-          className="flex justify-between items-center xss:text-xs lg:text-md w-full py-3 px-2 border-b leading-[2rem] text-black"
-        >
-          <span className="flex items-center">
-            {/* Chevron that rotates */}
-            <svg
-              className={`w-4 h-4 mr-2 text-gray-500 transform transition-transform duration-300 ${
-                openDropdown === menu.label ? "rotate-90" : ""
-              }`}
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              viewBox="0 0 24 24"
-            >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-            </svg>
-            {menu.label}
-          </span>
-          <span className="flex items-center justify-center xss:w-5 xss:h-5 md:w-6 md:h-6 rounded-full bg-gray-200 text-gray-700 text-sm font-bold">
-            {openDropdown === menu.label ? "-" : "+"}
-          </span>
-        </button>
-
-        {/* Submenu Items */}
-        {openDropdown === menu.label && (
-          <ul className="lg:pl-8 xss:pl-4 space-y-2 mt-2 border-l-2 border-gray-300 ml-2">
-            {menu.items.map((item, idx) => (
-              <li
-                key={idx}
-                className="flex items-center text-gray-700 py-1 xss:text-xs lg:text-md leading-[1.8rem]"
-              >
-                <span className="mr-2 text-gray-500">{">"}</span>
-                {item.name || item}
-              </li>
-            ))}
-          </ul>
-        )}
       </div>
-    ))}
-
-    <p className="cursor-pointer border-b pb-2 flex items-center xss:text-xs lg:text-md leading-[2rem]">
-      <svg
-        className="w-4 h-4 mr-2 text-gray-500"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth={2}
-        viewBox="0 0 24 24"
-      >
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-      </svg>
-      Blog
-    </p>
-    <p className="cursor-pointer border-b pb-2 flex items-center xss:text-xs lg:text-md leading-[2rem]">
-      <svg
-        className="w-4 h-4 mr-2 text-gray-500"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth={2}
-        viewBox="0 0 24 24"
-      >
-        <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-      </svg>
-      Contact
-    </p>
-  </div>
-</div>
-
-
-      {/* in screens less than lg - Mobile Quick Call + Free Quote */}
-      <div className="flex xl:hidden 2xl:hidden 3xl:hidden xss:justify-center items-center gap-4 px-4 py-3 bg-gray-50 mt-4">
-        <Image src="/Navbar/Phone-icon.svg" alt="Phone" width={16} height={16} />
-        <div className="flex flex-col">
-          <span className="xss:text-[0.6rem] lg:text-xs text-gray-500">Quick Call</span>
-            <a href="tel:+918919088163" className="text-xs text-blue-700 hover:underline transition-colors duration-200"> +91 8919088163</a>
-        </div>
-        <button onClick={() => setIsOpen(true)} className="bg-blue-600 xss:text-[0.6rem] lg:text-xs xss:py-1 xss:px-2 text-white lg:px-3 lg:py-1 rounded-full hover:bg-blue-700 transition">
-          Free Quote
-        </button>
-      </div>
+    </div>
           <PopUpForm isOpen={isOpen} onClose={() => setIsOpen(false)} />
     </div>
   );

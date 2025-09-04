@@ -402,7 +402,7 @@ import Image from "next/image";
 
 import "swiper/css";
 
-export default function ClientCarousel() {
+export default function CarousalServicePage() {
   const companies = [
     {
       logo: "/carouselimages/flythlogo.png",
@@ -463,7 +463,7 @@ export default function ClientCarousel() {
     return () => section && observer.unobserve(section);
   }, []);
 
-  const heading = "Our Featured Projects".split("");
+  const heading = "Our Successful Mobile App Projects".split("");
 
   const letterVariants = {
     hidden: { color: "#7B7E86" },
@@ -475,7 +475,7 @@ export default function ClientCarousel() {
       {/* Animated Heading */}
       <h2
         id="featured-heading"
-        className="font-['Urbanist'] text-2xl sm:text-3xl mt-5 md:text-5xl lg:text-6xl text-center text-[#7B7E86] mb-6 sm:mb-8 md:mb-10"
+        className="font-['Urbanist'] text-2xl sm:text-3xl mt-5 md:text-3xl text-center text-[#7B7E86] mb-6 sm:mb-8 md:mb-10 xl:py-5"
       >
         {heading.map((char, i) => (
           <motion.span
@@ -491,10 +491,6 @@ export default function ClientCarousel() {
           </motion.span>
         ))}
       </h2>
-
-      <p className="text-xs sm:text-sm md:text-lg lg:text-xl text-center font-normal mb-6 sm:mb-8 md:mb-10 text-[#071637]">
-        Our Clients
-      </p>
 
       <div className="relative max-w-7xl mx-auto space-y-2 xs:mt-0">
         {/* Logo Carousel */}

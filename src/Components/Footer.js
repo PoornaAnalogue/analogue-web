@@ -8,6 +8,8 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { MdAccessTime, MdCall } from "react-icons/md";
+import Link from "next/link";
+import { CalendarIcon } from '@heroicons/react/20/solid';
 
 export default function Footer() {
   const socialLinks = [
@@ -22,14 +24,14 @@ export default function Footer() {
     <>
     <footer className="relative bg-[#0c1a38] text-white overflow-hidden ">
       {/* Main Content Container */}
-      <div className="max-w-7xl mx-auto px-4 py-12 xss:px-7 xl:px-5 3xl:px-8">
+      <div className="max-w-7xl mx-auto px-4 py-12 xss:px-7 sm:px-15 xl:px-8  3xl:px-0">
         {/* Top Section */}
 
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-12">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 2xl:grid-cols-5 xss:gap-6 2xl:gap-0 mb-12">
         {/* About Us */}
-        <div className="col-span-1 ">
+        <div className="col-span-1 xss:col-span-2 sm:col-span-1">
           <h3 className="font-bold mb-3">About Us</h3>
-          <p className="text-gray-500 leading-relaxed mb-4 text-sm">
+          <p className="text-gray-400 leading-relaxed mb-4 text-sm">
             Analogue is the Best Mobile App Development Company in Hyderabad, India. 
             We are skilled in Mobile App Development, E-Commerce Development, and Web Development
           </p>
@@ -56,7 +58,7 @@ export default function Footer() {
             {/* Links */}
             <div className="xl:ml-18">
               <h3 className="font-bold mb-3">Links</h3>
-              <ul className="space-y-2 text-gray-500 text-sm">
+              <ul className="space-y-2 text-gray-400 text-sm">
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Our Mission</a></li>
                 <li><a href="#">Landing Page</a></li>
@@ -68,7 +70,7 @@ export default function Footer() {
             {/* Our Services */}
             <div>
               <h3 className="font-bold mb-3">Our Services</h3>
-              <ul className="space-y-2 text-gray-500 text-sm">
+              <ul className="space-y-2 text-gray-400 text-sm">
                 <li>Ui Ux Development</li>
                 <li>Web Development</li>
                 <li>Mobile App Development</li>
@@ -78,40 +80,93 @@ export default function Footer() {
           </div>
         </div>
 
-
-
         {/* Location */}
-        <div className="col-span-1 xl:col-span-1">
+        <div className="col-span-1 xss:col-span-2 sm:col-span-1">
           <h3 className="font-bold mb-3">Location</h3>
           <div className="grid grid-cols-1">
             <div className="flex items-center gap-2 lg:p-1 lg:min-w-[100px] ">
-              <span className="text-gray-500 lg:text-sm xss:text-lg">Hyderabad, India</span>
+              <span className="text-gray-400 xl:text-sm xss:text-lg">Hyderabad, India</span>
               <Image src="/Flags/India-Flag.svg" width={20} height={20} alt="India" className="w-auto h-auto max-w-[25px] max-h-[16px]" />
             </div>
             <div className="flex items-center gap-2 p-1 min-w-[100px]">
-              <span className="text-gray-500 lg:text-sm xss:text-lg">Dubai</span>
+              <span className="text-gray-400 xl:text-sm xss:text-lg">Dubai</span>
               <Image src="/Flags/Uae-Flag.svg" width={28} height={20} alt="UAE" className="w-[28px]  h-[20px]" />
             </div>
             <div className="flex items-center gap-2 p-1 min-w-[100px]">
-              <span className="text-gray-500 lg:text-sm xss:text-lg">California</span>
+              <span className="text-gray-400 xl:text-sm xss:text-lg">California</span>
               <Image src="/Flags/California-republic.svg" width={28} height={14} alt="USA" className="w-auto h-auto max-w-[28px] max-h-[25px]" />
             </div>
             <div className="flex items-center gap-2 p-1 min-w-[100px]">
-              <span className="text-gray-500 lg:text-sm xss:text-lg">Denmark</span>
+              <span className="text-gray-400 xl:text-sm xss:text-lg">Denmark</span>
               <Image src="/Flags/Denmark-Flag.svg" width={28} height={14} alt="Denmark" className="w-auto h-auto max-w-[28px] max-h-[24px]" />
             </div>
             <div className="flex items-center gap-2 p-1 min-w-[100px]">
-              <span className="text-gray-500 lg:text-sm xss:text-lg">Qatar</span>
+              <span className="text-gray-400 xl:text-sm xss:text-lg">Qatar</span>
               <Image src="/Flags/Qatar-Flag.svg" width={28} height={14} alt="Qatar" className="w-[28px]  h-[14px]" />
+            </div>
+          </div>
+        </div>
+
+        {/* Recent Posts */}
+        <div className="col-span-2 sm:col-span-1 xl:col-span-4 2xl:col-span-1 flex flex-col xl:flex-col">
+        <h4 className="text-lg font-bold mb-4 xl:mb-4 2xl:mb-0">Recent Posts</h4>
+        <div className="flex flex-col xl:flex-row 2xl:flex-col space-y-2 xl:space-y-0 xl:space-x-4">
+          <div className="flex">
+            <Image
+              src="/images/post2.png"
+              alt="How to Become a Mobile App Developer"
+              width={80}
+              height={64}
+              className="w-[80px] h-[8vh] my-auto rounded-xl cursor-pointer hover:opacity-35"
+              priority={false}
+            />
+            <div className="ml-3">
+              <Link
+                href="/blogs/how-to-become-a-mobile-app-developer"
+                className="hover:text-blue-700 cursor-pointer text-left text-sm text-gray-400"
+                scroll={true}
+              >
+                How to Become a Mobile App Developer in 2025
+              </Link>
+              <div className="flex mt-2">
+                <CalendarIcon className="mt-1 h-5 w-5 text-sm text-gray-400 mr-2" />
+                <span className="text-sm text-gray-400 flex items-center justify-center">01 July, 2025</span>
+              </div>
+            </div>
+          </div>
+          <div className="flex">
+            <Image
+              src="/images/post1.png"
+              alt="Food Delivery App Development Cost"
+              width={80}
+              height={64}
+              className="w-[80px] h-[8vh] my-auto rounded-xl hover:opacity-35"
+              priority={false}
+            />
+            <div className="ml-3">
+              <Link
+                href="/blogs/food-delivery-app-development-cost-india"
+                className="hover:text-blue-700 cursor-pointer text-left text-sm text-gray-400"
+                scroll={true}
+              >
+                How Much Does It Cost to Develop a Food Delivery App in India?
+              </Link>
+              <div className="flex mt-2">
+                <CalendarIcon className="mt-1 h-5 w-5 text-sm text-gray-400 mr-2" />
+                <span className="text-sm text-gray-400 flex items-center justify-center">29 May, 2025</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
 
+
+      </div>
+
               {/* Middle Section */}
       <div className="grid grid-cols-1 xl:grid-cols-4 gap-6 xl:px-10 2xl:px-7">
         {/* Copyright */}
-        <div className="text-start text-sm text-gray-200 xl:mx-[-1.5rem] hidden xl:block">
+        <div className="text-start text-sm text-gray-200 xl:mx-[-1.8rem] hidden xl:block">
           Copyright© 2023 Tronix. All Rights Reserved.
         </div>
 
@@ -119,12 +174,12 @@ export default function Footer() {
         <div className="col-span-3 grid grid-cols-1 xl:grid-cols-3 xss:gap-4 xl:gap-2 2xl:gap-5 xl:ml-[-1rem] 2xl:ml-0">
   {/* Location */}
   <div className="flex items-start gap-2">
-    <div className="relative w-[50px] h-[50px] xss:w-[150px] xss:h-[50px] sm:w-[130px] sm:ml-[-0.8rem] md:ml-[-0.15rem] md:w-[4.5rem] md:h-[4rem] xs:ml-[-0.4rem] sm:h-[60px] xl:w-[250px] xl:h-[60px] xl:ml-0 3xl:w-[180px]">
+    <div className="relative w-[50px] h-[50px] xss:w-[150px] xss:h-[50px] sm:w-[130px] sm:ml-[-0.4rem] md:ml-[-0.15rem] md:w-[4.5rem] md:h-[4rem] xs:ml-[-0.4rem] sm:h-[60px] xl:w-[250px] xl:h-[60px] xl:ml-0 3xl:w-[180px]">
       <Image src="/Footer/Location.svg" alt="Location" fill className="object-contain" />
     </div>
     <div className="flex flex-col">
       <h2 className="xss:text-xs sm:text-md lg:text-[0.9rem] xl:text-md">LOCATION</h2>
-      <p className="text-gray-500 text-sm mt-2">
+      <p className="text-gray-400 text-sm mt-2">
         <a
           href="https://maps.app.goo.gl/P858gAyx5vH8GaTQ7?g_st=ac"
           target="_blank"
@@ -144,7 +199,7 @@ export default function Footer() {
     </div>
     <div className="flex flex-col">
       <h2 className="xss:text-xs sm:text-md lg:text-[0.9rem] xl:text-md">WORKING HOURS</h2>
-      <p className="text-gray-500 text-sm mt-2">
+      <p className="text-gray-400 text-sm mt-2">
         Monday - Saturday <br /> 10am - 7pm
       </p>
     </div>
@@ -152,15 +207,15 @@ export default function Footer() {
 
   {/* Contact Us */}
   <div className="flex items-start gap-4 xl:w-[15.5rem] 2xl:ml-[-1.2rem]">
-    <div className="relative w-[50px] h-[50px] xss:w-[50px] xss:h-[80px] sm:w-[60px] sm:h-[60px] xl:w-[250px] xl:h-[60px] 3xl:w-[200px]">
+    <div className="relative w-[50px] h-[50px] xss:w-[50px] xss:h-[80px] sm:w-[60px] sm:h-[60px] xl:w-[70px] xl:h-[60px] 3xl:w-[200px]">
       <Image src="/Footer/Contact.svg" alt="Contact" fill className="object-contain" />
     </div>
     <div className="flex flex-col">
       <h2 className="xss:text-xs sm:text-md lg:text-[0.9rem] xl:text-md">CONTACT US</h2>
-      <a href="mailto:info@analogueitsolutions.com" className="hover:underline text-gray-500 text-sm">
+      <a href="mailto:info@analogueitsolutions.com" className="hover:underline text-gray-400 text-sm">
         info@analogueitsolutions.com
       </a>
-      <a href="tel:+918919088163" className="hover:underline text-gray-500 text-sm">
+      <a href="tel:+918919088163" className="hover:underline text-gray-400 text-sm">
         +91 89190 88163
       </a>
     </div>
