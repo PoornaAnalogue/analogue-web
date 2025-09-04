@@ -254,9 +254,9 @@ export default function Responsive_PyTech() {
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
               <span className="font-bold  "> Timely Delivery</span> - We are committed to delivering your Python development project on time, without compromising on quality.
           </p>
-          <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
+          {/* <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
             Partnering with AnalogueIT Solutions for Python development means gaining a competitive edge and staying ahead in today&apos;s fast-paced business environment. Contact us today to discuss how our Python development services can unlock new opportunities for your business          </p>
-
+ */}
 
           
 
