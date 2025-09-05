@@ -10,11 +10,29 @@ export default function FrequentQuestions({ Question }) {
     setOpenFaqIndex(openFaqIndex === index ? null : index);
   };
 
+ // Function to render the answer, formatting as bullet points for the specific FAQs
+  const renderAnswer = (faq) => {
+    if (
+      faq.question === "02. Is Digital Marketing is important for all?" ||
+      faq.question === "05. Is digital Marketing a Product or Service?"
+    ) {
+      const points = faq.answer.split('.').map(point => point.trim()).filter(point => point);
+      return (
+        <ul className="list-disc pl-5">
+          {points.map((point, index) => (
+            <li key={index}>{point}</li>
+          ))}
+        </ul>
+      );
+    }
+    return faq.answer;
+  };
+
   return (
     <div className="mx-auto 2xl:mt-10 md:mt-5">
       <div className="flex flex-col justify-center items-center">
         <div>
-          <h1 className="text-black text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold">
+          <h1 className="text-2xl text-black xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold">
             FAQS
           </h1>
         </div>
@@ -56,7 +74,7 @@ export default function FrequentQuestions({ Question }) {
               ref={(el) => (contentRefs.current[index] = el)}
             >
               <div className="pb-4 pt-3 w-full text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base bg-[#F1F3F8] text-gray-500 xss:px-6 lg:px-10 rounded-b-2xl">
-                {faq.answer}
+                {renderAnswer(faq)}
               </div>
             </div>
           </div>

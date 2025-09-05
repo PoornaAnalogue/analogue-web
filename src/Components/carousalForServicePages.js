@@ -471,7 +471,7 @@ export default function CarousalServicePage() {
   };
 
   return (
-    <div className="w-full px-4 sm:px-8 md:px-12 overflow-x-hidden  lg:px-16">
+    <div className="w-full px-4 sm:px-8 md:px-12 overflow-x-hidden lg:px-16">
       {/* Animated Heading */}
       <h2
         id="featured-heading"

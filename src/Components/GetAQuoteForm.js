@@ -158,20 +158,21 @@ try {
 
 
   return (
-    <div id="form-section" className="main-container min-h-[600px] xl:min-h-[700px] 2xl:min-h-screen relative flex flex-col items-center justify-center rounded-lg px-4 xl:mt-[-6rem] 3xl:mt-[-3rem] 2xl:mt-[-2rem] xs:px-6 xss:py-10 xl:pb-8 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-20">
+    <div id="form-section" className="main-container min-h-[600px] xl:min-h-[700px] 2xl:min-h-screen relative flex flex-col items-center justify-center rounded-lg px-4 bg-white xs:px-6 xss:py-10 xl:pb-8 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-20">
       {/* Background Image Layer */}
+      <div className="xl:mt-[-6rem] xss:mt-[-3rem] 3xl:mt-[-3rem] 2xl:mt-[-2rem]"></div>
       <div
         className="Form-img absolute z-0 
                       w-[80vw] max-w-[1000px] h-[80vh] max-h-[1000px]
                       left-[-1rem] bottom-[-2rem]
-                      xss:w-[70vw] xss:h-[70vh] xss:max-w-[600px] xss:max-h-[800px] xss:left-[1rem] xss:bottom-[-0.3rem]
+                      xss:w-[80vw] xss:h-[85vh] xss:max-w-[600px] xss:max-h-[800px] xss:left-[1rem] xss:bottom-[-0.3rem]
                       xs:w-[75vw] xs:h-[70vh] xs:max-w-[600px] xs:max-h-[800px] xs:left-[2rem] xs:bottom-[-0.3rem]
                       sm:w-[75vw] sm:h-[70vh] sm:max-w-[600px] sm:max-h-[800px] sm:left-[2.8rem] sm:bottom-[-1.5rem]
-                      md:w-[75vw] md:h-[75vh] md:max-w-[700px] md:max-h-[800px] md:left-[2rem] md:bottom-[-2rem]
-                      lg:w-[70vw] lg:h-[72vh] lg:max-w-[800px] lg:max-h-[900px] lg:left-[3rem] lg:bottom-[-4rem]
+                      md:w-[78vw] md:h-[79vh] md:max-w-[700px] md:max-h-[800px] md:left-[2.8rem] md:bottom-[-2rem]
+                      lg:w-[70vw] lg:h-[72vh] lg:max-w-[800px] lg:max-h-[900px] lg:left-[4rem] lg:bottom-[-3rem]
                       xl:w-[70vw] xl:h-[80vh] xl:max-w-[900px] xl:max-h-[900px] xl:left-[7rem] xl:bottom-[-1.8rem]
-                      2xl:w-[75vw] 2xl:h-[75vh] 2xl:max-w-[1000px] 2xl:max-h-[1000px] 2xl:left-[11rem] 2xl:bottom-[-2rem]
-                      3xl:w-[70vw] 3xl:h-[85vh] 3xl:max-w-[1000px] 3xl:max-h-[1000px] 3xl:left-[14rem] 3xl:bottom-[-4rem]
+                      2xl:w-[60vw] 2xl:h-[85vh] 2xl:max-w-[1000px] 2xl:max-h-[1000px] 2xl:left-[13rem] 2xl:bottom-[-1.8rem]
+                      3xl:w-[70vw] 3xl:h-[85vh] 3xl:max-w-[1000px] 3xl:max-h-[1000px] 3xl:left-[15rem] 3xl:bottom-[-3rem]
                       bg-no-repeat bg-contain bg-left-bottom"
       ></div>
 

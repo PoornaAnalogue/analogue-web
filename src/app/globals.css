@@ -1104,13 +1104,6 @@ body {
 }
 
 
-/* GetAQuote Form responsive styles based on breakpoints  */
-@media (min-width: 769px) and (max-width: 1023px) {
-  .Navbar-main {
-    background-color: #c0d0f0;
-  }
-}
-
 .Form-img {
   background-image: url('/contact/Form-background.svg');
 }
