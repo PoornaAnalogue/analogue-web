@@ -14,7 +14,7 @@ export default function FrequentQuestions({ Question }) {
     <div className="mx-auto 2xl:mt-10 md:mt-5">
       <div className="flex flex-col justify-center items-center">
         <div>
-          <h1 className="text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold">
+          <h1 className="text-black text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold">
             FAQS
           </h1>
         </div>
@@ -37,7 +37,7 @@ export default function FrequentQuestions({ Question }) {
                 <span className="text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base font-medium text-gray-800">
                   {faq.question}
                 </span>
-                <span className="text-2xl xss:pr-2 lg:pr-5">{openFaqIndex === index ? '-' : '+'}</span>
+                <span className="text-2xl xss:pr-2 lg:pr-5 text-black">{openFaqIndex === index ? '-' : '+'}</span>
               </button>
             </div>
 

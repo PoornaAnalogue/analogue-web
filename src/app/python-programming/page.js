@@ -2,38 +2,40 @@
 import { useEffect } from "react";
 import Image from "next/image";
 import GetAQuoteForm from "@/Components/GetAQuoteForm";
+import FrequentQuestions from "@/Components/frequentlyAskedQuestions";
 
 export default function Responsive_PyTech() {
-  useEffect(() => {
-    const scrollCarousel = document.querySelector(".animate-scroll");
-    const scrollLapCarousel = document.querySelector(".animate-scrollLap");
-
-    const faqArray = [
+   const faqArray = [
     {
       question:
         "01. What types of applications can you build using Python?",
       answer:
-         " At Analogue IT Solutions, we develop a wide range of applications using Python, including web applications, mobile apps, enterprise solutions, AI/ML-powered tools, and data-driven platforms."    },
+         "At Analogue IT Solutions, we develop a wide range of applications using Python, including web applications, mobile apps, enterprise solutions, AI/ML-powered tools, and data-driven platforms."    },
     {
       question:
         "02. Why should I choose Python for app development?",
       answer:
-        "  Python is known for its simplicity, scalability, and versatility. It supports rapid development, has an extensive library ecosystem, and is widely used for cutting-edge solutions like artificial intelligence, data science, and cloud-based apps."    },
+        "Python is known for its simplicity, scalability, and versatility. It supports rapid development, has an extensive library ecosystem, and is widely used for cutting-edge solutions like artificial intelligence, data science, and cloud-based apps."    },
     {
       question:
         "03. Do you provide custom Python app development services?",
       answer:
-      "  Yes, we specialize in custom Python development tailored to your business goals. From strategy and design to deployment and support, we deliver end-to-end solutions."    },
+      "Yes, we specialize in custom Python development tailored to your business goals. From strategy and design to deployment and support, we deliver end-to-end solutions."    },
     {
       question:
         "04. How secure are Python applications developed by Analogue IT Solutions?",
       answer:
-      " Security is a priority in our development process. We implement industry best practices, secure coding techniques, and testing protocols to ensure your Python application is robust and safe."    },
+      "Security is a priority in our development process. We implement industry best practices, secure coding techniques, and testing protocols to ensure your Python application is robust and safe."    },
     {
       question: "05. Can you integrate Python applications with third-party tools and APIs?",
       answer:
-      "  Absolutely. Our Python developers are skilled in seamless API integration and can connect your app with various third-party services, databases, and cloud platforms."    },
+      "Absolutely. Our Python developers are skilled in seamless API integration and can connect your app with various third-party services, databases, and cloud platforms."    },
   ];
+  useEffect(() => {
+    const scrollCarousel = document.querySelector(".animate-scroll");
+    const scrollLapCarousel = document.querySelector(".animate-scrollLap");
+
+   
 
     // Function to update carousel width
     const updateCarouselWidth = () => {
@@ -82,7 +84,7 @@ export default function Responsive_PyTech() {
                                 </div>
 
         {/* Adobe XD Section */}
-        <div className="flex flex-col xl:flex-row justify-center items-center w-full bg-white px-4 xss:px-6 xs:px-8 sm:px-10 md:px-14 lg:px-16 xl:px-20 2xl:px-24 3xl:px-32 pt-0 pb-6">
+        <div className="flex flex-col xl:flex-row justify-center items-center w-full bg-white px-4 xss:px-4 sm:px-6 md:px-10 lg:px-12 xl:px-8 2xl:px-11 3xl:px-18 pt-0 pb-6">
           <div className="w-full xl:w-3/5 font-medium xl:pl-10">
             <h1 className="text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold text-black underline underline-offset-[12px] sm:underline-offset-[16px] decoration-[#0D6EFD] decoration-4 p-2">
               Python
@@ -197,20 +199,20 @@ export default function Responsive_PyTech() {
             Driving innovation across multiple industries, Python has established itself as one of the most powerful and adaptable technologies. However, unlocking its full potential requires the right expertise  and that&apos;s where Analogue IT Solutions, a top Python development company, comes in
           </p>
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
-              <span className="font-bold  "> Simplified Development
+              <span className="font-bold  ">Simplified Development
               </span> - With its clean and easy-to-understand syntax, Python accelerates coding and reduces development complexities.
           </p>
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
-              <span className="font-bold  "> Limitless Flexibility</span> - Whether it&apos;s web apps, mobile solutions, data science, or AI/ML projects, Python proves effective in every domain.
+              <span className="font-bold  ">Limitless Flexibility</span> - Whether it&apos;s web apps, mobile solutions, data science, or AI/ML projects, Python proves effective in every domain.
           </p>
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
-              <span className="font-bold  "> Rich Ecosystem</span> - Tap into a massive collection of libraries and frameworks that boost efficiency while maintaining top-notch quality.
+              <span className="font-bold  ">Rich Ecosystem</span> - Tap into a massive collection of libraries and frameworks that boost efficiency while maintaining top-notch quality.
           </p>
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
-              <span className="font-bold  "> Scalable & Future-Ready</span> - Python supports building solutions that grow with your business, ensuring long-term sustainability.
+              <span className="font-bold  ">Scalable & Future-Ready</span> - Python supports building solutions that grow with your business, ensuring long-term sustainability.
           </p>
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
-              <span className="font-bold  "> Open-Source & Community Support</span> - Backed by a global community, Python offers cost-effective solutions with continuous enhancements and reliable support.
+              <span className="font-bold  ">Open-Source & Community Support</span> - Backed by a global community, Python offers cost-effective solutions with continuous enhancements and reliable support.
           </p>
 
 
@@ -219,49 +221,55 @@ export default function Responsive_PyTech() {
             Get high-quality Python development with Analogue IT Solutions          
           </h3>
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
-              <span className="font-bold  "> Python Web Development</span> - Our Python Web Development Services use cutting-edge technologies to build powerful and scalable online applications that match our clients&apos; business requirements. </p>
+              <span className="font-bold  ">Python Web Development</span> - Our Python Web Development Services use cutting-edge technologies to build powerful and scalable online applications that match our clients&apos; business requirements. </p>
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
-              <span className="font-bold  "> Python Mobile App Development</span> - Our Python Mobile App Development Services help businesses to develop high-performance, user-friendly mobile apps that meet the specific needs of their clients.
+              <span className="font-bold  ">Python Mobile App Development</span> - Our Python Mobile App Development Services help businesses to develop high-performance, user-friendly mobile apps that meet the specific needs of their clients.
           </p>
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
-              <span className="font-bold  "> Enterprise software solutions</span> - Python is used in our Enterprise Software Solutions to construct sophisticated, customised web apps that improve productivity and workflow efficiency.
+              <span className="font-bold  ">Enterprise software solutions</span> - Python is used in our Enterprise Software Solutions to construct sophisticated, customised web apps that improve productivity and workflow efficiency.
           </p>
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
-              <span className="font-bold  "> Custom Python development solutions</span> - Our custom Python development solutions are tailored to your company&apos;s specific demands, providing scalable, cost-effective solutions that produce tangible results.
+              <span className="font-bold  ">Custom Python development solutions</span> - Our custom Python development solutions are tailored to your company&apos;s specific demands, providing scalable, cost-effective solutions that produce tangible results.
           </p>
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
-              <span className="font-bold  "> Python data analysis and visualisation</span> - Our Python data analysis and visualisation services help businesses use big data to make better decisions by providing interactive dashboards and deeper insights.
+              <span className="font-bold  ">Python data analysis and visualisation</span> - Our Python data analysis and visualisation services help businesses use big data to make better decisions by providing interactive dashboards and deeper insights.
           </p>
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
-              <span className="font-bold  "> AI/ML solutions</span> -  Our Python-based AI and machine learning solutions enable businesses to automate operations, generate important insights, and enhance consumer experiences.
+              <span className="font-bold  ">AI/ML solutions</span> -  Our Python-based AI and machine learning solutions enable businesses to automate operations, generate important insights, and enhance consumer experiences.
           </p>
-
-          
 
 
           <h3 className="text-xl xss:text-sm  sm:text-base md:text-lg 2xl:text-[1.2rem] font-medium text-[#0E59F2] my-4 mt-6">
             At Analogue IT Solutions, we harness the full potential of Python to develop robust, scalable, and high-performing applications that drive business growth and success.Below are common procedure we follow:          
           </h3>
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
-              <span className="font-bold  "> Expertise</span> - Our team of developers has in-depth knowledge and expertise in Python programming, ensuring that your project is in the best hands.
+              <span className="font-bold  ">Expertise</span> - Our team of developers has in-depth knowledge and expertise in Python programming, ensuring that your project is in the best hands.
           </p>
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
-              <span className="font-bold  "> Custom Solutions</span> - We recognize that each business is unique. That&apos;s why we work closely with our clients to create custom Python solutions that align with their specific business objectives.
+              <span className="font-bold  ">Custom Solutions</span> - We recognize that each business is unique. That&apos;s why we work closely with our clients to create custom Python solutions that align with their specific business objectives.
           </p>
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
-              <span className="font-bold  "> Quality Assurance</span> - We uphold the highest standards of quality in our development process, ensuring that the final product is thoroughly tested and meets your expectations.
+              <span className="font-bold  ">Quality Assurance</span> - We uphold the highest standards of quality in our development process, ensuring that the final product is thoroughly tested and meets your expectations.
           </p>
-          <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
-              <span className="font-bold  "> Timely Delivery</span> - We are committed to delivering your Python development project on time, without compromising on quality.
+          <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium " >
+            <span className="font-bold">Timely Delivery</span> - We are committed to delivering your Python development project on time, without compromising on quality.
           </p>
-          {/* <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
-            Partnering with AnalogueIT Solutions for Python development means gaining a competitive edge and staying ahead in today&apos;s fast-paced business environment. Contact us today to discuss how our Python development services can unlock new opportunities for your business          </p>
- */}
-
-          
+          <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium" >
+                    Partnering with AnalogueIT Solutions for Python development means gaining a competitive edge and staying ahead in today&apos;s fast-paced business environment. Contact us today to discuss how our Python development services can unlock new opportunities for your business
+          </p>
 
 
-          <GetAQuoteForm />
+          {/* faqs section */}
+          <div className="w-[86%] mx-auto pb-3 xss:mt-5">
+            <div>
+            <FrequentQuestions Question={faqArray}/>
+            </div>
+          </div>
+
+
+          <div>
+            <GetAQuoteForm />
+          </div>
 
 
 

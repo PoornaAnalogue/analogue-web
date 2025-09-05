@@ -2,38 +2,41 @@
 import { useEffect } from "react";
 import Image from "next/image";
 import GetAQuoteForm from "@/Components/GetAQuoteForm";
+import FrequentQuestions from "@/Components/frequentlyAskedQuestions";
+// import FrequentQuestions from "@/Components/frequentlyAskedQuestions";
 
 export default function Responsive_AdobeTech() {
-  useEffect(() => {
-    const scrollCarousel = document.querySelector(".animate-scroll");
-    const scrollLapCarousel = document.querySelector(".animate-scrollLap");
-
-    const faqArray = [
+      const faqArray = [
     {
       question:
         "01. What is Adobe XD used for?",
       answer:
-         " Adobe XD is a professional UI/UX design and prototyping tool that helps designers create wireframes, mockups, and interactive prototypes for web and mobile apps. It's widely used to design user-friendly digital experiences."    },
+         "Adobe XD is a professional UI/UX design and prototyping tool that helps designers create wireframes, mockups, and interactive prototypes for web and mobile apps. It's widely used to design user-friendly digital experiences."    },
     {
       question:
         "02. Is Adobe XD free to use?",
       answer:
-        " Adobe XD offers both free and paid plans. The free version includes basic features, while premium plans provide advanced collaboration and cloud storage options for teams."    },
+        "Adobe XD offers both free and paid plans. The free version includes basic features, while premium plans provide advanced collaboration and cloud storage options for teams."    },
     {
       question:
         "03. Can Adobe XD be used for mobile app design?",
       answer:
-      " Yes, Adobe XD is ideal for mobile app design. It allows designers to create interactive prototypes and test user flows before development, ensuring smooth functionality and great user experience."    },
+      "Yes, Adobe XD is ideal for mobile app design. It allows designers to create interactive prototypes and test user flows before development, ensuring smooth functionality and great user experience."    },
     {
       question:
         "04. What are the benefits of using Adobe XD over other design tools?",
       answer:
-      " Adobe XD is lightweight, fast, and offers seamless integration with other Adobe Creative Cloud tools. Its features like auto-animate, responsive resizing, and real-time collaboration make it a preferred choice for UI/UX designers."    },
+      "Adobe XD is lightweight, fast, and offers seamless integration with other Adobe Creative Cloud tools. Its features like auto-animate, responsive resizing, and real-time collaboration make it a preferred choice for UI/UX designers."    },
     {
       question: "05. Does Analogue IT Solutions provide Adobe XD design services?",
       answer:
-      " Yes. Analogue IT Solutions specializes in delivering professional Adobe XD design services, creating interactive and user-friendly prototypes tailored to your business needs."    },
+      "Yes. Analogue IT Solutions specializes in delivering professional Adobe XD design services, creating interactive and user-friendly prototypes tailored to your business needs."    },
   ];
+  useEffect(() => {
+    const scrollCarousel = document.querySelector(".animate-scroll");
+    const scrollLapCarousel = document.querySelector(".animate-scrollLap");
+
+
 
     // Function to update carousel width
     const updateCarouselWidth = () => {
@@ -82,7 +85,7 @@ export default function Responsive_AdobeTech() {
                                 </div>
 
         {/* Adobe XD Section */}
-        <div className="flex flex-col xl:flex-row justify-center items-center w-full bg-white px-4 xss:px-6 xs:px-8 sm:px-10 md:px-14 lg:px-16 xl:px-20 2xl:px-24 3xl:px-32 pt-0 pb-6">
+        <div className="flex flex-col xl:flex-row justify-center items-center w-full bg-white px-4 xss:px-4 sm:px-6 md:px-10 lg:px-12 xl:px-8 2xl:px-11 3xl:px-18 pt-0 pb-6">
           <div className="w-full xl:w-3/5 font-medium xl:pl-10">
             <h1 className="text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold text-black underline underline-offset-[12px] sm:underline-offset-[16px] decoration-[#0D6EFD] decoration-4 p-2">
               Adobe XD
@@ -289,7 +292,20 @@ export default function Responsive_AdobeTech() {
            <span className="font-bold  ">App Store Optimization (ASO) : </span>App Store Optimization (ASO): 
             We ensure your app gets discovered by the right audience. Ready to realise the full potential of your app idea? Contact Analogue IT Solutions today for a free consultation. Let our Adobe Xd experts turn your vision into reality
           </p>
-          <GetAQuoteForm />
+
+
+          {/* faqs section */}
+          <div className="w-[86%] mx-auto pb-3 xss:mt-5">
+            <div>
+            <FrequentQuestions Question={faqArray}/>
+            </div>
+          </div>
+          
+          
+          
+          <div>
+            <GetAQuoteForm />
+          </div>
 
 
 
