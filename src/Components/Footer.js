@@ -177,7 +177,7 @@ export default function Footer() {
     <div className="relative w-[50px] h-[50px] xss:w-[150px] xss:h-[50px] sm:w-[130px] sm:ml-[-0.4rem] md:ml-[-0.15rem] md:w-[4.5rem] md:h-[4rem] xs:ml-[-0.4rem] sm:h-[60px] xl:w-[250px] xl:h-[60px] xl:ml-0 3xl:w-[180px]">
       <Image src="/Footer/Location.svg" alt="Location" fill className="object-contain" />
     </div>
-    <div className="flex flex-col">
+    <div className="flex flex-col md:ml-2">
       <h2 className="xss:text-xs sm:text-md lg:text-[0.9rem] xl:text-md">LOCATION</h2>
       <p className="text-gray-400 text-sm mt-2">
         <a

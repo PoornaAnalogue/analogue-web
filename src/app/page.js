@@ -5,8 +5,9 @@ export default function App() {
   return (
     <>
       
-      {/* <MainHomePage /> */}
-      <AndroidAppDevelopment />
+      <MainHomePage />
+      {/* <AndroidAppDevelopment /> */}
+
 
     </>
   );

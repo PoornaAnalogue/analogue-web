@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function Contact(){
     return (
-        <div>
+        <div className='bg-white'>
           {/* heading section */}
             <div className="relative flex justify-center w-full bg-white">
           <Image
