@@ -37,7 +37,7 @@ export default function FrequentQuestions({ Question }) {
           </h1>
         </div>
         <div className="xss:text-subsmall sm:text-xs lg:text-sm pt-2 text-gray-500 xss:pb-2 sm:pb-4 text-start">
-          In case, you aren't able to find your answer, do write to us through our contact page.
+          In case, you aren&apos;t able to find your answer, do write to us through our contact page.
         </div>
       </div>
       <div className="space-y-1">

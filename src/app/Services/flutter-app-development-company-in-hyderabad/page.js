@@ -19,18 +19,18 @@ export default function FlutterAppDevelopment(){
 
   // Array of image paths corresponding to original icon names
   const TechIcons = {
-    reactIcon: '/service-icons/react-logo.png',
-    nextjsIcon: '/service-icons/next-logo.png',
-    vueIcon: '/service-icons/vue-logo.png',
-    angularIcon: '/service-icons/angular-logo.png',
-    nodejsIcon: '/service-icons/node-logo.png',
-    javaIcon: '/service-icons/java-logo.png',
-    phpIcon: '/service-icons/php-logo.png',
-    pythonIcon: '/service-icons/python-logo.png',
-    dotnetIcon: '/service-icons/dotnet-logo.png',
-    flutterIcon: '/service-icons/flutter-logo.png',
-    kotlinIcon: '/service-icons/kotlin-logo.png',
-    bgicon: '/service-icons/bgicon.png',
+    reactIcon: '/service-icons/react-logo.svg',
+    nextjsIcon: '/service-icons/next-logo.svg',
+    vueIcon: '/service-icons/vue-logo.svg',
+    angularIcon: '/service-icons/angular-logo.svg',
+    nodejsIcon: '/service-icons/node-logo.svg',
+    javaIcon: '/service-icons/java-logo.svg',
+    phpIcon: '/service-icons/php-logo.svg',
+    pythonIcon: '/service-icons/python-logo.svg',
+    dotnetIcon: '/service-icons/dotnet-logo.svg',
+    flutterIcon: '/service-icons/flutter-logo.svg',
+    kotlinIcon: '/service-icons/kotlin-logo.svg',
+    bgicon: '/service-icons/bgicon.svg',
   };
 
   const technologies = [
@@ -158,7 +158,7 @@ const FlutterfaqArray = [
                 </div>
                 <h5 className=" text-2xl xss:text-[1.1rem] text-[#0D6EFD] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] xl:w-[60%] font-semibold leading-relaxed">Revolutionize Your Business with Flutter App Development</h5>
             <p className="text-gray-500 leading-relaxed text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base">
-                At Analogue IT Solutions, we are your one-stop destination for mobile app development. With our cutting-edge Flutter app development services, we bring your ideas to life with speed, precision, and innovation. Our team of expert developers specializes in creating seamless and intuitive mobile applications that cater to your unique business needs. As a leading Flutter app development company in Hyderabad, we take pride in delivering high-quality solutions that exceed our client's expectations. Whether you're based in Hyderabad or anywhere else in India, our team is here to transform your ideas into reality.
+                At Analogue IT Solutions, we are your one-stop destination for mobile app development. With our cutting-edge Flutter app development services, we bring your ideas to life with speed, precision, and innovation. Our team of expert developers specializes in creating seamless and intuitive mobile applications that cater to your unique business needs. As a leading Flutter app development company in Hyderabad, we take pride in delivering high-quality solutions that exceed our client&apos;s expectations. Whether you&apos;re based in Hyderabad or anywhere else in India, our team is here to transform your ideas into reality.
             </p>
             <div className="my-2">
               <button className="bg-blue-600 xss:text-xs lg:text-sm text-white xss:px-2 xss:py-2 xl:px-5 xl:py-3 rounded-3xl hover:bg-blue-700 transition cursor-pointer ">
@@ -221,15 +221,19 @@ const FlutterfaqArray = [
                                         key={idx}
                                         className="py-1 p-2 m-5 sm:m-0 sm:my-2 md:m-0 md:my-2 text-black relative"
                                     >
-                                        <img
+                                        <Image
                                         src={TechIcons.bgicon}
                                         alt="design"
+                                        width={20}
+                                        height={20}
                                         className=" xss:w-[5.5rem] sm:w-[6.3rem] md:w-[120px] lg:w-[135px] flex justify-center items-center mx-auto"
                                         />
                                         <div className="absolute inset-0 xss:text-subsmall sm:text-xs flex flex-col items-center justify-center">
-                                        <img
+                                        <Image
                                             src={item.icon}
                                             alt={item.name}
+                                            width={20}
+                                            height={20}
                                             className="w-[65px] h-[65px] xss:w-[2.5rem] xss:h-[2rem] sm:w-[55px] sm:h-[50px] md:w-[60px] md:h-[50px] lg:w-[68px] lg:h-[55px] xl:w-[85px] xl:h-[75px]"
                                         />
                                         {item.name}
@@ -285,7 +289,7 @@ const FlutterfaqArray = [
                            Flutter App Development Company in Hyderabad, India
                         </h3>
                         <div className="xl:text-sm text-[#7B7E86] xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base leading-relaxed 3xl:leading-8">
-                            <p className="pb-2">At Analogue IT Solutions, we specialise in building powerful, scalable, and cross-platform apps through Flutter app development. With Flutter's robust framework, we create mobile applications that combine speed, flexibility, and a native-like experience — all from a single codebase. Recognized among the top Flutter app development companies in Hyderabad, our mission is to transform your business ideas into sleek, high-performing apps that delight users and drive measurable growth.</p>
+                            <p className="pb-2">At Analogue IT Solutions, we specialise in building powerful, scalable, and cross-platform apps through Flutter app development. With Flutter&apos;s robust framework, we create mobile applications that combine speed, flexibility, and a native-like experience — all from a single codebase. Recognized among the top Flutter app development companies in Hyderabad, our mission is to transform your business ideas into sleek, high-performing apps that delight users and drive measurable growth.</p>
                         </div>
                     </div>
 
@@ -320,7 +324,7 @@ const FlutterfaqArray = [
                             Best Flutter App Developers in Hyderabad
                         </p>
                         <div className=" text-[#7B7E86] text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base leading-relaxed 3xl:leading-8">
-                            <p className="pb-2">Our team of skilled Flutter developers in Hyderabad blends innovation with precision, ensuring every app is user-friendly, feature-rich, and future-ready. Beyond app development, we also offer web development, e-commerce solutions, and digital marketing strategies to provide complete digital growth for your business. Whether you're a startup aiming for your first launch or an enterprise looking to expand digitally, Analogue delivers world-class Flutter solutions designed to help you scale faster.</p>
+                            <p className="pb-2">Our team of skilled Flutter developers in Hyderabad blends innovation with precision, ensuring every app is user-friendly, feature-rich, and future-ready. Beyond app development, we also offer web development, e-commerce solutions, and digital marketing strategies to provide complete digital growth for your business. Whether you&apos;re a startup aiming for your first launch or an enterprise looking to expand digitally, Analogue delivers world-class Flutter solutions designed to help you scale faster.</p>
                         </div>
                         </div>
 
@@ -330,7 +334,7 @@ const FlutterfaqArray = [
                            Why Analogue IT Solutions?
                         </h3>
                         <div className="xl:text-sm text-[#7B7E86] xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base leading-relaxed 3xl:leading-8">
-                            <p className="pb-2">Our team of skilled Flutter developers in Hyderabad blends innovation with precision, ensuring every app is user-friendly, feature-rich, and future-ready. Beyond app development, we also offer web development, e-commerce solutions, and digital marketing strategies to provide complete digital growth for your business. Whether you're a startup aiming for your first launch or an enterprise looking to expand digitally, Analogue delivers world-class Flutter solutions designed to help you scale faster.</p>
+                            <p className="pb-2">Our team of skilled Flutter developers in Hyderabad blends innovation with precision, ensuring every app is user-friendly, feature-rich, and future-ready. Beyond app development, we also offer web development, e-commerce solutions, and digital marketing strategies to provide complete digital growth for your business. Whether you&apos;re a startup aiming for your first launch or an enterprise looking to expand digitally, Analogue delivers world-class Flutter solutions designed to help you scale faster.</p>
                             <p className="pb-2">As the leading Flutter app development company in Hyderabad, we follow a client-focused approach:</p>
                             <p className="pb-2">Strict confidentiality with NDAs</p>
                             <p className="pb-2">Agile development process for timely delivery</p>

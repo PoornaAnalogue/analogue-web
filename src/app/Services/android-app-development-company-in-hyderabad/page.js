@@ -21,18 +21,18 @@ export default function AndroidAppDevelopment(){
 
   // Array of image paths corresponding to original icon names
   const TechIcons = {
-    reactIcon: '/service-icons/react-logo.png',
-    nextjsIcon: '/service-icons/next-logo.png',
-    vueIcon: '/service-icons/vue-logo.png',
-    angularIcon: '/service-icons/angular-logo.png',
-    nodejsIcon: '/service-icons/node-logo.png',
-    javaIcon: '/service-icons/java-logo.png',
-    phpIcon: '/service-icons/php-logo.png',
-    pythonIcon: '/service-icons/python-logo.png',
-    dotnetIcon: '/service-icons/dotnet-logo.png',
-    flutterIcon: '/service-icons/flutter-logo.png',
-    kotlinIcon: '/service-icons/kotlin-logo.png',
-    bgicon: '/service-icons/bgicon.png',
+    reactIcon: '/service-icons/react-logo.svg',
+    nextjsIcon: '/service-icons/next-logo.svg',
+    vueIcon: '/service-icons/vue-logo.svg',
+    angularIcon: '/service-icons/angular-logo.svg',
+    nodejsIcon: '/service-icons/node-logo.svg',
+    javaIcon: '/service-icons/java-logo.svg',
+    phpIcon: '/service-icons/php-logo.svg',
+    pythonIcon: '/service-icons/python-logo.svg',
+    dotnetIcon: '/service-icons/dotnet-logo.svg',
+    flutterIcon: '/service-icons/flutter-logo.svg',
+    kotlinIcon: '/service-icons/kotlin-logo.svg',
+    bgicon: '/service-icons/bgicon.svg',
   };
 
   const technologies = [
@@ -161,7 +161,7 @@ const faqArray = [
                 </h5>
             <p className="text-gray-500 leading-relaxed text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base">
                 As a top Android app development company in Hyderabad, we harness the latest technologies to accelerate your business growth. Our skilled team of Android app developers excels at crafting customized solutions that meet your specific requirements. With a commitment to quality and innovation, we empower businesses to thrive by delivering high-performance Android applications that enhance user engagement and streamline operations.
-                From intuitive <a className="text-blue-700 font-semibold" href="https://analogueitsolutions.com/ui-ux-design-company-in-hyderabad">UI/UX design</a> to seamless backend integration, we ensure every aspect of your app is built for efficiency and scalability. Whether you're a startup looking to launch your first mobile app or an enterprise seeking advanced solutions, our expertise covers everything from <a className="text-blue-700 font-semibold" href="https://analogueitsolutions.com/ecommerce-app-development-company">e-commerce</a> to fintech, healthcare, and beyond.
+                From intuitive <a className="text-blue-700 font-semibold" href="https://analogueitsolutions.com/ui-ux-design-company-in-hyderabad">UI/UX design</a> to seamless backend integration, we ensure every aspect of your app is built for efficiency and scalability. Whether you&apos;re a startup looking to launch your first mobile app or an enterprise seeking advanced solutions, our expertise covers everything from <a className="text-blue-700 font-semibold" href="https://analogueitsolutions.com/ecommerce-app-development-company">e-commerce</a> to fintech, healthcare, and beyond.
                 Our approach is customer-centric, focusing on delivering apps that are not only visually appealing but also robust, secure, and optimized for performance. Partner with us to turn your app idea into a reality and stay ahead in the competitive digital landscape.
             </p>
             <div className="my-2">
@@ -225,15 +225,19 @@ const faqArray = [
                                         key={idx}
                                         className="py-1 p-2 m-5 sm:m-0 sm:my-2 md:m-0 md:my-2 text-black relative"
                                     >
-                                        <img
+                                        <Image
                                         src={TechIcons.bgicon}
                                         alt="design"
+                                        width={20}
+                                        height={20}
                                         className=" xss:w-[5.5rem] sm:w-[6.3rem] md:w-[120px] lg:w-[135px] flex justify-center items-center mx-auto"
                                         />
                                         <div className="absolute inset-0 xss:text-subsmall sm:text-xs flex flex-col items-center justify-center">
-                                        <img
+                                        <Image
                                             src={item.icon}
                                             alt={item.name}
+                                            width={20}
+                                            height={20}
                                             className="w-[65px] h-[65px] xss:w-[2.5rem] xss:h-[2rem] sm:w-[55px] sm:h-[50px] md:w-[60px] md:h-[50px] lg:w-[68px] lg:h-[55px] xl:w-[85px] xl:h-[75px]"
                                         />
                                         {item.name}
@@ -265,7 +269,7 @@ const faqArray = [
                                 <p className="text-[#7B7E86] text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base xl:leading-6 xss:leading-5 sm:leading-relaxed 3xl:leading-8 mb-2">
                                     At Analogue IT Solutions, we are a premier Android app development company committed to turning your app ideas into reality. With our deep expertise and dedication to excellence, we collaborate closely with you to create exceptional Android app solutions that meet your unique needs and exceed expectations.</p>
                                 <p className="text-[#7B7E86] text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base xl:leading-6 xss:leading-5 sm:leading-relaxed 3xl:leading-8 mb-2">
-                                    Our team leverages the latest technologies and industry best practices to build high-performance, user-friendly apps tailored to your business goals. From intuitive UI/UX design to seamless functionality, we ensure that every app delivers a smooth and engaging experience. Whether you're a startup or an established business, our scalable solutions help you stay ahead in the competitive mobile landscape.</p>
+                                    Our team leverages the latest technologies and industry best practices to build high-performance, user-friendly apps tailored to your business goals. From intuitive UI/UX design to seamless functionality, we ensure that every app delivers a smooth and engaging experience. Whether you&apos;re a startup or an established business, our scalable solutions help you stay ahead in the competitive mobile landscape.</p>
                                 <p className="text-[#7B7E86] text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base xl:leading-6 xss:leading-5 sm:leading-relaxed 3xl:leading-8 mb-2">
                                     Beyond development, we offer ongoing support and updates to keep your app optimized and future-ready. Our goal is to not just build apps, but to create digital experiences that drive growth and enhance customer engagement. Partner with us to bring your Android app vision to life.</p>
                             </div>
@@ -350,8 +354,8 @@ const faqArray = [
                         </div>
 
                         {/* guarantees */}
-                        <div className="2xl:p-10 lg:px-7 xl:px-20 xss:p-5 w-full h-auto">
-                        <p className="text-[#0E59F2] text-lg xss:text-sm  sm:text-base md:text-lg 2xl:text-[1.2rem] font-medium xl:leading-7 text-black mb-2">Got it! Here's a concise version without descriptions:</p>
+                        <div className="2xl:p-10 lg:px-7 xl:px-20 2xl:px-15 xss:p-5 w-full h-auto">
+                        <p className="text-[#0E59F2] text-lg xss:text-sm  sm:text-base md:text-lg 2xl:text-[1.2rem] font-medium xl:leading-7 text-black mb-2">Got it! Here&apos;s a concise version without descriptions:</p>
                           <p className="text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold text-[#0E59F2] mb-2">  Why Choose Analogue IT Solutions?</p>
                         <ol className="list-decimal xss:ml-5 text-[#7B7E86] text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base pt-2">
                             <li className="xss:pb-1 lg:pb-3">Non-Disclosure Agreement (NDA) for confidentiality</li>

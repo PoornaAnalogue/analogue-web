@@ -15,7 +15,7 @@ export default function Responsive_AngularTech() {
       question:
         "02. Why should I choose AngularJS for my project?",
       answer:
-        "AngularJS simplifies development by offering two-way data binding, dependency injection, and reusable components. It’s great for building scalable and interactive applications quickly."    },
+        "AngularJS simplifies development by offering two-way data binding, dependency injection, and reusable components. It&apos;s great for building scalable and interactive applications quickly."    },
     {
       question:
         "03. Does Analogue IT Solutions provide custom AngularJS development?",
@@ -200,22 +200,22 @@ export default function Responsive_AngularTech() {
               <span className="font-bold  ">Structured development </span> - AngularJS enforces a structured approach to web development using its model-view-controller (MVC) architecture, making code more organised and maintainable.
           </p>
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
-              <span className="font-bold  ">Code reusability</span> - Components and services can be easily reused across different parts of your application, saving development time and reducing code duplication.
+              <span className="font-bold  ">Code reusability</span> - Components and services can be easily reused across different parts of your application, saving development time and reducing code duplication.
           </p>
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
               <span className="font-bold  ">Two-way data binding</span> - Data changes in the model automatically reflect in the view, and vice versa, simplifying data management and eliminating the need for manual DOM manipulation.
           </p>
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
-              <span className="font-bold  ">Dependency injection</span> - Dependencies are injected into components, making them easier to test and reducing coupling between components.
+              <span className="font-bold  ">Dependency injection</span> - Dependencies are injected into components, making them easier to test and reducing coupling between components.
           </p>
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
               <span className="font-bold  ">Extensive community and ecosystem</span> - A large and active community provides ample resources, tutorials, and libraries, making development faster and easier.
           </p>
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
-              <span className="font-bold  ">Single-page application (SPA) development</span> - AngularJS is well-suited for building SPAs, offering features like routing and navigation for seamless user experiences.
+              <span className="font-bold  ">Single-page application (SPA) development</span> - AngularJS is well-suited for building SPAs, offering features like routing and navigation for seamless user experiences.
           </p>
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
-              <span className="font-bold  ">SEO-friendly </span> - AngularJS applications can be optimised for search engines, potentially improving your website's organic reach.
+              <span className="font-bold  ">SEO-friendly </span> - AngularJS applications can be optimised for search engines, potentially improving your website&apos;s organic reach.
           </p>
 
 
@@ -226,22 +226,22 @@ export default function Responsive_AngularTech() {
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
               <span className="font-bold  ">AngularJS Web App Development</span> - We provide the best AngularJS web application development services on the market. Our professionals use an Agile development process that is suited to the project&apos;s requirements. Using cutting-edge technology and techniques, we develop dynamic and secure AngularJS websites that have the potential to become the next best.</p>
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
-              <span className="font-bold  ">Custom AngularJS Development</span> - Our expertise in Custom AngularJS Development can help your business thrive. Our committed staff excels at creating tailored solutions that address your specific requirements,resulting in a user-friendly and high-performance mobile app experience. Our AngularJS development expertise can help you improve your Online presence.
+              <span className="font-bold  ">Custom AngularJS Development</span> - Our expertise in Custom AngularJS Development can help your business thrive. Our committed staff excels at creating tailored solutions that address your specific requirements,resulting in a user-friendly and high-performance mobile app experience. Our AngularJS development expertise can help you improve your Online presence.
           </p>
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
-              <span className="font-bold  ">AngularJS Single Page App (SPA) Development</span> - Experience the future of web apps with our Angular Single Page App (SPA) Development services. We specialise in developing dynamic, quick, and interactive web apps with a seamless user experience. Unleash the power of SPAs to engage your audience while providing a modern, responsive, and efficient online presence
+              <span className="font-bold  ">AngularJS Single Page App (SPA) Development</span> - Experience the future of web apps with our Angular Single Page App (SPA) Development services. We specialise in developing dynamic, quick, and interactive web apps with a seamless user experience. Unleash the power of SPAs to engage your audience while providing a modern, responsive, and efficient online presence
           </p>
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
               <span className="font-bold  ">ChatBot Application Development</span> - At Analogue IT Solutions, we specialize in crafting intelligent and engaging chatbot applications that revolutionize the way you interact with your customers. Whether you&apos;re aiming to streamline customer service, boost engagement, or personalize user experiences, our team of experts delivers.
           </p>
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
-              <span className="font-bold  ">Custom Widgets Development</span> - Elevate your user experience and streamline your workflows with our expert Custom Widgets Development service. We specialize in creating bespoke UI components that seamlessly integrate into your existing applications and platforms.
+              <span className="font-bold  ">Custom Widgets Development</span> - Elevate your user experience and streamline your workflows with our expert Custom Widgets Development service. We specialize in creating bespoke UI components that seamlessly integrate into your existing applications and platforms.
           </p>
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
-              <span className="font-bold  ">Custom Real-Time Solutions</span> - We tailor each solution to your specific needs, whether it&apos;s building high-performance data pipelines, crafting intuitive real-time dashboards, or developing interactive data streaming applications. We leverage cutting-edge technologies like Apache Kafka, Spark Streaming, and cloud platforms to ensure robust and scalable solutions.
+              <span className="font-bold  ">Custom Real-Time Solutions</span> - We tailor each solution to your specific needs, whether it&apos;s building high-performance data pipelines, crafting intuitive real-time dashboards, or developing interactive data streaming applications. We leverage cutting-edge technologies like Apache Kafka, Spark Streaming, and cloud platforms to ensure robust and scalable solutions.
           </p>
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
-              <span className="font-bold  ">Data Streaming App Development</span> - Our team specialises in crafting data streaming applications that deliver actionable insights in real time. We design and build apps for various use cases, from real-time fraud detection and IoT sensor data analysis to stock market monitoring and personalized user experiences.
+              <span className="font-bold  ">Data Streaming App Development</span> - Our team specialises in crafting data streaming applications that deliver actionable insights in real time. We design and build apps for various use cases, from real-time fraud detection and IOT sensor data analysis to stock market monitoring and personalized user experiences.
           </p>
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
             At Analogue IT Solutions, we believe in fostering true partnerships. Contact us today for a free consultation and unlock the full potential of AngularJS for your business!

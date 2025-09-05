@@ -237,7 +237,7 @@ const [visibleSteps, setVisibleSteps] = useState([1]); // step 1 always visible
       >
         {/* Left Content */}
         <div className="flex flex-col xl:px-10">
-          <h3 className="text-white font-bold text-2xl md:text-3xl leading-snug">
+          <h3 className="text-white font-bold text-xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[2rem] leading-relaxed">
             Process we follow for <br /> successful project
           </h3>
           <AnimatePresence mode="wait">
@@ -250,11 +250,11 @@ const [visibleSteps, setVisibleSteps] = useState([1]); // step 1 always visible
                 transition={{ duration: 0.2 }}
                 className="mt-6 space-y-4 pr-2"
               >
-                <h4 className="text-xl font-bold mb-2">
+                <h4 className="font-weight-400 font-semibold text-[#0D6EFD] text-lg xss:text-sm  sm:text-base md:text-lg 2xl:text-[1.5rem] xl:mb-4 xss:mb-1 xs:mb-1  mb-2">
                   Step {steps[(selectedStep ?? currentStep) - 1].id}:{" "}
                   {steps[(selectedStep ?? currentStep) - 1].title}
                 </h4>
-                <p className="text-neutral-300 text-lg">
+                <p className="text-neutral-300 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] xl:leading-6 sm:leading-4 xs:leading-3 md:leading-5 3xl:leading-8">
                   {steps[(selectedStep ?? currentStep) - 1].description}
                 </p>
               </motion.div>

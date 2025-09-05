@@ -107,8 +107,7 @@ export default function Guarantees() {
         {/* Main Heading */}
         <h1
           className="
-            text-lg xss:text-xs sm:text-base md:text-xl lg:text-subnormal xl:text-subnormal 3xl:text-subheading
-            font-medium text-[#0D6EFD] leading-snug
+            font-weight-400 font-semibold text-[#0D6EFD] xl:text-2xl xl:mb-4 xss:mb-1 xss:text-sm xs:mb-1 xs:text-lg sm:text-subnormal lg:text-xl md:text-[1.4rem] xl:text-normal 2xl:text-normal 3xl:text-subbigheading leading-snug
             text-center lg:text-left
             whitespace-normal
           "
@@ -120,8 +119,7 @@ export default function Guarantees() {
         {/* Paragraph */}
         <p
           className="
-            mt-4 text-subsmall sm:text-small md:text-small lg:text-small xl:text-sm 2xl:leading-8 3xl:text-base
-            text-[#7B7E86] leading-relaxed font-medium
+            mt-4 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] xl:leading-6 sm:leading-4 xs:leading-3 md:leading-5 3xl:leading-8 leading-relaxed font-medium
             text-justify sm:text-left">
           Analogue has achieved the name and fame of being the best mobile app
           development company in Hyderabad, by organising and formulating a

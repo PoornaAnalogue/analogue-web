@@ -1,7 +1,6 @@
 'use client';
 import Image from "next/image";
-import { LazyLoadImage } from "react-lazy-load-image-component";
-import 'react-lazy-load-image-component/src/effects/blur.css';
+// import 'react-lazy-load-image-component/src/effects/blur.css';
 
 export default function Responsive_Zipck() {
   return (

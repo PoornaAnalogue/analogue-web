@@ -16,7 +16,7 @@ export default function Responsive_FigmaTech() {
       question:
         "02. Why should I choose Figma over other design tools?",
       answer:
-        "Figma stands out because it is web-based, supports real-time collaboration, requires no heavy installation, and works seamlessly across devices. It’s ideal for distributed teams and scalable projects"    },
+        "Figma stands out because it is web-based, supports real-time collaboration, requires no heavy installation, and works seamlessly across devices. It&apos;s ideal for distributed teams and scalable projects"    },
     {
       question:
         "03. Does Analogue IT Solutions provide Figma design services?",
@@ -224,7 +224,7 @@ export default function Responsive_FigmaTech() {
             Benefits of using Figma
           </h3>
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6 font-medium">
-            Driving innovation across multiple industries, Python has established itself as one of the most powerful and adaptable technologies. However, unlocking its full potential requires the right expertise  and that’s where Analogue IT Solutions, a top Python development company, comes in          </p>
+            Driving innovation across multiple industries, Python has established itself as one of the most powerful and adaptable technologies. However, unlocking its full potential requires the right expertise and that&apos;s where Analogue IT Solutions, a top Python development company, comes in          </p>
           
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
               <span className="font-bold  ">Real-time</span> - Work on designs with others simultaneously, see changes instantly, and provide feedback in real-time. This is perfect for remote teams or collaborative projects.
@@ -233,10 +233,10 @@ export default function Responsive_FigmaTech() {
               <span className="font-bold  ">Unlimited collaborators</span> - No limit on the number of people who can work on a project, unlike some other design tools with individual licenses.
           </p>
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
-              <span className="font-bold  ">Version control and history</span> - Easily track changes and revert to previous versions if needed.
+              <span className="font-bold  ">Version control and history</span> - Easily track changes and revert to previous versions if needed.
           </p>
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
-              <span className="font-bold  ">Easy sharing</span> - Share designs with anyone, even if they don't have a Figma account, with a simple link.
+              <span className="font-bold  ">Easy sharing</span> - Share designs with anyone, even if they don&apos;t have a Figma account, with a simple link.
           </p>
           
 
@@ -245,23 +245,23 @@ export default function Responsive_FigmaTech() {
             Build Seamless Experiences in Figma with Analogue IT Solutions          
           </h3>
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
-              <span className="font-bold  ">Expert Figma Designers</span> - Our team is skilled in creating user-friendly, modern, and interactive designs using Figma. </p>
+              <span className="font-bold  ">Expert Figma Designers</span> - Our team is skilled in creating user-friendly, modern, and interactive designs using Figma. </p>
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
-              <span className="font-bold  ">Collaborative Workflow</span> - With Figma’s real-time collaboration, we work closely with you to refine designs instantly.
+              <span className="font-bold  ">Collaborative Workflow</span> - With Figma&apos;s real-time collaboration, we work closely with you to refine designs instantly.
           </p>
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
               <span className="font-bold  ">Pixel-Perfect UI/UX</span> - We focus on delivering designs that are not only visually stunning but also intuitive and user-friendly.
           </p>
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
-              <span className="font-bold  "> Seamless Prototyping</span> - We turn your ideas into interactive prototypes, making it easier to visualize and test the user journey. </p>
+              <span className="font-bold  "> Seamless Prototyping</span> - We turn your ideas into interactive prototypes, making it easier to visualize and test the user journey. </p>
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
-              <span className="font-bold  ">Faster Turnaround</span> - With Figma’s efficiency and our expertise, we ensure quicker delivery without compromising quality.
+              <span className="font-bold  ">Faster Turnaround</span> - With Figma&apos;s efficiency and our expertise, we ensure quicker delivery without compromising quality.
           </p>
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
-              <span className="font-bold  ">Scalable Design Systems</span> - We build reusable design components to keep your brand consistent across all platforms.
+              <span className="font-bold  ">Scalable Design Systems</span> - We build reusable design components to keep your brand consistent across all platforms.
           </p>
           <p className="pb-3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] leading-5 sm:leading-6  font-medium">
-              <span className="font-bold  ">End-to-End Support</span> - From wireframes to final handoff, we stay with you throughout the entire design process.
+              <span className="font-bold  ">End-to-End Support</span> - From wireframes to final handoff, we stay with you throughout the entire design process.
           </p>
 
 
