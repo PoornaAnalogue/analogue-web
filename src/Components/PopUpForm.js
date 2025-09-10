@@ -499,7 +499,7 @@ try {
       }}
     >
       {/* Modal Container */}
-      <div className="relative text-xl p-2 w-full max-w-[700px] lg:max-w-[720px] max-h-[80vh] overflow-y-auto rounded-3xl shadow-lg bg-gradient-to-br from-blue-100 via-pink-50 to-gray-100">
+      <div className="relative text-xl p-2 w-full max-w-[330px] lg:max-w-[720px] max-h-[82vh] overflow-y-auto rounded-3xl shadow-lg bg-gradient-to-br from-blue-100 via-pink-50 to-gray-100">
         {/* Form Content */}
         <div className="relative p-2 md:p-10 xss:px-5">
           {/* Close Button */}
