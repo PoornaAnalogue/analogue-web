@@ -8,27 +8,22 @@ export default function ModalPopUp() {
  
   useEffect(() => {
     if (isMounted.current) {
-      console.log("ModalPopUp already mounted, skipping useEffect");
       return; // Prevent duplicate useEffect execution
     }
     isMounted.current = true;
  
-    console.log("ModalPopUp mounted, setting timer");
     const timer = setTimeout(() => {
       setIsOpen(true);
-      console.log("Modal opened");
     }, 10000); // show after 10s
  
     return () => {
       clearTimeout(timer);
       isMounted.current = false;
-      console.log("ModalPopUp unmounted, timer cleared");
     };
   }, []);
  
   const handleClose = () => {
     setIsOpen(false);
-    console.log("Modal close triggered");
   };
  
   return (

@@ -13,6 +13,13 @@ export default function Home() {
     { line1: "Website", line2: "Development", style: "bg-gradient-to-r from-green-500 to-blue-400" },
   ];
 
+  const ellipses = [
+    { name: "ellipse1", link: "/Home/ellipse1.png" },
+    { name: "ellipse2", link: "/Home/ellipse2.png" },
+    { name: "ellipse3", link: "/Home/ellipse3.png" },
+    { name: "ellipse4", link: "/Home/ellipse4.png" }
+  ];
+
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -86,19 +93,19 @@ export default function Home() {
               Analogue is a Best mobile app development company in Hyderabad that specialises in creating and enhancing user experience through the design and development of mobile and web applications. Our focus lies in helping businesses expand and reach their specific customer base by collaborating with individuals and organisations to conceptualise and promote their products.
             </p>
 
-            {/* Logos grid + social icons */}
+            {/* Logos grid */}
             <div className="flex flex-col xss:mt-3 lg:mt-10 lg:justify-start lg:items-center xl:items-start px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-15 xl:mt-[-2] xss:justify-center xss:items-center">
               <div className="grid gap-5 w-full xs:w-[20rem] lg:w-[37rem] 3xl:w-[35rem] xs:justify-center xs:items-center xs:grid-cols-4 md:grid-cols-4 xss:grid-cols-4 xss:gap-2 xss:w-[18rem] 2xl:mt-8 xss:justify-center xss:items-center lg:grid-cols-4 xl:grid-cols-4 xl:w-[25rem] 2xl:w-[22rem] xl:mb-2 sm:grid-cols-4 sm:w-[25rem]">
-              {[1, 2, 3, 4].map((id) => (
-                <Image
-                  key={id}
-                  src={`/Home/ellipse${id}.svg`}
-                  width={120}
-                  height={130}
-                  alt={`Logo ${id}`}
-                  className={`rounded-full mx-1 ${id === 1 ? "scale-115" : ""}`}
-                />
-              ))}
+              {ellipses.map((ellipse, index) => (
+              <Image
+                key={ellipse.name}
+                src={ellipse.link}
+                width={120}
+                height={130}
+                alt={`Logo ${ellipse.name}`} 
+                className={`rounded-full mx-1 ${index === 0 ? "scale-115" : ""}`}
+              />
+            ))}
             </div>
 
 
@@ -119,12 +126,12 @@ export default function Home() {
 
             {/* Left Side Image */}
             <div className=" absolute left-2 w-[40vw] max-w-[230px] xss:w-[28vw] xss:left-7 sm:left-7 sm:w-[28vw] md:left-15 md:w-[25vw] lg:left-20 lg:w-[28vw] xl:left-0 xl:w-[17vw] 2xl:left-8 2xl:w-[14vw] 3xl:left-8 3xl:w-[35vw] 3xl:h-[55vh] top-1/2 -translate-y-1/2 flex flex-col items-center">
-              <Image src="/Home/logo12.svg" alt="Mobile left image" width={230} height={200} />
+              <Image src="/Home/logo12.png" alt="Mobile left image" width={230} height={200} />
             </div>
 
             {/* Right Side Image */}
             <div className="absolute right-2 w-[22vw] max-w-[250px] xss:w-[28vw] xss:right-4 sm:right-4 sm:w-[30vw] md:right-8 md:w-[28vw] lg:right-10 lg:w-[30vw] xl:right-0 xl:w-[17.5vw] 2xl:right-3 2xl:w-[16vw] 3xl:right-6 3xl:w-[40vw] 3xl:h-[55vh] top-1/2 -translate-y-1/2 flex flex-col items-center">
-              <Image src="/Home/logo23.svg" alt="Mobile right image" width={250} height={200} />
+              <Image src="/Home/logo23.png" alt="Mobile right image" width={250} height={200} />
             </div>
           </div>
         </div>

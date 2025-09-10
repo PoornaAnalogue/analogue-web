@@ -12,25 +12,25 @@ import GetAQuoteForm from "@/Components/GetAQuoteForm";
 
 
 
-export default function FlutterAppDevelopment(){
+export default function DigitalMarketing(){
     const [isOpen, setIsOpen] = useState(false);
 
     const [selectedCategory, setSelectedCategory] = useState('Web Apps');
 
   // Array of image paths corresponding to original icon names
   const TechIcons = {
-    reactIcon: '/service-icons/react-logo.png',
-    nextjsIcon: '/service-icons/next-logo.png',
-    vueIcon: '/service-icons/vue-logo.png',
-    angularIcon: '/service-icons/angular-logo.png',
-    nodejsIcon: '/service-icons/node-logo.png',
-    javaIcon: '/service-icons/java-logo.png',
-    phpIcon: '/service-icons/php-logo.png',
-    pythonIcon: '/service-icons/python-logo.png',
-    dotnetIcon: '/service-icons/dotnet-logo.png',
-    flutterIcon: '/service-icons/flutter-logo.png',
-    kotlinIcon: '/service-icons/kotlin-logo.png',
-    bgicon: '/service-icons/bgicon.png',
+    reactIcon: '/service-icons/react-logo.svg',
+    nextjsIcon: '/service-icons/next-logo.svg',
+    vueIcon: '/service-icons/vue-logo.svg',
+    angularIcon: '/service-icons/angular-logo.svg',
+    nodejsIcon: '/service-icons/node-logo.svg',
+    javaIcon: '/service-icons/java-logo.svg',
+    phpIcon: '/service-icons/php-logo.svg',
+    pythonIcon: '/service-icons/python-logo.svg',
+    dotnetIcon: '/service-icons/dotnet-logo.svg',
+    flutterIcon: '/service-icons/flutter-logo.svg',
+    kotlinIcon: '/service-icons/kotlin-logo.svg',
+    bgicon: '/service-icons/bgicon.svg',
   };
 
   const technologies = [
@@ -217,13 +217,13 @@ const DigitalfaqArray = [
                             key={idx}
                             className="py-1 p-2 m-5 sm:m-0 sm:my-2 md:m-0 md:my-2 text-black relative"
                         >
-                            <img
+                            <Image
                             src={TechIcons.bgicon}
                             alt="design"
                             className=" xss:w-[5.5rem] sm:w-[6.3rem] md:w-[120px] lg:w-[135px] flex justify-center items-center mx-auto"
                             />
                             <div className="absolute inset-0 xss:text-subsmall sm:text-xs flex flex-col items-center justify-center">
-                            <img
+                            <Image
                                 src={item.icon}
                                 alt={item.name}
                                 className="w-[65px] h-[65px] xss:w-[2.5rem] xss:h-[2rem] sm:w-[55px] sm:h-[50px] md:w-[60px] md:h-[50px] lg:w-[68px] lg:h-[55px] xl:w-[85px] xl:h-[75px]"
@@ -265,7 +265,7 @@ const DigitalfaqArray = [
                     </div>
                     <div className=" text-[#7B7E86] p-5 border-l border-r border-gray-200 shadow-[0_4px_2px_rgba(0,0,0,0.3)] bg-white p-6 rounded-lg">
                         <h3 className="font-weight-400 text-[#0E59F2] xss:mb-3 xl:text-2xl xl:mb-4 xss:mb-1text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold">Influencer Marketing</h3>
-                        <p className="xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base  xss:leading-4 sm:leading-relaxed 3xl:leading-7">Influencer marketing is partnering with popular online personalities to promote products or services. It leverages the influencer's credibility and reach to connect with their audience and boost brand awareness.</p>
+                        <p className="xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base  xss:leading-4 sm:leading-relaxed 3xl:leading-7">Influencer marketing is partnering with popular online personalities to promote products or services. It leverages the influencer&apos;s credibility and reach to connect with their audience and boost brand awareness.</p>
                     </div>
                 </div>
     
@@ -342,13 +342,13 @@ const DigitalfaqArray = [
                 Digital Marketing Agency in India
             </h3>
             <div className="xl:text-sm text-[#7B7E86] xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base leading-relaxed 3xl:leading-8">
-                <p className="pb-2">Analogue IT Solutions is not just Best digital marketing company in Hyderabad; we are your strategic partner in achieving online dominance. As a Best digital marketing agency, we offer a comprehensive suite of services designed to elevate your brand and drive tangible results. Our team of Best digital marketers is committed to delivering exceptional performance and exceeding client expectations.</p>
+                <p className="pb-2">Analogue IT Solutions is not just Best digital marketing company in Hyderabad, we are your strategic partner in achieving online dominance. As a Best digital marketing agency, we offer a comprehensive suite of services designed to elevate your brand and drive tangible results. Our team of Best digital marketers is committed to delivering exceptional performance and exceeding client expectations.</p>
                 <p className="pb-2">From crafting compelling SEO strategies to executing high-impact PPC campaigns, we excel at every facet of digital marketing. Our expertise in local SEO (GMB) ensures that your business stands out in local search results, attracting more customers through your doors. We harness the power of social media through both organic and paid strategies, building strong brand connections and driving engagement.</p>
                 <p className="pb-2">As a Best digital marketing agency, we pride ourselves on delivering measurable results. Our data-driven approach allows us to optimise campaigns for maximum ROI, making us one of the best performance marketing agencies in Hyderabad. Whether you need help with online reputation management, influencer collaborations, or captivating creatives, our talented team is here to assist you.</p>
             </div>
             </div>
 
-            {/* content under IOS app dev company in India */}
+            {/* content under Digital marketing dev company in India */}
             <div className="w-full h-auto bg-white xl:p-5 xl:px-20 xss:px-5 pt-5 xs:p-5 sm:px-8 ">
             <h3 className='font-weight-400 font-semibold text-[#0E59F2] xss:mb-3 xl:text-2xl xl:mb-4 xss:mb-1text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold'>
                 Analogue IT Solutions - Best Digital Marketing Agency in Hyderabad
@@ -367,7 +367,7 @@ const DigitalfaqArray = [
             <div className="xl:text-sm text-[#7B7E86] xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base leading-relaxed 3xl:leading-8">
                 <p className="pb-2">Are you ready to take your business to new heights? Partner with Analogue IT Solutions, the best digital marketing agency in Hyderabad. Our data-driven approach, coupled with our passion for innovation, sets us apart from the competition.</p>
                 <p className="pb-2">We offer a wide range of services, including SEO, PPC, social media marketing, and more, to ensure your online success. Our team of skilled digital marketers will work closely with you to develop a customised strategy that aligns with your business objectives.</p>
-                <p className="pb-2">Don't settle for average results. Choose Analogue IT Solutions as your partner in digital transformation.</p>
+                <p className="pb-2">Don&apos;t settle for average results. Choose Analogue IT Solutions as your partner in digital transformation.</p>
             </div>
             </div>
 

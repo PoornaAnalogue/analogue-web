@@ -189,7 +189,7 @@ try {
 
         {/* Glassmorphic Form */}
         <div className="relative z-20 xl:p-6 xl:mt-[-2.7rem] 2xl:mt-[-2.3rem] 3xl:mt-[-1.5rem] xss:mt-[-2.3rem] xs:mt-[-2.2rem] sm:mt-[-2.4rem] md:mt-[-2rem] lg:mt-[-2.5rem] w-full p-5 border-gray-300 border-2
-                        2xl:w-[70%] 3xl:w-[88%] xl:w-[75%] lg:w-[80%] md:w-[80%] sm:w-[75%] xs:w-[75%] xs:p-3 xss:w-[80%]
+                        2xl:w-[70%] 3xl:w-[88%] xl:w-[75%] lg:w-[80%] md:w-[80%] sm:w-[78%] xs:w-[78%] xs:p-3 xss:w-[80%]
                         rounded-3xl backdrop-blur-3xl shadow-lg 
                         bg-gradient-to-br from-white/40 via-white/50 to-transparent">
           <div className="absolute inset-0 bg-gradient-to-br from-gray-500/20 via-gray-800/20 to-transparent rounded-3xl pointer-events-none"></div>

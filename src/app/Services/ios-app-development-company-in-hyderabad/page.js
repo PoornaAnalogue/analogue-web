@@ -19,18 +19,18 @@ export default function FlutterAppDevelopment(){
 
   // Array of image paths corresponding to original icon names
   const TechIcons = {
-    reactIcon: '/service-icons/react-logo.png',
-    nextjsIcon: '/service-icons/next-logo.png',
-    vueIcon: '/service-icons/vue-logo.png',
-    angularIcon: '/service-icons/angular-logo.png',
-    nodejsIcon: '/service-icons/node-logo.png',
-    javaIcon: '/service-icons/java-logo.png',
-    phpIcon: '/service-icons/php-logo.png',
-    pythonIcon: '/service-icons/python-logo.png',
-    dotnetIcon: '/service-icons/dotnet-logo.png',
-    flutterIcon: '/service-icons/flutter-logo.png',
-    kotlinIcon: '/service-icons/kotlin-logo.png',
-    bgicon: '/service-icons/bgicon.png',
+    reactIcon: '/service-icons/react-logo.svg',
+    nextjsIcon: '/service-icons/next-logo.svg',
+    vueIcon: '/service-icons/vue-logo.svg',
+    angularIcon: '/service-icons/angular-logo.svg',
+    nodejsIcon: '/service-icons/node-logo.svg',
+    javaIcon: '/service-icons/java-logo.svg',
+    phpIcon: '/service-icons/php-logo.svg',
+    pythonIcon: '/service-icons/python-logo.svg',
+    dotnetIcon: '/service-icons/dotnet-logo.svg',
+    flutterIcon: '/service-icons/flutter-logo.svg',
+    kotlinIcon: '/service-icons/kotlin-logo.svg',
+    bgicon: '/service-icons/bgicon.svg',
   };
 
   const technologies = [
@@ -221,15 +221,19 @@ const IosfaqArray = [
                             key={idx}
                             className="py-1 p-2 m-5 sm:m-0 sm:my-2 md:m-0 md:my-2 text-black relative"
                         >
-                            <img
+                            <Image
                             src={TechIcons.bgicon}
                             alt="design"
+                            width={20}
+                            height={20}
                             className=" xss:w-[5.5rem] sm:w-[6.3rem] md:w-[120px] lg:w-[135px] flex justify-center items-center mx-auto"
                             />
                             <div className="absolute inset-0 xss:text-subsmall sm:text-xs flex flex-col items-center justify-center">
-                            <img
+                            <Image
                                 src={item.icon}
                                 alt={item.name}
+                                width={20}
+                                height={20}
                                 className="w-[65px] h-[65px] xss:w-[2.5rem] xss:h-[2rem] sm:w-[55px] sm:h-[50px] md:w-[60px] md:h-[50px] lg:w-[68px] lg:h-[55px] xl:w-[85px] xl:h-[75px]"
                             />
                             {item.name}
@@ -286,8 +290,8 @@ const IosfaqArray = [
             </h3>
             <div className="xl:text-sm text-[#7B7E86] xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base leading-relaxed 3xl:leading-8">
                 <p className="pb-2">Your go-to destination for top-notch IOS app development and a wide range of other services! Our dedicated team specialises in IOS app development and is ready to take on any project, big or small</p>
-                <p className="pb-2">But that's not all - we also offer mobile app development, web development, Android app development, flutter app development, and E-commerce app development. Whether you need a sleek and modern website, a cutting-edge mobile app, or a custom eCommerce solution, we've got you covered.</p>
-                <p className="pb-2">Don't settle for mediocre results - trust Analogue IT Solutions for all your IOS app development needs and more. Contact us today to learn more about our IOS app development services and how we can help bring your vision to life. Choose the best - choose Analogue IT Solutions.</p>
+                <p className="pb-2">But that&apos;s not all - we also offer mobile app development, web development, Android app development, flutter app development, and E-commerce app development. Whether you need a sleek and modern website, a cutting-edge mobile app, or a custom eCommerce solution, we&apos;ve got you covered.</p>
+                <p className="pb-2">Don&apos;t settle for mediocre results - trust Analogue IT Solutions for all your IOS app development needs and more. Contact us today to learn more about our IOS app development services and how we can help bring your vision to life. Choose the best - choose Analogue IT Solutions.</p>
             </div>
             </div>
 
@@ -347,9 +351,9 @@ const IosfaqArray = [
                 IOS App Development Company in Hyderabad, India
             </h3>
             <div className="xl:text-sm text-[#7B7E86] xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base leading-relaxed 3xl:leading-8">
-                <p className="pb-2">As a leading iOS app development company in India, Analogue IT Solutions is committed to delivering innovative, scalable, and user-centric iOS applications tailored to business needs. With deep expertise in iOS app development, we design and build apps that meet Apple's highest standards of quality, performance, and security. Recognized as one of the top iOS app development companies in Hyderabad, we bring your ideas to life with precision and innovation.</p>
-                <p className="pb-2">Our team of skilled IOS developers in Hyderabad specializes in building intuitive, engaging, and feature-rich applications for iPhone and iPad. Beyond app development, Analogue also provides digital marketing and business strategy consulting, helping brands leverage technology to achieve their goals. Whether it's a startup or an enterprise, our iOS app development services ensure seamless digital experiences that drive growth.</p>
-                <p className="pb-2">At Analogue IT Solutions, we don't just build apps — we craft experiences. Our iOS app development services in Hyderabad transform your vision into interactive, user-friendly, and high-performance applications.</p>
+                <p className="pb-2">As a leading iOS app development company in India, Analogue IT Solutions is committed to delivering innovative, scalable, and user-centric iOS applications tailored to business needs. With deep expertise in iOS app development, we design and build apps that meet Apple&apos;s highest standards of quality, performance, and security. Recognized as one of the top iOS app development companies in Hyderabad, we bring your ideas to life with precision and innovation.</p>
+                <p className="pb-2">Our team of skilled IOS developers in Hyderabad specializes in building intuitive, engaging, and feature-rich applications for iPhone and iPad. Beyond app development, Analogue also provides digital marketing and business strategy consulting, helping brands leverage technology to achieve their goals. Whether it&apos;s a startup or an enterprise, our iOS app development services ensure seamless digital experiences that drive growth.</p>
+                <p className="pb-2">At Analogue IT Solutions, we don&apos;t just build apps — we craft experiences. Our iOS app development services in Hyderabad transform your vision into interactive, user-friendly, and high-performance applications.</p>
             </div>
             </div>
 
@@ -359,7 +363,7 @@ const IosfaqArray = [
                 Analogue IT Solutions - Best iOS App Development Services in Hyderabad
             </h3>
             <div className="xl:text-sm text-[#7B7E86] xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base leading-relaxed 3xl:leading-8">
-                <p className="pb-2">Analogue IT Solutions has built a reputation as the best iOS app development company in Hyderabad by following a client-first approach. Our team collaborates closely with clients to brainstorm, strategize, and deliver top-notch iOS apps that stand out in today's competitive market.</p>
+                <p className="pb-2">Analogue IT Solutions has built a reputation as the best iOS app development company in Hyderabad by following a client-first approach. Our team collaborates closely with clients to brainstorm, strategize, and deliver top-notch iOS apps that stand out in today&apos;s competitive market.</p>
                 <p className="pb-2">We are dedicated to developing iOS apps that are elegant, responsive, and seamlessly aligned with your business objectives. By blending creative design with robust development practices, we create digital products that leave a lasting impact on your users.</p>
             </div>
             </div>

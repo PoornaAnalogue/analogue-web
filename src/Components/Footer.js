@@ -1,3 +1,5 @@
+
+"use client";
 import Image from "next/image";
 import {
   FaFacebookF,
@@ -113,14 +115,14 @@ export default function Footer() {
         <div className="flex flex-col xl:flex-row 2xl:flex-col space-y-2 xl:space-y-0 xl:space-x-4">
           <div className="flex">
             <Image
-              src="/images/post2.png"
+              src="/Footer/post2.png"
               alt="How to Become a Mobile App Developer"
               width={80}
               height={64}
               className="w-[80px] h-[8vh] my-auto rounded-xl cursor-pointer hover:opacity-35"
               priority={false}
             />
-            <div className="ml-3">
+            <div className="ml-3 lg:px-5">
               <Link
                 href="/blogs/how-to-become-a-mobile-app-developer"
                 className="hover:text-blue-700 cursor-pointer text-left text-sm text-gray-400"
@@ -134,16 +136,16 @@ export default function Footer() {
               </div>
             </div>
           </div>
-          <div className="flex">
+          <div className="flex mt-2">
             <Image
-              src="/images/post1.png"
+              src="/Footer/post1.png"
               alt="Food Delivery App Development Cost"
               width={80}
               height={64}
               className="w-[80px] h-[8vh] my-auto rounded-xl hover:opacity-35"
               priority={false}
             />
-            <div className="ml-3">
+            <div className="ml-3 px-5">
               <Link
                 href="/blogs/food-delivery-app-development-cost-india"
                 className="hover:text-blue-700 cursor-pointer text-left text-sm text-gray-400"
@@ -151,7 +153,7 @@ export default function Footer() {
               >
                 How Much Does It Cost to Develop a Food Delivery App in India?
               </Link>
-              <div className="flex mt-2">
+              <div className="flex mt-2 ">
                 <CalendarIcon className="mt-1 h-5 w-5 text-sm text-gray-400 mr-2" />
                 <span className="text-sm text-gray-400 flex items-center justify-center">29 May, 2025</span>
               </div>
@@ -163,21 +165,23 @@ export default function Footer() {
 
       </div>
 
-              {/* Middle Section */}
+      {/* Middle Section */}
       <div className="grid grid-cols-1 xl:grid-cols-4 gap-6 xl:px-10 2xl:px-7">
         {/* Copyright */}
         <div className="text-start text-sm text-gray-200 xl:mx-[-1.8rem] hidden xl:block">
-          Copyright© 2023 Tronix. All Rights Reserved.
+          Copyright © {new Date().getFullYear()}
+          <Link href="/" className="text-blue-500 hover:text-white" scroll={false} onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}> Analogue IT Solutions.</Link>
+           All Rights Reserved.
         </div>
 
         {/* address, working hours, contact Details */}
         <div className="col-span-3 grid grid-cols-1 xl:grid-cols-3 xss:gap-4 xl:gap-2 2xl:gap-5 xl:ml-[-1rem] 2xl:ml-0">
   {/* Location */}
-  <div className="flex items-start gap-2">
-    <div className="relative w-[50px] h-[50px] xss:w-[150px] xss:h-[50px] sm:w-[130px] sm:ml-[-0.4rem] md:ml-[-0.15rem] md:w-[4.5rem] md:h-[4rem] xs:ml-[-0.4rem] sm:h-[60px] xl:w-[250px] xl:h-[60px] xl:ml-0 3xl:w-[180px]">
+  <div className="flex items-start gap-4">
+  <div className="relative w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] xl:w-[70px] xl:h-[60px]">
       <Image src="/Footer/Location.svg" alt="Location" fill className="object-contain" />
     </div>
-    <div className="flex flex-col md:ml-2">
+    <div className="flex flex-col xss:w-[68%] lg:w-[55%] xl:w-[80%] ">
       <h2 className="xss:text-xs sm:text-md lg:text-[0.9rem] xl:text-md">LOCATION</h2>
       <p className="text-gray-400 text-sm mt-2">
         <a
@@ -190,11 +194,11 @@ export default function Footer() {
         </a>
       </p>
     </div>
-  </div>
+    </div>
 
   {/* Working Hours */}
   <div className="flex items-start gap-4">
-    <div className="relative w-[50px] h-[50px] xss:w-[50px] xss:h-[50px] sm:w-[60px] sm:h-[60px]">
+    <div className="relative w-[50px] h-[50px] xss:w-[50px] xss:h-[80px] sm:w-[60px] sm:h-[60px] xl:w-[70px] xl:h-[60px] 3xl:w-[80px]">
       <Image src="/Footer/Working-Hours.svg" alt="Working Hours" fill className="object-contain" />
     </div>
     <div className="flex flex-col">
@@ -220,8 +224,7 @@ export default function Footer() {
       </a>
     </div>
   </div>
-</div>
-
+      </div>
 
       </div>
       </div>
@@ -233,8 +236,9 @@ export default function Footer() {
         </h1>
       </div>
         <div className="text-center md:text-lg xss:px-3 xss:text-sm bg-[#1a265c] py-4 w-screen text-gray-200 mt-4 xl:hidden">
-    Copyright © 2025 Analogue IT Solutions. All Rights Reserved.
-  </div>
+          Copyright © {new Date().getFullYear()} 
+          <Link href="/" className="text-blue-500 hover:text-white" scroll={false} onClick={() => window.scrollTo({top: 0, behavior: 'smooth'})}> Analogue IT Solutions.</Link> All Rights Reserved.
+       </div>
     </footer>
     </>
   );

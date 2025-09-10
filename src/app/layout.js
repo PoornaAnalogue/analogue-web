@@ -3,6 +3,7 @@ import "./globals.css";
 import Footer from "@/Components/Footer";
 import Navbar from "@/Components/Navbar";
 import CursorWrapper from "@/Components/CursorWrapper";
+import ModalPopUp from "@/Components/Modal-PopUp";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
@@ -20,7 +21,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className="scroll-smooth">
       <head><link rel="icon" href="/favicon.png" sizes="any" /></head>
       <body className={urbanist.className} >
-        {/* <ModalPopUp /> */}
+        <ModalPopUp />
         <CursorWrapper />
         <Navbar />
         {children}
