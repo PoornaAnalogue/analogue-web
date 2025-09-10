@@ -330,8 +330,8 @@ useEffect(() => {
 
   const heading = "Our Process".split("");
   const letterVariants = {
-    hidden: { color: "#7B7E86" },
-    visible: { color: "#071637" },
+    hidden: { color: "#e3e5e8" },
+    visible: { color: "#3C6FA2" },
   };
 
   return (
@@ -349,7 +349,7 @@ useEffect(() => {
             initial="hidden"
             whileInView="visible"
             viewport={{ once: false, amount: 0.6 }}
-            transition={{ delay: i * 0.06, duration: 0.35 }}
+            transition={{ delay: i * 0.1, duration: 0.5 }}
             className="inline-block"
           >
             {char === " " ? "\u00A0" : char}
