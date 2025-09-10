@@ -27,7 +27,7 @@ const Responsive_ServicePage_Mobile = () => {
       ],
       bg: "bg-[#4335A7]",
       text: "text-white",
-      src: "/ServicePage-Images/service-img (1).svg",
+      src: "/ServicePage-Images/service-img (3).svg",
     },
     {
       id: 2,

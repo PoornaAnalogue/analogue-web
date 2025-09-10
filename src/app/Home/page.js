@@ -29,7 +29,7 @@ export default function Home() {
 
   return (
     <div className="main !bg-[#FAFBFF] ">
-      <div className="flex flex-col relative xss:min-h-[calc(10vh-64px)] lg:min-h-[calc(80vh-64px)] xl:min-h-[calc(50vh-64px)] 2xl:min-h-[calc(70vh-64px)]">
+      <div className="flex flex-col relative xss:min-h-[calc(10vh-64px)] lg:min-h-[calc(52vh-64px)] xl:min-h-[calc(50vh-64px)] 2xl:min-h-[calc(70vh-64px)] ">
         {/* Hero */}
         <div className="hero flex flex-col xs:flex-col sm:flex-col md:flex-col lg:flex-col xl:flex-row !bg-[#FAFBFF] text-black relative">
           {/* Left Hero */}
@@ -113,17 +113,17 @@ export default function Home() {
 
           {/* Right Hero */}
           <div className="right-hero w-full xl:w-1/2 flex justify-center 2xl:mt-[-0.55rem] xl:mt-[-0.45rem] xs:mt-10 md:mt-10 xss:mt-10 items-center relative bg-[url(/Home/Bg-image-of-home-page.svg)] bg-cover bg-center bg-no-repeat">
-            <div className="relative w-[55vw] max-w-[400px] h-auto aspect-[4/5] xss:w-[45vw] sm:w-[50vw] md:w-[41vw] lg:w-[41vw] xl:w-[40vw] 2xl:w-[30vw] xl:ml-[-0.6rem] 2xl:ml-[-0.6rem] 3xl:h-[28rem] xl:w-[80%] xl:h-[22rem] xl: w-[80%] 2xl:h-[22rem] max-w-[400px] aspect-[4/5] flex justify-center items-center">
+            <div className="relative w-[55vw] max-w-[400px] h-auto aspect-[4/5] xss:w-[45vw] sm:w-[50vw] md:w-[41vw] lg:w-[41vw] xl:w-[40vw] 2xl:w-[30vw] xl:ml-[-0.6rem] 2xl:ml-[-0.6rem] 3xl:h-[30rem] xl:w-[80%] xl:h-[22rem] xl: w-[80%] 2xl:h-[22rem] max-w-[400px] aspect-[4/5] flex justify-center items-center">
               <Lottie animationData={animationData} loop={true} style={{ width: "90%", height: "90%" }} />
             </div>
 
             {/* Left Side Image */}
-            <div className="absolute left-2 w-[40vw] max-w-[230px] xss:w-[28vw] xss:left-7 sm:left-7 sm:w-[28vw] md:left-15 md:w-[25vw] lg:left-20 lg:w-[28vw] xl:left-0 xl:w-[17vw] 2xl:left-8 2xl:w-[14vw] 3xl:left-8 3xl:w-[35vw] top-1/2 -translate-y-1/2 flex flex-col items-center">
+            <div className=" absolute left-2 w-[40vw] max-w-[230px] xss:w-[28vw] xss:left-7 sm:left-7 sm:w-[28vw] md:left-15 md:w-[25vw] lg:left-20 lg:w-[28vw] xl:left-0 xl:w-[17vw] 2xl:left-8 2xl:w-[14vw] 3xl:left-8 3xl:w-[35vw] 3xl:h-[55vh] top-1/2 -translate-y-1/2 flex flex-col items-center">
               <Image src="/Home/logo12.svg" alt="Mobile left image" width={230} height={200} />
             </div>
 
             {/* Right Side Image */}
-            <div className="absolute right-2 w-[22vw] max-w-[250px] xss:w-[28vw] xss:right-4 sm:right-4 sm:w-[30vw] md:right-8 md:w-[28vw] lg:right-10 lg:w-[30vw] xl:right-0 xl:w-[17.5vw] 2xl:right-3 2xl:w-[16vw] 3xl:right-6 3xl:w-[40vw] top-1/2 -translate-y-1/2 flex flex-col items-center">
+            <div className="absolute right-2 w-[22vw] max-w-[250px] xss:w-[28vw] xss:right-4 sm:right-4 sm:w-[30vw] md:right-8 md:w-[28vw] lg:right-10 lg:w-[30vw] xl:right-0 xl:w-[17.5vw] 2xl:right-3 2xl:w-[16vw] 3xl:right-6 3xl:w-[40vw] 3xl:h-[55vh] top-1/2 -translate-y-1/2 flex flex-col items-center">
               <Image src="/Home/logo23.svg" alt="Mobile right image" width={250} height={200} />
             </div>
           </div>

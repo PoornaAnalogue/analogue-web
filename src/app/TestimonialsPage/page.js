@@ -48,7 +48,7 @@ export default function Responsive_Testimonials() {
   ];
 
   return (
-    <section className="bg-white w-full h-auto flex flex-col xs:items-center xs:justify-center sm:items-center sm:justify-center md:items-center md:justify-center lg:items-center lg:justify-center xl:items-center xl:justify-center 2xl:items-center 2xl:justify-center 3xl:items-center 3xl:justify-center py-5 xs:py-3 sm:py-4 xl:py-5 3xl:py-25">
+    <section className=" bg-white w-full h-auto flex flex-col xs:items-center xs:justify-center sm:items-center sm:justify-center md:items-center md:justify-center lg:items-center lg:justify-center xl:items-center xl:justify-center 2xl:items-center 2xl:justify-center 3xl:items-center 3xl:justify-center py-5 xs:py-3 sm:py-4 xl:py-5 3xl:py-10">
       <div className="w-full max-w-[360px] xs:max-w-[480px] sm:max-w-[640px] md:max-w-[768px] lg:max-w-[1024px] xl:max-w-[1280px] 2xl:max-w-[1536px] mx-auto px-2 xs:px-3 sm:px-4 md:px-6">
         <h2 className="font-bold text-[#071637] text-xl xss:text-xl sm:text-2xl md:text-3xl  mb-4 xs:mb-5 sm:mb-6 md:mb-4 lg:mb-3 text-center">
           Our Testimonials

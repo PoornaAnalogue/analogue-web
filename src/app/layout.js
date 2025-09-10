@@ -1,9 +1,8 @@
 import { Urbanist } from "next/font/google";
 import "./globals.css";
-import CustomCursor from "./CustomCursor";
 import Footer from "@/Components/Footer";
-import ModalPopUp from "@/Components/Modal-PopUp";
 import Navbar from "@/Components/Navbar";
+import CursorWrapper from "@/Components/CursorWrapper";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
@@ -16,12 +15,13 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+
   return (
     <html lang="en" className="scroll-smooth">
       <head><link rel="icon" href="/favicon.png" sizes="any" /></head>
       <body className={urbanist.className} >
         {/* <ModalPopUp /> */}
-        <CustomCursor />
+        <CursorWrapper />
         <Navbar />
         {children}
         <Footer />

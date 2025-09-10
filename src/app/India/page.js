@@ -1,7 +1,7 @@
 export default  function Responsive_India(){
     return(
         <>
-        <div className="w-full h-auto bg-white xl:p-5 xl:px-20 xss:p-5 xs:p-5 sm:px-8 ">
+        <div className=" w-full h-auto bg-white xl:p-5 xl:px-20 xss:p-5 xs:p-5 sm:px-8 ">
             <p className='font-weight-400 font-semibold text-[#0D6EFD] xl:text-2xl xl:mb-4 xss:mb-1 xss:text-sm xs:mb-1 xs:text-lg sm:text-subnormal lg:text-xl md:text-[1.4rem] xl:text-normal 2xl:text-normal 3xl:text-subbigheading '>
                 Mobile App Development Company in India
             </p>
