@@ -26,8 +26,10 @@ const Responsive_ServicePage_MobileTest = () => {
       id: 1,
       title: "App Development",
       content: [
-        "Looking for the best Mobile App Development Company in Hyderabad? Analogue IT Solutions is your trusted partner for turning ideas into powerful mobile apps. We specialize in Android, iOS, and cross-platform development, delivering fast, scalable, and user-friendly solutions. Our expert team focuses on UI/UX design, smooth performance, and secure architecture to provide exceptional user experiences.", 
-        <p key = "app-br3"  className="pb-2"> </p>,  
+        "Looking for the best Mobile App Development Company in Hyderabad? Analogue IT Solutions is your trusted partner for turning ideas into powerful mobile apps. We specialize in Android, iOS, and cross-platform development, delivering fast, scalable, and user-friendly solutions. Our expert team focuses on UI/UX design, smooth performance, and secure architecture to provide exceptional user experiences.",
+        <p key="app-br3" className="pb-2">
+          {" "}
+        </p>,
         "From startups to enterprises, we serve industries like healthcare, e-commerce, travel, and logistics. Covering the complete app development lifecycle, we ensure precision at every stage. Businesses choose us because we build apps that engage users, strengthen brands, and drive business growth.",
       ],
       bg: "bg-[#4335A7]",
@@ -39,7 +41,9 @@ const Responsive_ServicePage_MobileTest = () => {
       title: "Website Development",
       content: [
         "Looking for the best Website Development Company in Hyderabad? Analogue IT Solutions creates websites that not only look great but also perform, engage, and deliver measurable results. Our services include business websites, e-commerce platforms, portals, and custom web solutions tailored to your brand. We prioritize speed, security, SEO-friendly structures, and responsive design to ensure smooth performance across all devices.",
-        <p key = "web-br3"  className="pb-2"> </p>,
+        <p key="web-br3" className="pb-2">
+          {" "}
+        </p>,
         "As a trusted Website Development Company in Hyderabad, we work with startups, SMEs, and enterprises to build strong online identities. Clients choose us because we transform ideas into powerful digital platforms that drive conversions, build trust, and accelerate growth.",
       ],
       bg: "bg-[#FFF6E9]",
@@ -51,8 +55,10 @@ const Responsive_ServicePage_MobileTest = () => {
       title: "UI UX Design",
       content: [
         "Searching for the leading UI/UX Design Company in Hyderabad? At Analogue IT Solutions, we transform ideas into seamless digital journeys that delight users. Our designs are modern, engaging, and user-focused, ensuring a perfect mix of creativity and functionality. Whether it's wireframes, prototypes, or complete design systems, our team pays attention to every detail that represents your brand.",
-        <p key = "ui-br2"  className="pb-2"> </p>,
-         "Known as one of the top UI/UX Design Companies in Hyderabad, we emphasize smooth navigation, visual appeal, and user satisfaction. Businesses trust us because we deliver experiences that not only stand out but also enhance engagement, build loyalty, and accelerate growth.",
+        <p key="ui-br2" className="pb-2">
+          {" "}
+        </p>,
+        "Known as one of the top UI/UX Design Companies in Hyderabad, we emphasize smooth navigation, visual appeal, and user satisfaction. Businesses trust us because we deliver experiences that not only stand out but also enhance engagement, build loyalty, and accelerate growth.",
       ],
       bg: "bg-[#8FC7FF]",
       text: "text-[#03153A]",
@@ -63,7 +69,9 @@ const Responsive_ServicePage_MobileTest = () => {
       title: "Digital Marketing",
       content: [
         "Searching for the best Digital Marketing Agency in Hyderabad? At Analogue IT Solutions, we combine strategy and creativity to drive measurable business growth. Unlike generic approaches, we believe in tailored solutions designed around your brand's unique goals. Our team of experts specializes in SEO, Social Media Marketing, Paid Advertising, and Content Marketing, ensuring your business stands out in the digital landscape.",
-        <p key = "dig-br2"  className="pb-2"> </p>,
+        <p key="dig-br2" className="pb-2">
+          {" "}
+        </p>,
         " Every campaign is built on deep research, innovative ideas, and data-driven execution to maximize results. Recognized as a trusted digital marketing agency, we help startups, SMEs, and enterprises build visibility, engage audiences, and achieve sustainable online success.",
       ],
       bg: "bg-[#FF7F3E]",
@@ -75,7 +83,9 @@ const Responsive_ServicePage_MobileTest = () => {
       title: "GPS Tracking",
       content: [
         " Looking for the best GPS Tracking Company in Hyderabad? Analogue IT Solutions provides reliable, advanced GPS solutions designed to secure your vehicles, assets, and workforce. Our technology offers real-time tracking, route optimization, fuel monitoring, and detailed reporting to help businesses enhance efficiency and reduce costs.",
-          <p key = "gps-br2"  className="pb-2"> </p>,
+        <p key="gps-br2" className="pb-2">
+          {" "}
+        </p>,
         "Whether you manage a logistics fleet, cab service, or delivery network, our GPS systems give you complete control 24/7. Trusted by startups and enterprises alike, we are recognized as a leading GPS Tracking Company in Hyderabad. Clients choose us because we deliver accuracy, security, and easy-to-use dashboards that simplify operations and drive business growth.",
       ],
       bg: "bg-[#072060]",
@@ -136,20 +146,20 @@ const Responsive_ServicePage_MobileTest = () => {
             }`}
           >
             {heading.map((char, i) => (
-                          <motion.span
-                            key={`services-${i}`}
-                            variants={letterVariants}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: false, amount: 0.6 }}
-                            transition={{ delay: i * 0.2, duration: 0.4 }}
-                            className="inline-block"
-                          >
-                            {char === " " ? "\u00A0" : char}
-                          </motion.span>
-                        ))}
-                      </motion.p>
-          
+              <motion.span
+                key={`services-${i}`}
+                variants={letterVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.6 }}
+                transition={{ delay: i * 0.2, duration: 0.4 }}
+                className="inline-block"
+              >
+                {char === " " ? "\u00A0" : char}
+              </motion.span>
+            ))}
+          </motion.p>
+
           <motion.p
             className={`text-4xl xss:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-[#4D4B4B] transform transition-transform duration-1000 ${
               animate
@@ -158,29 +168,36 @@ const Responsive_ServicePage_MobileTest = () => {
             }`}
           >
             {subHeading.map((char, i) => (
-                          <motion.span
-                            key={`provide-${i}`}
-                            variants={letterVariantsProvide}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: false, amount: 0.6 }}
-                            transition={{ delay: (subHeading.length - 1 - i) * 0.1, duration: 0.4 }}
-                            className="inline-block"
-                          >
-                            {char === " " ? "\u00A0" : char}
-                          </motion.span>
-                        ))}
-                      </motion.p>
+              <motion.span
+                key={`provide-${i}`}
+                variants={letterVariantsProvide}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.6 }}
+                transition={{
+                  delay: (subHeading.length - 1 - i) * 0.1,
+                  duration: 0.4,
+                }}
+                className="inline-block"
+              >
+                {char === " " ? "\u00A0" : char}
+              </motion.span>
+            ))}
+          </motion.p>
         </div>
         <div className="bg-blue-900 ">
           <div className="w-full h-auto ">
             {containers.map((container, index) => (
               <div
                 key={container.id}
-              // Mobile & Tablet → Click
-                onClick={!isXL ? () => toggleContainer(container.id) : undefined}
+                // Mobile & Tablet → Click
+                onClick={
+                  !isXL ? () => toggleContainer(container.id) : undefined
+                }
                 // Desktop (xl and above) → Hover
-                onMouseEnter={isXL ? () => toggleContainer(container.id) : undefined}                // onMouseEnter={() => toggleContainer(container.id)} // 👈 hover also works
+                onMouseEnter={
+                  isXL ? () => toggleContainer(container.id) : undefined
+                } // onMouseEnter={() => toggleContainer(container.id)} // 👈 hover also works
                 className={`${
                   container.bg
                 } flex flex-col xss:flex-row overflow-hidden transition-all duration-1000 ${
@@ -200,8 +217,10 @@ const Responsive_ServicePage_MobileTest = () => {
                     <div className=" xs:pt-2 xss:mx-0 xss:px-0 sm:mb-2 md:mb-3 font-bold text-lg xss:text-sm xs:text-lg  sm:text-xl md:text-2xl lg:text-normal mb-2 xs:mb-1">
                       <h2>{container.title}</h2>
                     </div>
-                    <div className=" leading-[1.3] sm:leading-[1.5] text-xs xss:text-subsmall sm:text-[0.6rem] md:text-small xl:text-[0.8rem] 2xl:text-[1rem] 3xl:text-base
-                    ">
+                    <div
+                      className=" leading-[1.3] sm:leading-[1.5] text-xs xss:text-subsmall sm:text-[0.6rem] md:text-small xl:text-[0.8rem] 2xl:text-[1rem] 3xl:text-base
+                    "
+                    >
                       {container.content}
                     </div>
                   </div>
@@ -213,12 +232,12 @@ const Responsive_ServicePage_MobileTest = () => {
                   <div
                     className={` relative w-full transition-all duration-500 
                     ${
-                        expandedContainer === container.id
+                      expandedContainer === container.id
                         ? "h-full "
                         : "h-[8rem] xss:h-[6rem] sm:h-[8rem] md:h-[12rem] lg:h-[13rem] xl:h-[14rem] "
                     }
                     `}
-                >
+                  >
                     <Image
                       src={container.src}
                       alt={`${container.title} illustration`}

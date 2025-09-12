@@ -3,7 +3,7 @@
 // import PhoneInput from "react-phone-input-2";
 // import "react-phone-input-2/lib/style.css";
 // import { useRouter } from "next/navigation";
-// import { FiRefreshCcw } from "react-icons/fi"; 
+// import { FiRefreshCcw } from "react-icons/fi";
 
 // export default function PopUpForm({ isOpen, onClose }) {
 //   const router = useRouter();
@@ -29,7 +29,6 @@
 // };
 
 // const isError = (field) => touched[field] && !formData[field];
-  
 
 // const isValidPhone = (phone) => {
 //   // Remove +91 or 91 and non-digits
@@ -39,16 +38,15 @@
 //   return /^[6-9]\d{9}$/.test(num);
 // };
 
-
 //     // capcha generation
 //      const [captcha, setCaptcha] = useState("");
-//      const [captchaError, setCaptchaError] = useState(""); 
-  
+//      const [captchaError, setCaptchaError] = useState("");
+
 //     // Generate captcha on mount
 //     useEffect(() => {
 //       generateCaptcha();
 //     }, []);
-  
+
 //     const generateCaptcha = () => {
 //       const chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 //       let code = "";
@@ -57,7 +55,7 @@
 //       }
 //       setCaptcha(code);
 //     };
-  
+
 // const handleSubmit = (e) => {
 //   e.preventDefault();
 
@@ -102,7 +100,6 @@
 
 //       if (!isOpen) return null;
 
-
 //   return (
 //     <div
 //       className="fixed inset-0 z-[1000] flex items-center border-white justify-center bg-black/30 backdrop-blur-[2px] px-4"
@@ -141,7 +138,6 @@
 //             Get a Quote from a Top Mobile App Development Company
 //           </p>
 
-
 //            {/* Form Fields */}
 //        <form onSubmit={handleSubmit}
 //        className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-2 2xl:gap-5 xs:gap-2 overflow-hidden">
@@ -170,7 +166,6 @@
 //               </div>
 //             ))}
 
-
 //             <div>
 //               <PhoneInput
 //                 country={"in"}
@@ -196,8 +191,6 @@
 //                 <p className="text-xs text-red-500 mt-1">Please enter a valid number.</p>
 //               )}
 //             </div>
-
-
 
 //             <div className="md:col-span-2">
 //               <select
@@ -270,8 +263,6 @@
 //               {captchaError && <p className="text-xs text-red-500">{captchaError}</p>}
 //             </div>
 
-
-
 //             <div className="col-span-1 md:grid-cols-2 flex justify-start mt-2">
 //               <button type="submit" className="px-4 py-2 bg-blue-500 rounded-full text-white hover:bg-blue-600 transition xss:text-xs lg:text-sm">
 //                 Get A Quote
@@ -319,8 +310,6 @@
 //   );
 // }
 
-
-
 "use client";
 import React, { useState, useEffect } from "react";
 import PhoneInput from "react-phone-input-2";
@@ -336,16 +325,16 @@ import { TestForm } from "@/utils/APICalling";
 export default function PopUpForm({ isOpen, onClose }) {
   const router = useRouter();
   const [formData, setFormData] = useState({
-  name: "",
-  email: "",
-  phone: "", 
-  dialCode: "",    
-  countryName: "",   
-  subject: "",
-  reach: "",   
-  message: "",
-  captchaInput: "",
-});
+    name: "",
+    email: "",
+    phone: "",
+    dialCode: "",
+    countryName: "",
+    subject: "",
+    reach: "",
+    message: "",
+    captchaInput: "",
+  });
 
   const [touched, setTouched] = useState({});
   const [captcha, setCaptcha] = useState("");
@@ -363,26 +352,25 @@ export default function PopUpForm({ isOpen, onClose }) {
 
   const isError = (field) => touched[field] && !formData[field];
 
-const isValidPhone = (phone, country) => {
-  if (!country) return false;
+  const isValidPhone = (phone, country) => {
+    if (!country) return false;
 
-  // Remove all non-digits
-  let num = phone.replace(/\D/g, "");
+    // Remove all non-digits
+    let num = phone.replace(/\D/g, "");
 
-  // Strict rule for India (+91)
-  if (country.dialCode === "91") {
-    // Remove the dial code prefix if it exists
-    if (num.startsWith("91")) {
-      num = num.slice(2);
+    // Strict rule for India (+91)
+    if (country.dialCode === "91") {
+      // Remove the dial code prefix if it exists
+      if (num.startsWith("91")) {
+        num = num.slice(2);
+      }
+      return /^[6-9]\d{9}$/.test(num); // must start 6-9 and be exactly 10 digits
     }
-    return /^[6-9]\d{9}$/.test(num); // must start 6-9 and be exactly 10 digits
-  }
 
-  // Generic rule for other countries
-  const expectedLength = (country.format.match(/\./g) || []).length;
-  return num.length === expectedLength;
-};
-
+    // Generic rule for other countries
+    const expectedLength = (country.format.match(/\./g) || []).length;
+    return num.length === expectedLength;
+  };
 
   useEffect(() => {
     generateCaptcha();
@@ -433,33 +421,33 @@ const isValidPhone = (phone, country) => {
     // ✅ API Call using GetQuotation
     try {
       const payload = {
-      name: formData.name,
-      email: formData.email,
-      phoneNumber: formData.phone,  // ✅ mapping
-      subject: formData.subject,
-      reachUs: formData.reach,      // ✅ mapping
-      message: formData.message,
-    };
+        name: formData.name,
+        email: formData.email,
+        phoneNumber: formData.phone, // ✅ mapping
+        subject: formData.subject,
+        reachUs: formData.reach, // ✅ mapping
+        message: formData.message,
+      };
 
-   // 👉 Second API (HelloLeads)
-    const countryData = {
-      dialCode: formData.dialCode,   // "91"
-      name: formData.countryName,    // "India"
-    };
+      // 👉 Second API (HelloLeads)
+      const countryData = {
+        dialCode: formData.dialCode, // "91"
+        name: formData.countryName, // "India"
+      };
 
-    try {
-  const response = await TestForm(payload);
-  console.log("✅ API Response:", response);
-} catch (err) {
-  console.error("❌ TestForm failed:", err);
-}
+      try {
+        const response = await TestForm(payload);
+        console.log("✅ API Response:", response);
+      } catch (err) {
+        console.error("❌ TestForm failed:", err);
+      }
 
-try {
-  const crmResponse = await HelloLeadsAPI(payload, countryData);
-  console.log("✅ CRM API Response:", crmResponse);
-} catch (err) {
-  console.error("❌ HelloLeads failed:", err);
-}
+      try {
+        const crmResponse = await HelloLeadsAPI(payload, countryData);
+        console.log("✅ CRM API Response:", crmResponse);
+      } catch (err) {
+        console.error("❌ HelloLeads failed:", err);
+      }
 
       toast.success("Your request has been submitted!", {
         position: "bottom-center",
@@ -529,9 +517,24 @@ try {
        <form onSubmit={handleSubmit}
        className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-2 2xl:gap-2 3xl:gap-5 xs:gap-2 overflow-hidden">
             {[
-              { name: "name", type: "text", placeholder: "Your Name*", id: "name"},
-              { name: "email", type: "email", placeholder: "Your Email", id: "email" },
-              { name: "subject", type: "text", placeholder: "Subject*", id: "subject" },
+              {
+                name: "name",
+                type: "text",
+                placeholder: "Your Name*",
+                id: "name",
+              },
+              {
+                name: "email",
+                type: "email",
+                placeholder: "Your Email",
+                id: "email",
+              },
+              {
+                name: "subject",
+                type: "text",
+                placeholder: "Subject*",
+                id: "subject",
+              },
             ].map((field, i) => (
               <div key={i}>
                 <input
@@ -553,40 +556,48 @@ try {
               </div>
             ))}
 
-
             <div>
               <PhoneInput
                 country={"in"}
                 value={formData.phone}
                 onChange={(value, country) => {
-                setFormData((prev) => ({
-                  ...prev,
-                  phone: value,             
-                  dialCode: country.dialCode,
-                  countryName: country.name,   
-                  countryFormat: country.format,
-                }));
-                setTouched((prev) => ({ ...prev, phone: true }));
-              }}
+                  setFormData((prev) => ({
+                    ...prev,
+                    phone: value,
+                    dialCode: country.dialCode,
+                    countryName: country.name,
+                    countryFormat: country.format,
+                  }));
+                  setTouched((prev) => ({ ...prev, phone: true }));
+                }}
                 countryCodeEditable={false}
                 enableSearch={true}
                 inputClass="!bg-transparent !border-none !focus:outline-none !text-xs !w-full !pl-12 !text-gray-800 placeholder-black"
                 buttonClass="!bg-transparent !border-none !outline-none"
                 containerClass={`!border-b !pb-1 ${
-                  touched.phone && formData.phone && !isValidPhone(formData.phone)
+                  touched.phone &&
+                  formData.phone &&
+                  !isValidPhone(formData.phone)
                     ? "!border-red-500 !text-red-600"
                     : "!border-gray-800"
                 }`}
                 dropdownClass="!bg-white !text-xs"
-                placeholder="Phone Number*" name="phoneNumber" id="phoneNumber" 
+                placeholder="Phone Number*"
+                name="phoneNumber"
+                id="phoneNumber"
                 onBlur={() => setTouched((prev) => ({ ...prev, phone: true }))}
               />
-              {touched.phone && formData.phone && !isValidPhone(formData.phone, { dialCode: formData.dialCode, format: formData.countryFormat }) && (
-                <p className="text-xs text-red-500 mt-1">Please enter a valid number.</p>
-              )}
+              {touched.phone &&
+                formData.phone &&
+                !isValidPhone(formData.phone, {
+                  dialCode: formData.dialCode,
+                  format: formData.countryFormat,
+                }) && (
+                  <p className="text-xs text-red-500 mt-1">
+                    Please enter a valid number.
+                  </p>
+                )}
             </div>
-
-
 
             <div className="md:col-span-2">
               <select
@@ -625,9 +636,16 @@ try {
                 onChange={handleChange}
                 onBlur={handleBlur}
                 className={`bg-transparent border-b focus:outline-none text-gray-800 text-xs placeholder-black py-2 w-full ${
-                  isError("message") ? "border-red-500 text-red-600" : "border-gray-800"
-                }`}/>
-              {isError("message") && <p className="text-xs text-red-500 mt-1">Message is required.</p>}
+                  isError("message")
+                    ? "border-red-500 text-red-600"
+                    : "border-gray-800"
+                }`}
+              />
+              {isError("message") && (
+                <p className="text-xs text-red-500 mt-1">
+                  Message is required.
+                </p>
+              )}
             </div>
 
             {/* Captcha Section */}
@@ -654,16 +672,21 @@ try {
                 onChange={handleChange}
                 placeholder="Enter Captcha"
                 id="captchaInput"
-                className={`border-b bg-transparent focus:outline-none text-xs text-gray-800 placeholder-black py-2 xss:w-1/2 md:w-1/4 xl:w-1/8 ${captchaError ? "border-red-500 text-red-600" : ""}`}
+                className={`border-b bg-transparent focus:outline-none text-xs text-gray-800 placeholder-black py-2 xss:w-1/2 md:w-1/4 xl:w-1/8 ${
+                  captchaError ? "border-red-500 text-red-600" : ""
+                }`}
               />
               {/* Error message below input */}
-              {captchaError && <p className="text-xs text-red-500">{captchaError}</p>}
+              {captchaError && (
+                <p className="text-xs text-red-500">{captchaError}</p>
+              )}
             </div>
 
-
-
             <div className="col-span-1 md:grid-cols-2 flex justify-start mt-2">
-              <button type="submit" className="px-4 py-2 bg-blue-500 rounded-full text-white hover:bg-blue-600 transition xss:text-xs lg:text-sm">
+              <button
+                type="submit"
+                className="px-4 py-2 bg-blue-500 rounded-full text-white hover:bg-blue-600 transition xss:text-xs lg:text-sm"
+              >
                 Get A Quote
               </button>
             </div>
@@ -704,7 +727,7 @@ try {
             }
           }
         `}</style>
+      </div>
     </div>
-  </div>
   );
 }

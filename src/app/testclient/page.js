@@ -5,72 +5,71 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function PuzzleTest() {
   // ==================== Puzzle Steps ====================
-const steps = [
-  {
-    id: 1,
-    title: "Requirements",
-    img: "/puzzle1.png",
-    description:
-      "Our process begins with understanding your vision. We work closely with you to gather detailed requirements, analyze your business goals, and identify the exact needs of your mobile app. This stage ensures we align the app’s features, design, and functionality with your target audience and objectives. By defining clear requirements, we lay a strong foundation for a successful app development journey.",
-  },
-  {
-    id: 2,
-    title: "Agreement",
-    img: "/puzzle2.png",
-    description:
-      "Once the requirements are clear, we move forward with a transparent agreement. This includes project scope, timeline, budget, and deliverables. Our goal is to ensure both parties are aligned from the very beginning. With a well-defined agreement in place, we create a smooth roadmap for development and build mutual trust that drives the project’s success.",
-  },
-  {
-    id: 3,
-    title: "UI / UX",
-    img: "/puzzle3.png",
-    description:
-      "Design is where your vision comes alive! Our creative UX/UI team focuses on crafting intuitive user experiences and visually engaging interfaces. We design wireframes, prototypes, and layouts that not only reflect your brand identity but also ensure smooth navigation and user satisfaction. We ensure your app is both functional and visually stunning.",
-  },
-  {
-    id: 4,
-    title: "Development",
-    img: "/puzzle4.png",
-    description:
-      "This is where concept turns into code. Our skilled developers translate the approved designs into a fully functional mobile application. We emphasize performance, security, and scalability while using modern frameworks such as React Native, Flutter, Swift, and Kotlin. By following a structured development cycle, we ensure your app is robust, reliable, and ready to scale as your business grows.",
-  },
-  {
-    id: 5,
-    title: "Testing",
-    img: "/puzzle5.png",
-    description:
-      "Quality is at the heart of our process. Once development is complete, our QA experts thoroughly test the app for functionality, speed, and security. We perform device testing, bug fixes, and performance checks to make sure the app runs seamlessly across iOS, Android, and cross-platform environments. This step ensures your users get a flawless experience from the very first use.",
-  },
-  {
-    id: 6,
-    title: "Client Approval",
-    img: "/puzzle6.png",
-    description:
-      "At this stage, we hand over the tested app for your final review. We walk you through its features, design flow, and overall performance. Any adjustments or fine-tuning you suggest are carefully implemented. Once you’re fully satisfied, we secure your approval to move ahead with the launch.",
-  },
-  {
-    id: 7,
-    title: "Deployment",
-    img: "/puzzle7.png",
-    description:
-      "The launch day is here! Our team ensures your app goes live smoothly on app stores, meeting every technical and security requirement. With a flawless deployment process, we make sure your app is ready to reach users and create an immediate impact.",
-  },
-  {
-    id: 8,
-    title: "User Will Use",
-    img: "/puzzle8.png",
-    description:
-      "Once deployed, your app becomes available for users to download and interact with. This is where the real value begins. Customers engage with your features, explore the design, and experience the solutions your app provides. Our focus is on ensuring users enjoy a seamless, engaging, and satisfying journey from the very first use.",
-  },
-  {
-    id: 9,
-    title: "Analogue Monitor",
-    img: "/puzzle9.png",
-    description:
-      "We believe in long-term collaboration. After deployment, our team actively tracks your app’s performance, resolves issues, and rolls out updates. From maintaining system health to adding new features, we ensure your app remains reliable, secure, and aligned with user expectations helping your business grow continuously.",
-  },
-];
-
+  const steps = [
+    {
+      id: 1,
+      title: "Requirements",
+      img: "/puzzle1.png",
+      description:
+        "Our process begins with understanding your vision. We work closely with you to gather detailed requirements, analyze your business goals, and identify the exact needs of your mobile app. This stage ensures we align the app’s features, design, and functionality with your target audience and objectives. By defining clear requirements, we lay a strong foundation for a successful app development journey.",
+    },
+    {
+      id: 2,
+      title: "Agreement",
+      img: "/puzzle2.png",
+      description:
+        "Once the requirements are clear, we move forward with a transparent agreement. This includes project scope, timeline, budget, and deliverables. Our goal is to ensure both parties are aligned from the very beginning. With a well-defined agreement in place, we create a smooth roadmap for development and build mutual trust that drives the project’s success.",
+    },
+    {
+      id: 3,
+      title: "UI / UX",
+      img: "/puzzle3.png",
+      description:
+        "Design is where your vision comes alive! Our creative UX/UI team focuses on crafting intuitive user experiences and visually engaging interfaces. We design wireframes, prototypes, and layouts that not only reflect your brand identity but also ensure smooth navigation and user satisfaction. We ensure your app is both functional and visually stunning.",
+    },
+    {
+      id: 4,
+      title: "Development",
+      img: "/puzzle4.png",
+      description:
+        "This is where concept turns into code. Our skilled developers translate the approved designs into a fully functional mobile application. We emphasize performance, security, and scalability while using modern frameworks such as React Native, Flutter, Swift, and Kotlin. By following a structured development cycle, we ensure your app is robust, reliable, and ready to scale as your business grows.",
+    },
+    {
+      id: 5,
+      title: "Testing",
+      img: "/puzzle5.png",
+      description:
+        "Quality is at the heart of our process. Once development is complete, our QA experts thoroughly test the app for functionality, speed, and security. We perform device testing, bug fixes, and performance checks to make sure the app runs seamlessly across iOS, Android, and cross-platform environments. This step ensures your users get a flawless experience from the very first use.",
+    },
+    {
+      id: 6,
+      title: "Client Approval",
+      img: "/puzzle6.png",
+      description:
+        "At this stage, we hand over the tested app for your final review. We walk you through its features, design flow, and overall performance. Any adjustments or fine-tuning you suggest are carefully implemented. Once you’re fully satisfied, we secure your approval to move ahead with the launch.",
+    },
+    {
+      id: 7,
+      title: "Deployment",
+      img: "/puzzle7.png",
+      description:
+        "The launch day is here! Our team ensures your app goes live smoothly on app stores, meeting every technical and security requirement. With a flawless deployment process, we make sure your app is ready to reach users and create an immediate impact.",
+    },
+    {
+      id: 8,
+      title: "User Will Use",
+      img: "/puzzle8.png",
+      description:
+        "Once deployed, your app becomes available for users to download and interact with. This is where the real value begins. Customers engage with your features, explore the design, and experience the solutions your app provides. Our focus is on ensuring users enjoy a seamless, engaging, and satisfying journey from the very first use.",
+    },
+    {
+      id: 9,
+      title: "Analogue Monitor",
+      img: "/puzzle9.png",
+      description:
+        "We believe in long-term collaboration. After deployment, our team actively tracks your app’s performance, resolves issues, and rolls out updates. From maintaining system health to adding new features, we ensure your app remains reliable, secure, and aligned with user expectations helping your business grow continuously.",
+    },
+  ];
 
   // ==================== Puzzle Styles (Hard-coded switch) ====================
   const styles = (index) => {
@@ -165,8 +164,7 @@ const steps = [
                   className="space-y-4"
                 >
                   <h4 className="text-xl font-bold mb-2">
-                    Step {steps[stepIndex - 1].id}:{" "}
-                    {steps[stepIndex - 1].title}
+                    Step {steps[stepIndex - 1].id}: {steps[stepIndex - 1].title}
                   </h4>
                   <p className="text-neutral-300 text-lg">
                     {steps[stepIndex - 1].description}

@@ -2,39 +2,52 @@ import Image from "next/image";
 
 export default function BlogPageTesting() {
   const blogsData = [
-  {
-    id: 1,
-    title: "Dynamic Blog Example 1",
-    author: "Madhavika",
-    blocks: [
-      { type: "heading", data: "Welcome to blog 1" },
-      { type: "paragraph", data: "This is an introduction for blog 1." },
-      { type: "image", data: { url: "/BlogImages/BlogsImg-1.svg", alt: "Sample 1" } },
-      { type: "quote", data: "Consistency is the key!" }
-    ]
-  },
-  {
-    id: 2,
-    title: "Dynamic Blog Example 2",
-    author: "Madhavika",
-    blocks: [
-      { type: "heading", data: "Welcome to blog 2" },
-      { type: "paragraph", data: "This is an introduction for blog 2." },
-      { type: "image", data: { url: "/BlogImages/BlogsImg-1.svg", alt: "Sample 2" } },
-      { type: "subheading", data: "Section A" },
-      { type: "paragraph", data: "Some details about section A..." }
-    ]
-  }
-];
+    {
+      id: 1,
+      title: "Dynamic Blog Example 1",
+      author: "Madhavika",
+      blocks: [
+        { type: "heading", data: "Welcome to blog 1" },
+        { type: "paragraph", data: "This is an introduction for blog 1." },
+        {
+          type: "image",
+          data: { url: "/BlogImages/BlogsImg-1.svg", alt: "Sample 1" },
+        },
+        { type: "quote", data: "Consistency is the key!" },
+      ],
+    },
+    {
+      id: 2,
+      title: "Dynamic Blog Example 2",
+      author: "Madhavika",
+      blocks: [
+        { type: "heading", data: "Welcome to blog 2" },
+        { type: "paragraph", data: "This is an introduction for blog 2." },
+        {
+          type: "image",
+          data: { url: "/BlogImages/BlogsImg-1.svg", alt: "Sample 2" },
+        },
+        { type: "subheading", data: "Section A" },
+        { type: "paragraph", data: "Some details about section A..." },
+      ],
+    },
+  ];
 
   const blogs = blogsData; // normally this comes from API
 
   return (
-    <div style={{  margin: "auto", padding: "20px" }} className="grid grid-cols-2 gap-5 text-black ">
+    <div
+      style={{ margin: "auto", padding: "20px" }}
+      className="grid grid-cols-2 gap-5 text-black "
+    >
       {blogs.map((blog) => (
         <div
           key={blog.id}
-          style={{ border: "2px solid #ddd", padding: "20px", marginBottom: "30px" }}
+          style={{
+            border: "2px solid #ddd",
+            padding: "20px",
+            marginBottom: "30px",
+          }}
         >
           <h1 className="font-bold text-xl">{blog.title}</h1>
           <p>By {blog.author}</p>

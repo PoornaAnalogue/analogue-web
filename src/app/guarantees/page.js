@@ -1,4 +1,3 @@
-
 "use client";
 import { useState } from "react";
 import { FaLock, FaDollarSign, FaUsers, FaRocket, FaSmile, FaCog, FaHeadset, FaTools, FaTwitter, FaLinkedin } from "react-icons/fa";
@@ -126,68 +125,70 @@ export default function Guarantees() {
           Analogue IT Solutions - Best Mobile App Development Application
           Services in Hyderabad
         </h1>
- 
+
         {/* Paragraph */}
-        <p
-          className="
-            mt-4 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] xl:leading-6 sm:leading-4 xs:leading-3 md:leading-5 3xl:leading-8 leading-relaxed font-medium
-            text-justify sm:text-left">
+        <p className="mt-4 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] xss:leading-5 sm:leading-6 font-medium text-justify sm:text-left pb-2">
           Analogue has achieved the name and fame of being the best mobile app
           development company in Hyderabad, by organising and formulating a
           client-centric process. Our teams will collaborate, brainstorm, and
           get the leading strategies for planning and creating a mobile
           application.
-          <br />
+          </p>
+          <p className="mt-4 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] xss:leading-5 sm:leading-6 font-medium text-justify sm:text-left">
           We are dedicated to crafting mobile applications that are engaging,
           intuitive, well-structured, innovative, and distinctive. Our goal is
           to capture the essence and ambiance of the respective business through
           a blend of essential design patterns and sophisticated style elements.
           Being the premier mobile app development company in Hyderabad, India.
-        </p><br/><br />
-      <h2 className="text-2xl xss:text-xs xss:mt-[-1rem] lg:text-lg sm:text-base font-semibold text-center lg:text-2xl xss:text-lg text-blue-600 mb-8">
-        Analogue Guarantees the following : 
-      </h2>
+        </p>
+        <br />
+        <br />
+        <h2 className="text-2xl xss:text-xs xss:mt-[-1rem] lg:text-lg sm:text-base font-semibold text-center lg:text-2xl xss:text-lg text-blue-600 mb-8">
+          Analogue Guarantees the following :
+        </h2>
 
-      {/* First 2 rows */}
-      {renderRow(row1, 0)}
-      {renderRow(row2, 3)}
+        {/* First 2 rows */}
+        {renderRow(row1, 0)}
+        {renderRow(row2, 3)}
 
       {/* Third row - last 2 items, centered */}
-      <div className="mt-4 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6 max-w-xl mx-auto">
-        {row3.map((item, idx) => {
-          const globalIndex = 6 + idx;
-          const isFlipped = flippedIndex === globalIndex;
-
-          return (
-            <div
-              key={globalIndex}
-              className="w-full xss:h-[3rem] md:h-[4rem] xl:h-[5rem] cursor-pointer perspective group"
-              onClick={() => handleCardClick(globalIndex)}
-            >
+        <div className="mt-4 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6 max-w-xl mx-auto">
+          {row3.map((item, idx) => {
+            const globalIndex = 6 + idx;
+            const isFlipped = flippedIndex === globalIndex;
+ 
+            return (
               <div
-                className={`relative h-full transition-transform duration-500 transform-style-preserve-3d ${
-                  isFlipped ? "rotate-y-180" : "group-hover:rotate-y-180"
-                }`}
+                key={globalIndex}
+                className="w-full xss:h-[3rem] md:h-[4rem] xl:h-[5rem] cursor-pointer perspective group"
+                onClick={() => handleCardClick(globalIndex)}
               >
-                {/* FRONT SIDE */}
                 <div
-                  className={`${item.bg} ${item.textColor}  absolute inset-0 flex items-center justify-center p-4 text-center rounded-xl border border-gray-300 shadow-md backface-hidden`}
+                  className={`relative w-full h-full transition-transform duration-500 transform-style-preserve-3d ${
+                    isFlipped ? "rotate-y-180" : "group-hover:rotate-y-180"
+                  }`}
                 >
-                  <span className="text-xl pr-2">{item.icon}</span>
-                  <h3 className="text-sm md:text-base font-semibold">{item.title}</h3>
-                </div>
-
-                {/* BACK SIDE */}
-                <div
-                  className={`${item.bg} ${item.textColor} absolute inset-0 flex items-center justify-center p-4 text-center rounded-xl border border-gray-300 shadow-md rotate-y-180 backface-hidden`}
-                >
-                  <p className="text-xs md:text-sm">{item.text}</p>
+                  {/* FRONT SIDE */}
+                  <div
+                    className={`${item.bg} ${item.textColor} absolute inset-0 flex items-center justify-center p-4 text-center rounded-xl border border-gray-300 shadow-md backface-hidden`}
+                  >
+                    <span className="text-xl pr-2">{item.icon}</span>
+                    <h3 className="text-sm md:text-base font-semibold">
+                      {item.title}
+                    </h3>
+                  </div>
+ 
+                  {/* BACK SIDE */}
+                  <div
+                    className={`${item.bg} ${item.textColor} absolute inset-0 flex items-center justify-center p-4 text-center rounded-xl border border-gray-300 shadow-md rotate-y-180 backface-hidden`}
+                  >
+                    <p className="text-xs md:text-sm">{item.text}</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          );
-        })}
-      </div>
+            );
+          })}
+        </div>
       </div>
     </section>
   );

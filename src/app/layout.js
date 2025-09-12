@@ -4,10 +4,11 @@ import Footer from "@/Components/Footer";
 import Navbar from "@/Components/Navbar";
 import CursorWrapper from "@/Components/CursorWrapper";
 import ModalPopUp from "@/Components/Modal-PopUp";
+import { BypassProvider } from "@/Components/ByPassProvider";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"], 
+  weight: ["400", "500", "600", "700", "800"],
 });
 
 export const metadata = {
@@ -16,16 +17,19 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-
   return (
     <html lang="en" className="scroll-smooth">
-      <head><link rel="icon" href="/favicon.png" sizes="any" /></head>
-      <body className={urbanist.className} >
+      <head>
+        <link rel="icon" href="/favicon.png" sizes="any" />
+      </head>
+      <body className={urbanist.className}>
         <ModalPopUp />
+        <BypassProvider />
         <CursorWrapper />
         <Navbar />
         {children}
         <Footer />
+        <BypassProvider />
       </body>
     </html>
   );

@@ -44,7 +44,6 @@ export default function Responsive_Testimonials() {
       image: "/Testimonial-Images/Male-logo.png",
       stars: 5,
     },
-
   ];
 
   return (
@@ -54,7 +53,8 @@ export default function Responsive_Testimonials() {
           Our Testimonials
         </h2>
         <p className="text-[#7B7E86] text-xs xs:text-sm sm:text-base  mb-6 xs:mb-8 sm:mb-10 md:mb-8 lg:mb-6 xl:mb-10 text-center">
-          Our satisfied clients share their success stories and experiences with us.
+          Our satisfied clients share their success stories and experiences with
+          us.
         </p>
 
         {/* Swiper Carousel */}
@@ -84,12 +84,16 @@ export default function Responsive_Testimonials() {
           >
             {testimonials.map((t, i) => (
               <SwiperSlide key={i}>
-                <div className="bg-white rounded-lg shadow-md border border-gray-100 flex flex-col h-full max-w-full mx-7 sm:mx-12 md:mx-2 xl:mx-5
+                <div
+                  className="bg-white rounded-lg shadow-md border border-gray-100 flex flex-col h-full max-w-full mx-7 sm:mx-12 md:mx-2 xl:mx-5
                 
-                ">
+                "
+                >
                   {/* Quote Section */}
                   <div className="bg-[#E3ECFF] px-3 xs:px-4 sm:px-5 md:px-6 py-2 xs:py-3 flex-grow flex flex-col">
-                    <span className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl text-start w-full font-medium text-black">“</span>
+                    <span className="text-4xl xs:text-5xl sm:text-6xl md:text-7xl text-start w-full font-medium text-black">
+                      “
+                    </span>
                     <p className="xss:h-[8rem] xxs:h-[7rem] xs:h-[8rem] test:h-[7rem] sm:h-[9rem] test2:h-[7rem] md:h-[12rem]  lg:h-[10rem] test4:h-[10rem] xl:h-[9rem] 2xl:h-[10rem] 3xl:h-[8rem] text-[#071637] text-[10px] xss:text-xs sm:text-sm md:text-sm   leading-4 xs:leading-5 sm:leading-6  font-light text-justify">
                       {t.text}
                     </p>
@@ -113,7 +117,9 @@ export default function Responsive_Testimonials() {
                       {Array(t.stars)
                         .fill()
                         .map((_, idx) => (
-                          <span className="pr-0.5 xs:pr-0.5 sm:pr-1" key={idx}>★</span>
+                          <span className="pr-0.5 xs:pr-0.5 sm:pr-1" key={idx}>
+                            ★
+                          </span>
                         ))}
                     </div>
                   </div>
