@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useRef, useEffect, useState } from "react";
@@ -109,145 +110,124 @@ const steps = [
     requestAnimationFrame(() => window.scrollBy({ top: amount }));
   };
 
-  // puzzle step change handler for both directions
+  // Enhanced scroll change handler for bidirectional animation
+  const handleScrollChange = (direction) => {
+    setSelectedStep(null);
 
-const handleScrollChange = (direction) => {
-  setSelectedStep(null);
+    if (scrollLock.current) return;
 
-  if (scrollLock.current) return;
-
-  if (puzzleDirection === 'forward') {
-    if (direction === "down") {
-      if (currentStep < maxStep) {
-        setCurrentStep((prev) => Math.min(prev + 1, maxStep));
-        lockScrollTemporarily();
-      } else {
-        // Forward puzzle completed, unlock
-        setIsLocked(false);
-        setIsPuzzleCompleted(true);
-        nudgeNativeScroll("down");
-      }
-    } else if (direction === "up") {
-      if (currentStep > minStep) {
-        setCurrentStep((prev) => Math.max(prev - 1, minStep));
-        lockScrollTemporarily();
-      } else {
-        // At first step scrolling up, unlock immediately
-        setIsLocked(false);
-      }
-    }
-  } else if (puzzleDirection === 'reverse') {
-    if (direction === "up") {
-      if (currentStep > minStep) {
-        setCurrentStep((prev) => Math.max(prev - 1, minStep));
-        lockScrollTemporarily();
-      } else {
-        // Reverse puzzle completed (reached step 1), unlock
-        setIsLocked(false);
-        setIsPuzzleCompleted(true);
-      }
-    } else if (direction === "down") {
-      if (currentStep < maxStep) {
-        setCurrentStep((prev) => Math.min(prev + 1, maxStep));
-        lockScrollTemporarily();
-      } else {
-        // At last step scrolling down, unlock immediately
-        setIsLocked(false);
-      }
-    }
-  }
-};
-
-// Section scroll lock and snap logic in useEffect
-useEffect(() => {
-  const section = document.getElementById("puzzle-container");
-  if (!section) return;
-
-  const handleScroll = () => {
-    const rect = section.getBoundingClientRect();
-    const currentY = window.scrollY;
-    const direction = currentY > lastScrollY.current ? "down" : "up";
-    lastScrollY.current = currentY;
-
-    // Check if user has scrolled to the middle/half of the puzzle section
-    const sectionMiddle = section.offsetTop + (section.offsetHeight / 2);
-    const viewportMiddle = window.scrollY + (window.innerHeight / 2);
-    const inView = Math.abs(viewportMiddle - sectionMiddle) < (section.offsetHeight / 4);
-    const alreadySnapped = Math.abs(window.scrollY - section.offsetTop) < 2;
-
-    if (inView && !alreadySnapped && !isPuzzleCompleted) {
-      // Completely disable any scroll animations
-      document.body.style.overflow = 'hidden';
-      const originalScrollBehavior = document.documentElement.style.scrollBehavior;
-      document.documentElement.style.scrollBehavior = 'auto';
-
-      // Set all states BEFORE any scroll operation to prevent visual jumps
-      setIsSnapping(true);
+    if (puzzleDirection === 'forward') {
       if (direction === "down") {
-        setPuzzleDirection('forward');
-        if (!hasEnteredSection.current) {
-          setCurrentStep(minStep); // Start at step 1 for forward
+        if (currentStep < maxStep) {
+          setCurrentStep((prev) => Math.min(prev + 1, maxStep));
+          lockScrollTemporarily();
+        } else {
+          // Forward puzzle completed, unlock
+          setIsLocked(false);
+          setIsPuzzleCompleted(true);
+          nudgeNativeScroll("down");
         }
-      } else {
-        setPuzzleDirection('reverse');
-        // For reverse direction, keep current state (don't reset to maxStep)
-        // This preserves the 9 pieces if user completed forward direction
-        if (!hasEnteredSection.current && currentStep === minStep) {
-          setCurrentStep(maxStep); // Only set to maxStep if starting fresh
+      } else if (direction === "up") {
+        if (currentStep > minStep) {
+          setCurrentStep((prev) => Math.max(prev - 1, minStep));
+          lockScrollTemporarily();
+        } else {
+          // At first step scrolling up, unlock
+          setIsLocked(false);
+          nudgeNativeScroll("up");
         }
       }
-
-      // Force immediate scroll with no animation whatsoever
-      window.scrollTo(0, section.offsetTop);
-      
-      // Re-enable scrolling and set final states
-      document.body.style.overflow = '';
-      setIsSnapping(false);
-      setIsLocked(true);
-      hasEnteredSection.current = true;
-
-      // Restore scroll behavior
-      setTimeout(() => {
-        document.documentElement.style.scrollBehavior = originalScrollBehavior;
-      }, 100);
-
-    } else if ((rect.bottom <= 0 || rect.top >= window.innerHeight) && hasEnteredSection.current) {
-      hasEnteredSection.current = false;
-      setIsLocked(false);
-      setIsPuzzleCompleted(false);
-      setPuzzleDirection('forward');
-      // DON'T reset currentStep - preserve the puzzle state
-      // This keeps the completed state (9 pieces) when user returns in reverse
+    } else if (puzzleDirection === 'reverse') {
+      if (direction === "up") {
+        if (currentStep > minStep) {
+          setCurrentStep((prev) => Math.max(prev - 1, minStep));
+          lockScrollTemporarily();
+        } else {
+          // Reverse puzzle completed, unlock
+          setIsLocked(false);
+          setIsPuzzleCompleted(true);
+          nudgeNativeScroll("up");
+        }
+      } else if (direction === "down") {
+        if (currentStep < maxStep) {
+          setCurrentStep((prev) => Math.min(prev + 1, maxStep));
+          lockScrollTemporarily();
+        } else {
+          // At last step scrolling down, unlock
+          setIsLocked(false);
+          nudgeNativeScroll("down");
+        }
+      }
     }
   };
 
-  window.addEventListener("scroll", handleScroll, { passive: true });
-  return () => {
-    window.removeEventListener("scroll", handleScroll);
-  };
-}, [maxStep, minStep, isPuzzleCompleted]);
+  useEffect(() => {
+    const section = document.getElementById("puzzle-container");
+    if (!section) return;
 
-// Handle puzzle completion for both directions with smoother transitions
-useEffect(() => {
-  if (isLocked) {
-    if (puzzleDirection === 'forward' && currentStep === maxStep) {
-      // Add slight delay before unlocking for smoother transition
-      setTimeout(() => {
+        let debounceTimeout = null;
+
+    const handleScroll = () => {
+      const rect = section.getBoundingClientRect();
+      const currentY = window.scrollY;
+      const direction = currentY > lastScrollY.current ? "down" : "up";
+      lastScrollY.current = currentY;
+
+      // Is any part of section in viewport?
+      const inView = rect.top < window.innerHeight && rect.bottom > 0;
+      const alreadySnapped = Math.abs(window.scrollY - section.offsetTop) < 2;
+
+      if (inView && !alreadySnapped && !isPuzzleCompleted) {
+        setIsSnapping(true); // << Block UI before snap
+        window.scrollTo({ top: section.offsetTop, behavior: "auto" }); // << Use "auto" for instant snap (no flicker)
+        setTimeout(() => {
+          setIsSnapping(false); // << Release UI after snap is done
+          setIsLocked(true);
+          if (direction === "down") {
+            setPuzzleDirection('forward');
+            setCurrentStep(minStep);
+          } else {
+            setPuzzleDirection('reverse');
+            setCurrentStep(maxStep);
+          }
+          hasEnteredSection.current = true;
+        }, 0); // let browser paint cycle run!
+      } else if ((rect.bottom <= 0 || rect.top >= window.innerHeight) && hasEnteredSection.current) {
+        hasEnteredSection.current = false;
         setIsLocked(false);
-        setIsPuzzleCompleted(true);
-        nudgeNativeScroll("down");
-      }, 300);
-    } else if (puzzleDirection === 'reverse' && currentStep === minStep) {
-      setTimeout(() => {
-        setIsLocked(false);
-        setIsPuzzleCompleted(true);
-        nudgeNativeScroll("up");
-      }, 300);
+        setIsPuzzleCompleted(false);
+        setPuzzleDirection('forward');
+      }
+    };
+
+
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      clearTimeout(debounceTimeout);
+    };
+  }, [maxStep, minStep, isPuzzleCompleted]);
+
+  // Handle puzzle completion for both directions with smoother transitions
+  useEffect(() => {
+    if (isLocked) {
+      if (puzzleDirection === 'forward' && currentStep === maxStep) {
+        // Add slight delay before unlocking for smoother transition
+        setTimeout(() => {
+          setIsLocked(false);
+          setIsPuzzleCompleted(true);
+          nudgeNativeScroll("down");
+        }, 300);
+      } else if (puzzleDirection === 'reverse' && currentStep === minStep) {
+        setTimeout(() => {
+          setIsLocked(false);
+          setIsPuzzleCompleted(true);
+          nudgeNativeScroll("up");
+        }, 300);
+      }
     }
-  }
-}, [currentStep, isLocked, maxStep, minStep, puzzleDirection]);
-
-
+  }, [currentStep, isLocked, maxStep, minStep, puzzleDirection]);
 
   // Prevent body scroll when locked (desktop + mobile touch)
   useEffect(() => {
@@ -335,7 +315,7 @@ useEffect(() => {
   };
 
   return (
-    <div id="puzzle-container" ref={headingRef} className="min-h-screen flex flex-col justify-start items-center snap-center">
+    <div id="puzzle-container" ref={headingRef} className="3xl:min-h-screen flex flex-col justify-start items-center snap-center">
       {!isSnapping && (
     <div className="sticky-wrapper">
       <h2

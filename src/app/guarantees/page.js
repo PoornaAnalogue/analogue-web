@@ -1,6 +1,8 @@
 
 "use client";
 import { useState } from "react";
+import { FaLock, FaDollarSign, FaUsers, FaRocket, FaSmile, FaCog, FaHeadset, FaTools, FaTwitter, FaLinkedin } from "react-icons/fa";
+
 
 export default function Guarantees() {
   const guarantees = [
@@ -9,48 +11,56 @@ export default function Guarantees() {
       text: "Non-Disclosure Agreement (NDA) that will ensure privacy",
       bg: "bg-blue-100",
       textColor: "text-[#2C5A88]",
+      icon: <FaLock />,
     },
     {
       title: "Affordable App Development",
       text: "Budget-friendly design and development",
       bg: "bg-purple-100",
       textColor: "text-[#26175C]",
+      icon: <FaDollarSign />,
     },
     {
       title: "Expert Development Team",
       text: "Support from a proven team of experts",
       bg: "bg-[#FFF3E3]",
       textColor: "text-[#5E3B0B]",
+      icon: <FaUsers />,
     },
     {
       title: "Fast Mobile App Delivery",
       text: "Quick development of the mobile application based on your need",
       bg: "bg-green-100",
       textColor: "text-[#276014]",
+      icon: <FaRocket />,
     },
     {
       title: "User-Friendly UI/UX",
       text: "Development of a user-friendly and interactive app",
       bg: "bg-[#FFE3FA]",
       textColor: "text-[#2C5A88]",
+      icon: <FaSmile />,
     },
     {
       title: "Seamless Performance",
       text: "Fault-free execution, even during concurrent operation by different users",
       bg: "bg-[#FFE3E3]",
       textColor: "text-[#570F0F]",
+      icon: <FaCog />,
     },
     {
       title: "Quick Response Support",
       text: "Swift response",
       bg: "bg-[#FBFFE3]",
       textColor: "text-[#5F6E0B]",
+      icon: <FaHeadset />,
     },
     {
       title: "Custom-Tailored Solutions",
       text: "Custom-tailored applications suiting your needs",
       bg: "bg-[#E3FFF5]",
       textColor: "text-[#106849]",
+      icon: <FaTools />,
     },
   ];
 
@@ -65,7 +75,7 @@ export default function Guarantees() {
   };
 
   const renderRow = (items, startIndex) => (
-    <div className="mt-4 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-3 gap-6">
+    <div className="mt-4 grid grid-cols-1 w-full items-center justify-center sm:grid-cols-1 md:grid-cols-3 gap-6 2xl:gap-10 2xl:px-20 3xl:px-55 2xl:mb-7">
       {items.map((item, idx) => {
         const globalIndex = startIndex + idx;
         const isFlipped = flippedIndex === globalIndex;
@@ -85,6 +95,7 @@ export default function Guarantees() {
               <div
                 className={`${item.bg} ${item.textColor} absolute inset-0 flex items-center justify-center p-4 text-center rounded-xl border border-gray-300 shadow-md backface-hidden`}
               >
+                <span className="text-xl pr-2">{item.icon}</span>
                 <h3 className="text-sm md:text-base font-semibold">{item.title}</h3>
               </div>
 
@@ -103,7 +114,7 @@ export default function Guarantees() {
 
   return (
     <section className="px-4 sm:px-6 lg:px-20 py-10 bg-white">
-       <div className="max-w-6xl mx-auto">
+       <div className="max-w-8xl mx-auto">
         {/* Main Heading */}
         <h1
           className="
@@ -142,7 +153,7 @@ export default function Guarantees() {
       {renderRow(row2, 3)}
 
       {/* Third row - last 2 items, centered */}
-      <div className="mt-4 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto">
+      <div className="mt-4 grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 gap-6 max-w-xl mx-auto">
         {row3.map((item, idx) => {
           const globalIndex = 6 + idx;
           const isFlipped = flippedIndex === globalIndex;
@@ -154,14 +165,15 @@ export default function Guarantees() {
               onClick={() => handleCardClick(globalIndex)}
             >
               <div
-                className={`relative w-full h-full transition-transform duration-500 transform-style-preserve-3d ${
+                className={`relative h-full transition-transform duration-500 transform-style-preserve-3d ${
                   isFlipped ? "rotate-y-180" : "group-hover:rotate-y-180"
                 }`}
               >
                 {/* FRONT SIDE */}
                 <div
-                  className={`${item.bg} ${item.textColor} absolute inset-0 flex items-center justify-center p-4 text-center rounded-xl border border-gray-300 shadow-md backface-hidden`}
+                  className={`${item.bg} ${item.textColor}  absolute inset-0 flex items-center justify-center p-4 text-center rounded-xl border border-gray-300 shadow-md backface-hidden`}
                 >
+                  <span className="text-xl pr-2">{item.icon}</span>
                   <h3 className="text-sm md:text-base font-semibold">{item.title}</h3>
                 </div>
 

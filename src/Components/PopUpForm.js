@@ -499,9 +499,9 @@ try {
       }}
     >
       {/* Modal Container */}
-      <div className="relative text-xl p-2 w-full max-w-[330px] lg:max-w-[720px] max-h-[82vh] overflow-y-auto rounded-3xl shadow-lg bg-gradient-to-br from-blue-100 via-pink-50 to-gray-100">
+      <div className="relative text-xl p-2 w-full max-w-[330px] lg:max-w-[720px] 2xl:w-[600px] 2xl:h-[75vh] 2xl:w-[720px] 3xl:max-h-[82vh] max-h-[82vh] overflow-y-auto rounded-3xl shadow-lg bg-gradient-to-br from-blue-100 via-pink-50 to-gray-100">
         {/* Form Content */}
-        <div className="relative p-2 md:p-10 xss:px-5">
+        <div className="relative p-2 md:p-10 2xl:p-1 3xl:p-6 2xl:px-8 xss:px-5">
           {/* Close Button */}
           <button
             onClick={(e) => {
@@ -527,7 +527,7 @@ try {
 
            {/* Form Fields */}
        <form onSubmit={handleSubmit}
-       className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-2 2xl:gap-5 xs:gap-2 overflow-hidden">
+       className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-2 2xl:gap-2 3xl:gap-5 xs:gap-2 overflow-hidden">
             {[
               { name: "name", type: "text", placeholder: "Your Name*", id: "name"},
               { name: "email", type: "email", placeholder: "Your Email", id: "email" },
