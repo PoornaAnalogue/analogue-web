@@ -373,15 +373,16 @@ export default function Footer() {
         </div>
         <div className="text-center md:text-lg xss:px-3 xss:text-sm bg-[#1a265c] py-4 w-screen text-gray-200 mt-4 xl:hidden">
           Copyright © {new Date().getFullYear()}
-          <Link
-            href="/"
-            className="text-blue-500 hover:text-white"
-            scroll={false}
-            onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+          <a
+            className="text-blue-500 hover:text-white cursor-pointer"
+            onClick={(e) => {
+              e.preventDefault(); // navigation prevent
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
           >
-            {" "}
             Analogue IT Solutions.
-          </Link>{" "}
+          </a>
+          {" "}
           All Rights Reserved.
         </div>
       </footer>
