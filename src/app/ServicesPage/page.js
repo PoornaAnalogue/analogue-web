@@ -3,7 +3,6 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-
 const Responsive_ServicePage_Mobile = () => {
   const [animate, setAnimate] = useState(false);
   const headerRef = useRef(null);
@@ -17,10 +16,14 @@ const Responsive_ServicePage_Mobile = () => {
       content: [
         "Looking for the best Mobile App Development Company in Hyderabad? Your search ends with Analogue IT Solutions, where we turn innovative ideas into high-performing mobile apps. We specialize in building Android, iOS, and cross-platform applications that are fast, scalable, and user-friendly.",
         <br key="app-br1" />,
-        <p key = "app-br3"  className="pb-2"> </p>,
+        <p key="app-br3" className="pb-2">
+          {" "}
+        </p>,
         " Our team focuses on UI/UX design, smooth functionality, and secure architecture to ensure every app delivers the best experience to your users. As a trusted Mobile App Development Company in Hyderabad, we serve startups, enterprises, and businesses across industries like healthcare, e-commerce, travel, and logistics.",
         <br key="app-br2" />,
-        <p key = "app-br4"  className="pb-2"> </p>,
+        <p key="app-br4" className="pb-2">
+          {" "}
+        </p>,
 
         // <br key="app-br4" />,
         " From concept to launch, we handle the complete app development lifecycle with precision. That’s why businesses choose us as the best Mobile App Development Company in Hyderabad — because we create apps that engage users and drive growth.",
@@ -35,12 +38,16 @@ const Responsive_ServicePage_Mobile = () => {
       content: [
         "Searching for the best Website Development Company in Hyderabad? At Analogue IT Solutions, we design and develop websites that do more than just look good – they perform, engage, and deliver results. Our expertise covers business websites, e-commerce stores, portals, and custom web solutions tailored to your brand’s needs.",
         <br key="web-br1" />,
-        <p key = "web-br3"  className="pb-2"> </p>,
+        <p key="web-br3" className="pb-2">
+          {" "}
+        </p>,
 
         // <br key="web-br3" />,
         "We focus on speed, security, SEO-friendly structure, and responsive design, ensuring your website works seamlessly across all devices. Being a trusted Website Development Company in Hyderabad, we help startups, SMEs, and enterprises establish a strong online identity that drives conversions and builds trust.",
-        <br key="web-br2" />,        
-        <p key = "web-br4"  className="pb-2"> </p>,
+        <br key="web-br2" />,
+        <p key="web-br4" className="pb-2">
+          {" "}
+        </p>,
 
         // <br key="web-br4" />,
         "That’s why clients recognize us as the best Website Development Company in Hyderabad – because we turn ideas into digital platforms that fuel growth.",
@@ -54,13 +61,17 @@ const Responsive_ServicePage_Mobile = () => {
       title: "UI UX Design",
       content: [
         "Looking for the best UI/UX Design Company in Hyderabad? Your search ends with Analogue IT Solutions – where creativity meets technology to deliver stunning digital experiences. We specialize in building intuitive, user-friendly, and visually engaging designs that perfectly balance innovation with functionality.",
-        <br key="ui-br1" />,        
-        <p key = "ui-br2"  className="pb-2"> </p>,
+        <br key="ui-br1" />,
+        <p key="ui-br2" className="pb-2">
+          {" "}
+        </p>,
 
         // <br key="ui-br2" />,
         "From wireframes and prototypes to full-scale design systems, our expert team ensures every detail reflects your brand and keeps users engaged.",
-        <br key="ui-br3" />,        
-        <p key = "ui-br4"  className="pb-2"> </p>,
+        <br key="ui-br3" />,
+        <p key="ui-br4" className="pb-2">
+          {" "}
+        </p>,
 
         // <br key="ui-br4" />,
         "Recognized as the best UI/UX Design Company in Hyderabad, we focus on seamless navigation, modern design trends, and customer-centric experiences that enhance usability and satisfaction. That’s why businesses trust us as the best UI/UX Design Company in Hyderabad to create digital products that stand out, boost engagement, and drive measurable growth.",
@@ -74,13 +85,17 @@ const Responsive_ServicePage_Mobile = () => {
       title: "Digital Marketing",
       content: [
         "Searching for the best Digital Marketing Agency in Hyderabad? Welcome to Analogue IT Solutions, where strategy meets creativity to deliver real business growth. We don’t believe in one-size-fits-all marketing.",
-        <br key="dig-br1" />,        
-        <p key = "dig-br2"  className="pb-2"> </p>,
+        <br key="dig-br1" />,
+        <p key="dig-br2" className="pb-2">
+          {" "}
+        </p>,
 
         // <br key="dig-br2" />,
         "Our experts design customized campaigns across SEO, Social Media, Paid Ads, and Content Marketing to match your brand goals and audience. Every strategy is backed by research, creativity, and measurable results.",
-        <br key="dig-br3" />,        
-        <p key = "dig-br4"  className="pb-2"> </p>,
+        <br key="dig-br3" />,
+        <p key="dig-br4" className="pb-2">
+          {" "}
+        </p>,
 
         // <br key="dig-br4" />,
         "As a growing brand, you need a trusted partner — and that’s why companies rely on us as their Digital Marketing Agency in Hyderabad to generate leads, build engagement, and strengthen online presence. With us, your business doesn’t just get visibility — it gets results. That’s what makes us the best Digital Marketing Agency in Hyderabad for businesses ready to scale.",
@@ -94,13 +109,17 @@ const Responsive_ServicePage_Mobile = () => {
       title: "GPS Tracking",
       content: [
         " Looking for the best GPS Tracking Company in Hyderabad? Your search ends with Analogue IT Solutions – offering reliable and advanced GPS solutions to keep your assets, vehicles, and people safe.",
-        <br key="gps-br1" />,        
-        <p key = "gps-br2"  className="pb-2"> </p>,
+        <br key="gps-br1" />,
+        <p key="gps-br2" className="pb-2">
+          {" "}
+        </p>,
 
         // <br key="gps-br2" />,
         "We provide real-time tracking, route optimization, fuel monitoring, and advanced reporting to help businesses improve efficiency and reduce costs. Whether you run a logistics fleet, cab service, or delivery business, our GPS solutions ensure you stay in control 24/7.",
         <br key="gps-br3" />,
-        <p key = "gps-br4"  className="pb-2"> </p>,
+        <p key="gps-br4" className="pb-2">
+          {" "}
+        </p>,
 
         // <br key="gps-br4" />,
         "Trusted by enterprises and startups, we are recognized as a reliable GPS Tracking Company in Hyderabad delivering accuracy, security, and easy-to-use dashboards. That’s why clients choose us as the best GPS Tracking Company in Hyderabad to streamline operations and safeguard their business.",
@@ -163,20 +182,20 @@ const Responsive_ServicePage_Mobile = () => {
             }`}
           >
             {heading.map((char, i) => (
-                          <motion.span
-                            key={`services-${i}`}
-                            variants={letterVariants}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: false, amount: 0.6 }}
-                            transition={{ delay: i * 0.2, duration: 0.4 }}
-                            className="inline-block"
-                          >
-                            {char === " " ? "\u00A0" : char}
-                          </motion.span>
-                        ))}
-                      </motion.p>
-          
+              <motion.span
+                key={`services-${i}`}
+                variants={letterVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.6 }}
+                transition={{ delay: i * 0.2, duration: 0.4 }}
+                className="inline-block"
+              >
+                {char === " " ? "\u00A0" : char}
+              </motion.span>
+            ))}
+          </motion.p>
+
           <motion.p
             className={`text-4xl xss:text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium text-[#4D4B4B] transform transition-transform duration-1000 ${
               animate
@@ -185,19 +204,22 @@ const Responsive_ServicePage_Mobile = () => {
             }`}
           >
             {subHeading.map((char, i) => (
-                          <motion.span
-                            key={`provide-${i}`}
-                            variants={letterVariantsProvide}
-                            initial="hidden"
-                            whileInView="visible"
-                            viewport={{ once: false, amount: 0.6 }}
-                            transition={{ delay: (subHeading.length - 1 - i) * 0.1, duration: 0.4 }}
-                            className="inline-block"
-                          >
-                            {char === " " ? "\u00A0" : char}
-                          </motion.span>
-                        ))}
-                      </motion.p>
+              <motion.span
+                key={`provide-${i}`}
+                variants={letterVariantsProvide}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: false, amount: 0.6 }}
+                transition={{
+                  delay: (subHeading.length - 1 - i) * 0.1,
+                  duration: 0.4,
+                }}
+                className="inline-block"
+              >
+                {char === " " ? "\u00A0" : char}
+              </motion.span>
+            ))}
+          </motion.p>
         </div>
         <div className="bg-blue-900">
           <div className="w-full h-auto">
@@ -224,8 +246,10 @@ const Responsive_ServicePage_Mobile = () => {
                     <div className="xs:pt-2 xss:mx-0 xss:px-0 font-bold text-lg xss:text-sm xs:text-lg xs:pb-2 sm:text-xl md:text-2xl lg:text-normal mb-2 xs:mb-3">
                       <h2>{container.title}</h2>
                     </div>
-                    <div className="font-light sm:text-[0.6rem] 2xl:text-subbody xss:text-subsmall md:text-small xl:text-[0.85rem] 2xl:text-subbody 3xl:text-base 3xl:leading-6
-                    ">
+                    <div
+                      className="font-light sm:text-[0.6rem] 2xl:text-subbody xss:text-subsmall md:text-small xl:text-[0.85rem] 2xl:text-subbody 3xl:text-base 3xl:leading-6
+                    "
+                    >
                       {container.content}
                     </div>
                   </div>

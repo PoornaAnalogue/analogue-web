@@ -1,4 +1,3 @@
-
 "use client";
 
 import { useRef, useState, useEffect } from "react";
@@ -146,10 +145,13 @@ export default function ClientCarousel() {
           }}
         >
           {companies.map((c, i) => (
-            <SwiperSlide key={`logo-${i}`} onClick={() => onLogoClick((i % companies.length))}>
+            <SwiperSlide
+              key={`logo-${i}`}
+              onClick={() => onLogoClick(i % companies.length)}
+            >
               <div
                 className={`flex justify-center transition-transform duration-300 cursor-pointer ${
-                  activeIndex === (i % companies.length)
+                  activeIndex === i % companies.length
                     ? "scale-125 opacity-100"
                     : "scale-90 opacity-50"
                 }`}
@@ -198,7 +200,7 @@ export default function ClientCarousel() {
             }}
           >
             {companies.map((c, i) => (
-              <SwiperSlide key={`phone-${(i)}`} className="flex justify-center">
+              <SwiperSlide key={`phone-${i}`} className="flex justify-center">
                 <div className="phone-wrapper flex justify-center">
                   <Image
                     src={c.phone}
@@ -215,169 +217,155 @@ export default function ClientCarousel() {
       </div>
 
       {/* Styles */}
-      
 
       <style jsx global>{`
-  /* 🔹 Smooth animation */
-  .client-swiper .phone-wrapper {
-    transform: scale(0.8) translateY(30px);
-    transition: transform 0.5s ease !important;
-    padding-top: 3rem;
-    padding-bottom: 2.5rem;
-  }
-  .client-swiper .swiper-slide {
-    transition: transform 0.2s ease, opacity 0.2s ease !important;
-  }
+        /* 🔹 Smooth animation */
+        .client-swiper .phone-wrapper {
+          transform: scale(0.8) translateY(30px);
+          transition: transform 0.5s ease !important;
+          padding-top: 3rem;
+          padding-bottom: 2.5rem;
+        }
+        .client-swiper .swiper-slide {
+          transition: transform 0.2s ease, opacity 0.2s ease !important;
+        }
 
-  /* 🔹 Active slide */
-  .client-swiper .swiper-slide-active .phone-wrapper {
-    transform: scale(1.2) translateY(0) translateX(10px);
-    margin-right: 20px;
-  }
+        /* 🔹 Active slide */
+        .client-swiper .swiper-slide-active .phone-wrapper {
+          transform: scale(1.2) translateY(0) translateX(10px);
+          margin-right: 20px;
+        }
 
-  /* 🔹 Neighbor slides */
-  .client-swiper .swiper-slide-prev .phone-wrapper,
-  .client-swiper .swiper-slide-next .phone-wrapper {
-    transform: scale(0.95) translateY(15px);
-  }
+        /* 🔹 Neighbor slides */
+        .client-swiper .swiper-slide-prev .phone-wrapper,
+        .client-swiper .swiper-slide-next .phone-wrapper {
+          transform: scale(0.95) translateY(15px);
+        }
 
-  /* 🔹 Image scaling */
-  .client-swiper .swiper-slide-active .phone-wrapper img {
-    transform: scale(1);
-    z-index: 10;
-  }
-  .client-swiper .swiper-slide-prev .phone-wrapper img,
-  .client-swiper .swiper-slide-next .phone-wrapper img {
-    transform: scale(1.05);
-    z-index: 5;
-  }
+        /* 🔹 Image scaling */
+        .client-swiper .swiper-slide-active .phone-wrapper img {
+          transform: scale(1);
+          z-index: 10;
+        }
+        .client-swiper .swiper-slide-prev .phone-wrapper img,
+        .client-swiper .swiper-slide-next .phone-wrapper img {
+          transform: scale(1.05);
+          z-index: 5;
+        }
 
-  /* 🔹 Extra far slides */
-  .client-swiper .prev-prev .phone-wrapper,
-  .client-swiper .next-next .phone-wrapper {
-    transform: scale(0.95) translateY(15px);
-  }
+        /* 🔹 Extra far slides */
+        .client-swiper .prev-prev .phone-wrapper,
+        .client-swiper .next-next .phone-wrapper {
+          transform: scale(0.95) translateY(15px);
+        }
 
-  /* 🔹 Small devices */
-  @media (max-width: 480px) {
-    .client-swiper .phone-wrapper img {
-      height: 250px !important;
-      width: auto !important;
-    }
-    .phone-section {
-      margin-top: 1rem !important;
-    }
-  }
- 
+        /* 🔹 Small devices */
+        @media (max-width: 480px) {
+          .client-swiper .phone-wrapper img {
+            height: 250px !important;
+            width: auto !important;
+          }
+          .phone-section {
+            margin-top: 1rem !important;
+          }
+        }
 
+        @media (max-width: 640px) {
+          .client-swiper .phone-wrapper img {
+            height: 280px !important;
+          }
+          .client-carousel-container {
+            padding-left: 0.5rem !important;
+            padding-right: 0.5rem !important;
+          }
 
-  @media (max-width: 640px) {
-  .client-swiper .phone-wrapper img {
-    height: 280px !important;
-  }
-  .client-carousel-container {
-    padding-left: 0.5rem !important;
-    padding-right: 0.5rem !important;
-  }
+          /* Neighbours */
+          .client-swiper .swiper-slide-prev .phone-wrapper,
+          .client-swiper .swiper-slide-next .phone-wrapper {
+            transform: scale(0.8) translateY(10px);
+          }
 
-  /* Neighbours */
-  .client-swiper .swiper-slide-prev .phone-wrapper,
-  .client-swiper .swiper-slide-next .phone-wrapper {
-    transform: scale(0.8) translateY(10px);
-  }
+          /* Active */
+          .client-swiper .swiper-slide-active .phone-wrapper {
+            transform: scale(1) translateY(0);
+          }
 
-  /* Active */
-  .client-swiper .swiper-slide-active .phone-wrapper {
-    transform: scale(1) translateY(0);
-  }
+          /* ✅ Shift neighbours symmetrically */
+          .client-swiper .swiper-slide-prev .phone-wrapper {
+            transform: scale(0.8) translateY(10px) translateX(10px);
+            margin: 10px;
+          }
+          .client-swiper .swiper-slide-next .phone-wrapper {
+            transform: scale(0.7) translateY(10px) translateX(-35px);
+          }
+        }
 
-  /* ✅ Shift neighbours symmetrically */
-  .client-swiper .swiper-slide-prev .phone-wrapper {
-    transform: scale(0.8) translateY(10px) translateX(10px);
-    margin:10px;
-  }
-  .client-swiper .swiper-slide-next .phone-wrapper {
-    transform: scale(0.7) translateY(10px) translateX(-35px);
-  }
-}
+        @media (max-width: 768px) {
+          .client-swiper .phone-wrapper img {
+            height: 320px !important;
+          }
+        }
 
+        /* 🔹 Tablets & laptops */
+        @media (min-width: 1024px) and (max-width: 1279px) {
+          .client-swiper .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+          }
+          .client-swiper .phone-wrapper img {
+            max-height: 80vh;
+            width: auto;
+          }
+          .client-swiper .swiper-slide-next .phone-wrapper img {
+            margin-right: -20px;
+          }
+          .client-swiper .swiper-slide-prev .phone-wrapper img {
+            margin-left: -20px;
+          }
+        }
 
+        /* 🔹 2xl screens */
+        @media (min-width: 1280px) and (max-width: 1536px) {
+          .client-swiper .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+          }
+          .client-swiper .swiper-slide-next .phone-wrapper img {
+            margin-right: -30px;
+          }
+          .client-swiper .swiper-slide-prev .phone-wrapper img {
+            margin-left: -30px;
+          }
+        }
 
-  @media (max-width: 768px) {
-    .client-swiper .phone-wrapper img {
-      height: 320px !important;
-    }
-  }
-
-
-
-
-  /* 🔹 Tablets & laptops */
-  @media (min-width: 1024px) and (max-width: 1279px) {
-    .client-swiper .swiper-slide {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: transform 0.3s ease, opacity 0.3s ease;
-    }
-    .client-swiper .phone-wrapper img {
-      max-height: 80vh;
-      width: auto;
-    }
-    .client-swiper .swiper-slide-next .phone-wrapper img {
-      margin-right: -20px;
-    }
-    .client-swiper .swiper-slide-prev .phone-wrapper img {
-      margin-left: -20px;
-    }
-
-
-  }
-
-  /* 🔹 2xl screens */
-  @media (min-width: 1280px) and (max-width: 1536px) {
-    .client-swiper .swiper-slide {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: transform 0.3s ease, opacity 0.3s ease;
-    }
-    .client-swiper .swiper-slide-next .phone-wrapper img {
-      margin-right: -30px;
-    }
-    .client-swiper .swiper-slide-prev .phone-wrapper img {
-      margin-left: -30px;
-    }
-
-    
-      
-  }
-
-  /* 🔹 Landscape tweaks */
-  @media (orientation: landscape) and (max-width: 1024px) {
-    .phone-section {
-      padding-top: 2rem !important;
-      transform: translateX(0) !important;
-    }
-    .client-swiper .swiper-slide-active .phone-wrapper {
-      transform: scale(1) translateY(0) !important;
-    }
-  }
-  @media (orientation: landscape) and (max-width: 767px) {
-    .phone-section {
-      margin-top: 0.3rem !important;
-    }
-    .client-swiper .phone-wrapper {
-      width: 90% !important;
-      padding-top: 0.5rem !important;
-    }
-    .client-swiper .swiper-slide-prev .phone-wrapper,
-    .client-swiper .swiper-slide-next .phone-wrapper {
-      transform: scale(0.8) translateY(10px) !important;
-    }
-  }
-`}</style>
- 
+        /* 🔹 Landscape tweaks */
+        @media (orientation: landscape) and (max-width: 1024px) {
+          .phone-section {
+            padding-top: 2rem !important;
+            transform: translateX(0) !important;
+          }
+          .client-swiper .swiper-slide-active .phone-wrapper {
+            transform: scale(1) translateY(0) !important;
+          }
+        }
+        @media (orientation: landscape) and (max-width: 767px) {
+          .phone-section {
+            margin-top: 0.3rem !important;
+          }
+          .client-swiper .phone-wrapper {
+            width: 90% !important;
+            padding-top: 0.5rem !important;
+          }
+          .client-swiper .swiper-slide-prev .phone-wrapper,
+          .client-swiper .swiper-slide-next .phone-wrapper {
+            transform: scale(0.8) translateY(10px) !important;
+          }
+        }
+      `}</style>
     </div>
   );
 }

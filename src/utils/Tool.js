@@ -4,8 +4,8 @@ export const HelloLeadsAPI = async (values, countryCode) => {
   const { dialCode } = countryCode;
   const dialCodePrefix = `+${dialCode}`;
 
-const cleanPhone = values.phoneNumber.replace("+", "");
-const mobileNumber = cleanPhone.slice(dialCode.length);
+  const cleanPhone = values.phoneNumber.replace("+", "");
+  const mobileNumber = cleanPhone.slice(dialCode.length);
 
   const NeedTOPass = {
     first_name: values.name,

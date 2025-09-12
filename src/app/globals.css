@@ -137,6 +137,14 @@ body {
 
 }
 
+/* globals.css */
+@media (min-height: 1025px) {
+  .h-hero {
+    min-height: auto;
+  }
+}
+
+
 @layer utilities {
   @media (min-width: var(--breakpoint-xs)) {
     .xs\:block {

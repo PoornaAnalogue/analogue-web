@@ -10,10 +10,13 @@ const Lottie = dynamic(() => import("lottie-react"), {
 });
 
 // Dynamically import the animation data
-const animationData = dynamic(() => import("@/animations/LottieFiles-Mobile.json"), {
-  ssr: false,
-});
- 
+const animationData = dynamic(
+  () => import("@/animations/LottieFiles-Mobile.json"),
+  {
+    ssr: false,
+  }
+);
+
 export default function MyLottie() {
   return (
     <div className="flex items-center justify-center h-screen bg-gray-100">

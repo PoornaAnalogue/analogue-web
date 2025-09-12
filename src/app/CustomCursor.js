@@ -16,7 +16,7 @@ export default function CustomCursor() {
       const tag = target.tagName.toLowerCase();
       const isClickable =
         target.closest("a, button, input, textarea, select, [role='button']") ||
-        target.getAttribute("onclick") !== null || 
+        target.getAttribute("onclick") !== null ||
         window.getComputedStyle(target).cursor === "not-allowed" ||
         window.getComputedStyle(target).cursor === "pointer";
 
@@ -34,41 +34,38 @@ export default function CustomCursor() {
   if (hide) return null; // don't render braces on clickable areas
 
   return (
-
-//     <div
-//   style={{
-//     position: "fixed",
-//     left: pos.x,
-//     top: pos.y,
-//     pointerEvents: "none",
-//     transform: "translate(-50%, -50%)",
-//     fontSize: "19px",
-//     fontWeight: "light",
-//     color: "black",
-//     zIndex: 9999,
-//     animation: "glow 1.5s infinite ease-in-out", // 👈 glowing effect
-//   }}
-// >
-//   {"< />"}
-// </div>
-
+    //     <div
+    //   style={{
+    //     position: "fixed",
+    //     left: pos.x,
+    //     top: pos.y,
+    //     pointerEvents: "none",
+    //     transform: "translate(-50%, -50%)",
+    //     fontSize: "19px",
+    //     fontWeight: "light",
+    //     color: "black",
+    //     zIndex: 9999,
+    //     animation: "glow 1.5s infinite ease-in-out", // 👈 glowing effect
+    //   }}
+    // >
+    //   {"< />"}
+    // </div>
 
     <div
-  style={{
-    position: "fixed",
-    left: pos.x,
-    top: pos.y,
-    pointerEvents: "none",
-    transform: "translate(-50%, -50%)",
-    fontSize: "26px",
-    fontWeight: "semibold",
-    color: "#4165e6ff",
-    zIndex: 9999,
-    animation: "glow 1.5s infinite ease-in-out", // 👈 glowing effect
-  }}
->
-  {"{ }"}
-</div>
-
+      style={{
+        position: "fixed",
+        left: pos.x,
+        top: pos.y,
+        pointerEvents: "none",
+        transform: "translate(-50%, -50%)",
+        fontSize: "26px",
+        fontWeight: "semibold",
+        color: "#4165e6ff",
+        zIndex: 9999,
+        animation: "glow 1.5s infinite ease-in-out", // 👈 glowing effect
+      }}
+    >
+      {"{ }"}
+    </div>
   );
 }

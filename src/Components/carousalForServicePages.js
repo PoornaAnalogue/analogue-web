@@ -246,13 +246,8 @@
 //       margin-top: 1rem !important;
 //     }
 //   }
- 
-
-
-
 
 // // 648....
-
 
 // /* 🔹 At 640px screens, shrink left/right images */
 // @media (max-width: 640px) {
@@ -283,14 +278,8 @@
 //   transform: translateX(-20px) scale(1.1) translateY(30px) !important;
 // }
 
-
 // }
 
-
-
-
-
-  
 //   @media (max-width: 768px) {
 //     .client-swiper .phone-wrapper img {
 //       height: 320px !important;
@@ -298,16 +287,13 @@
 //     .client-swiper .swiper-slide-prev .phone-wrapper,
 //   .client-swiper .swiper-slide-next .phone-wrapper {
 //     transform: scale(0.7) translateY(0px) !important; /* neighbors smaller */
-   
+
 //   }
 
 //   .client-swiper .phone-wrapper img {
 //     height: 280px !important; /* keep middle height */
 //   }
 // }
-
-
-
 
 //   /* adjust neighbors for equal spacing */
 //   .client-swiper .swiper-slide-prev {
@@ -316,8 +302,6 @@
 //   .client-swiper .swiper-slide-next {
 //     margin-left: 0px !important;  /* push away from edge */
 //   }
-
- 
 
 //   }
 
@@ -384,13 +368,6 @@
 //     </div>
 //   );
 // }
-
-
-
-
-
-
-
 
 "use client";
 
@@ -584,7 +561,6 @@ export default function CarousalServicePage() {
       </div>
 
       {/* Styles */}
-      
 
       <style jsx global>{`
   /* 🔹 Smooth animation */
@@ -752,7 +728,6 @@ export default function CarousalServicePage() {
     }
   }
 `}</style>
- 
     </div>
   );
 }
