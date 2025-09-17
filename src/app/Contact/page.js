@@ -34,7 +34,7 @@ export default function Contact() {
           {
             icon: "/contact/mail.svg",
             title: "Email Address",
-            text: "info@analogueitsolutions.com",
+            text: "sales@analogueitsolutions.com",
           },
           {
             icon: "/contact/distance.svg",
@@ -49,7 +49,7 @@ export default function Contact() {
           {
             icon: "/contact/mail.svg",
             title: "Send Email",
-            text: "hr@analogueitsolutions.com",
+            text: "sales@analogueitsolutions.com",
           },
           {
             icon: "/contact/business_center.svg",
@@ -82,7 +82,7 @@ export default function Contact() {
                   {item.text.includes("@") ? (
                     // Email link
                     <a
-                      href="https://mail.google.com/mail/?view=cm&to=info@analogueitsolutions.com"
+                      href="https://mail.google.com/mail/?view=cm&to=sales@analogueitsolutions.com"
                       className="text-[#071637] text-xs xss:text-xs xs:text-sm sm:text-[0.65rem] md:text-[0.75rem] lg:text-sm xl:text-sm 2xl:text-sm leading-relaxed mt-1 xss:mt-1 xs:mt-2 sm:mt-1 md:mt-2 lg:mt-3 xl:mt-3 2xl:mt-3 break-words hover:text-blue-600"
                     >
                       {item.text}

@@ -16,7 +16,6 @@ export default function MainHomePage() {
   return (
     <>
       <Home />
-      {/* <Responsive_ServicePage_Mobile /> */}
       <Responsive_ServicePage_MobileTest />
       <ClientCarousel />
       <Guarantees />

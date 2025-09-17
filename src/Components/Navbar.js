@@ -153,13 +153,13 @@ export default function Navbar() {
           <h1>Timings: 24 / 7</h1>
         </div>
         <Link
-          href="https://mail.google.com/mail/?view=cm&to=info@analogueitsolutions.com"
+          href="https://mail.google.com/mail/?view=cm&to=sales@analogueitsolutions.com"
           target="_blank"
           rel="noopener noreferrer"
           className="w-full text-center sm:w-auto xss:justify-center sm:text-left flex items-center gap-2 hover:text-blue-600 hover:underline transition-colors duration-200"
         >
           <FaEnvelope className="text-gray-700" />
-          info@analogueitsolutions.com
+          sales@analogueitsolutions.com
         </Link>
 
         <style jsx>{`
@@ -271,6 +271,11 @@ export default function Navbar() {
             <li className="hover:text-blue-600 cursor-pointer xss:text-xs 2xl:text-sm">
               <Link href="/Products" className="block w-full h-full">
                 Our Products
+              </Link>
+            </li>
+            <li className="hover:text-blue-600 cursor-pointer xss:text-xs 2xl:text-sm">
+              <Link href="/careers" className="block w-full h-full">
+                Careers
               </Link>
             </li>
             <li className="hover:text-blue-600 cursor-pointer xss:text-xs 2xl:text-sm">

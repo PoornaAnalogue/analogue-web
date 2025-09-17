@@ -8,7 +8,6 @@ import {
   FaWhatsapp,
   FaYoutube,
 } from "react-icons/fa";
-import { MdAccessTime, MdCall } from "react-icons/md";
 import Link from "next/link";
 import { CalendarIcon } from "@heroicons/react/20/solid";
 import { useBypass } from "@/Components/ByPassProvider";
@@ -388,16 +387,11 @@ export default function Footer() {
             href="/"
             className="text-blue-500 hover:text-white"
             scroll={false}
-            onClick={(e) => {
-            e.preventDefault();
-            isBypass.current = true; // 🔥 enable bypass
-            window.scrollTo({ top: 0, behavior: "smooth" });
-
-            // reset bypass after scroll finishes
-            setTimeout(() => {
-              isBypass.current = false;
-            }, 1200); // match smooth scroll duration
-          }}
+              onClick={(e) => {
+                e.preventDefault();   
+                // Just jump to top instantly
+                window.scrollTo({ top: 0, behavior: "auto" });
+              }}
           >
             {" "}
             Analogue IT Solutions.
