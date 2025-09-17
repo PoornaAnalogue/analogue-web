@@ -5,69 +5,69 @@ import React, { useRef, useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function Game() {
-  const steps = [
+const steps = [
     {
       id: 1,
       title: "Requirements",
       img: "/puzzleimages/puzzle1.png",
       description:
-        "Our process begins with understanding your vision. We work closely with you to gather detailed requirements, analyze your business goals, and identify the exact needs of your mobile app. This stage ensures we align the app's features, design, and functionality with your target audience and objectives. By defining clear requirements, we lay a strong foundation for a successful app development journey.",
+        "Our process begins with understanding your vision. We work closely with you to gather detailed requirements, analyze your business goals, and identify the exact needs of your mobile app. This stage ensures we align the app's features, design, and functionality with your target audience and objectives. By defining clear requirements, we lay a strong foundation for a successful app development journey. Additionally, we focus on mapping user expectations, market trends, and potential challenges to create a well-structured roadmap.",
     },
     {
       id: 2,
       title: "Agreement",
       img: "/puzzleimages/puzzle2.png",
       description:
-        "Once the requirements are clear, we move forward with a transparent agreement. This includes project scope, timeline, budget, and deliverables. Our goal is to ensure both parties are aligned from the very beginning. With a well-defined agreement in place, we create a smooth roadmap for development and build mutual trust that drives the project's success.",
+        "Once the requirements are clear, we move forward with a transparent agreement. This includes project scope, timeline, budget, and deliverables. Our goal is to ensure both parties are aligned from the very beginning. With a well-defined agreement in place, we create a smooth roadmap for development and build mutual trust that drives the project's success. We also define key milestones to track progress, set clear communication guidelines for regular updates, and document every detail to avoid any ambiguity. This clarity helps us maintain accountability, ensures timely delivery, and fosters a strong, long-term working relationship.",
     },
     {
       id: 3,
       title: "UI/ UX",
       img: "/puzzleimages/puzzle3.png",
       description:
-        "Design is where your vision comes alive! Our creative UX/UI team focuses on crafting intuitive user experiences and visually engaging interfaces. We design wireframes, prototypes, and layouts that not only reflect your brand identity but also ensure smooth navigation and user satisfaction. We ensure your app is both functional and visually stunning.",
+        "Design is where your vision comes alive! Our creative UX/UI team focuses on crafting intuitive user experiences and visually engaging interfaces. We design wireframes, prototypes, and layouts that not only reflect your brand identity but also ensure smooth navigation and user satisfaction. We ensure your app is both functional and visually stunning. Beyond aesthetics, we prioritize usability testing, accessibility standards, and responsive design principles. This ensures your app performs seamlessly across different devices and platforms. Ultimately, our goal is to deliver an interface that captivates users while keeping their journey simple and enjoyable.",
     },
     {
       id: 4,
       title: "Development",
       img: "/puzzleimages/puzzle4.png",
       description:
-        "This is where concept turns into code. Our skilled developers translate the approved designs into a fully functional mobile application. We emphasize performance, security, and scalability while using modern frameworks such as React Native, Flutter, Swift, and Kotlin. By following a structured development cycle, we ensure your app is robust, reliable, and ready to scale as your business grows.",
+        "This is where concept turns into code. Our skilled developers translate the approved designs into a fully functional mobile application. We emphasize performance, security, and scalability while using modern frameworks such as React Native, Flutter, Swift, and Kotlin. By following a structured development cycle, we ensure your app is robust, reliable, and ready to scale as your business grows. We also integrate third-party APIs, implement advanced features, and carry out modular coding practices for long-term flexibility. Regular code reviews and agile methodologies keep the project on track and transparent. This approach guarantees faster delivery while maintaining the highest quality standards.",
     },
     {
       id: 5,
       title: "Testing",
       img: "/puzzleimages/puzzle5.png",
       description:
-        "Quality is at the heart of our process. Once development is complete, our QA experts thoroughly test the app for functionality, speed, and security. We perform device testing, bug fixes, and performance checks to make sure the app runs seamlessly across iOS, Android, and cross-platform environments. This step ensures your users get a flawless experience from the very first use.",
+        "Quality is at the heart of our process. Once development is complete, our QA experts thoroughly test the app for functionality, speed, and security. We perform device testing, bug fixes, and performance checks to make sure the app runs seamlessly across iOS, Android, and cross-platform environments. This step ensures your users get a flawless experience from the very first use. In addition, we conduct usability testing, stress testing, and real-world simulations to identify hidden issues. Automated and manual testing methods are combined for maximum accuracy. This ensures your app not only works perfectly but also delivers consistent reliability under any condition.",
     },
     {
       id: 6,
       title: "Client Approval",
       img: "/puzzleimages/puzzle6.png",
       description:
-        "At this stage, we hand over the tested app for your final review. We walk you through its features, design flow, and overall performance. Any adjustments or fine-tuning you suggest are carefully implemented. Once you're fully satisfied, we secure your approval to move ahead with the launch.",
+        "At this stage, we hand over the tested app for your final review. We walk you through its features, design flow, and overall performance. Any adjustments or fine-tuning you suggest are carefully implemented. Once you're fully satisfied, we secure your approval to move ahead with the launch. We also provide detailed documentation and training if required, ensuring you’re confident in managing the app. This collaborative feedback loop helps us refine the product to match your exact vision. Your approval marks the green light for us to transition seamlessly into the launch phase.",
     },
     {
       id: 7,
       title: "Deployment",
       img: "/puzzleimages/puzzle7.png",
       description:
-        "The launch day is here! Our team ensures your app goes live smoothly on app stores, meeting every technical and security requirement. With a flawless deployment process, we make sure your app is ready to reach users and create an immediate impact.",
+        "The launch day is here! Our team ensures your app goes live smoothly on app stores, meeting every technical and security requirement. With a flawless deployment process, we make sure your app is ready to reach users and create an immediate impact. We handle app store submissions, compliance checks, and necessary configurations to guarantee approval without delays. Our experts also optimize app listings with descriptions, screenshots, and metadata to enhance visibility. This ensures your app not only launches successfully but also stands out to attract the right audience from day one.",
     },
     {
       id: 8,
       title: "User Will Use",
       img: "/puzzleimages/puzzle8.png",
       description:
-        "Once deployed, your app becomes available for users to download and interact with. This is where the real value begins. Customers engage with your features, explore the design, and experience the solutions your app provides. Our focus is on ensuring users enjoy a seamless, engaging, and satisfying journey from the very first use.",
+        "Once deployed, your app becomes available for users to download and interact with. This is where the real value begins. Customers engage with your features, explore the design, and experience the solutions your app provides. Our focus is on ensuring users enjoy a seamless, engaging, and satisfying journey from the very first use. We track user behavior, gather feedback, and analyze performance to understand how your app is being adopted. These insights help in making continuous improvements and updates. By prioritizing user satisfaction, we ensure your app drives long-term loyalty and business growth.",
     },
     {
       id: 9,
       title: "Analogue Monitor",
       img: "/puzzleimages/puzzle9.png",
       description:
-        "We believe in long-term collaboration. After deployment, our team actively tracks your app's performance, resolves issues, and rolls out updates. From maintaining system health to adding new features, we ensure your app remains reliable, secure, and aligned with user expectations, helping your business grow continuously.",
+        "We believe in long-term collaboration. After deployment, our team actively tracks your app's performance, resolves issues, and rolls out updates. From maintaining system health to adding new features, we ensure your app remains reliable, secure, and aligned with user expectations, helping your business grow continuously.  Our experts provide ongoing support to adapt your app to changing market demands. We proactively identify opportunities for innovation and improvement. This ensures your app stays competitive, user-friendly, and an asset that drives sustainable growth.",
     },
   ];
 
@@ -352,13 +352,13 @@ export default function Game() {
     <div
       id="puzzle-container"
       ref={headingRef}
-      className="min-h-screen flex flex-col justify-start items-center snap-center"
+      className="lg:min-h-0 flex flex-col justify-start items-center snap-center"
     >
       {!isSnapping && (
         <div className="sticky-wrapper">
           <h2
             id="featured-heading"
-            className="font-['Urbanist'] text-2xl sm:text-3xl mt-5 md:text-5xl lg:text-6xl text-center text-[#7B7E86] mb-6 sm:mb-5 md:mb-10"
+            className="font-['Urbanist'] text-2xl sm:text-3xl mt-5 md:text-5xl lg:text-6xl text-center text-[#7B7E86] mb-6 sm:mb-5 md:mb-10 xss:my-5 xs:my-3 xl:mb-3 2xl:py-3 "
           >
             {heading.map((char, i) => (
               <motion.span
@@ -375,10 +375,10 @@ export default function Game() {
             ))}
           </h2>
 
-          <div className="w-full grid grid-cols-1 lg:grid-cols-2 items-start bg-[#071637] text-white py-10 lg:py-20 sm:py-10 px-4 xl:px-12 gap-8">
+          <div className="w-full min-h-0 sm:min-h-screen lg:min-h-0 grid grid-cols-1 lg:grid-cols-2 items-start bg-[#071637] text-white py-10 lg:py-20 sm:py-10 px-4 xl:px-12 gap-8 xss:py-5 xs:py-0 xl:py-5 2xl:py-15">
             {/* Left Content */}
-            <div className="flex flex-col xl:px-10">
-              <h3 className="text-white font-bold text-xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[2rem] leading-relaxed">
+            <div className="flex flex-col xl:px-10 py-5">
+              <h3 className="text-white font-bold text-xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[2rem] leading-relaxed xss:pb-3 xs:pb-0 ">
                 Process we follow for <br /> successful project
               </h3>
 
@@ -392,11 +392,11 @@ export default function Game() {
                     transition={{ duration: 0.2 }}
                     className="mt-6 space-y-4 pr-2"
                   >
-                    <h4 className="font-weight-400 font-semibold text-[#0D6EFD] text-lg xss:text-sm sm:text-base md:text-lg 2xl:text-[1.5rem] xl:mb-4 xss:mb-1 xs:mb-1 mb-2">
+                    <h4 className="font-weight-400 font-semibold text-[#0D6EFD] text-lg xss:text-sm sm:text-base md:text-lg 2xl:text-[1.5rem] xl:mb-2 xss:mb-1 xs:mb-1 mb-2">
                       Step {steps[(selectedStep ?? currentStep) - 1].id}:{" "}
                       {steps[(selectedStep ?? currentStep) - 1].title}
                     </h4>
-                    <p className="text-neutral-300 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] xl:leading-6 sm:leading-4 xs:leading-3 md:leading-5 3xl:leading-8">
+                    <p className="text-neutral-300 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] xss:leading-5 sm:leading-6 xss:pt-3 xs:pt-0">
                       {steps[(selectedStep ?? currentStep) - 1].description}
                     </p>
                   </motion.div>

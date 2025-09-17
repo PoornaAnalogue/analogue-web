@@ -315,12 +315,13 @@ export default function Navbar() {
             </div>
 
             <button
-              suppressHydrationWarning
-              onClick={() => setIsOpen(true)}
-              className="bg-blue-600 text-sm text-white px-2 py-1.5 rounded-full hover:bg-blue-700 transition cursor-pointer"
-            >
-              Free Quote
-            </button>
+            suppressHydrationWarning
+            onClick={() => setIsOpen(true)}
+            className="bg-blue-600 text-sm text-white px-3 py-1.5 rounded-lg hover:bg-blue-500 transition cursor-pointer animate-pulse-soft"
+          >
+            Free Quote
+          </button>
+
           </div>
 
           {/* Hamburger Icon */}

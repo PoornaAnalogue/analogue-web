@@ -339,7 +339,7 @@ export default function Footer() {
                     WORKING HOURS
                   </h2>
                   <p className="text-gray-400 text-sm mt-2">
-                    Monday - Saturday <br /> 10am - 7pm
+                    Monday - Saturday <br /> <span>Timings : 24 / 7</span>
                   </p>
                 </div>
               </div>

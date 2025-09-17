@@ -21,13 +21,10 @@ export default function MainHomePage() {
       <ClientCarousel />
       <Guarantees />
       {/* <Game /> */}
-            {/* <GameTest /> */}
-            <GameTest />
-
+      <GameTest />
       <Responsive_Best_App />
       <Responsive_Testimonials />
       <Responsive_Calendar />
-      {/* <Responsive_India /> */}
       <Responsive_India_Test />
       <GetAQuoteForm />
     </>
