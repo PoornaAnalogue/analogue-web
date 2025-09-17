@@ -11,8 +11,10 @@ import {
 import { MdAccessTime, MdCall } from "react-icons/md";
 import Link from "next/link";
 import { CalendarIcon } from "@heroicons/react/20/solid";
+import { useBypass } from "@/Components/ByPassProvider";
 
 export default function Footer() {
+  const isBypass = useBypass; // 🔥 define here
   const socialLinks = [
     {
       id: 1,
@@ -275,7 +277,16 @@ export default function Footer() {
                 href="/"
                 className="text-blue-500 hover:text-white"
                 scroll={false}
-                onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                onClick={(e) => {
+                e.preventDefault();
+                isBypass.current = true; // 🔥 enable bypass
+                window.scrollTo({ top: 0, behavior: "smooth" });
+
+                // reset bypass after scroll finishes
+                setTimeout(() => {
+                  isBypass.current = false;
+                }, 1200); // match smooth scroll duration
+              }}
               >
                 {" "}
                 Analogue IT Solutions.
@@ -373,15 +384,23 @@ export default function Footer() {
         </div>
         <div className="text-center md:text-lg xss:px-3 xss:text-sm bg-[#1a265c] py-4 w-screen text-gray-200 mt-4 xl:hidden">
           Copyright © {new Date().getFullYear()}
-          <a
-            className="text-blue-500 hover:text-white cursor-pointer"
+          <Link
+            href="/"
+            className="text-blue-500 hover:text-white"
+            scroll={false}
             onClick={(e) => {
-              e.preventDefault(); // navigation prevent
-              window.scrollTo({ top: 0, behavior: "smooth" });
-            }}
+            e.preventDefault();
+            isBypass.current = true; // 🔥 enable bypass
+            window.scrollTo({ top: 0, behavior: "smooth" });
+
+            // reset bypass after scroll finishes
+            setTimeout(() => {
+              isBypass.current = false;
+            }, 1200); // match smooth scroll duration
+          }}
           >
             Analogue IT Solutions.
-          </a>
+          </Link>
           {" "}
           All Rights Reserved.
         </div>

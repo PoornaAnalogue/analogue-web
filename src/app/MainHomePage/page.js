@@ -20,9 +20,9 @@ export default function MainHomePage() {
       <Responsive_ServicePage_MobileTest />
       <ClientCarousel />
       <Guarantees />
-      {/* <Game /> */}
+      <Game />
             {/* <GameTest /> */}
-            <GameTest />
+            {/* <GameTest /> */}
 
       <Responsive_Best_App />
       <Responsive_Testimonials />

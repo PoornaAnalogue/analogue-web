@@ -1,3 +1,4 @@
+
 "use client";
 
 import React, { useRef, useEffect, useState } from "react";
@@ -93,6 +94,8 @@ export default function Game() {
   const headingRef = useRef(null);
   const touchStartY = useRef(null);
   const scrollLock = useRef(false);
+  const isBypass = useRef(false);
+
   const lastScrollY = useRef(
     typeof window !== "undefined" ? window.scrollY : 0
   );
@@ -111,8 +114,7 @@ export default function Game() {
     requestAnimationFrame(() => window.scrollBy({ top: amount }));
   };
 
-  // puzzle step change handler for both directions
-
+  // Enhanced scroll change handler for bidirectional animation
   const handleScrollChange = (direction) => {
     setSelectedStep(null);
 
@@ -166,6 +168,10 @@ export default function Game() {
     if (!section) return;
 
     const handleScroll = () => {
+
+      // 🔥 Skip puzzle lock if bypass mode is active
+      if (isBypass.current) return;
+
       const rect = section.getBoundingClientRect();
       const currentY = window.scrollY;
       const direction = currentY > lastScrollY.current ? "down" : "up";
@@ -232,7 +238,7 @@ export default function Game() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [maxStep, minStep, isPuzzleCompleted]);
+  }, [isBypass, maxStep, minStep, isPuzzleCompleted]);
 
   // Handle puzzle completion for both directions with smoother transitions
   useEffect(() => {

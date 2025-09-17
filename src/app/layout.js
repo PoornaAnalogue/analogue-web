@@ -4,6 +4,7 @@ import Footer from "@/Components/Footer";
 import Navbar from "@/Components/Navbar";
 import CursorWrapper from "@/Components/CursorWrapper";
 import ModalPopUp from "@/Components/Modal-PopUp";
+import { BypassProvider } from "@/Components/ByPassProvider";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
@@ -23,10 +24,12 @@ export default function RootLayout({ children }) {
       </head>
       <body className={urbanist.className}>
         <ModalPopUp />
+        <BypassProvider />
         <CursorWrapper />
         <Navbar />
         {children}
         <Footer />
+        <BypassProvider />
       </body>
     </html>
   );
