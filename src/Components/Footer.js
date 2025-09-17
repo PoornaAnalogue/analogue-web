@@ -393,9 +393,9 @@ export default function Footer() {
                 window.scrollTo({ top: 0, behavior: "auto" });
               }}
           >
-            {" "}
             Analogue IT Solutions.
-          </Link>{" "}
+          </Link>
+          {" "}
           All Rights Reserved.
         </div>
       </footer>

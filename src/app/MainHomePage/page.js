@@ -19,7 +19,6 @@ export default function MainHomePage() {
       <Responsive_ServicePage_MobileTest />
       <ClientCarousel />
       <Guarantees />
-      {/* <Game /> */}
       <GameTest />
       <Responsive_Best_App />
       <Responsive_Testimonials />
