@@ -479,12 +479,12 @@ export default function PopUpForm({ isOpen, onClose }) {
   return (
     <div
       className="fixed inset-0 z-[1000] flex items-center border-white justify-center bg-black/30 backdrop-blur-[2px] px-4"
-      onClick={(e) => {
-        if (e.target === e.currentTarget) {
-          e.stopPropagation();
-          onClose();
-        }
-      }}
+      // onClick={(e) => {
+      //   if (e.target === e.currentTarget) {
+      //     e.stopPropagation();
+      //     // onClose();
+      //   }
+      // }}
     >
       {/* Modal Container */}
       <div className="relative text-xl p-2 w-full max-w-[330px] lg:max-w-[720px] 2xl:w-[600px] 2xl:h-[75vh] 2xl:w-[720px] 3xl:max-h-[82vh] max-h-[82vh] overflow-y-auto rounded-3xl shadow-lg bg-gradient-to-br from-blue-100 via-pink-50 to-gray-100">

@@ -301,7 +301,7 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 gap-6 xss:px-8 pb-10 md:px-15">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 gap-6 xss:px-8 pb-10 md:px-15">
           {teamData.map((member, index) => (
           <div
             key={index}
@@ -316,7 +316,7 @@ export default function AboutPage() {
             <p className=" xss:text-xs lg:text-sm text-gray-600">{member.role}</p>
           </div>
         ))}
-      </div> */}
+      </div>
       </section>
     </>
   );
