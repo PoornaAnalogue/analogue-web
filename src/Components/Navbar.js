@@ -273,11 +273,11 @@ export default function Navbar() {
                 Our Products
               </Link>
             </li>
-            <li className="hover:text-blue-600 cursor-pointer xss:text-xs 2xl:text-sm">
+            {/* <li className="hover:text-blue-600 cursor-pointer xss:text-xs 2xl:text-sm">
               <Link href="/careers" className="block w-full h-full">
                 Careers
               </Link>
-            </li>
+            </li> */}
             <li className="hover:text-blue-600 cursor-pointer xss:text-xs 2xl:text-sm">
               <Link href="/blogs" className="block w-full h-full">
                 Blog

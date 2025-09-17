@@ -5,26 +5,26 @@ export default function Contact() {
   return (
     <div className="bg-white">
       {/* heading section */}
-      <div className="relative flex justify-center w-full bg-white">
-        <Image
-          src="/contact/Contact-Abstract-Design.svg"
-          width={480}
-          height={180}
-          alt="Abstract design background"
-          className="object-contain w-full h-auto max-w-[300px] xss:max-w-[320px] xs:max-w-[360px] sm:max-w-[480px] md:max-w-[550px]"
-          sizes="(max-width: 320px) 300px, (max-width: 360px) 320px, (max-width: 480px) 360px, (max-width: 640px) 450px, (max-width: 768px) 640px, 768px"
-        />
-        <div className="absolute top-12 xss:top-10 xs:top-10 sm:top-20 md:top-15 bg-white px-4">
-          <h1 className="text-xl xss:text-2xl xs:text-3xl sm:text-4xl md:text-[2.5rem] font-bold text-violet-950 text-center">
-            Contact Us
-          </h1>
-          <p className="text-xs xss:text-xs xs:text-base sm:text-lg text-black leading-loose text-center mt-2 sm:mt-3">
-            Contact Us
-          </p>
-        </div>
-      </div>
+      <div className="relative flex justify-center w-full bg-white ">
+                <Image
+                  src="/AdobeTech-Images/Abstract Design.svg"
+                  width={480}
+                  height={180}
+                  alt="Abstract design background"
+                  className="object-contain w-full h-auto max-w-[300px] xss:max-w-[320px] xs:max-w-[360px] sm:max-w-[450px] "
+                  sizes="(max-width: 320px) 300px, (max-width: 360px) 320px, (max-width: 480px) 360px, (max-width: 640px) 450px, (max-width: 768px) 640px, 768px"
+                />
+                <div className="absolute top-12 xss:top-10 xs:top-11 sm:top-14 md:top-15 bg-white px-4">
+                  <h1 className="text-xl xss:text-2xl  sm:text-[1.7rem] md:text-[2rem] font-bold text-violet-950 text-center">
+                    Contact Us
+                  </h1>
+                  <p className="text-xs xss:text-xs md:text-sm text-black leading-loose text-center sm:mt-2">
+                    For any inquiries, please reach out to us.
+                  </p>
+                </div>
+              </div>
 
-      <div className="grid grid-cols-1 xss:grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 gap-4 xss:gap-4 xs:gap-5 sm:gap-6 md:gap-6 lg:gap-7 xl:gap-8 2xl:gap-8 p-4 xss:p-6 xs:p-8 sm:p-8 md:p-10 lg:p-16 xl:p-20 2xl:p-35 mt-4 xss:mt-4 xs:mt-6 sm:mt-8 md:mt-10 lg:mt-0 2xl:mt-[-6rem]">
+      <div className="grid grid-cols-1 xss:grid-cols-1 xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-3 gap-4 xss:gap-4 xs:gap-5 sm:gap-6 md:gap-6 lg:gap-7 xl:gap-8 2xl:gap-8 p-4 xss:p-6 xs:p-8 sm:p-8 md:p-10 lg:p-16 xl:px-15 2xl:p-35 mt-4 xss:mt-0 md:mt-10 lg:mt-0 2xl:mt-[-6rem]">
         {[
           {
             icon: "/contact/call.svg",
@@ -58,18 +58,18 @@ export default function Contact() {
         ].map((item, idx) => (
           <div
             key={idx}
-            className="flex items-center gap-2 xss:gap-2 xs:gap-3 sm:gap-2 md:gap-2 lg:gap-3 xl:gap-3 2xl:gap-0 border text-[#071637] border-blue-400 border-2 rounded-xl"
+            className="flex items-center gap-2 xss:gap-2 xs:gap-3 sm:gap-2 md:gap-2 lg:gap-0 2xl:gap-0 border text-[#071637] border-blue-400 border-2 rounded-xl"
           >
-            <div className="flex-shrink-0 px-2 xss:px-3 xs:px-3 sm:px-2 md:px-3 lg:px-4 xl:px-4 2xl:px-4">
+            <div className="flex-shrink-0 px-2 xss:px-3 xs:px-3 sm:px-2 md:px-3 lg:px-4 2xl:px-4">
               <Image
                 src={item.icon}
                 alt={item.text}
                 width={40}
                 height={40}
-                className="w-[20px] h-[20px] xss:w-[24px] xss:h-[24px] xs:w-[28px] xs:h-[28px] sm:w-[28px] sm:h-[28px] md:w-[32px] md:h-[32px] lg:w-[40px] lg:h-[40px] xl:w-[40px] xl:h-[40px] 2xl:w-[40px] 2xl:h-[40px] 2xl:ml-4 object-contain"
+                className="w-[20px] h-[20px] xss:w-[24px] xss:h-[24px]  xs:w-[28px] xs:h-[28px] sm:w-[28px] sm:h-[28px] md:w-[32px] md:h-[32px] lg:w-[40px] lg:h-[40px] xl:w-[40px] xl:h-[40px] 2xl:w-[40px] 2xl:h-[40px] 2xl:ml-4 object-contain"
               />
             </div>
-            <div className="py-2 xss:py-2 xs:py-3 sm:py-2 md:py-2 lg:py-3 xl:py-3 2xl:py-3">
+            <div className="py-2 xss:py-2 xs:py-3 sm:py-2 md:py-2 lg:py-7 xl:py-3 2xl:py-3  xl:ml-[-0.6rem] xss:ml-[-0.5rem] 2xl:ml-[-0.4rem]">
               {item.title && (
                 <h3 className="text-sm xss:text-sm xs:text-base sm:text-[0.75rem] md:text-[0.85rem] lg:text-base xl:text-base 2xl:text-base underline decoration-gray-400 underline-offset-2 decoration-1 mb-1">
                   {item.title}
@@ -109,7 +109,9 @@ export default function Contact() {
                   ) : (
                     // Normal text (like address or careers)
                     <p className="text-[#071637] text-xs xss:text-xs xs:text-sm sm:text-[0.65rem] md:text-[0.75rem] lg:text-sm xl:text-sm 2xl:text-sm leading-relaxed mt-1 xss:mt-1 xs:mt-2 sm:mt-1 md:mt-2 lg:mt-3 xl:mt-3 2xl:mt-3 break-words">
+                      {/* <a href="/careers" className="hover:text-blue-600"> */}
                       {item.text}
+                      {/* </a> */}
                     </p>
                   )}
                 </>
@@ -120,8 +122,8 @@ export default function Contact() {
       </div>
 
       {/* middle box */}
-      <div className="p-4 xs:p-6 sm:p-8 md:p-10 lg:p-12 xl:p-16 2xl:p-20 rounded-lg">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-center bg-blue-200 rounded-2xl p-4 xs:p-6 sm:p-8 md:p-10 lg:p-12 xl:p-15 overflow-hidden">
+      <div className="p-4 xs:p-6 sm:p-8 md:p-10 lg:p-12 xl:p-16 2xl:px-20 xl:py-0 lg:mt-[-1.8rem] 2xl:mt-[-3rem] rounded-lg">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-center bg-blue-200 rounded-2xl p-4 xs:p-6 sm:p-8 md:p-10 lg:p-12 xl:p-12 overflow-hidden">
           <Image
             src="/contact/leftbox-topleft-img.svg"
             alt="Left-Design"
