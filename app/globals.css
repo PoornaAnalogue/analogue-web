@@ -68,7 +68,7 @@ body {
   --breakpoint-xll:1170px;
   --breakpoint-2xl: 1280px;
   --breakpoint-2xxl: 1400px;
-  --breakpoint-3xl: 1536px;
+  --breakpoint-3xl: 1536px;-
 
   /* Map them to Tailwind's internal vars */
   --tw-breakpoint-sm: var(--breakpoint-sm);
