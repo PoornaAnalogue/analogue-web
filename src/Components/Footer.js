@@ -271,7 +271,7 @@ export default function Footer() {
           <div className="grid grid-cols-1 xl:grid-cols-4 gap-6 xl:px-10 2xl:px-7">
             {/* Copyright */}
             <div className="text-start text-sm text-gray-200 xl:mx-[-1.8rem] hidden xl:block">
-              Developed by {new Date().getFullYear()}
+              Developed by
               <Link
                 href="/"
                 className="text-blue-500 hover:text-white"
@@ -288,7 +288,7 @@ export default function Footer() {
               }}
               >
                 {" "}
-                Analogue IT Solutions.
+                Analogue IT Solutions. {" "}
               </Link>
               All Rights Reserved.
             </div>
@@ -382,7 +382,7 @@ export default function Footer() {
           </h1>
         </div>
         <div className="text-center md:text-lg xss:px-3 xss:text-sm bg-[#1a265c] py-4 w-screen text-gray-200 mt-4 xl:hidden">
-          Developed by {new Date().getFullYear()}
+          Developed by {" "}
           <Link
             href="/"
             className="text-blue-500 hover:text-white"

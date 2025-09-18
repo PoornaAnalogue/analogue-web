@@ -2,6 +2,32 @@
 import Image from "next/image";
 
 export default function Responsive_Aarishh() {
+  const developingIcons = [
+    { id: 1, src: "/SingleProduct-Images/React.png", alt: "React logo" },
+    { id: 2, src: "/SingleProduct-Images/Angular.png", alt: "Angular logo" },
+    { id: 3, src: "/SingleProduct-Images/icons8-vue-js 1.png", alt: "Vue.js logo" },
+    { id: 4, src: "/SingleProduct-Images/next-js 1.png", alt: "Next.js logo" },
+    { id: 5, src: "/SingleProduct-Images/tensorflow.png", alt: "TensorFlow logo" },
+    { id: 6, src: "/SingleProduct-Images/amazon sagemaker.png", alt: "Amazon SageMaker logo" },
+    { id: 7, src: "/SingleProduct-Images/Java.png", alt: "Java logo" },
+    { id: 8, src: "/SingleProduct-Images/Php.png", alt: "PHP logo" },
+    { id: 9, src: "/SingleProduct-Images/node-js 3.png", alt: "Node.js logo" },
+    { id: 10, src: "/SingleProduct-Images/dotnet 1.png", alt: ".NET logo" },
+    { id: 11, src: "/SingleProduct-Images/keras.png", alt: "Keras logo" },
+    { id: 12, src: "/SingleProduct-Images/R Programming.png", alt: "R logo" },
+    { id: 13, src: "/SingleProduct-Images/icons8-vue-js 1.png", alt: "Flutter logo" },
+    { id: 14, src: "/SingleProduct-Images/tensorflow.png", alt: "React logo" },
+    { id: 15, src: "/SingleProduct-Images/amazon sagemaker.png", alt: "Kotlin logo" },
+    { id: 16, src: "/SingleProduct-Images/Java.png", alt: "Laravel logo" },
+    { id: 17, src: "/SingleProduct-Images/Php.png", alt: "Spark logo" },
+    { id: 18, src: "/SingleProduct-Images/node-js 3.png", alt: "Springboot logo" },
+    { id: 19, src: "/SingleProduct-Images/dotnet 1.png", alt: "Saas logo" },
+    { id: 20, src: "/SingleProduct-Images/keras.png", alt: "Python logo" },
+  ];
+
+  // const designingIcons = [{
+  //   { id: 1, src: "/SingleProduct-Images/React.png", alt: "React logo" },
+  // }]
   return (
     <>
       <div className="w-full bg-white">
@@ -68,95 +94,40 @@ export default function Responsive_Aarishh() {
               customer base by collaborating with individuals and organisations
               to conceptualise and promote their products.
             </p>
+            {/* development tools */}
             <div className="w-full xl:w-2/3  mt-4">
               <p className="text-[#0D6EFD] text-sm xss:text-base sm:text-lg lg:text-xl 2xl:text-2xl 3xl:text-[1.75rem] font-bold text-start">
                 Development Tools We use:
               </p>
               <div className="grid grid-cols-2 xss:grid-cols-6 md:grid-cols-8 lg:grid-cols-9 xl:grid-cols-6 2xl:grid-cols-6 3xl:grid-cols-6 gap-2 xss:gap-3 xs:gap-4 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-2 2xl:gap-3 3xl:gap-4 mt-2">
-                <Image
-                  src="/SingleProduct-Images/React.png"
-                  width={50}
-                  height={50}
-                  alt="React logo"
-                  className="object-contain w-8 xss:w-10 xs:w-12 sm:w-12 md:w-14 lg:w-14 xl:w-16 2xl:w-16 3xl:w-20 h-auto"
-                />
-                <Image
-                  src="/SingleProduct-Images/Angular.png"
-                  width={50}
-                  height={50}
-                  alt="Angular logo"
-                  className="object-contain w-8 xss:w-10 xs:w-12 sm:w-12 md:w-14 lg:w-14 xl:w-16 2xl:w-16 3xl:w-20 h-auto"
-                />
-                <Image
-                  src="/SingleProduct-Images/icons8-vue-js 1.png"
-                  width={50}
-                  height={50}
-                  alt="Vue.js logo"
-                  className="object-contain w-8 xss:w-10 xs:w-12 sm:w-12 md:w-14 lg:w-14 xl:w-16 2xl:w-16 3xl:w-20 h-auto"
-                />
-                <Image
-                  src="/SingleProduct-Images/next-js 1.png"
-                  width={50}
-                  height={50}
-                  alt="Next.js logo"
-                  className="object-contain w-8 xss:w-10 xs:w-12 sm:w-12 md:w-14 lg:w-14 xl:w-16 2xl:w-16 3xl:w-20 h-auto"
-                />
-                <Image
-                  src="/SingleProduct-Images/tensorflow.png"
-                  width={50}
-                  height={50}
-                  alt="TensorFlow logo"
-                  className="object-contain w-8 xss:w-10 xs:w-12 sm:w-12 md:w-14 lg:w-14 xl:w-16 2xl:w-16 3xl:w-20 h-auto"
-                />
-                <Image
-                  src="/SingleProduct-Images/amazon sagemaker.png"
-                  width={50}
-                  height={50}
-                  alt="Amazon SageMaker logo"
-                  className="object-contain w-8 xss:w-10 xs:w-12 sm:w-12 md:w-14 lg:w-14 xl:w-16 2xl:w-16 3xl:w-20 h-auto"
-                />
-                <Image
-                  src="/SingleProduct-Images/Java.png"
-                  width={50}
-                  height={50}
-                  alt="Java logo"
-                  className="object-contain w-8 xss:w-10 xs:w-12 sm:w-12 md:w-14 lg:w-14 xl:w-16 2xl:w-16 3xl:w-20 h-auto"
-                />
-                <Image
-                  src="/SingleProduct-Images/Php.png"
-                  width={50}
-                  height={50}
-                  alt="PHP logo"
-                  className="object-contain w-8 xss:w-10 xs:w-12 sm:w-12 md:w-14 lg:w-14 xl:w-16 2xl:w-16 3xl:w-20 h-auto"
-                />
-                <Image
-                  src="/SingleProduct-Images/node-js 3.png"
-                  width={50}
-                  height={50}
-                  alt="Node.js logo"
-                  className="object-contain w-8 xss:w-10 xs:w-12 sm:w-12 md:w-14 lg:w-14 xl:w-16 2xl:w-16 3xl:w-20 h-auto"
-                />
-                <Image
-                  src="/SingleProduct-Images/dotnet 1.png"
-                  width={50}
-                  height={50}
-                  alt=".NET logo"
-                  className="object-contain w-8 xss:w-10 xs:w-12 sm:w-12 md:w-14 lg:w-14 xl:w-16 2xl:w-16 3xl:w-20 h-auto"
-                />
-                <Image
-                  src="/SingleProduct-Images/keras.png"
-                  width={50}
-                  height={50}
-                  alt="Keras logo"
-                  className="object-contain w-8 xss:w-10 xs:w-12 sm:w-12 md:w-14 lg:w-14 xl:w-16 2xl:w-16 3xl:w-20 h-auto"
-                />
-                <Image
-                  src="/SingleProduct-Images/R Programming.png"
-                  width={50}
-                  height={50}
-                  alt="R logo"
-                  className="object-contain w-8 xss:w-10 xs:w-12 sm:w-12 md:w-14 lg:w-14 xl:w-16 2xl:w-16 3xl:w-20 h-auto"
-                />
+                {developingIcons.map((icon) => (
+                  <Image
+                    key={icon.id}
+                    src={icon.src}
+                    width={50}
+                    height={50}
+                    alt={icon.alt}
+                    className="object-contain w-8 xss:w-10 xs:w-12 sm:w-12 md:w-14 lg:w-14 xl:w-16 2xl:w-16 3xl:w-20 h-auto"
+                  />
+                ))}
+              </div>
+            </div>
+            {/* Designing tools */}
+            <div className="w-full xl:w-2/3  mt-4">
+              <p className="text-[#0D6EFD] text-sm xss:text-base sm:text-lg lg:text-xl 2xl:text-2xl 3xl:text-[1.75rem] font-bold text-start">
+                Designing Tools We use:
+              </p>
+              <div className="grid grid-cols-2 xss:grid-cols-6 md:grid-cols-8 lg:grid-cols-9 xl:grid-cols-6 2xl:grid-cols-6 3xl:grid-cols-6 gap-2 xss:gap-3 xs:gap-4 sm:gap-4 md:gap-5 lg:gap-6 xl:gap-2 2xl:gap-3 3xl:gap-4 mt-2">
+                {icons.map((icon) => (
+                  <Image
+                    key={icon.id}
+                    src={icon.src}
+                    width={50}
+                    height={50}
+                    alt={icon.alt}
+                    className="object-contain w-8 xss:w-10 xs:w-12 sm:w-12 md:w-14 lg:w-14 xl:w-16 2xl:w-16 3xl:w-20 h-auto"
+                  />
+                ))}
               </div>
             </div>
           </div>

@@ -1,7 +1,5 @@
 /* globals.css */
 @import "tailwindcss";
-@import "./nandini.css";
-
 
 @tailwind base;
 @tailwind components;
@@ -9,22 +7,8 @@
 
 .hero {
   display: flex;
-  /* flex-direction: row; */
   align-items: stretch;
 }
-
-
-/* 
-.lazy-load-image-background.blur {
-  filter: blur(10px);
-  transition: filter 0.1s ease-in-out;
-}
-
-.lazy-load-image-background.blur.lazy-load-image-loaded {
-  filter: none;
-} */
-
-/* poorna */
 
 /* Flip card custom utilities */
 .perspective {
@@ -47,13 +31,9 @@
 html,
 body {
   cursor: none;
-
   overflow-x: hidden;
-
-  /* Hide default cursor */
 }
 
-/* globals.css */
 @keyframes glow {
 
   0%,
@@ -98,53 +78,51 @@ body {
   --tw-breakpoint-2xl: var(--breakpoint-2xl);
 
   /* global text and font sizes along with line heights */
-  --text-bigheading: 3rem;
+
   /* text-5xl*/
+  --text-bigheading: 3rem;
   --text-bigheading--line-height: 3rem;
 
-  --text-subbigheading: 2.25rem;
   /* text-4xl*/
+  --text-subbigheading: 2.25rem;
   --text-subbigheading--line-height: 3rem;
 
-  --text-normal: 1.875rem;
   /* text-3xl*/
+  --text-normal: 1.875rem;
   --text-normal--line-height: 3rem;
 
+    /* text-2xl*/
   --text-subheading: 1.5rem;
-  /* text-2xl*/
   --text-subheading--line-height: 3rem;
 
+    /* text-xl*/
   --text-subnormal: 1.25rem;
-  /* text-xl*/
   --text-subnormal--line-height: 2.4rem;
 
+    /* text-lg*/
   --text-body: 1.125rem;
-  /* text-lg*/
   --text-body--line-height: 2rem;
 
+    /* text-sm*/
   --text-subbody: 0.9rem;
-  /* text-sm*/
   --text-subbody--line-height: 1.1rem;
-  /* leading-7 */
 
+    /* text-xs*/
   --text-small: 0.75rem;
-  /* text-xs*/
   --text-small--line-height: 1rem;
-  /* leading-5 */
 
   --text-subsmall: 0.5rem;
   --text-subsmall--line-height: 0.8rem;
 
 }
 
-/* globals.css */
 @media (min-height: 1025px) {
   .h-hero {
     min-height: auto;
   }
 }
 
-
+/* 
 @layer utilities {
   @media (min-width: var(--breakpoint-xs)) {
     .xs\:block {
@@ -165,7 +143,7 @@ body {
       display: none;
     }
   }
-}
+} */
 
 .animate-scroll,
 .animate-scrollLap {
@@ -180,12 +158,6 @@ body {
 .animate-scrollLap>div {
   flex-shrink: 0;
 }
-
-
-/* ======================= */
-
-/* RESPONSIVENESS ...... */
-/* 1. Override Tailwind's theme breakpoints */
 
 
 @keyframes scrollLap {
@@ -233,235 +205,9 @@ body {
 }
 
 .Form-img {
-  background-image: url('/contact/Form-background.png');
+  background-image: url('/contact/Form-background.svg');
 }
 
-.animate-scroll,
-.animate-scrollLap {
-  display: flex;
-  gap: 16px;
-  width: max-content;
-  animation-duration: 30s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  will-change: transform;
-}
-
-.animate-scroll {
-  animation-name: scroll;
-}
-
-.animate-scrollLap {
-  animation-name: scrollLap;
-}
-
-.animate-scroll>div,
-.animate-scrollLap>div {
-  flex-shrink: 0;
-}
-
-.animate-scroll:hover,
-.animate-scrollLap:hover {
-  animation-play-state: paused;
-}
-
-@media (max-width: 768px) {
-  .animate-scroll>div {
-    min-width: 120px;
-    height: 200px;
-  }
-
-  .animate-scrollLap>div {
-    min-width: 100px;
-    height: 180px;
-  }
-}
-
-/* Glow animation */
-@keyframes glow {
-
-  0%,
-  100% {
-    text-shadow: 0 0 3px #4165e6, 0 0 6px #4165e6;
-  }
-
-  50% {
-    text-shadow: 0 0 10px #4165e6, 0 0 20px #4165e6;
-  }
-}
-
-/* Brace animations */
-@keyframes braceMoveLeft {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(-6px);
-  }
-}
-
-@keyframes braceMoveRight {
-
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(6px);
-  }
-}
-
-/* Open-close animation */
-@keyframes openClose {
-
-  0%,
-  100% {
-    letter-spacing: -5px;
-  }
-
-  50% {
-    letter-spacing: 2px;
-  }
-}
-
-/* Crossfade text animation */
-@keyframes crossfadeTexts {
-
-  0%,
-  45% {
-    opacity: 1;
-  }
-
-  50%,
-  95% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.animate-crossfadeTexts {
-  animation: crossfadeTexts 4s ease-in-out infinite;
-}
-
-/* Fade swap animation */
-@keyframes fadeSwap {
-  0% {
-    opacity: 1;
-  }
-
-  40% {
-    opacity: 0;
-  }
-
-  60% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.animate-fadeSwap {
-  animation: fadeSwap 3s ease-in-out infinite;
-}
-
-/* Slide + fade swap animation */
-@keyframes slideFadeSwap {
-  0% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  40% {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-
-  60% {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.animate-slideFadeSwap {
-  animation: slideFadeSwap 4s ease-in-out infinite;
-}
-
-/* Scale + fade swap animation */
-@keyframes scaleFadeSwap {
-  0% {
-    opacity: 1;
-    transform: scale(1);
-  }
-
-  40% {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-
-  60% {
-    opacity: 0;
-    transform: scale(1.1);
-  }
-
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.animate-scaleFadeSwap {
-  animation: scaleFadeSwap 4s ease-in-out infinite;
-}
-
-/* Word-by-word fade swap */
-@keyframes wordFadeSwap {
-  0% {
-    opacity: 1;
-  }
-
-  25% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  75% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.animate-wordFadeSwap span {
-  opacity: 0;
-  animation: wordFadeSwap 6s ease-in-out infinite;
-}
-
-.animate-wordFadeSwap span:nth-child(1) {
-  animation-delay: 0s;
-}
-
-.animate-wordFadeSwap span:nth-child(2) {
-  animation-delay: 3s;
-}
 
 /* Carousel animations */
 @keyframes scroll {
@@ -525,7 +271,6 @@ body {
 }
 
 /* Phone carousel styles - SINGLE SET OF RULES */
-
 .client-swiper .swiper-slide-active .phone-wrapper {
   transform: scale(1.2) translateY(0);
   z-index: 3;
@@ -551,13 +296,11 @@ body {
 }
 
 .client-swiper .edge-left .phone-wrapper {
-  background-color: red !important;
   transform: scale(1.5) translateY(35px) !important;
   z-index: 1 !important;
 }
 
 .client-swiper .edge-right .phone-wrapper {
-  background-color: blue !important;
   transform: scale(1.5) translateY(35px) !important;
   z-index: 1 !important;
 }
@@ -777,27 +520,6 @@ body {
 }
 
 
-/* Navbar background colors */
-@layer utilities {
-  @media (min-width: 310px) and (max-width: 480px) {
-    .Navbar-main {
-      background-color: #e0e0e0;
-    }
-  }
-
-  @media (min-width: 481px) and (max-width: 768px) {
-    .Navbar-main {
-      background-color: #d0d0f0;
-    }
-  }
-
-  @media (min-width: 769px) and (max-width: 1023px) {
-    .Navbar-main {
-      background-color: #c0d0f0;
-    }
-  }
-}
-
 /* Scrollbar hiding */
 .scrollbar-hide::-webkit-scrollbar {
   display: none;
@@ -806,16 +528,6 @@ body {
 .scrollbar-hide {
   -ms-overflow-style: none;
   scrollbar-width: none;
-}
-
-
-
-/* Theme colors */
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -875,8 +587,6 @@ body {
     .xs\:hidden {
       display: none;
     }
-
-    /* Add more xs: utilities as needed */
   }
 
   /* 3xl: modifier */
@@ -888,8 +598,6 @@ body {
     .\33 xl\:hidden {
       display: none;
     }
-
-    /* Add more 3xl: utilities as needed */
   }
 
 
@@ -945,180 +653,17 @@ body {
   }
 }
 
-
-
-
-/* sample testing */
-
-/* ======================
-   MULTI-TEXT FADE EFFECTS
-   ====================== */
-
-/* 1. Crossfade between 2 texts in home page title */
-@keyframes crossfadeTexts {
-
-  0%,
-  45% {
-    opacity: 1;
-  }
-
-  50%,
-  95% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-
-    @media (min-width: 310px) and (max-width: 480px) {
-      .Navbar-main {
-        background-color: #f0f0f0;
-      }
-    }
-  }
-}
-
-@media (min-width: 350px) and (max-width: 480px) {
+@media (min-width: 481px) and (max-width: 1600px) {
   .Navbar-main {
-    background-color: #e0e0e0;
+    background-color: white;
+    border: #ffffff 1px solid;
   }
-}
-
-@media (min-width: 481px) and (max-width: 768px) {
-  .Navbar-main {
-    background-color: #d0d0f0;
-  }
-}
-
-.animate-crossfadeTexts {
-  animation: crossfadeTexts 4s ease-in-out infinite;
-}
-
-.animate-crossfadeTexts {
-  animation: crossfadeTexts 4s ease-in-out infinite;
-}
-
-/* 2. Fade Out then Fade In */
-@keyframes fadeSwap {
-  0% {
-    opacity: 1;
-  }
-
-  40% {
-    opacity: 0;
-  }
-
-  60% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.animate-fadeSwap {
-  animation: fadeSwap 3s ease-in-out infinite;
-}
-
-/* 3. Slide + Fade Swap (Left to Right) */
-@keyframes slideFadeSwap {
-  0% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  40% {
-    opacity: 0;
-    transform: translateX(-30px);
-  }
-
-  60% {
-    opacity: 0;
-    transform: translateX(30px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.animate-slideFadeSwap {
-  animation: slideFadeSwap 4s ease-in-out infinite;
-}
-
-/* 4. Scale + Fade Swap */
-@keyframes scaleFadeSwap {
-  0% {
-    opacity: 1;
-    transform: scale(1);
-  }
-
-  40% {
-    opacity: 0;
-    transform: scale(0.9);
-  }
-
-  60% {
-    opacity: 0;
-    transform: scale(1.1);
-  }
-
-  100% {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-.animate-scaleFadeSwap {
-  animation: scaleFadeSwap 4s ease-in-out infinite;
-}
-
-/* 5. Word-by-word fade swap */
-@keyframes wordFadeSwap {
-  0% {
-    opacity: 1;
-  }
-
-  25% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  75% {
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-.animate-wordFadeSwap span {
-  opacity: 0;
-  animation: wordFadeSwap 6s ease-in-out infinite;
-}
-
-.animate-wordFadeSwap span:nth-child(1) {
-  animation-delay: 0s;
-}
-
-.animate-wordFadeSwap span:nth-child(2) {
-  animation-delay: 3s;
-}
-
-
-.Form-img {
-  background-image: url('/contact/Form-background.svg');
 }
 
 
 /* poorna's new lines */
 
+/* Free quote button glow animation */
 @keyframes pulse-soft {
   0%, 100% {
     transform: scale(1);
