@@ -5,7 +5,6 @@ import Blogs from "@/app/Dynamic_blogs/page";
 import GameTest from "@/app/game/puztest";
 import Responsive_India_Test from "@/app/India/testindia";
 import MainHomePage from "@/app/MainHomePage/page";
-import Responsive_Aarishh from "@/app/Prod-Aarish/page";
 
 
 export default function Navbar() {
@@ -14,6 +13,7 @@ export default function Navbar() {
     {/* <MainHomePage /> */}
     {/* <Responsive_Aarishh /> */}
     <NavbarDyn />
+    <MainHomePage />
     </>
      );
 }

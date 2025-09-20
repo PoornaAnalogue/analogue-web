@@ -159,13 +159,14 @@ export default function GetAQuoteForm() {
   return (
     <div
       id="form-section"
-      className=" main-container min-h-[600px] xl:min-h-[700px] 2xl:h-screen relative flex flex-col items-center justify-center rounded-lg px-4 bg-white xs:px-6 xss:py-10 xl:pb-8 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-20"
+      className=" main-container min-h-[600px] overflow-hidden xl:min-h-[700px] 2xl:h-screen relative flex flex-col items-center justify-center rounded-lg px-4 bg-white xs:px-6 xss:py-10 xl:pb-8 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-20"
     >
       {/* Background Image Layer */}
       <div className="xl:mt-[-6rem] xss:mt-[-3rem] 3xl:mt-[-3rem] 2xl:mt-[-7rem] 3xl:mt-[-5rem] "></div>
+      <div>
       <div
-        className="Form-img absolute z-0 
-                      w-[80vw] max-w-[1000px] h-[80vh] max-h-[1000px]
+        className="Form-img absolute z-0
+                      w-[80vw] max-w-[1000px] h-[70vh] max-h-[1000px]
                       left-[-1rem] bottom-[-2rem]
                       xss:w-[80vw] xss:h-[85vh] xss:max-w-[600px] xss:max-h-[800px] xss:left-[1rem] xss:bottom-[-0.3rem]
                       xs:w-[75vw] xs:h-[70vh] xs:max-w-[600px] xs:max-h-[800px] xs:left-[2rem] xs:bottom-[-0.3rem]
@@ -173,10 +174,11 @@ export default function GetAQuoteForm() {
                       md:w-[78vw] md:h-[79vh] md:max-w-[700px] md:max-h-[800px] md:left-[2.8rem] md:bottom-[-2rem]
                       lg:w-[70vw] lg:h-[72vh] lg:max-w-[800px] lg:max-h-[900px] lg:left-[4rem] lg:bottom-[-3rem]
                       xl:w-[70vw] xl:h-[80vh] xl:max-w-[900px] xl:max-h-[900px] xl:left-[7rem] xl:bottom-[-1.8rem]
-                      2xl:w-[60vw] 2xl:h-[85vh] 2xl:max-w-[1000px] 2xl:max-h-[1000px] 2xl:left-[13rem] 2xl:bottom-[-1.8rem]
-                      3xl:w-[70vw] 3xl:h-[85vh] 3xl:max-w-[1000px] 3xl:max-h-[1000px] 3xl:left-[15rem] 3xl:bottom-[-3rem]
+                      2xl:w-[60vw] 2xl:h-[85vh] 2xl:max-w-[1000px] 2xl:max-h-[1000px] 2xl:left-[14.5rem] 2xl:bottom-[-0.6rem]
+                      3xl:w-[70vw] 3xl:h-[71vh] 3xl:max-w-[1000px] 3xl:max-h-[1000px] 3xl:left-[15rem] 3xl:bottom-[-3.5rem]
                       bg-no-repeat bg-contain bg-left-bottom"
       ></div>
+      </div>
 
       <div className="relative w-full max-w-5xl rounded-3xl min。由min-h-[600px] xl:min-h-[700px] 2xl:min-h-[800px] flex flex-col justify-center items-center z-10">
         {/* Big Background Text */}
@@ -191,8 +193,8 @@ export default function GetAQuoteForm() {
 
         {/* Glassmorphic Form */}
         <div
-          className="relative z-20 xl:p-6 xl:mt-[-2.7rem] 2xl:mt-[-2.3rem] 3xl:mt-[-1.5rem] xss:mt-[-2.3rem] xs:mt-[-2.2rem] sm:mt-[-2.4rem] md:mt-[-2rem] lg:mt-[-2.5rem] w-full p-5 border-gray-300 border-2
-                        2xl:w-[70%] 3xl:w-[88%] xl:w-[75%] lg:w-[80%] md:w-[80%] sm:w-[78%] xs:w-[78%] xs:p-3 xss:w-[80%]
+          className="relative z-20 xl:p-6 2xl:p-4 xl:mt-[-2.7rem] 2xl:mt-[-2.3rem] 3xl:mt-[-1.5rem] xss:mt-[-2.3rem] xs:mt-[-2.2rem] sm:mt-[-2.4rem] md:mt-[-2rem] lg:mt-[-2.5rem] w-full p-5 border-gray-300 border-2
+                        2xl:w-[65%] 3xl:w-[88%] xl:w-[75%] lg:w-[80%] md:w-[80%] sm:w-[78%] xs:w-[78%] xs:p-3 xss:w-[80%]
                         rounded-3xl backdrop-blur-3xl shadow-lg 
                         bg-gradient-to-br from-white/40 via-white/50 to-transparent"
         >
@@ -209,7 +211,7 @@ export default function GetAQuoteForm() {
           {/* Form Fields */}
           <form
             onSubmit={handleSubmit}
-            className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-2 2xl:gap-5 xs:gap-2 overflow-hidden"
+            className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-2 3xl:gap-5 xs:gap-2 overflow-hidden"
           >
             {[
               { name: "name", type: "text", placeholder: "Your Name*" },

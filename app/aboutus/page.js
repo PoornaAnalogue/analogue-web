@@ -2,7 +2,7 @@
 import Image from "next/image";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
-import teamData from "@/TeamData/teamdata";
+import teamData from "@/app/websiteData/teamdata";
 
 export default function AboutPage() {
   // Separate refs for each number so they animate independently

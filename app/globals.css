@@ -268,14 +268,22 @@ body {
 }
 /* Hero fix for Safari viewport issues */
 .hero-fix {
-  height: calc(100dvh - 64px); /* modern Safari + Chrome, Edge, Firefox */
+  min-height: calc(80dvh - 64px); 
+  justify-content: space-evenly;
 }
 
 @supports not (height: 100dvh) {
   .hero-fix {
-    height: calc(100vh - 64px); /* older Safari fallback */
+    height: calc(100vh - 64px);
   }
 }
+
+/* .mac-safari .hero-fix .mobile {
+   height: 30rem; 
+} */
+
+
+
 
 
 
@@ -692,8 +700,6 @@ body {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
-
-
 
 
 

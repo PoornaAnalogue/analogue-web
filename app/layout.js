@@ -27,6 +27,7 @@ export default function RootLayout({ children }) {
       <body className={urbanist.className}>
         {/* <ModalPopUp /> */}
         {/* <BypassProvider /> */}
+        <BypassProvider />
         <CursorWrapper />
         {/* <LandingHero /> */}
         {/* <Navbar /> */}
