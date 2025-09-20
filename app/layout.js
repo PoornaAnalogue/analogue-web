@@ -1,10 +1,10 @@
 import { Urbanist } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/footer";
-import CursorWrapper from "@/components/cursor-wrapper";
-import { BypassProvider } from "@/components/ByPassProvider";
+// import { BypassProvider } from "@/components/ByPassProvider";
 import Navbar from "@/components/navbar-page";
 import ModalPopUp from "@/components/modal-popup";
+import CursorWrapper from "@/components/cursor-wrapper";
 
 
 const urbanist = Urbanist({
@@ -25,13 +25,13 @@ export default function RootLayout({ children }) {
       </head>
       <body className={urbanist.className}>
         <ModalPopUp />
-        <BypassProvider />
-        <BypassProvider />
+        {/* <BypassProvider /> */}
+        {/* <BypassProvider /> */}
         <CursorWrapper />
         <Navbar />
         {children}
         <Footer />
-        <BypassProvider />
+        {/* <BypassProvider /> */}
       </body>
     </html>
   );
