@@ -1,8 +1,8 @@
 "use client";
 import { useEffect } from "react";
 import Image from "next/image";
-import GetAQuoteForm from "@/Components/GetAQuoteForm";
-import FrequentQuestions from "@/Components/frequentlyAskedQuestions";
+import GetAQuoteForm from "@/components/get-quote-form";
+import FrequentQuestions from "@/components/faqs-page";
 
 export default function Responsive_JavaTech() {
   const faqArray = [

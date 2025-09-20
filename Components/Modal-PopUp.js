@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
-import PopUpForm from "./PopUpForm"; // adjust path
+import PopUpForm from "./popup-form"; // adjust path
 
 export default function ModalPopUp() {
   const [isOpen, setIsOpen] = useState(false);

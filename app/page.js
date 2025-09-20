@@ -1,19 +1,27 @@
-import NavbarDyn from "@/app/TechnologiesDyn/navbarDyn";
-import Responsive_AdobeTech from "@/app/adobe-xd-design-company/page";
-import BlogPageTesting from "@/app/blogTesting/page";
-import Blogs from "@/app/Dynamic_blogs/page";
-import GameTest from "@/app/game/puztest";
-import Responsive_India_Test from "@/app/India/testindia";
-import MainHomePage from "@/app/MainHomePage/page";
-
+import BestAppIndiaPage from "@/app/home-page-main/best-app-in-india";
+import CalendarPage from "@/app/home-page-main/calendar/calendar-page";
+import ClientCarouselPage from "@/app/home-page-main/carousal-page";
+import GuaranteesPage from "@/app/home-page-main/guarantees-page";
+import HomePage from "@/app/home-page-main/hero-page";
+import PuzzlePage from "@/app/home-page-main/puzzle-page";
+import ServicesPage from "@/app/home-page-main/services-page";
+import StartWorkPage from "@/app/home-page-main/start-work-with-us";
+import TestimonialsPage from "@/app/home-page-main/testimonal-page";
+import GetAQuoteForm from "@/components/get-quote-form";
 
 export default function Navbar() {
   return (
     <>
-    {/* <MainHomePage /> */}
-    {/* <Responsive_Aarishh /> */}
-    <NavbarDyn />
-    <MainHomePage />
+    <HomePage />
+    <ServicesPage />
+    <ClientCarouselPage />
+    <GuaranteesPage />
+    <PuzzlePage />
+    <StartWorkPage />
+    <TestimonialsPage />
+    <CalendarPage />
+    <BestAppIndiaPage />
+    <GetAQuoteForm />
     </>
      );
 }

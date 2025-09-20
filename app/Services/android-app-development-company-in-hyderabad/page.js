@@ -2,15 +2,13 @@
 import { FaChevronDown } from "react-icons/fa";
 import Image from "next/image";
 import { useState } from "react";
-import PopUpForm from "@/Components/PopUpForm";
+import PopUpForm from "@/components/popup-form";
 import Link from "next/link";
 import Script from "next/script";
-import CarousalServicePage from "@/Components/carousalForServicePages";
-import Responsive_Best_App from "@/app/BestMobileApp/page";
-import Responsive_Calendar from "@/app/BookAppointment/page";
-import Responsive_India from "@/app/India/page";
-import FrequentQuestions from "@/Components/frequentlyAskedQuestions";
-import GetAQuoteForm from "@/Components/GetAQuoteForm";
+import CarousalServicePage from "@/components/carousal-servicepage";
+import FrequentQuestions from "@/components/faqs-page";
+import GetAQuoteForm from "@/components/get-quote-form";
+import CalendarPage from "@/app/home-page-main/calendar/calendar-page";
 
 export default function AndroidAppDevelopment() {
   const [isOpen, setIsOpen] = useState(false);
@@ -358,7 +356,7 @@ export default function AndroidAppDevelopment() {
 
         {/* Calendar */}
         <div>
-          <Responsive_Calendar />
+          <CalendarPage />
         </div>
 
         {/* Android dev company in India */}
@@ -424,7 +422,7 @@ export default function AndroidAppDevelopment() {
           <div className="text-white text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold xss:pb-5 lg:pb-8 2xl:pb-15 text-center">
             Our Services Extend to These Top Locations!
           </div>
-          <div className="grid lg:grid-cols-2 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base xss:grid-cols-1 xss:gap-4 xl:gap-5 sm:px-8 md:px-28 lg:px-10 2xl:px-50">
+          <div className="grid lg:grid-cols-2 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base xss:grid-cols-1 xss:gap-4 xl:gap-5 sm:px-8 md:px-28 lg:px-12 2xl:px-40 3xl:px-50">
             <div className="flex items-center">
               <div className="w-[1.5rem] xss:w-[1.8rem] sm:w-[2rem] lg:w-[2.4rem] ">
                 <Image
@@ -436,7 +434,7 @@ export default function AndroidAppDevelopment() {
                 />
               </div>
               <p className="text-white pl-2">
-                Mobile App Development Company in Hyderabad
+                Mobile App Development Company in Hyderabad(Ind)
               </p>
             </div>
             <div className="flex items-center">
@@ -450,7 +448,7 @@ export default function AndroidAppDevelopment() {
                 />
               </div>
               <p className="text-white pl-2">
-                Mobile App Development Company in Toronto
+                Mobile App Development Company in UAE
               </p>
             </div>
             <div className="flex items-center">
@@ -464,7 +462,7 @@ export default function AndroidAppDevelopment() {
                 />
               </div>
               <p className="text-white pl-2">
-                Mobile App Development Company in Saudi
+                Mobile App Development Company in USA
               </p>
             </div>
             <div className="flex items-center">
@@ -478,7 +476,7 @@ export default function AndroidAppDevelopment() {
                 />
               </div>
               <p className="text-white pl-2">
-                Mobile App Development Company in Dubai
+                Mobile App Development Company in UK
               </p>
             </div>
             <div className="flex items-center">
@@ -492,7 +490,7 @@ export default function AndroidAppDevelopment() {
                 />
               </div>
               <p className="text-white pl-2">
-                Mobile App Development Company in Qatar
+                Mobile App Development Company in Europe
               </p>
             </div>
             <div className="flex items-center">
@@ -506,7 +504,7 @@ export default function AndroidAppDevelopment() {
                 />
               </div>
               <p className="text-white pl-2">
-                Mobile App Development Company in Kochi
+                Mobile App Development Company in Australia
               </p>
             </div>
           </div>

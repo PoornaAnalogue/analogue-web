@@ -1,5 +1,5 @@
-import BlogCard from "@/app/blogCard/page";
-import { blogsdata } from "@/app/BlogsData/blogData";
+import BlogCard from "@/app/blogcard/page";
+import { blogsdata } from "@/app/blogsdata/blogData";
 
 export default function Home() {
   return (

@@ -4,7 +4,7 @@ import { FaChevronDown, FaBars, FaTimes, FaEnvelope } from "react-icons/fa";
 import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import PopUpForm from "@/Components/PopUpForm";
+import PopUpForm from "@/components/popup-form";
 import technologies from "@/app/TechnologiesDyn/tech.json"; 
 import industriesData from "@/app/TechnologiesDyn/indus.json"; 
 

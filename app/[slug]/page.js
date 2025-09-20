@@ -3,22 +3,22 @@ import React from "react";
 import Lottie from "lottie-react";
 import techData from "@/app/TechnologiesDyn/tech.json";
 import industriesData from "@/app/TechnologiesDyn/indus.json";
-import IndusAnime from "@/animations/Industry.json"
+import IndusAnime from "@/animations/industry.json"
 
 // Technology Components
 import TechDetails from "../TechnologiesDyn/components/TechDetails";
 import TechCarousel from "../TechnologiesDyn/components/TechCarousel";
 import TechBenefits from "@/app/TechnologiesDyn/components/TechBenefits";
-import Header from "@/Components/Header";
 
 
 // Common Components
-import GetAQuoteForm from "@/Components/GetAQuoteForm";
-import FrequentQuestions from "@/Components/frequentlyAskedQuestions";
+import GetAQuoteForm from "@/components/get-quote-form";
+import FrequentQuestions from "@/components/faqs-page";
 import { IndusHeadline, IndusTagline, TechHeadline, TechTagline } from "@/app/TechnologiesDyn/commonCarousel";
 import Image from "next/image";
 import IndusDetails from "@/app/TechnologiesDyn/components/IndusDetails";
-import Navbar from "@/Components/Navbar";
+import Navbar from "@/components/navbar-page";
+// import Header from "@/components/header-page";
 
 export default function SlugPage({ params }) {
   const { slug } =  params;
@@ -141,6 +141,7 @@ export default function SlugPage({ params }) {
       </>
     );
   }
+  
 
   // Not found case
   return <h1 className="text-center mt-20">Page Not Found</h1>;

@@ -2,13 +2,13 @@
 import { FaChevronDown } from "react-icons/fa";
 import Image from "next/image";
 import { useState } from "react";
-import PopUpForm from "@/Components/PopUpForm";
+import PopUpForm from "@/components/popup-form";
 import Link from "next/link";
 import Script from "next/script";
-import CarousalServicePage from "@/Components/carousalForServicePages";
-import Responsive_Calendar from "@/app/BookAppointment/page";
-import FrequentQuestions from "@/Components/frequentlyAskedQuestions";
-import GetAQuoteForm from "@/Components/GetAQuoteForm";
+import CarousalServicePage from "@/components/carousal-servicepage";
+import FrequentQuestions from "@/components/faqs-page";
+import GetAQuoteForm from "@/components/get-quote-form";
+import CalendarPage from "@/app/home-page-main/calendar/calendar-page";
 
 export default function FlutterAppDevelopment() {
   const [isOpen, setIsOpen] = useState(false);
@@ -362,7 +362,7 @@ export default function FlutterAppDevelopment() {
 
         {/* Calendar */}
         <div>
-          <Responsive_Calendar />
+          <CalendarPage />
         </div>
 
         {/* flutter app dev company in India */}

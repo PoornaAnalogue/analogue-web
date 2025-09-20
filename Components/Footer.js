@@ -10,7 +10,7 @@ import {
 } from "react-icons/fa";
 import Link from "next/link";
 import { CalendarIcon } from "@heroicons/react/20/solid";
-import { useBypass } from "@/Components/ByPassProvider";
+import { useBypass } from "@/components/ByPassProvider";
 
 export default function Footer() {
   const isBypass = useBypass; // 🔥 define here

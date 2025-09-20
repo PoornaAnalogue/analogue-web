@@ -1,4 +1,4 @@
-import GetAQuoteForm from "@/Components/GetAQuoteForm";
+import GetAQuoteForm from "@/components/get-quote-form";
 import Image from "next/image";
 
 export default function Contact() {

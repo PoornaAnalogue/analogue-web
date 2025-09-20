@@ -3,6 +3,7 @@ import Image from "next/image";
 import CountUp from "react-countup";
 import { useInView } from "react-intersection-observer";
 import teamData from "@/app/websiteData/teamdata";
+import { motion } from "framer-motion";
 
 export default function AboutPage() {
   // Separate refs for each number so they animate independently
@@ -42,142 +43,188 @@ export default function AboutPage() {
           </div>
         </div>
 
-        {/* SUCCESS STORY */}
-        <div className="grid xss:grid-cols-1 lg:grid-cols-2 gap-6 mb-10">
-          <div className="bg-[#072060] text-white p-5 rounded-lg shadow-md flex flex-col justify-between max-w-full sm:max-w-[600px] lg:max-w-[800px]">
-            <div>
-              <span className="bg-[#363b70] xl:text-[0.65rem] xss:px-3 xss:py-2 xss:text-subsmall xl:px-3 xl:py-2 rounded-full uppercase">
-                About Us
-              </span>
-              <h3 className="text-xl sm:text-xl xl:text-[1.4rem] 2xl:text-2xl font-bold mt-4 mb-3">
-                Stories of success
-              </h3>
-              <p className="text-sm xss:text-xs md:text-sm 2xl:text-base lg:text-small xl:text-sm 3xl:text-base text-gray-200 xl:leading-5 2xl:leading-6">
-                Analogue is a Best mobile app development company in Hyderabad
-                that specialises in creating and enhancing user experience
-                through the design and development of mobile and web
-                applications.
-              </p>
-            </div>
+         <section className="section-container-1">
+  {/* SUCCESS STORY */}
+  <div className="grid xss:grid-cols-1 lg:grid-cols-2 gap-6 mb-10">
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={{
+        hidden: { scale: 0.7, opacity: 0 },
+        visible: { scale: 1, opacity: 1, transition: { duration: 0.8, ease: "easeOut" } },
+      }}
+      className="bg-[#072060] text-white p-5 rounded-lg shadow-md flex flex-col justify-between max-w-full sm:max-w-[600px] lg:max-w-[800px]"
+    >
+      <motion.div
+        variants={{
+          hidden: { scale: 1.1 },
+          visible: { scale: 1, transition: { duration: 0.8, ease: "easeOut" } },
+        }}
+      >
+        <span className="bg-[#363b70] xl:text-[0.65rem] xss:px-3 xss:py-2 xss:text-subsmall xl:px-3 xl:py-2 rounded-full uppercase">
+          About Us
+        </span>
+        <h3 className="text-xl sm:text-xl xl:text-[1.4rem] 2xl:text-2xl font-bold mt-4 mb-3">
+          Stories of success
+        </h3>
+        <p className="text-sm xss:text-xs md:text-sm 2xl:text-base lg:text-small xl:text-sm 3xl:text-base text-gray-200 xl:leading-5 2xl:leading-6">
+          Analogue is a Best mobile app development company in Hyderabad
+          that specialises in creating and enhancing user experience
+          through the design and development of mobile and web
+          applications.
+        </p>
+      </motion.div>
+    </motion.div>
+
+    {/* SUCCESSFUL PROJECTS & HAPPY CLIENTS */}
+    <div className="flex flex-col sm:flex-row lg:flex-col lg:flex-row gap-6">
+      <motion.div
+        ref={projectsRef}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={{
+          hidden: { scale: 0.7, opacity: 0 },
+          visible: { scale: 1, opacity: 1, transition: { duration: 0.8, ease: "easeOut" } },
+        }}
+        className="bg-blue-100 p-6 rounded-lg shadow-sm text-center sm:text-left flex-1"
+      >
+        <motion.div
+          variants={{
+            hidden: { scale: 1.1 },
+            visible: { scale: 1, transition: { duration: 0.8, ease: "easeOut" } },
+          }}
+        >
+          <div className="mb-4">
+            <p className="text-2xl sm:text-3xl font-extrabold text-[#072060]">
+              {projectsInView ? <CountUp start={1} end={250} duration={2} /> : 0}+
+            </p>
+            <p className="2xl:text-lg lg:text-md text-gray-700 mt-1">
+              Successful Projects
+            </p>
           </div>
-
-          {/* SUCCESSFUL PROJECTS & HAPPY CLIENTS */}
-          <div className="flex flex-col sm:flex-row lg:flex-col lg:flex-row gap-6">
-            {/* Successful Projects */}
-            <div
-              ref={projectsRef}
-              className="bg-blue-100 p-6 rounded-lg shadow-sm text-center sm:text-left flex-1"
-            >
-              <div className="mb-4">
-                <p className="text-2xl sm:text-3xl font-extrabold text-[#072060]">
-                  {projectsInView ? (
-                    <CountUp
-                      start={1}
-                      end={250}
-                      duration={2}
-                      key={projectsInView ? "projects" : "projects"}
-                    />
-                  ) : (
-                    0
-                  )}
-                  +
-                </p>
-                <p className="2xl:text-lg lg:text-md text-gray-700 mt-1">
-                  Successful Projects
-                </p>
-              </div>
-              <div className="flex justify-center ">
-                <Image
-                  src="/gifs/process-done.gif"
-                  alt="Process"
-                  width={150}
-                  height={90}
-                  unoptimized
-                  className="object-cover mx-auto xss:w-[13rem] xss:h-[9rem] xl:w-[14rem] xl:h-[9rem] text-center"
-                />
-              </div>
-            </div>
-
-            {/* Happy Clients */}
-            <div
-              ref={clientsRef}
-              className="bg-blue-100 p-6 rounded-lg shadow-sm text-center xss:text-left flex-1"
-            >
-              <div className="mb-4">
-                <p className="text-2xl sm:text-3xl font-extrabold text-[#072060]">
-                  {clientsInView ? (
-                    <CountUp
-                      start={1}
-                      end={250}
-                      duration={2}
-                      key={clientsInView ? "clients" : "clients"}
-                    />
-                  ) : (
-                    0
-                  )}
-                  +
-                </p>
-                <p className="2xl:text-lg lg:text-md text-gray-700 mt-1">
-                  Happy Clients
-                </p>
-              </div>
-              <div className="flex justify-center">
-                <Image
-                  src="/gifs/happy-clients.gif"
-                  alt="happy-clients"
-                  width={150}
-                  height={90}
-                  unoptimized
-                  className="object-contain xss:w-[14rem] xss:h-[9rem] mx-auto sm:mx-0"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* IMAGE & SKILLED EXPERTS */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-          {/* Office Image */}
-          <div className="md:col-span-3 overflow-hidden rounded-lg shadow-xs order-2 sm:order-2 md:order-1">
+          <div className="flex justify-center ">
             <Image
-              src="/aboutimages/office.svg"
-              alt="office.svg"
-              width={700}
-              height={500}
-              className="w-full h-full object-cover"
+              src="/gifs/process-done.gif"
+              alt="Process"
+              width={150}
+              height={90}
+              unoptimized
+              className="object-cover mx-auto xss:w-[13rem] xss:h-[9rem] xl:w-[14rem] xl:h-[9rem] text-center"
             />
           </div>
+        </motion.div>
+      </motion.div>
 
-          {/* Skilled Experts */}
-          <div
-            ref={expertsRef}
-            className="xss:col-span-1  w-full bg-blue-100 p-6 rounded-lg shadow-sm text-center xss:text-left flex-1 order-1 sm:order-1 md:order-2"
-          >
-            <div className="mb-4">
-              <p className="text-2xl sm:text-3xl font-extrabold text-[#072060]">
-                {expertsInView ? (
-                  <CountUp start={1} end={40} duration={2} key="experts" />
-                ) : (
-                  0
-                )}
-                +
-              </p>
-              <p className="2xl:text-lg lg:text-md text-gray-700 mt-1">
-                Skilled Experts
-              </p>
-            </div>
-            <div className="flex justify-center">
-              <Image
-                src="/gifs/team.gif"
-                alt="Team"
-                width={150}
-                height={90}
-                unoptimized
-                className="object-contain mx-auto xl:w-[15rem] xl:h-[9rem] sm:mx-0"
-              />
-            </div>
+      <motion.div
+        ref={clientsRef}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.3 }}
+        variants={{
+          hidden: { scale: 0.7, opacity: 0 },
+          visible: { scale: 1, opacity: 1, transition: { duration: 0.8, ease: "easeOut" } },
+        }}
+        className="bg-blue-100 p-6 rounded-lg shadow-sm text-center xss:text-left flex-1"
+      >
+        <motion.div
+          variants={{
+            hidden: { scale: 1.1 },
+            visible: { scale: 1, transition: { duration: 0.8, ease: "easeOut" } },
+          }}
+        >
+          <div className="mb-4">
+            <p className="text-2xl sm:text-3xl font-extrabold text-[#072060]">
+              {clientsInView ? <CountUp start={1} end={250} duration={2} /> : 0}+
+            </p>
+            <p className="2xl:text-lg lg:text-md text-gray-700 mt-1">
+              Happy Clients
+            </p>
           </div>
+          <div className="flex justify-center">
+            <Image
+              src="/gifs/happy-clients.gif"
+              alt="happy-clients"
+              width={150}
+              height={90}
+              unoptimized
+              className="object-contain xss:w-[14rem] xss:h-[9rem] mx-auto sm:mx-0"
+            />
+          </div>
+        </motion.div>
+      </motion.div>
+    </div>
+  </div>
+
+  {/* IMAGE & SKILLED EXPERTS */}
+  <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={{
+        hidden: { scale: 0.7, opacity: 0 },
+        visible: { scale: 1, opacity: 1, transition: { duration: 0.8, ease: "easeOut" } },
+      }}
+      className="md:col-span-3 overflow-hidden rounded-lg shadow-xs order-2 sm:order-2 md:order-1"
+    >
+      <motion.div
+        variants={{
+          hidden: { scale: 1.1 },
+          visible: { scale: 1, transition: { duration: 0.8, ease: "easeOut" } },
+        }}
+      >
+        <Image
+          src="/aboutimages/office.svg"
+          alt="office.svg"
+          width={700}
+          height={500}
+          className="w-full h-full object-cover"
+        />
+      </motion.div>
+    </motion.div>
+
+    <motion.div
+      ref={expertsRef}
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.3 }}
+      variants={{
+        hidden: { scale: 0.7, opacity: 0 },
+        visible: { scale: 1, opacity: 1, transition: { duration: 0.8, ease: "easeOut" } },
+      }}
+      className="xss:col-span-1 w-full bg-blue-100 p-6 rounded-lg shadow-sm text-center xss:text-left flex-1 order-1 sm:order-1 md:order-2"
+    >
+      <motion.div
+        variants={{
+          hidden: { scale: 1.1 },
+          visible: { scale: 1, transition: { duration: 0.8, ease: "easeOut" } },
+        }}
+      >
+        <div className="mb-4">
+          <p className="text-2xl sm:text-3xl font-extrabold text-[#072060]">
+            {expertsInView ? <CountUp start={1} end={40} duration={2} /> : 0}+
+          </p>
+          <p className="2xl:text-lg lg:text-md text-gray-700 mt-1">
+            Skilled Experts
+          </p>
         </div>
+        <div className="flex justify-center">
+          <Image
+            src="/gifs/team.gif"
+            alt="Team"
+            width={150}
+            height={90}
+            unoptimized
+            className="object-contain mx-auto xl:w-[15rem] xl:h-[9rem] sm:mx-0"
+          />
+        </div>
+      </motion.div>
+    </motion.div>
+  </div>
+</section>
+
       </section>
 
       {/* SECTION 2 */}

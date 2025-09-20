@@ -1,12 +1,11 @@
 import { Urbanist } from "next/font/google";
 import "./globals.css";
-import Footer from "@/Components/Footer";
-import Navbar from "@/Components/Navbar";
-import CursorWrapper from "@/Components/CursorWrapper";
-import ModalPopUp from "@/Components/Modal-PopUp";
-import { BypassProvider } from "@/Components/ByPassProvider";
-import Home from "@/app/Home/page";
-import LandingHero from "@/Components/NewDesign";
+import Footer from "@/components/footer";
+import CursorWrapper from "@/components/cursor-wrapper";
+import { BypassProvider } from "@/components/ByPassProvider";
+import Navbar from "@/components/navbar-page";
+import ModalPopUp from "@/components/modal-popup";
+
 
 const urbanist = Urbanist({
   subsets: ["latin"],
@@ -25,15 +24,14 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.png" sizes="any" />
       </head>
       <body className={urbanist.className}>
-        {/* <ModalPopUp /> */}
-        {/* <BypassProvider /> */}
+        <ModalPopUp />
+        <BypassProvider />
         <BypassProvider />
         <CursorWrapper />
-        {/* <LandingHero /> */}
-        {/* <Navbar /> */}
+        <Navbar />
         {children}
-        {/* <Footer /> */}
-        {/* <BypassProvider /> */}
+        <Footer />
+        <BypassProvider />
       </body>
     </html>
   );

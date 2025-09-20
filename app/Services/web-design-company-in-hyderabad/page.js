@@ -2,13 +2,12 @@
 import { FaChevronDown } from "react-icons/fa";
 import Image from "next/image";
 import { useState } from "react";
-import PopUpForm from "@/Components/PopUpForm";
+import PopUpForm from "@/components/popup-form";
 import Link from "next/link";
 import Script from "next/script";
-import CarousalServicePage from "@/Components/carousalForServicePages";
-import Responsive_Calendar from "@/app/BookAppointment/page";
-import FrequentQuestions from "@/Components/frequentlyAskedQuestions";
-import GetAQuoteForm from "@/Components/GetAQuoteForm";
+import CarousalServicePage from "@/components/carousal-servicepage";
+import FrequentQuestions from "@/components/faqs-page";
+import GetAQuoteForm from "@/components/get-quote-form";
 
 export default function WebAppDevelopment() {
   const [isOpen, setIsOpen] = useState(false);
@@ -366,7 +365,7 @@ export default function WebAppDevelopment() {
 
         {/* Calendar */}
         <div>
-          <Responsive_Calendar />
+          <CalendarPage />
         </div>
 
         {/* IOS app dev company in India */}
