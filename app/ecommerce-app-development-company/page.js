@@ -27,10 +27,10 @@ export default function EcommerceAppDevelopment() {
         {/* News App Section */}
         <div className="pt-0 mt-0 flex flex-col xl:flex-row w-full gap-4 xss:gap-5  sm:gap-8 md:gap-10 lg:gap-12 xl:gap-4 2xl:gap-16 justify-center items-start px-4 xss:px-5 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-20 3xl:px-24 py-2 xss:pb-5  ">
           <div className="w-full xl:w-1/2 px-3 xss:px-4 sm:px-6 md:px-8 lg:px-10 ">
-            <h2 className="text-xl xss:text-xl sm:text-3xl md:text-3xl  xl:text-3xl text-[#071637] font-semibold underline decoration-blue-500 decoration-3 xss:decoration-4 underline-offset-6 xss:underline-offset-8 sm:underline-offset-10">
+            <h2 className="text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold underline underline-offset-[12px] sm:underline-offset-[16px] decoration-[#0D6EFD] decoration-4  text-[#071637] ">
               E-commerce App & Web
             </h2>
-            <p className="text-[10px] xss:text-xs sm:text-base  xl:text-[1.125rem] text-[#7B7E86] leading-relaxed mt-4 xss:mt-5 sm:mt-8 md:mt-10">
+            <p className="text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base   text-[#7B7E86] leading-5 sm:leading-6 mt-4 xss:mt-5 sm:mt-8 md:mt-10">
               Analogue is a premier mobile app development company in Hyderabad,
               specializing in creating and enhancing user experiences through
               innovative mobile and web applications. We focus on helping

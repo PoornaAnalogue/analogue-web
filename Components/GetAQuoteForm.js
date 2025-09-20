@@ -159,7 +159,7 @@ export default function GetAQuoteForm() {
   return (
     <div
       id="form-section"
-      className=" main-container min-h-[600px] xl:min-h-[700px] 2xl:min-h-screen relative flex flex-col items-center justify-center rounded-lg px-4 bg-white xs:px-6 xss:py-10 xl:pb-8 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-20"
+      className=" main-container min-h-[600px] xl:min-h-[700px] 2xl:h-screen relative flex flex-col items-center justify-center rounded-lg px-4 bg-white xs:px-6 xss:py-10 xl:pb-8 sm:px-8 md:px-10 lg:px-12 xl:px-16 2xl:px-20"
     >
       {/* Background Image Layer */}
       <div className="xl:mt-[-6rem] xss:mt-[-3rem] 3xl:mt-[-3rem] 2xl:mt-[-7rem] 3xl:mt-[-5rem] "></div>

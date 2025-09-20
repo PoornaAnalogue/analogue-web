@@ -1,3 +1,4 @@
+import NavbarDyn from "@/app/TechnologiesDyn/navbarDyn";
 import Responsive_AdobeTech from "@/app/adobe-xd-design-company/page";
 import BlogPageTesting from "@/app/blogTesting/page";
 import Blogs from "@/app/Dynamic_blogs/page";
@@ -10,8 +11,9 @@ import Responsive_Aarishh from "@/app/Prod-Aarish/page";
 export default function Navbar() {
   return (
     <>
-    <MainHomePage />
+    {/* <MainHomePage /> */}
     {/* <Responsive_Aarishh /> */}
+    <NavbarDyn />
     </>
      );
 }

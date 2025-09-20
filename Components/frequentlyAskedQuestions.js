@@ -32,7 +32,7 @@ export default function FrequentQuestions({ Question }) {
   };
 
   return (
-    <div className="mx-auto 2xl:mt-10 md:mt-5">
+    <div className=" mx-auto 2xl:mt-3 md:mt-5 w-[86%] pb-3 xss:mt-5">
       <div className="flex flex-col justify-center items-center">
         <div>
           <h1 className="text-2xl text-black xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold">

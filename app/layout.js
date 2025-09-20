@@ -25,14 +25,14 @@ export default function RootLayout({ children }) {
         <link rel="icon" href="/favicon.png" sizes="any" />
       </head>
       <body className={urbanist.className}>
-        <ModalPopUp />
-        <BypassProvider />
+        {/* <ModalPopUp /> */}
+        {/* <BypassProvider /> */}
         <CursorWrapper />
         {/* <LandingHero /> */}
-        <Navbar />
+        {/* <Navbar /> */}
         {children}
-        <Footer />
-        <BypassProvider />
+        {/* <Footer /> */}
+        {/* <BypassProvider /> */}
       </body>
     </html>
   );
