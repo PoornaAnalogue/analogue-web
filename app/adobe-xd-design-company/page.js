@@ -479,11 +479,12 @@ export default function Responsive_AdobeTech() {
             </div>
           </div>
 
-          <div>
-            <GetAQuoteForm />
-          </div>
+          
         </div>
+
+        
       </div>
+      <GetAQuoteForm />
     </>
   );
 }
