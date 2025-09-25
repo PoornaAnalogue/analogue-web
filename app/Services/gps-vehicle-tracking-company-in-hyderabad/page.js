@@ -6,9 +6,13 @@ import PopUpForm from "@/components/popup-form";
 import Link from "next/link";
 import Script from "next/script";
 import CarousalServicePage from "@/components/carousal-servicepage";
-import Responsive_Calendar from "@/app/book-appointment/page";
+// import Responsive_Calendar from "@/app/book-appointment/page";
 import FrequentQuestions from "@/components/faqs-page";
 import GetAQuoteForm from "@/components/get-quote-form";
+import CalendarPage from "@/app/home-page-main/calendar/calendar-page";
+import TypewriterHeading from "@/components/service-related-components/typewrite-heading";
+import TechnologiesButtons from "@/components/service-related-components/tech-icons";
+import ExtendedLocations from "@/components/service-related-components/extended-locations";
 
 export default function GPSVehicleTracking() {
   const [isOpen, setIsOpen] = useState(false);
@@ -69,36 +73,47 @@ export default function GPSVehicleTracking() {
 
   //   faqs
 
-  const IosfaqArray = [
+  const gpsfaqArray = [
     {
       question:
-        "01. What services does your Company offer in IOS App Development?",
+        "01. What is GPS vehicle tracking?",
       answer:
-        "We offer a wide range of services including app design, development, testing, and maintenance for iPhone, iPad, and Apple Watch apps.",
-    },
-    {
-      question:
-        "02. How long does it take to develop an IOS app with your company?",
-      answer:
-        "The timeline for developing an IOS app can vary depending on the complexity of the project. We work closely with our clients to set realistic timelines and meet their specific needs.",
+        "GPS vehicle tracking is a technology that uses Global Positioning System (GPS) satellites to monitor the real-time location, speed, and route of vehicles. It helps businesses manage fleets efficiently and ensure vehicle safety.",
     },
     {
       question:
-        "03. Can you provide examples of IOS apps your company has developed?",
+        "02. How does GPS vehicle tracking work?",
       answer:
-        "Yes, we have developed a variety of IOS apps for different industries including finance, healthcare, e-commerce, and entertainment. Contact us for a portfolio of our work.",
+        "A GPS tracking device installed in the vehicle communicates with satellites to determine the vehicle’s exact location. This data is then transmitted to a central platform, allowing fleet managers to monitor vehicles in real-time through web or mobile applications.",
     },
     {
       question:
-        "04. What sets your Company apart from other IOS app Development development companies?",
+        "03. Is GPS vehicle tracking suitable for all types of fleets?",
       answer:
-        "Our Company stands out for our high-quality design, responsive development process, and exceptional customer service. We prioritize client satisfaction and work collaboratively to deliver top-notch results.",
+        "Absolutely. GPS tracking can be implemented for small businesses, delivery vehicles, trucks, taxis, logistics fleets, and even personal vehicles.",
     },
     {
-      question: "05. Do you offer post-launch support for IOS apps?",
+      question:
+        "04. How secure is GPS vehicle tracking data?",
       answer:
-        "Yes, we offer post-launch support and maintenance services to ensure that your IOS app continues to function smoothly and stays up-to-date with the latest technology and trends.",
+        "At Analogue IT Solutions, we prioritize data security. All tracking data is encrypted and securely stored, ensuring that only authorized users can access it.",
     },
+    {
+      question: "05. How can I get started with GPS vehicle tracking?",
+      answer:
+        "You can get started by contacting a trusted GPS vehicle tracking provider like Analogue IT Solutions. Our team will assess your requirements, recommend the best solution, and assist with installation and setup.",
+    },
+  ];
+
+  const heading = [
+    { word: "Best", color: "text-black" },
+    { word: "GPS", color: "text-blue-500" },
+    { word: "Vehicle", color: "text-blue-500" },
+    { word: "Tracking", color: "text-blue-500" },
+    { word: "Services", color: "text-blue-500" },
+    { word: "in", color: "text-black" },
+    { word: "Hyderabad,", color: "text-black" },
+    { word: "India", color: "text-black" },
   ];
 
   return (
@@ -126,51 +141,44 @@ export default function GPSVehicleTracking() {
         {/* heading and content section */}
         <div className="px-4 xss:px-6 xs:px-8 sm:px-10 md:px-12 lg:px-16 xl:px-20 flex flex-col space-y-4 ">
           {/* about our company on top */}
-          <div className="flex items-center mb-1">
-            <span className="w-1 h-1 bg-black rounded-full mr-2"></span>
-            <span className="font-medium text-xs xss:text-subsmall sm:text-xs xl:text-sm text-black">
-              ABOUT OUR COMPANY
-            </span>
-          </div>
-          <h1 className=" text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] xl:w-[55%] 2xl:w-[45%] font-semibold text-black leading-snug">
-            Best{" "}
-            <span className="text-blue-500">
-              {" "}
-              GPS Tracking App Development{" "}
-            </span>{" "}
-            Company in Hyderabad, India
-          </h1>
-          <p className="text-gray-500 leading-relaxed text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base">
-            Are you looking for a top-notch IOS app development company to
-            create a cutting-edge mobile application that will take your
-            business to the next level? Look no further! Our team of expert IOS
-            app developers specialises in creating high-quality IOS apps that
-            are tailored to meet your specific needs and objectives. At Analogue
-            IT Solutions, we offer a wide range of IOS app development services.
-            Whether you need a simple iOS app or a complex, feature-rich mobile
-            application, our team of experienced IOS and Android app developers
-            has the skills and expertise to bring your vision to life.
-          </p>
+          <div className="flex flex-col xl:flex-row items-center xl:items-start w-full gap-6">
+            <div className="xl:w-1/2">
+              <div className="flex items-center mb-1">
+                <span className="w-1 h-1 bg-black rounded-full mr-2"></span>
+                <span className="font-medium text-xs xss:text-subsmall sm:text-xs xl:text-sm text-black">
+                  ABOUT OUR COMPANY
+                </span>
+              </div>
+              <TypewriterHeading textArray={heading} />
+              <p className="text-gray-500 leading-relaxed text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base">
+                At Analogue IT Solutions, we specialize in delivering GPS Vehicle Tracking services designed to enhance fleet management, improve safety, and optimize operational efficiency. Our vehicle tracking device services ensure that you can monitor and control your vehicles in real-time with precision. With the latest in GPS tracking technology, our solutions are reliable, scalable, and tailored to meet your unique needs. We help businesses reduce fuel costs, minimize downtime, and maximize productivity through intelligent tracking insights. Our solutions also strengthen driver accountability and ensure timely deliveries for improved customer satisfaction.
+              </p>
 
-          {/* Free Quote button + Call us */}
-          <div className="lg:flex gap-4">
-            <button
-              suppressHydrationWarning
-              onClick={() => setIsOpen(true)}
-              className="bg-blue-600 xss:text-xs lg:text-sm text-white xss:px-2 xss:py-2 xl:px-5 xl:py-3 rounded-3xl hover:bg-blue-700 transition cursor-pointer"
-            >
-              Get Free Quote
-            </button>
-            <div className="flex xss:flex-col lg:flex-row lg:items-center xss:ml-2 lg:ml-[-0.3rem] xss:mt-2 lg:mt-0">
-              <span className="xss:text-xs lg:text-sm text-blue-500 mr-2">
-                Call Us
-              </span>
-              <a
-                href="tel:+918919088163"
-                className="xss:text-xs lg:text-sm text-blue-700 hover:underline transition-colors duration-200"
-              >
-                +91 8919088163
-              </a>
+              {/* Free Quote button + Call us */}
+              <div className="xs:flex  gap-4 xss:pt-2 xl:pt-3">
+                <button
+                  suppressHydrationWarning
+                  onClick={() => setIsOpen(true)}
+                  className="bg-blue-600 xss:text-xs lg:text-sm text-white xss:px-2 xss:py-2 xl:px-5 xl:py-3 rounded-3xl hover:bg-blue-700 transition cursor-pointer"
+                >
+                  Get Free Quote
+                </button>
+                <div className="flex xss:flex-col lg:flex-row lg:items-center xss:ml-2 lg:ml-[-0.3rem] xss:mt-2 lg:mt-0">
+                  <span className="xss:text-xs lg:text-sm text-blue-500 mr-2">
+                    Call Us
+                  </span>
+                  <a
+                    href="tel:+918919088163"
+                    className="xss:text-xs lg:text-sm text-blue-700 hover:underline transition-colors duration-200"
+                  >
+                    +91 8919088163
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="xl:w-1/2 flex justify-center items-center">
+              <Image src="/service-icons/gps-img.png" width={600} height={400} alt="flutter image"
+                className="w-full h-auto max-w-[30rem] object-contain " />
             </div>
           </div>
 
@@ -181,34 +189,11 @@ export default function GPSVehicleTracking() {
               WELCOME TO OUR COMPANY
             </span>
           </div>
-          <h5 className=" text-2xl xss:text-[1.1rem] text-[#0D6EFD] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] xl:w-[60%] font-semibold leading-relaxed">
-            Accelerating Business Growth with Expert iOS App Development
+          <h5 className=" sub-heading">
+            What is GPS Vehicle Tracking?
           </h5>
           <p className="text-gray-500 leading-relaxed text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base">
-            At Analogue IT Solutions, we are a leading iOS app development
-            company in Hyderabad, helping businesses transform ideas into
-            powerful mobile experiences. Our skilled team of iOS developers
-            harnesses the latest technologies to craft customised applications
-            that align with your business goals and deliver real value.
-          </p>
-          <p className="text-gray-500 leading-relaxed text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base">
-            From elegant, user-friendly UI/UX design to secure and scalable
-            backend integration, every iOS app we build is designed for
-            performance, reliability, and growth. Whether you are a startup
-            launching your first app or an enterprise looking for advanced
-            solutions, our iOS app development expertise spans industries like
-            e-commerce, healthcare, fintech, logistics, and more.
-          </p>
-          <p className="text-gray-500 leading-relaxed text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base">
-            With a customer-centric approach, we create iOS applications that
-            are not only visually appealing but also robust, secure, and
-            optimised for seamless performance. Our focus is on delivering apps
-            that enhance user engagement, streamline operations, and boost
-            business growth.
-          </p>
-          <p className="text-gray-500 leading-relaxed text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base">
-            Partner with Analogue IT Solutions to turn your iOS app vision into
-            reality and stay ahead in the competitive digital landscape.
+            GPS Vehicle Tracking is the process of tracking the real-time location and movement of vehicles using satellite signals. Our GPS Tracking Services utilize advanced GPS trackers to provide live tracking, historical data, and detailed reports. Whether you're managing a fleet of vehicles or just need to monitor a single vehicle, our Vehicle Tracking System offers you the complete solution. It enhances security by preventing unauthorized vehicle usage and supports route optimization to save time and fuel. With our reliable system, you gain full control and visibility over your vehicles anytime, anywhere.
           </p>
           <div className="my-2">
             <button className="bg-blue-600 xss:text-xs lg:text-sm text-white xss:px-2 xss:py-2 xl:px-5 xl:py-3 rounded-3xl hover:bg-blue-700 transition cursor-pointer ">
@@ -221,20 +206,10 @@ export default function GPSVehicleTracking() {
         <div className="mt-4 xss:mt-6 xs:mt-8 sm:mt-10 md:mt-12 lg:mt-15 ">
           <div className="relative w-full h-auto min-h-[200px] xss:min-h-[250px] xs:min-h-[200px] sm:min-h-[350px] md:min-h-[400px] lg:h-[400px] bg-[url('/service-icons/app-dev-bg.jpg')] bg-cover bg-center flex flex-col lg:flex-row justify-end items-center">
             <div className="w-full lg:w-[48%] 2xl:w-[50%] lg:absolute lg:inset-y-0 lg:left-0 p-4 xss:p-6 xs:p-8 sm:p-10 md:p-12 lg:p-11 xl:p-9 2xl:p-10">
-              <h1 className="text-white text-lg xss:text-md xs:text-lg sm:text-xl md:text-xl xl:text-2xl 3xl:text-[1.6rem] font-bold xss:leading-tight 2xl:leading-relaxed 2xl:w-[60%] 3xl:w-[65%]">
-                Empowering Businesses with Custom iOS Apps
-              </h1>
-              <p className="text-white text-xs xss:text-xs xs:text-xs sm:text-sm md:text-sm lg:text-[0.75rem] xl:text-sm 3xl:text-base xss:leading-5 xl:leading-6 2xl:leading-7 mt-2 xss:mt-3 xs:mt-4 sm:mt-4 md:mt-5 lg:mt-3 xl:mt-3 3xl:mt-2">
-                At Analogue IT Solutions, we specialise in iOS app development,
-                creating tailored applications that align with your business
-                goals. Our team leverages advanced technologies and creative
-                design to deliver secure, scalable, and user-friendly solutions.
-                Whether you’re looking for an e-commerce platform or a unique
-                business application, our iOS app development expertise ensures
-                exceptional performance and seamless user experiences. With
-                innovation and precision, we bring your vision to life, making
-                us the trusted choice for businesses seeking top-quality iOS app
-                development services.
+              <h1 className="text-white text-lg xss:text-md xs:text-lg sm:text-xl md:text-xl xl:text-2xl 3xl:text-[1.6rem] font-bold xss:leading-tight 2xl:leading-relaxed 2xl:w-[60%] 3xl:w-[75%]">
+                Empowering Businesses with Smart GPS Vehicle Tracking              </h1>
+              <p className="text-white text-xs xss:text-xs xs:text-xs sm:text-sm md:text-sm lg:text-[0.75rem] xl:text-sm 3xl:text-base xss:leading-5 xl:leading-6 2xl:leading-6 mt-2 xss:mt-3 xs:mt-4 sm:mt-4 md:mt-5 lg:mt-3 xl:mt-3 3xl:mt-2">
+                At Analogue IT Solutions, we provide cutting-edge GPS vehicle tracking solutions that empower businesses to manage their fleets efficiently and securely. Our platform delivers real-time location updates, route optimization, and comprehensive reporting, allowing you to monitor vehicles, reduce operational costs, and enhance overall safety. With intuitive dashboards and actionable insights, our GPS tracking system helps you make informed decisions, improve productivity, and ensure seamless coordination across your fleet. Whether you manage a small business or a large enterprise, our solutions are designed to keep your vehicles connected, your operations smooth, and your business ahead of the competition.
               </p>
               <button className="bg-blue-700 text-white rounded p-2 xss:p-2 xs:p-2 sm:p-3 md:p-3 lg:p-2 xl:p-2 2xl:p-3 mt-2 lg:mt-4 xss:mt-3 xs:mt-4 sm:mt-4 md:mt-4 lg:mt-2 xl:mt-3 2xl:mt-4 3xl:mt-3 text-xs xss:text-xs xs:text-sm sm:text-sm md:text-sm lg:text-[0.65rem] xl:text-xs 2xl:text-sm">
                 <Link href="/contact">Contact Us</Link>
@@ -258,368 +233,226 @@ export default function GPSVehicleTracking() {
         </div>
 
         {/* TECHNOLOGIES SECTION  WITH ICONS AND BG IMAGE */}
-        <div className=" w-full h-auto bg-[url('/service-icons/app-dev-bg.jpg')] bg-cover bg-center flex flex-col lg:flex-row h-[35rem] sm:h-[27rem] md:h-[32rem] lg:h-[32rem] xl:h-[26rem]">
-          <div className=" pt-[4%] sm:pt-[5%] 3xl:w-[80%] w-[80%] mx-auto text-white">
-            <h2 className="text-2xl xss:text-center lg:text-start xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold mb-9">
-              TECHNOLOGIES
-            </h2>
-            <div className="flex space-x-8 mb-6">
-              {technologies.map((tech, index) => (
-                <span
-                  key={index}
-                  onClick={() => setSelectedCategory(tech.category)}
-                  className={`cursor-pointer pb-1 border-b-2 font-medium xss:text-xs sm:text-sm lg:text-base  transition-all duration-500 ease-in-out ${
-                    selectedCategory === tech.category
-                      ? "border-white text-[#0E59F2]"
-                      : "border-transparent"
-                  } hover:border-[#0E59F2]`}
-                >
-                  {tech.category}
-                </span>
-              ))}
-            </div>
+        <div>
+          <TechnologiesButtons />
+        </div>
 
-            {/* Display selected category items */}
-            <div className="flex">
-              <div className="w-full">
-                <div className="grid grid-cols-6 xss:grid-cols-2 sm:grid-cols-3 2xl:w-[60rem] xl:grid-cols-5">
-                  {selectedItems?.map((item, idx) => (
-                    <div
-                      key={idx}
-                      className="py-1 p-2 m-5 sm:m-0 sm:my-2 md:m-0 md:my-2 text-black relative"
-                    >
-                      <Image
-                        src={TechIcons.bgicon}
-                        alt="design"
-                        width={20}
-                        height={20}
-                        className=" xss:w-[5.5rem] sm:w-[6.3rem] md:w-[120px] lg:w-[135px] flex justify-center items-center mx-auto"
-                      />
-                      <div className="absolute inset-0 xss:text-subsmall sm:text-xs flex flex-col items-center justify-center">
-                        <Image
-                          src={item.icon}
-                          alt={item.name}
-                          width={20}
-                          height={20}
-                          className="w-[65px] h-[65px] xss:w-[2.5rem] xss:h-[2rem] sm:w-[55px] sm:h-[50px] md:w-[60px] md:h-[50px] lg:w-[68px] lg:h-[55px] xl:w-[85px] xl:h-[75px]"
-                        />
-                        {item.name}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
+        {/* GPS vehicle tracking */}
+        <div className="w-full h-auto bg-white xl:p-5 xl:px-20 xss:px-5 pt-5 xs:p-5 sm:px-8 ">
+          <h3 className="sub-heading">
+            GPS Vehicle Tracking - Real-Time Vehicle Monitoring Made Easy        
+              </h3>
+          <div className="text">
+            <p className="pb-1">
+              GPS Vehicle Tracking is the process of monitoring the real-time location and movement of vehicles using advanced satellite signals. With the help of our GPS Tracking Services, you can not only view live tracking but also access detailed reports, driving history, and performance insights.
+            </p>
+            <p className="pb-1">
+              Our Vehicle Tracking System is designed for both individuals and businesses. Whether you&apos;re managing a fleet of vehicles for logistics, transportation, delivery services, or simply need to track a single car for personal use, our GPS solutions ensure complete safety, control, and efficiency.
+            </p>
           </div>
         </div>
 
-        {/* Our services new section */}
-        <div className=" pb-10">
-          <div className="flex flex-col xss:items-start sm:items-center xss:px-4 xss:py-5 xl:py-10">
-            <div className="flex items-center mb-1">
-              <span className="w-1 h-1 bg-black rounded-full mr-2"></span>
-              <span className="font-medium text-xs xss:text-subsmall sm:text-xs xl:text-sm text-black">
-                Our Services
+        {/* key features */}
+        <div className="w-full h-auto bg-white xl:p-0 xl:px-20 xss:px-5 xss:px-5 sm:px-8">
+          <h5 className=" xss:pb-2 xl:pb-3 sub-heading">
+            Key Features of Our GPS Vehicle Tracking System 
+            </h5>
+
+          <div className="text-[#7B7E86]">
+            <div className="sub-text">
+              Real-Time Location Tracking -{" "}
+              <span className="text">
+                Instantly know where your vehicle is at any time.    
+                  </span>
+            </div>
+
+            <div className="sub-text">
+              Route History & Playback  -{" "}
+              <span className="text">
+                View historical travel routes for better trip management.
               </span>
             </div>
-            <h1 className=" text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold text-black leading-snug">
-              IOS App Development Services at Analogue IT Solutions
-            </h1>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 xss:gap-8 xss:px-8 3xl:gap-20 2xl:gap-14 2xl:px-14 3xl:px-30 px-10">
-            <div className=" text-[#7B7E86] p-5 border-l border-r border-gray-200 shadow-[0_4px_2px_rgba(0,0,0,0.3)] bg-white rounded-lg">
-              <h3 className="font-weight-400 text-[#0E59F2] xss:mb-3 xl:text-2xl xl:mb-4 xss:mb-1text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold">
-                Mobile App Optimization
-              </h3>
-              <p className="xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base  xss:leading-4 sm:leading-relaxed 3xl:leading-7">
-                Developers optimise the app for performance and speed to ensure
-                it delivers a seamless user experience.
-              </p>
+
+            <div className="sub-text">
+              Detailed Reports -{" "}
+              <span className="text">
+                Get insights into speed, distance traveled, idle time, and stoppages.
+              </span>
             </div>
-            <div className=" text-[#7B7E86] p-5 border-l border-r border-gray-200 shadow-[0_4px_2px_rgba(0,0,0,0.3)] bg-white p-6 rounded-lg">
-              <h3 className="font-weight-400 text-[#0E59F2] xss:mb-3 xl:text-2xl xl:mb-4 xss:mb-1text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold">
-                Custom UI/UX Design
-              </h3>
-              <p className="xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base  xss:leading-4 sm:leading-relaxed 3xl:leading-7">
-                Designers create visually appealing user interfaces and ensure a
-                smooth user experience within the app.
-              </p>
+
+            <div className="sub-text">
+              Geofencing Alerts -{" "}
+              <span className="text">
+                Set virtual boundaries and get notified when vehicles enter or exit specific areas.
+              </span>
             </div>
-            <div className=" text-[#7B7E86] p-5 border-l border-r border-gray-200 shadow-[0_4px_2px_rgba(0,0,0,0.3)] bg-white p-6 rounded-lg">
-              <h3 className="font-weight-400 text-[#0E59F2] xss:mb-3 xl:text-2xl xl:mb-4 xss:mb-1text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold">
-                App Store Submission
-              </h3>
-              <p className="xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base  xss:leading-4 sm:leading-relaxed 3xl:leading-7">
-                Developers help clients navigate the App Store submission
-                process and ensure that the app meets all guidelines and
-                requirements set by Apple.
-              </p>
+
+            <div className="sub-text">
+              Driver Behavior Monitoring -{" "}
+              <span className="text">
+                Track driving patterns like overspeeding, harsh braking, or unnecessary idling.
+              </span>
             </div>
-            <div className=" text-[#7B7E86] p-5 border-l border-r border-gray-200 shadow-[0_4px_2px_rgba(0,0,0,0.3)] bg-white p-6 rounded-lg">
-              <h3 className="font-weight-400 text-[#0E59F2] xss:mb-3 xl:text-2xl xl:mb-4 xss:mb-1text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold">
-                App Testing and Debugging
-              </h3>
-              <p className="xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base  xss:leading-4 sm:leading-relaxed 3xl:leading-7">
-                Developers thoroughly test the app to ensure it runs smoothly
-                and is free of any bugs or glitches before it is released to the
-                App Store.
-              </p>
+            <div className="sub-text">
+              Mobile & Web Access -{" "}
+              <span className="text">
+                Monitor your vehicles 24/7 via smartphone app or web dashboard.
+              </span>
             </div>
           </div>
         </div>
+
+
+        {/* benefits of gps  */}
+        <div className="w-full h-auto bg-white xl:p-5 xl:px-20 xss:px-5 pt-5 xs:p-5 sm:px-8">
+          <h5 className="sub-heading">
+            Benefits of GPS Tracking Services
+          </h5>
+
+          <div className="text-[#7B7E86]">
+            <div className="sub-text">
+              Improved Fleet Management -{" "}
+              <span className="text">
+                Optimize routes, reduce fuel costs, and increase productivity.
+              </span>
+            </div>
+
+            <div className="sub-text">
+              Enhanced Safety & Security  -{" "}
+              <span className="text">
+                Receive instant alerts in case of theft, misuse, or route deviations.
+              </span>
+            </div>
+
+            <div className="sub-text">
+              Better Customer Service -{" "}
+              <span className="text">
+                Ensure on-time deliveries with accurate ETAs and live tracking updates.
+              </span>
+            </div>
+
+            <div className="sub-text">
+              Cost Savings -{" "}
+              <span className="text">
+                Reduce fuel expenses, maintenance costs, and unauthorized vehicle usage
+              </span>
+            </div>
+
+            <div className="sub-text">
+              Peace of Mind -{" "}
+              <span className="text">
+                Know your loved ones or valuable goods are safe at all times.
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* who can use the gps  */}
+        <div className="w-full h-auto bg-white xl:p-0 xl:px-20 xss:px-5 pt-5 xs:p-5 sm:px-8 ">
+          <h5 className="sub-heading">
+            Who Can Use GPS Vehicle Tracking?
+          </h5>
+
+          <div className="text-[#7B7E86]">
+            <p className="sub-text">
+              Our GPS Tracking System combines accuracy, reliability, and user-friendly features to give you complete control over your vehicles. By using our advanced GPS trackers, you can ensure smarter decision-making, improved efficiency, and enhanced safety for your vehicles.
+
+            </p>
+            <div className="sub-text">
+              Logistics & Transport Companies -{" "}
+              <span className="text">
+                Monitor trucks, buses, and cargo in real time.
+              </span>
+            </div>
+
+            <div className="sub-text">
+              Delivery Services  -{" "}
+              <span className="text">
+                Ensure timely deliveries with optimized routes.
+              </span>
+            </div>
+
+            <div className="sub-text">
+              Taxi & Ride-Sharing Services -{" "}
+              <span className="text">
+                Improve transparency and passenger safety.
+              </span>
+            </div>
+
+            <div className="sub-text">
+              Personal Vehicle Owners -{" "}
+              <span className="text">
+                Keep your family and private cars secure.
+              </span>
+            </div>
+
+            <div className="sub-text">
+              Corporate Fleets -{" "}
+              <span className="text">
+                Track employee movement and reduce operational costs.
+              </span>
+            </div>
+          </div>
+        </div>
+
 
         {/* Calendar */}
         <div>
-          <Responsive_Calendar />
+          <CalendarPage />
         </div>
 
-        {/* IOS app dev company in India */}
-        <div className="w-full h-auto bg-white xl:p-5 xl:px-20 xss:px-5 pt-5 xs:p-5 sm:px-8 ">
-          <h3 className="font-weight-400 font-semibold text-[#0E59F2] xss:mb-3 xl:text-2xl xl:mb-4 xss:mb-1text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold">
-            Are You Looking for The Best IOS App Development Company?
+        {/* mapping gps */}
+        <div className="w-full h-auto bg-white xl:py-3 xl:px-20 xss:px-5 pt-5 xs:px-5 sm:px-8 ">
+          <h3 className="sub-heading">
+            GIS Mapping Services for Vehicle Management
           </h3>
-          <div className="xl:text-sm text-[#7B7E86] xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base leading-relaxed 3xl:leading-8">
+          <div className="text">
             <p className="pb-2">
-              Your go-to destination for top-notch IOS app development and a
-              wide range of other services! Our dedicated team specialises in
-              IOS app development and is ready to take on any project, big or
-              small
-            </p>
-            <p className="pb-2">
-              But that&apos;s not all - we also offer mobile app development,
-              web development, Android app development, flutter app development,
-              and E-commerce app development. Whether you need a sleek and
-              modern website, a cutting-edge mobile app, or a custom eCommerce
-              solution, we&apos;ve got you covered.
-            </p>
-            <p className="pb-2">
-              Don&apos;t settle for mediocre results - trust Analogue IT
-              Solutions for all your IOS app development needs and more. Contact
-              us today to learn more about our IOS app development services and
-              how we can help bring your vision to life. Choose the best -
-              choose Analogue IT Solutions.
-            </p>
+We offer advanced GIS Mapping Services to visualize your fleet's location and routes on customized maps. By leveraging GPS trackers and vehicle tracking systems, our GIS Mapping Services help you plan efficient routes and monitor driver behavior. These solutions enhance operational transparency, reduce fuel costs, and improve overall fleet productivity. With real-time data insights, businesses can make smarter decisions and deliver services more efficiently.            </p>
           </div>
         </div>
+
+        <div className="w-full h-auto bg-white xl:p-0 xl:px-20 xss:px-5 pt-5 xs:p-5 sm:px-8 ">
+          <h3 className="sub-heading">
+            Drones as a Service for Vehicle Monitoring          </h3>
+          <div className="text">
+            <p className="pb-2">
+We also provide drone services for aerial monitoring of your vehicles and assets. Drones equipped with GPS technology can provide real-time aerial views of your fleet, ensuring enhanced security and better oversight of remote or large-area locations. This allows for quicker incident detection, improved risk management, and proactive maintenance planning. With high-resolution imaging and data collection, you gain actionable insights to optimize fleet safety and performance.            </p>
+          </div>
+        </div>
+
+        {/* why choose  */}
+        <div className="w-full h-auto bg-white xl:py-3 xl:px-20 xss:px-5 xs:p-5 sm:px-8 ">
+          <h3 className="sub-heading">
+            Why Choose Analogue IT Solutions for Your GPS Vehicle Tracking Needs?          </h3>
+          <div className="text">
+            <p className="xss:pb-2 md:pb-5">
+As one of the leading vehicle tracking device service providers, we have extensive experience in providing reliable GPS tracking solutions. Our team is committed to delivering high-quality, customizable tracking systems that provide real-time, accurate data. Whether you are a small business or a large enterprise, we tailor our services to meet your specific requirements. With our advanced solutions, you can improve operational efficiency, reduce costs, and ensure greater safety for your fleet. Our customer-focused approach guarantees seamless integration and ongoing support for hassle-free management. By choosing us, you gain a trusted partner dedicated to helping your business thrive with smart tracking technologies.            </p>
+          </div>
+        </div>
+
 
         {/* Extended Locations */}
-        <div className=" w-full h-auto bg-[url('/service-icons/app-dev-bg.jpg')] bg-cover bg-center xss:p-7 xl:p-15">
-          <div className="text-white text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold xss:pb-5 lg:pb-8 2xl:pb-15 text-center">
-            Our Services Extend to These Top Locations!
-          </div>
-          <div className="grid lg:grid-cols-2 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base xss:grid-cols-1 xss:gap-4 xl:gap-5 sm:px-8 md:px-28 lg:px-10 2xl:px-50">
-            <div className="flex items-center">
-              <div className="w-[1.5rem] xss:w-[1.8rem] sm:w-[2rem] lg:w-[2.4rem] ">
-                <Image
-                  src="/service-icons/hyd.svg"
-                  alt="hyd"
-                  width={40}
-                  height={40}
-                  priority={false}
-                />
-              </div>
-              <p className="text-white pl-2">
-                Mobile App Development Company in Hyderabad
-              </p>
-            </div>
-            <div className="flex items-center">
-              <div className="w-[1.5rem] xss:w-[1.8rem] sm:w-[2rem] lg:w-[2.4rem] ">
-                <Image
-                  src="/service-icons/torento.svg"
-                  alt="toronto"
-                  width={40}
-                  height={40}
-                  priority={false}
-                />
-              </div>
-              <p className="text-white pl-2">
-                Mobile App Development Company in Toronto
-              </p>
-            </div>
-            <div className="flex items-center">
-              <div className="w-[1.5rem] xss:w-[1.8rem] sm:w-[2rem] lg:w-[2.4rem] ">
-                <Image
-                  src="/service-icons/saudi.svg"
-                  alt="saudi"
-                  width={40}
-                  height={40}
-                  priority={false}
-                />
-              </div>
-              <p className="text-white pl-2">
-                Mobile App Development Company in Saudi
-              </p>
-            </div>
-            <div className="flex items-center">
-              <div className="w-[1.5rem] xss:w-[1.8rem] sm:w-[2rem] lg:w-[2.4rem] ">
-                <Image
-                  src="/service-icons/dubai.svg"
-                  alt="dubai"
-                  width={40}
-                  height={40}
-                  priority={false}
-                />
-              </div>
-              <p className="text-white pl-2">
-                Mobile App Development Company in Dubai
-              </p>
-            </div>
-            <div className="flex items-center">
-              <div className="w-[1.5rem] xss:w-[1.8rem] sm:w-[2rem] lg:w-[2.4rem] ">
-                <Image
-                  src="/service-icons/qatar.svg"
-                  alt="qatar"
-                  width={40}
-                  height={40}
-                  priority={false}
-                />
-              </div>
-              <p className="text-white pl-2">
-                Mobile App Development Company in Qatar
-              </p>
-            </div>
-            <div className="flex items-center">
-              <div className="w-[1.5rem] xss:w-[1.8rem] sm:w-[2rem] lg:w-[2.4rem] ">
-                <Image
-                  src="/service-icons/kochi.svg"
-                  alt="kochi"
-                  width={40}
-                  height={40}
-                  priority={false}
-                />
-              </div>
-              <p className="text-white pl-2">
-                Mobile App Development Company in Kochi
-              </p>
-            </div>
+        <div>
+          <ExtendedLocations />
+        </div>
+
+        {/* discuss ideas */}
+        <div className="w-full h-auto bg-white xl:p-5  xl:px-20 xss:px-5 pt-5 xs:p-5 sm:px-8 ">
+          <h3 className=" sub-heading">
+            Get Started Today            
+            </h3>
+          <div className="xl:text-sm text-[#7B7E86] pb-2 xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base leading-relaxed 3xl:leading-8">
+            <p className="pb-2">
+              If you're looking for reliable GPS Vehicle Tracking solutions or want to learn more about our vehicle tracking system, GPS tracker, or GIS mapping services, contact Analogue IT Solutions today! Our experts are here to guide you in choosing the best solution for your vehicle fleet management needs.            </p>
           </div>
         </div>
 
-        {/* IOS app dev company in India */}
-        <div className="w-full h-auto bg-white xl:p-5 xl:px-20 xss:px-5 pt-5 xs:p-5 sm:px-8 ">
-          <h3 className="font-weight-400 font-semibold text-[#0E59F2] xss:mb-3 xl:text-2xl xl:mb-4 xss:mb-1text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold">
-            IOS App Development Company in Hyderabad, India
-          </h3>
-          <div className="xl:text-sm text-[#7B7E86] xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base leading-relaxed 3xl:leading-8">
-            <p className="pb-2">
-              As a leading iOS app development company in India, Analogue IT
-              Solutions is committed to delivering innovative, scalable, and
-              user-centric iOS applications tailored to business needs. With
-              deep expertise in iOS app development, we design and build apps
-              that meet Apple&apos;s highest standards of quality, performance,
-              and security. Recognized as one of the top iOS app development
-              companies in Hyderabad, we bring your ideas to life with precision
-              and innovation.
-            </p>
-            <p className="pb-2">
-              Our team of skilled IOS developers in Hyderabad specializes in
-              building intuitive, engaging, and feature-rich applications for
-              iPhone and iPad. Beyond app development, Analogue also provides
-              digital marketing and business strategy consulting, helping brands
-              leverage technology to achieve their goals. Whether it&apos;s a
-              startup or an enterprise, our iOS app development services ensure
-              seamless digital experiences that drive growth.
-            </p>
-            <p className="pb-2">
-              At Analogue IT Solutions, we don&apos;t just build apps — we craft
-              experiences. Our iOS app development services in Hyderabad
-              transform your vision into interactive, user-friendly, and
-              high-performance applications.
-            </p>
-          </div>
-        </div>
-
-        {/* content under IOS app dev company in India */}
-        <div className="w-full h-auto bg-white xl:p-5 xl:px-20 xss:px-5 pt-5 xs:p-5 sm:px-8 ">
-          <h3 className="font-weight-400 font-semibold text-[#0E59F2] xss:mb-3 xl:text-2xl xl:mb-4 xss:mb-1text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold">
-            Analogue IT Solutions - Best iOS App Development Services in
-            Hyderabad
-          </h3>
-          <div className="xl:text-sm text-[#7B7E86] xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base leading-relaxed 3xl:leading-8">
-            <p className="pb-2">
-              Analogue IT Solutions has built a reputation as the best iOS app
-              development company in Hyderabad by following a client-first
-              approach. Our team collaborates closely with clients to
-              brainstorm, strategize, and deliver top-notch iOS apps that stand
-              out in today&apos;s competitive market.
-            </p>
-            <p className="pb-2">
-              We are dedicated to developing iOS apps that are elegant,
-              responsive, and seamlessly aligned with your business objectives.
-              By blending creative design with robust development practices, we
-              create digital products that leave a lasting impact on your users.
-            </p>
-          </div>
-        </div>
-
-        {/* why analogue it solutions */}
-        <div className="w-full h-auto bg-white xl:p-5 xl:px-20 xss:px-5 pt-5 xs:p-5 sm:px-8 ">
-          <h3 className="font-weight-400 font-semibold text-[#0E59F2] xss:mb-3 xl:text-2xl xl:mb-4 xss:mb-1text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold ">
-            Why Choose Analogue IT Solutions?
-          </h3>
-          <div className="xl:text-sm text-[#7B7E86] xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base leading-relaxed 3xl:leading-8">
-            <p className="pb-2">
-              Strict Non-Disclosure Agreement (NDA) to protect your ideas.
-            </p>
-            <p className="pb-2">
-              Affordable yet high-quality iOS app development services
-            </p>
-            <p className="pb-2">
-              Experienced iOS developers with expertise in Swift, Objective-C,
-              and modern frameworks
-            </p>
-            <p className="pb-2">
-              Fast and efficient development processes tailored to your
-              timelines
-            </p>
-            <p className="pb-2">
-              Apps designed with excellent usability and interactive experiences
-            </p>
-            <p className="pb-2">
-              Reliable performance across all Apple devices
-            </p>
-            <p className="pb-2">
-              Continuous updates, maintenance, and dedicated support
-            </p>
-            <p className="pb-2">
-              Custom-built iOS solutions tailored to your business needs
-            </p>
-          </div>
-        </div>
-
-        {/* IOS app dev company in India */}
-        <div className="w-full h-auto bg-white xl:p-5 xl:px-20 xss:px-5 pt-5 xs:p-5 sm:px-8 ">
-          <h3 className="font-weight-400 font-semibold text-[#0E59F2] xss:mb-3 xl:text-2xl xl:mb-4 xss:mb-1text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold">
-            Choose the Best iOS App Developers in Hyderabad
-          </h3>
-          <div className="xl:text-sm text-[#7B7E86] xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base leading-relaxed 3xl:leading-8">
-            <p className="pb-2">
-              Searching for expert iOS app developers in Hyderabad? Partner with
-              Analogue IT Solutions! Our experienced professionals stay ahead of
-              the curve with the latest Apple technologies and development
-              trends, ensuring world-class iOS solutions for your business.
-            </p>
-            <p className="pb-2">
-              Along with iOS apps, we also specialize in web development and
-              e-commerce solutions, offering a complete suite of digital
-              services to help you grow. From robust iOS applications to dynamic
-              websites and scalable online stores, Analogue is your trusted
-              digital partner.
-            </p>
-            <p className="pb-2">
-              Though headquartered in Hyderabad, our iOS app development
-              services extend globally, making us the preferred iOS app
-              development company in Hyderabad, Telangana. Get in touch today
-              and discover how Analogue can transform your business through
-              cutting-edge iOS solutions.
-            </p>
-          </div>
-        </div>
 
         {/* faqs section */}
         <div className="w-[86%] mx-auto pb-3 xss:mt-5">
           <div>
-            <FrequentQuestions Question={IosfaqArray} />
+            <FrequentQuestions Question={gpsfaqArray} />
           </div>
         </div>
 

@@ -9,6 +9,7 @@ import CarousalServicePage from "@/components/carousal-servicepage";
 import FrequentQuestions from "@/components/faqs-page";
 import GetAQuoteForm from "@/components/get-quote-form";
 import CalendarPage from "@/app/home-page-main/calendar/calendar-page";
+import ExtendedLocations from "@/components/service-related-components/extended-locations";
 
 export default function AndroidAppDevelopment() {
   const [isOpen, setIsOpen] = useState(false);
@@ -132,7 +133,7 @@ export default function AndroidAppDevelopment() {
               ABOUT OUR COMPANY
             </span>
           </div>
-          <h1 className=" text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] xl:w-[55%] 2xl:w-[45%] font-semibold text-black leading-snug">
+          <h1 className="  text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.7rem] md:w-[75%] xl:text-[2rem] 3xl:text-[2.5rem] xl:w-[75%] 2xl:w-[65%] font-semibold text-black leading-snug">
             Best{" "}
             <span className="text-blue-500"> Android App Development </span>{" "}
             Company in Hyderabad, India
@@ -176,7 +177,7 @@ export default function AndroidAppDevelopment() {
               WELCOME TO OUR COMPANY
             </span>
           </div>
-          <h5 className="text-[#0D6EFD] text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] xl:w-[60%] font-semibold leading-tight">
+          <h5 className="subt text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.5rem] md:w-[75%] xl:text-[1.8rem] 3xl:text-[2.2rem] xl:w-[75%] 2xl:w-[65%] font-semibold text-black leading-snug">
             Accelerating Business Growth with Top-Notch Android Development
           </h5>
           <p className="text-gray-500 leading-relaxed text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base">
@@ -310,14 +311,13 @@ export default function AndroidAppDevelopment() {
         </div>
 
         {/* Start Work with us */}
-        <div
-          className="w-full h-auto bg-white px-3 py-5 xs:px-4 xs:py-6 
+        <div className="w-full h-auto bg-white px-3 py-5 xs:px-4 xs:py-6 
                         sm:px-5 sm:py-7 md:px-6 md:py-8 lg:px-8 lg:py-10 xl:px-10 xl:py-8 xl:px-20"
         >
           <p
             className="text-[#071637] font-semibold text-body mb-3 font-600 underline decoration-[#0D6EFD] decoration-2 underline-offset-6
                             xs:text-body xs:decoration-2 xs:underline-offset-7 xs:mb-4
-                            text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold
+                            text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.6rem] 3xl:text-[2.2rem] font-semibold
                             sm:decoration-3 md:decoration-3  xl:decoration-4 
                             sm:underline-offset-10 md:underline-offset-15 xl:underline-offset-[20px] 
                             sm:mb-2 md:mb-4 xl:mb-5"
@@ -361,7 +361,7 @@ export default function AndroidAppDevelopment() {
 
         {/* Android dev company in India */}
         <div className="w-full h-auto bg-white xl:p-5 xl:px-20 xss:px-5 pt-5 xs:p-5 sm:px-8 ">
-          <p className="font-weight-400 font-semibold text-[#0E59F2] xss:mb-3 xl:text-2xl xl:mb-4 xss:mb-1text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold">
+          <p className=" subt text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.5rem] md:w-[75%] xl:text-[1.8rem] 3xl:text-[2.2rem] xl:w-[75%] 2xl:w-[65%] font-semibold text-black leading-snug">
             Mobile App Development Company in India
           </p>
           <div className="xl:text-sm text-[#7B7E86] xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base  xss:leading-4 sm:leading-relaxed 3xl:leading-8">
@@ -394,8 +394,8 @@ export default function AndroidAppDevelopment() {
 
         {/* text under responsive india */}
         <div className="w-full h-auto bg-white xl:p-5 xl:px-20 xss:px-5 xss:pb-2 sm:px-8 ">
-          <p className="font-weight-400 font-semibold text-[#0E59F2] text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] xl:mb-4 xss:mb-1 xs:mb-1 ">
-            Analogue IT Solutions - Best AndroidAppDevelopment Services <br />{" "}
+          <p className="subt text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.5rem] md:w-[75%] xl:text-[1.8rem] 3xl:text-[2.2rem] xl:w-[75%] 2xl:w-[65%] font-semibold text-black leading-snug xl:mb-4 xss:mb-1 xs:mb-1 ">
+            Analogue IT Solutions - Best AndroidAppDevelopment Services 
             in Hyderabad
           </p>
           <div className=" text-[#7B7E86] text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base xl:leading-6 xss:leading-4 sm:leading-relaxed 3xl:leading-8">
@@ -418,108 +418,18 @@ export default function AndroidAppDevelopment() {
         </div>
 
         {/* Extended Locations */}
-        <div className=" w-full h-auto bg-[url('/service-icons/app-dev-bg.jpg')] bg-cover bg-center xss:p-7 xl:p-15">
-          <div className="text-white text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold xss:pb-5 lg:pb-8 2xl:pb-15 text-center">
-            Our Services Extend to These Top Locations!
-          </div>
-          <div className="grid lg:grid-cols-2 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base xss:grid-cols-1 xss:gap-4 xl:gap-5 sm:px-8 md:px-28 lg:px-12 2xl:px-40 3xl:px-50">
-            <div className="flex items-center">
-              <div className="w-[1.5rem] xss:w-[1.8rem] sm:w-[2rem] lg:w-[2.4rem] ">
-                <Image
-                  src="/service-icons/hyd.svg"
-                  alt="hyd"
-                  width={40}
-                  height={40}
-                  priority={false}
-                />
-              </div>
-              <p className="text-white pl-2">
-                Mobile App Development Company in Hyderabad(Ind)
-              </p>
-            </div>
-            <div className="flex items-center">
-              <div className="w-[1.5rem] xss:w-[1.8rem] sm:w-[2rem] lg:w-[2.4rem] ">
-                <Image
-                  src="/service-icons/torento.svg"
-                  alt="toronto"
-                  width={40}
-                  height={40}
-                  priority={false}
-                />
-              </div>
-              <p className="text-white pl-2">
-                Mobile App Development Company in UAE
-              </p>
-            </div>
-            <div className="flex items-center">
-              <div className="w-[1.5rem] xss:w-[1.8rem] sm:w-[2rem] lg:w-[2.4rem] ">
-                <Image
-                  src="/service-icons/saudi.svg"
-                  alt="saudi"
-                  width={40}
-                  height={40}
-                  priority={false}
-                />
-              </div>
-              <p className="text-white pl-2">
-                Mobile App Development Company in USA
-              </p>
-            </div>
-            <div className="flex items-center">
-              <div className="w-[1.5rem] xss:w-[1.8rem] sm:w-[2rem] lg:w-[2.4rem] ">
-                <Image
-                  src="/service-icons/dubai.svg"
-                  alt="dubai"
-                  width={40}
-                  height={40}
-                  priority={false}
-                />
-              </div>
-              <p className="text-white pl-2">
-                Mobile App Development Company in UK
-              </p>
-            </div>
-            <div className="flex items-center">
-              <div className="w-[1.5rem] xss:w-[1.8rem] sm:w-[2rem] lg:w-[2.4rem] ">
-                <Image
-                  src="/service-icons/qatar.svg"
-                  alt="qatar"
-                  width={40}
-                  height={40}
-                  priority={false}
-                />
-              </div>
-              <p className="text-white pl-2">
-                Mobile App Development Company in Europe
-              </p>
-            </div>
-            <div className="flex items-center">
-              <div className="w-[1.5rem] xss:w-[1.8rem] sm:w-[2rem] lg:w-[2.4rem] ">
-                <Image
-                  src="/service-icons/kochi.svg"
-                  alt="kochi"
-                  width={40}
-                  height={40}
-                  priority={false}
-                />
-              </div>
-              <p className="text-white pl-2">
-                Mobile App Development Company in Australia
-              </p>
-            </div>
-          </div>
-        </div>
+        <ExtendedLocations />
 
         {/* guarantees */}
-        <div className="2xl:p-10 lg:px-7 xl:px-20 2xl:px-15 xss:p-5 w-full h-auto">
-          <p className="text-[#0E59F2] text-lg xss:text-sm  sm:text-base md:text-lg 2xl:text-[1.2rem] font-medium xl:leading-7 text-black mb-2">
+        <div className="2xl:px-10 lg:px-7 xl:px-20 2xl:px-15 xss:p-5 w-full h-auto">
+          <p className="subt text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.5rem] md:w-[75%] xl:text-[1.8rem] 3xl:text-[2.2rem] xl:w-[75%] 2xl:w-[65%] font-semibold text-black leading-snug mb-2">
             Got it! Here&apos;s a concise version without descriptions:
           </p>
           <p className="text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold text-[#0E59F2] mb-2">
             {" "}
             Why Choose Analogue IT Solutions?
           </p>
-          <ol className="list-decimal xss:ml-5 text-[#7B7E86] text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base pt-2">
+          <ol className="list-decimal xss:ml-5 text-[#7B7E86] text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-lg pt-2">
             <li className="xss:pb-1 lg:pb-3">
               Non-Disclosure Agreement (NDA) for confidentiality
             </li>
@@ -548,8 +458,8 @@ export default function AndroidAppDevelopment() {
         </div>
 
         {/* text under guarantess */}
-        <div className="w-full h-auto bg-white xl:p-5 xl:px-20 xss:px-5 sm:px-8 ">
-          <h3 className="font-weight-400 text-[#0D6EFD] font-semibold xl:text-2xl xl:mb-4 xss:mb-1 xss:text-sm xs:mb-1 lg:mb-3 text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold">
+        <div className="w-full h-auto bg-white xl:px-20 xss:px-5 sm:px-8 ">
+          <h3 className="subt text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.5rem] md:w-[75%] xl:text-[1.8rem] 3xl:text-[2.2rem] xl:w-[75%] 2xl:w-[65%] font-semibold text-black leading-snug">
             Choose the Best Android App Developers in Hyderabad
           </h3>
           <div className="text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] xl:leading-6 xss:leading-4 sm:leading-relaxed 3xl:leading-8">

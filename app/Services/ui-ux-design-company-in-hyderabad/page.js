@@ -8,6 +8,7 @@ import Script from "next/script";
 import CarousalServicePage from "@/components/carousal-servicepage";
 import FrequentQuestions from "@/components/faqs-page";
 import GetAQuoteForm from "@/components/get-quote-form";
+import CalendarPage from "@/app/home-page-main/calendar/calendar-page";
 
 export default function UIUXAppDevelopment() {
   const [isOpen, setIsOpen] = useState(false);
@@ -68,35 +69,35 @@ export default function UIUXAppDevelopment() {
 
   //   faqs
 
-  const IosfaqArray = [
+  const UiUxfaqArray = [
     {
       question:
-        "01. What services does your Company offer in IOS App Development?",
+        "01. 1. What is UI/UX development?",
       answer:
-        "We offer a wide range of services including app design, development, testing, and maintenance for iPhone, iPad, and Apple Watch apps.",
+        "UI (User Interface) development focuses on designing the visual elements of a product such as buttons, layouts, and screens while UX (User Experience) development ensures the product is intuitive, user-friendly, and provides a seamless journey for users. Together, UI and UX create a product that looks good and works efficiently.",
     },
     {
       question:
-        "02. How long does it take to develop an IOS app with your company?",
+        "02. How do UI/UX affect app or website performance?",
       answer:
-        "The timeline for developing an IOS app can vary depending on the complexity of the project. We work closely with our clients to set realistic timelines and meet their specific needs.",
+        "Strong UI/UX directly influence usability. Clear navigation, fast load times, responsive layouts, and intuitive flows reduce friction, leading to higher conversions and better user retention.",
     },
     {
       question:
-        "03. Can you provide examples of IOS apps your company has developed?",
+        "03. Do you provide custom UI/UX solutions?",
       answer:
-        "Yes, we have developed a variety of IOS apps for different industries including finance, healthcare, e-commerce, and entertainment. Contact us for a portfolio of our work.",
+        "Yes. Every business is unique, so we provide tailored UI & UX design services based on your target audience, industry, and goals.",
     },
     {
       question:
-        "04. What sets your Company apart from other IOS app Development development companies?",
+        "04. Can UI/UX design increase sales or conversions?",
       answer:
-        "Our Company stands out for our high-quality design, responsive development process, and exceptional customer service. We prioritize client satisfaction and work collaboratively to deliver top-notch results.",
+        "Yes. A user-friendly interface with an optimized user journey leads to smoother transactions, fewer drop-offs, and higher conversion rates.",
     },
     {
-      question: "05. Do you offer post-launch support for IOS apps?",
+      question: "05. How do you approach UI/ UX development?",
       answer:
-        "Yes, we offer post-launch support and maintenance services to ensure that your IOS app continues to function smoothly and stays up-to-date with the latest technology and trends.",
+        "At Analogue IT Solutions, we start with research and user analysis, create wireframes and prototypes, test user flows, and then deliver designs that balance creativity with functionality.",
     },
   ];
 
@@ -131,21 +132,14 @@ export default function UIUXAppDevelopment() {
               ABOUT OUR COMPANY
             </span>
           </div>
-          <h1 className=" text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] xl:w-[55%] 2xl:w-[45%] font-semibold text-black leading-snug">
+          <h1 className=" text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.7rem] md:w-[75%] xl:text-[2rem] 3xl:text-[2.5rem] xl:w-[75%] 2xl:w-[65%] font-semibold text-black leading-snug">
             Best{" "}
-            <span className="text-blue-500"> UI & UX App Development </span>{" "}
+            <span className="text-blue-500"> UI / UX Design </span>{" "}
             Company in Hyderabad, India
           </h1>
           <p className="text-gray-500 leading-relaxed text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base">
-            Are you looking for a top-notch IOS app development company to
-            create a cutting-edge mobile application that will take your
-            business to the next level? Look no further! Our team of expert IOS
-            app developers specialises in creating high-quality IOS apps that
-            are tailored to meet your specific needs and objectives. At Analogue
-            IT Solutions, we offer a wide range of IOS app development services.
-            Whether you need a simple iOS app or a complex, feature-rich mobile
-            application, our team of experienced IOS and Android app developers
-            has the skills and expertise to bring your vision to life.
+            Analogue IT Solutions is widely recognized as the Best UI/UX Design Company, offering comprehensive, top-quality services to meet the unique needs of our clients.
+            With a strong dedication to user-centric design and a strong commitment to excellence, we create innovative, highly usable interfaces that elevate user experiences to new heights.As a leading UI/UX design company, we seamlessly blend innovative design concepts with cutting-edge technology to deliver exceptional digital solutions that resonate with users and drive business success.
           </p>
 
           {/* Free Quote button + Call us */}
@@ -177,34 +171,11 @@ export default function UIUXAppDevelopment() {
               WELCOME TO OUR COMPANY
             </span>
           </div>
-          <h5 className=" text-2xl xss:text-[1.1rem] text-[#0D6EFD] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] xl:w-[60%] font-semibold leading-relaxed">
-            Accelerating Business Growth with Expert iOS App Development
+          <h5 className=" subt text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.5rem] md:w-[75%] xl:text-[1.8rem] 3xl:text-[2.2rem] xl:w-[75%] 2xl:w-[65%] font-semibold text-black leading-snug">
+            Elevating Business Success Through UI/UX Design
           </h5>
           <p className="text-gray-500 leading-relaxed text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base">
-            At Analogue IT Solutions, we are a leading iOS app development
-            company in Hyderabad, helping businesses transform ideas into
-            powerful mobile experiences. Our skilled team of iOS developers
-            harnesses the latest technologies to craft customised applications
-            that align with your business goals and deliver real value.
-          </p>
-          <p className="text-gray-500 leading-relaxed text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base">
-            From elegant, user-friendly UI/UX design to secure and scalable
-            backend integration, every iOS app we build is designed for
-            performance, reliability, and growth. Whether you are a startup
-            launching your first app or an enterprise looking for advanced
-            solutions, our iOS app development expertise spans industries like
-            e-commerce, healthcare, fintech, logistics, and more.
-          </p>
-          <p className="text-gray-500 leading-relaxed text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base">
-            With a customer-centric approach, we create iOS applications that
-            are not only visually appealing but also robust, secure, and
-            optimised for seamless performance. Our focus is on delivering apps
-            that enhance user engagement, streamline operations, and boost
-            business growth.
-          </p>
-          <p className="text-gray-500 leading-relaxed text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base">
-            Partner with Analogue IT Solutions to turn your iOS app vision into
-            reality and stay ahead in the competitive digital landscape.
+            As a trusted UI/UX Design Company in Hyderabad, we specialize in delivering user-friendly and innovative design solutions that enhance customer experiences and strengthen digital presence. Our skilled team blends creativity with modern design practices to craft interfaces that are intuitive, engaging, and impactful. With a commitment to excellence, our UI/UX Design Company in Hyderabad ensures every project is tailored to your unique business goals, helping you achieve growth and long-term success in the digital world.
           </p>
           <div className="my-2">
             <button className="bg-blue-600 xss:text-xs lg:text-sm text-white xss:px-2 xss:py-2 xl:px-5 xl:py-3 rounded-3xl hover:bg-blue-700 transition cursor-pointer ">
@@ -217,20 +188,11 @@ export default function UIUXAppDevelopment() {
         <div className="mt-4 xss:mt-6 xs:mt-8 sm:mt-10 md:mt-12 lg:mt-15 ">
           <div className="relative w-full h-auto min-h-[200px] xss:min-h-[250px] xs:min-h-[200px] sm:min-h-[350px] md:min-h-[400px] lg:h-[400px] bg-[url('/service-icons/app-dev-bg.jpg')] bg-cover bg-center flex flex-col lg:flex-row justify-end items-center">
             <div className="w-full lg:w-[48%] 2xl:w-[50%] lg:absolute lg:inset-y-0 lg:left-0 p-4 xss:p-6 xs:p-8 sm:p-10 md:p-12 lg:p-11 xl:p-9 2xl:p-10">
-              <h1 className="text-white text-lg xss:text-md xs:text-lg sm:text-xl md:text-xl xl:text-2xl 3xl:text-[1.6rem] font-bold xss:leading-tight 2xl:leading-relaxed 2xl:w-[60%] 3xl:w-[65%]">
-                Empowering Businesses with Custom iOS Apps
+              <h1 className="  text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.5rem] md:w-[75%] xl:text-[1.8rem] 3xl:text-[2.2rem] xl:w-[75%] 2xl:w-[65%] font-semibold text-white leading-snug 2xl:w-[60%] 3xl:w-[65%]">
+                Innovative UI/UX Design for Your Business
               </h1>
               <p className="text-white text-xs xss:text-xs xs:text-xs sm:text-sm md:text-sm lg:text-[0.75rem] xl:text-sm 3xl:text-base xss:leading-5 xl:leading-6 2xl:leading-7 mt-2 xss:mt-3 xs:mt-4 sm:mt-4 md:mt-5 lg:mt-3 xl:mt-3 3xl:mt-2">
-                At Analogue IT Solutions, we specialise in iOS app development,
-                creating tailored applications that align with your business
-                goals. Our team leverages advanced technologies and creative
-                design to deliver secure, scalable, and user-friendly solutions.
-                Whether you’re looking for an e-commerce platform or a unique
-                business application, our iOS app development expertise ensures
-                exceptional performance and seamless user experiences. With
-                innovation and precision, we bring your vision to life, making
-                us the trusted choice for businesses seeking top-quality iOS app
-                development services.
+                At Analogue IT Solutions, we excel in creating cutting-edge UI/UX design to work flawlessly across platforms. By harnessing the versatility of UI/UX, we deliver apps that are fast, scalable, and visually engaging. From dynamic e-commerce solutions to bespoke mobile applications, our team focuses on crafting products that elevate user experience and drive measurable business results. Partner with us to turn your vision into a powerful UI/UX Design with creativity, precision, and innovation.
               </p>
               <button className="bg-blue-700 text-white rounded p-2 xss:p-2 xs:p-2 sm:p-3 md:p-3 lg:p-2 xl:p-2 2xl:p-3 mt-2 lg:mt-4 xss:mt-3 xs:mt-4 sm:mt-4 md:mt-4 lg:mt-2 xl:mt-3 2xl:mt-4 3xl:mt-3 text-xs xss:text-xs xs:text-sm sm:text-sm md:text-sm lg:text-[0.65rem] xl:text-xs 2xl:text-sm">
                 <Link href="/contact">Contact Us</Link>
@@ -264,11 +226,10 @@ export default function UIUXAppDevelopment() {
                 <span
                   key={index}
                   onClick={() => setSelectedCategory(tech.category)}
-                  className={`cursor-pointer pb-1 border-b-2 font-medium xss:text-xs sm:text-sm lg:text-base  transition-all duration-500 ease-in-out ${
-                    selectedCategory === tech.category
-                      ? "border-white text-[#0E59F2]"
-                      : "border-transparent"
-                  } hover:border-[#0E59F2]`}
+                  className={`cursor-pointer pb-1 border-b-2 font-medium xss:text-xs sm:text-sm lg:text-base  transition-all duration-500 ease-in-out ${selectedCategory === tech.category
+                    ? "border-white text-[#0E59F2]"
+                    : "border-transparent"
+                    } hover:border-[#0E59F2]`}
                 >
                   {tech.category}
                 </span>
@@ -319,46 +280,38 @@ export default function UIUXAppDevelopment() {
               </span>
             </div>
             <h1 className=" text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold text-black leading-snug">
-              IOS App Development Services at Analogue IT Solutions
+              UI/UX Development Services
             </h1>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 xss:gap-8 xss:px-8 3xl:gap-20 2xl:gap-14 2xl:px-14 3xl:px-30 px-10">
             <div className=" text-[#7B7E86] p-5 border-l border-r border-gray-200 shadow-[0_4px_2px_rgba(0,0,0,0.3)] bg-white rounded-lg">
               <h3 className="font-weight-400 text-[#0E59F2] xss:mb-3 xl:text-2xl xl:mb-4 xss:mb-1text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold">
-                Mobile App Optimization
+                Design Thinking Process
               </h3>
               <p className="xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base  xss:leading-4 sm:leading-relaxed 3xl:leading-7">
-                Developers optimise the app for performance and speed to ensure
-                it delivers a seamless user experience.
+                The Design Thinking Process in UI/UX development is a human-centred approach to creating user-friendly and effective interfaces.
               </p>
             </div>
             <div className=" text-[#7B7E86] p-5 border-l border-r border-gray-200 shadow-[0_4px_2px_rgba(0,0,0,0.3)] bg-white p-6 rounded-lg">
               <h3 className="font-weight-400 text-[#0E59F2] xss:mb-3 xl:text-2xl xl:mb-4 xss:mb-1text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold">
-                Custom UI/UX Design
-              </h3>
+                Empathise Process              </h3>
               <p className="xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base  xss:leading-4 sm:leading-relaxed 3xl:leading-7">
-                Designers create visually appealing user interfaces and ensure a
-                smooth user experience within the app.
+                Empathising is the cornerstone of UX. Deeply understanding users fosters intuitive interfaces and meaningful interactions.
               </p>
             </div>
             <div className=" text-[#7B7E86] p-5 border-l border-r border-gray-200 shadow-[0_4px_2px_rgba(0,0,0,0.3)] bg-white p-6 rounded-lg">
               <h3 className="font-weight-400 text-[#0E59F2] xss:mb-3 xl:text-2xl xl:mb-4 xss:mb-1text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold">
-                App Store Submission
+                Wireframing Process
               </h3>
               <p className="xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base  xss:leading-4 sm:leading-relaxed 3xl:leading-7">
-                Developers help clients navigate the App Store submission
-                process and ensure that the app meets all guidelines and
-                requirements set by Apple.
+                Wire framing in UI/UX is the initial stage of design, involving outlining layout and functionality for digital interfaces. It's crucial for planning.
               </p>
             </div>
             <div className=" text-[#7B7E86] p-5 border-l border-r border-gray-200 shadow-[0_4px_2px_rgba(0,0,0,0.3)] bg-white p-6 rounded-lg">
               <h3 className="font-weight-400 text-[#0E59F2] xss:mb-3 xl:text-2xl xl:mb-4 xss:mb-1text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold">
-                App Testing and Debugging
-              </h3>
+                Project Research              </h3>
               <p className="xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base  xss:leading-4 sm:leading-relaxed 3xl:leading-7">
-                Developers thoroughly test the app to ensure it runs smoothly
-                and is free of any bugs or glitches before it is released to the
-                App Store.
+                Know your users, build for them: Project research ensures your UI/UX resonates with your target audience.
               </p>
             </div>
           </div>
@@ -369,34 +322,98 @@ export default function UIUXAppDevelopment() {
           <CalendarPage />
         </div>
 
-        {/* IOS app dev company in India */}
         <div className="w-full h-auto bg-white xl:p-5 xl:px-20 xss:px-5 pt-5 xs:p-5 sm:px-8 ">
-          <h3 className="font-weight-400 font-semibold text-[#0E59F2] xss:mb-3 xl:text-2xl xl:mb-4 xss:mb-1text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold">
-            Are You Looking for The Best IOS App Development Company?
-          </h3>
-          <div className="xl:text-sm text-[#7B7E86] xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base leading-relaxed 3xl:leading-8">
-            <p className="pb-2">
-              Your go-to destination for top-notch IOS app development and a
-              wide range of other services! Our dedicated team specialises in
-              IOS app development and is ready to take on any project, big or
-              small
-            </p>
-            <p className="pb-2">
-              But that&apos;s not all - we also offer mobile app development,
-              web development, Android app development, flutter app development,
-              and E-commerce app development. Whether you need a sleek and
-              modern website, a cutting-edge mobile app, or a custom eCommerce
-              solution, we&apos;ve got you covered.
-            </p>
-            <p className="pb-2">
-              Don&apos;t settle for mediocre results - trust Analogue IT
-              Solutions for all your IOS app development needs and more. Contact
-              us today to learn more about our IOS app development services and
-              how we can help bring your vision to life. Choose the best -
-              choose Analogue IT Solutions.
+          <h5 className="   text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.5rem] md:w-[75%] xl:text-[1.8rem] 3xl:text-[2.2rem] xl:w-[75%] 2xl:w-[65%] font-semibold text-black leading-snug py-2">
+            How We Create Impactful User Experiences
+          </h5>
+          <div className="text-[#7B7E86]">
+            <p className="pb-2 text-lg xss:text-sm  sm:text-base md:text-lg 2xl:text-[1.2rem] font-medium text-[#363638D9]">
+              Dynamic Design -{" "}
+              <span className="xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base  xss:leading-4 sm:leading-relaxed 3xl:leading-8">
+                Dynamic design in UI/UX development focuses on creating versatile, interactive, and visually appealing interfaces that adapt seamlessly to user behavior. By integrating animations, responsive layouts, and engaging visuals, we deliver designs that not only capture attention but also provide an optimal and memorable user experience.                      </span>
+              <p className="pb-2 text-lg xss:text-sm  sm:text-base md:text-lg 2xl:text-[1.2rem] font-medium text-[#363638D9]">
+                Usability Testing -{" "}
+                <span className="xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base  xss:leading-4 sm:leading-relaxed 3xl:leading-8">
+                  Usability testing plays a crucial role in UI/UX development, allowing real users to interact with your digital product while performing specific tasks. This process helps identify pain points, uncover hidden challenges, and validate design decisions. By resolving interface issues early, we ensure the final product is intuitive, user-friendly, and aligned with customer expectations.                        </span>
+              </p>
+              <p className="pb-2 text-lg xss:text-sm  sm:text-base md:text-lg 2xl:text-[1.2rem] font-medium text-[#363638D9]">
+                Metrics That Matter -{" "}
+                <span className="xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base  xss:leading-4 sm:leading-relaxed 3xl:leading-8">
+                  In the digital space, data-driven insights shape success. Metrics that matter—such as engagement rates, conversion ratios, and customer satisfaction scores help businesses make informed decisions. Our optimized UI/UX designs are built around these key performance indicators, driving increased ROI, boosting customer retention, and fostering long-term business growth.                        </span>
+              </p>
+              <p className="pb-2 text-lg xss:text-sm  sm:text-base md:text-lg 2xl:text-[1.2rem] font-medium text-[#363638D9]">
+                Advanced UX Research Lab -{" "}
+                <span className="xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base  xss:leading-4 sm:leading-relaxed 3xl:leading-8">
+                  Our advanced UX research lab is a cutting-edge facility designed to analyze and understand real user behavior. Equipped with modern tools and techniques, it allows us to conduct in-depth research, usability studies, and design evaluations. This ensures our UI/UX design processes remain innovative, evidence-based, and highly effective. By leveraging these insights, we enhance product usability, elevate user satisfaction, and deliver solutions that stand out in a competitive market.                        </span>
+              </p>
             </p>
           </div>
         </div>
+
+        {/* webS app dev company in India */}
+        <div className="w-full h-auto bg-white xl:p-0 xl:px-20 xss:px-5 pt-3 xs:p-5 sm:px-8 ">
+          <h3 className="  text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.5rem] md:w-[75%] xl:text-[1.8rem] 3xl:text-[2.2rem] xl:w-[75%] 2xl:w-[65%] font-semibold text-black leading-snug">
+            UI/UX Design Company in Hyderabad          
+            </h3>
+          <div className="xl:text-sm text-[#7B7E86] xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base leading-relaxed 3xl:leading-8">
+            <p className="pb-2">
+              At Analogue IT Solutions, we don&apos;t just design interfaces — we design experiences that engage, inspire, and convert. As a leading UI/UX Design Company in Hyderabad, we craft digital journeys that are visually stunning, intuitive to use, and aligned with your brand identity.
+            </p>
+            <p className="pb-2">
+              Our expertise covers everything from user research and journey mapping to interactive prototypes and responsive design. We focus on solving real user problems while delivering sleek, modern, and result-oriented designs.
+            </p>
+            <p className="pb-2">
+              Whether you&apos;re building a startup app or enhancing an enterprise platform, our team ensures that every touchpoint feels seamless and impactful. With us, your product doesn&apos;t just look good it works brilliantly.
+            </p>
+          </div>
+        </div>
+
+        <div className="w-full h-auto bg-white xl:p-0 xl:px-20 xss:px-5 pt-5 xs:p-5 sm:px-8">
+          <h5 className="  text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.5rem] md:w-[75%] xl:text-[1.8rem] 3xl:text-[2.2rem] xl:w-[75%] 2xl:w-[65%] font-semibold text-black leading-snug">
+            Our UI/UX Design Services
+          </h5>
+          <p className="pb-2">
+            At Analogue IT Solutions, we provide end-to-end design services tailored to your unique business goals:
+          </p>
+
+          <div className="text-[#7B7E86]">
+            <div className="pb-2 text-lg xss:text-sm sm:text-base md:text-lg 2xl:text-[1.2rem] font-medium text-[#363638D9]">
+              User Research & Analysis -{" "}
+              <span className="xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base xss:leading-4 sm:leading-relaxed 3xl:leading-8">
+                Understanding your audience, their needs, and behavior patterns to create meaningful designs.
+              </span>
+            </div>
+
+            <div className="pb-2 text-lg xss:text-sm sm:text-base md:text-lg 2xl:text-[1.2rem] font-medium text-[#363638D9]">
+              Wireframing & Prototyping -{" "}
+              <span className="xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base xss:leading-4 sm:leading-relaxed 3xl:leading-8">
+                Turning ideas into interactive blueprints for better visualization before development.
+              </span>
+            </div>
+
+            <div className="pb-2 text-lg xss:text-sm sm:text-base md:text-lg 2xl:text-[1.2rem] font-medium text-[#363638D9]">
+              UI Design -{" "}
+              <span className="xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base xss:leading-4 sm:leading-relaxed 3xl:leading-8">
+                Delivering modern, consistent, and brand-aligned interfaces that enhance visual appeal.
+              </span>
+            </div>
+
+            <div className="pb-2 text-lg xss:text-sm sm:text-base md:text-lg 2xl:text-[1.2rem] font-medium text-[#363638D9]">
+              Usability Testing -{" "}
+              <span className="xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base xss:leading-4 sm:leading-relaxed 3xl:leading-8">
+                Gathering feedback from real users to refine and optimize design performance.
+              </span>
+            </div>
+
+            <div className="pb-2 text-lg xss:text-sm sm:text-base md:text-lg 2xl:text-[1.2rem] font-medium text-[#363638D9]">
+              Responsive & Interactive Design -{" "}
+              <span className="xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base xss:leading-4 sm:leading-relaxed 3xl:leading-8">
+                Ensuring your app or website delivers the same seamless experience across all devices.
+              </span>
+            </div>
+          </div>
+        </div>
+
 
         {/* Extended Locations */}
         <div className=" w-full h-auto bg-[url('/service-icons/app-dev-bg.jpg')] bg-cover bg-center xss:p-7 xl:p-15">
@@ -491,131 +508,81 @@ export default function UIUXAppDevelopment() {
           </div>
         </div>
 
-        {/* IOS app dev company in India */}
-        <div className="w-full h-auto bg-white xl:p-5 xl:px-20 xss:px-5 pt-5 xs:p-5 sm:px-8 ">
-          <h3 className="font-weight-400 font-semibold text-[#0E59F2] xss:mb-3 xl:text-2xl xl:mb-4 xss:mb-1text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold">
-            IOS App Development Company in Hyderabad, India
-          </h3>
-          <div className="xl:text-sm text-[#7B7E86] xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base leading-relaxed 3xl:leading-8">
+        {/* why choose  */}
+        <div className="w-full h-auto bg-white xl:p-5 xl:px-20 xss:px-5 pt-5 xs:p-5 sm:px-8">
+          <h5 className=" py-2 text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.5rem] md:w-[75%] xl:text-[1.8rem] 3xl:text-[2.2rem] xl:w-[75%] 2xl:w-[65%] font-semibold text-black leading-snug">
+            Why Choose Analogue IT Solutions?  </h5>
+          <p className="pb-2">
+            When it comes to choosing a UI/UX design partner in Hyderabad, businesses trust Analogue IT Solutions for the following reasons:  </p>
+
+          <div className="text-[#7B7E86]">
+            <div className="pb-2 text-lg xss:text-sm sm:text-base md:text-lg 2xl:text-[1.2rem] text-[#363638D9] font-medium">
+              Creative Excellence -{" "}
+              <span className="xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base xss:leading-4 sm:leading-relaxed 3xl:leading-8">
+                Our designs strike the perfect balance between aesthetics and functionality.      </span>
+            </div>
+
+            <div className="pb-2 text-lg xss:text-sm sm:text-base md:text-lg 2xl:text-[1.2rem] font-medium text-[#363638D9]">
+              Human-Centered Approach  -{" "}
+              <span className="xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base xss:leading-4 sm:leading-relaxed 3xl:leading-8">
+                Every decision we make is based on improving the end-user experience.      </span>
+            </div>
+
+            <div className="pb-2 text-lg xss:text-sm sm:text-base md:text-lg 2xl:text-[1.2rem] font-medium text-[#363638D9]">
+              Industry Expertise -{" "}
+              <span className="xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base xss:leading-4 sm:leading-relaxed 3xl:leading-8">
+                We&apos;ve worked across multiple domains, from startups to enterprises, delivering impactful designs.
+              </span>
+            </div>
+
+            <div className="pb-2 text-lg xss:text-sm sm:text-base md:text-lg 2xl:text-[1.2rem] font-medium text-[#363638D9]">
+              Innovation & Precision -{" "}
+              <span className="xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base xss:leading-4 sm:leading-relaxed 3xl:leading-8">
+                We focus on the finer details while bringing innovative design ideas to life.
+              </span>
+            </div>
+
+            <div className="pb-2 text-lg xss:text-sm sm:text-base md:text-lg 2xl:text-[1.2rem] font-medium text-[#363638D9]">
+              Tailored Solutions -{" "}
+              <span className="xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base xss:leading-4 sm:leading-relaxed 3xl:leading-8">
+                No two businesses are the same, which is why our strategies are customized for your unique goals.
+              </span>
+            </div>
+            <div className="pb-2 text-lg xss:text-sm sm:text-base md:text-lg 2xl:text-[1.2rem] font-medium text-[#363638D9]">
+              Result-Oriented Approach -{" "}
+              <span className="xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base xss:leading-4 sm:leading-relaxed 3xl:leading-8">
+                We design with conversions, usability, and long-term growth in mind.
+              </span>
+            </div>
+          </div>
+        </div>
+
+        {/* transforming ideas */}
+        <div className="w-full h-auto bg-white xl:p-2  xl:px-20 xss:px-5 pt-5 xs:p-5 sm:px-8 ">
+          <h3 className="  text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.5rem] md:w-[75%] xl:text-[1.8rem] 3xl:text-[2.2rem] xl:w-[75%] 2xl:w-[65%] font-semibold text-black leading-snug">
+            Transforming Ideas Into Experiences          </h3>
+          <div className="xl:text-sm text-[#7B7E86] pb-2 xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base leading-relaxed 3xl:leading-8">
             <p className="pb-2">
-              As a leading iOS app development company in India, Analogue IT
-              Solutions is committed to delivering innovative, scalable, and
-              user-centric iOS applications tailored to business needs. With
-              deep expertise in iOS app development, we design and build apps
-              that meet Apple&apos;s highest standards of quality, performance,
-              and security. Recognized as one of the top iOS app development
-              companies in Hyderabad, we bring your ideas to life with precision
-              and innovation.
-            </p>
-            <p className="pb-2">
-              Our team of skilled IOS developers in Hyderabad specializes in
-              building intuitive, engaging, and feature-rich applications for
-              iPhone and iPad. Beyond app development, Analogue also provides
-              digital marketing and business strategy consulting, helping brands
-              leverage technology to achieve their goals. Whether it&apos;s a
-              startup or an enterprise, our iOS app development services ensure
-              seamless digital experiences that drive growth.
-            </p>
-            <p className="pb-2">
-              At Analogue IT Solutions, we don&apos;t just build apps — we craft
-              experiences. Our iOS app development services in Hyderabad
-              transform your vision into interactive, user-friendly, and
-              high-performance applications.
+              At Analogue IT Solutions, we treat every project as a journey. From the very first brainstorming session to the final prototype, we ensure collaboration, creativity, and precision. Our aim is to transform your ideas into digital experiences that resonate with users, strengthen brand identity, and fuel business growth.
+              Whether you are a startup looking to create your first product or an enterprise enhancing your existing platforms, we have the expertise to deliver designs that delight users and deliver measurable results.
             </p>
           </div>
         </div>
 
-        {/* content under IOS app dev company in India */}
-        <div className="w-full h-auto bg-white xl:p-5 xl:px-20 xss:px-5 pt-5 xs:p-5 sm:px-8 ">
-          <h3 className="font-weight-400 font-semibold text-[#0E59F2] xss:mb-3 xl:text-2xl xl:mb-4 xss:mb-1text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold">
-            Analogue IT Solutions - Best iOS App Development Services in
-            Hyderabad
-          </h3>
+        {/* partner wiith */}
+        <div className="w-full h-auto bg-white xl:p-0 xl:px-20 xss:px-5 pt-5 xs:p-5 sm:px-8 ">
+          <h3 className="  text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.5rem] md:w-[75%] xl:text-[1.8rem] 3xl:text-[2.2rem] xl:w-[75%] 2xl:w-[65%] font-semibold text-black leading-snug">
+            Partner with the Best UI/UX Design Company in Hyderabad</h3>
           <div className="xl:text-sm text-[#7B7E86] xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base leading-relaxed 3xl:leading-8">
             <p className="pb-2">
-              Analogue IT Solutions has built a reputation as the best iOS app
-              development company in Hyderabad by following a client-first
-              approach. Our team collaborates closely with clients to
-              brainstorm, strategize, and deliver top-notch iOS apps that stand
-              out in today&apos;s competitive market.
-            </p>
-            <p className="pb-2">
-              We are dedicated to developing iOS apps that are elegant,
-              responsive, and seamlessly aligned with your business objectives.
-              By blending creative design with robust development practices, we
-              create digital products that leave a lasting impact on your users.
-            </p>
-          </div>
-        </div>
-
-        {/* why analogue it solutions */}
-        <div className="w-full h-auto bg-white xl:p-5 xl:px-20 xss:px-5 pt-5 xs:p-5 sm:px-8 ">
-          <h3 className="font-weight-400 font-semibold text-[#0E59F2] xss:mb-3 xl:text-2xl xl:mb-4 xss:mb-1text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold ">
-            Why Choose Analogue IT Solutions?
-          </h3>
-          <div className="xl:text-sm text-[#7B7E86] xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base leading-relaxed 3xl:leading-8">
-            <p className="pb-2">
-              Strict Non-Disclosure Agreement (NDA) to protect your ideas.
-            </p>
-            <p className="pb-2">
-              Affordable yet high-quality iOS app development services
-            </p>
-            <p className="pb-2">
-              Experienced iOS developers with expertise in Swift, Objective-C,
-              and modern frameworks
-            </p>
-            <p className="pb-2">
-              Fast and efficient development processes tailored to your
-              timelines
-            </p>
-            <p className="pb-2">
-              Apps designed with excellent usability and interactive experiences
-            </p>
-            <p className="pb-2">
-              Reliable performance across all Apple devices
-            </p>
-            <p className="pb-2">
-              Continuous updates, maintenance, and dedicated support
-            </p>
-            <p className="pb-2">
-              Custom-built iOS solutions tailored to your business needs
-            </p>
-          </div>
-        </div>
-
-        {/* IOS app dev company in India */}
-        <div className="w-full h-auto bg-white xl:p-5 xl:px-20 xss:px-5 pt-5 xs:p-5 sm:px-8 ">
-          <h3 className="font-weight-400 font-semibold text-[#0E59F2] xss:mb-3 xl:text-2xl xl:mb-4 xss:mb-1text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold">
-            Choose the Best iOS App Developers in Hyderabad
-          </h3>
-          <div className="xl:text-sm text-[#7B7E86] xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base leading-relaxed 3xl:leading-8">
-            <p className="pb-2">
-              Searching for expert iOS app developers in Hyderabad? Partner with
-              Analogue IT Solutions! Our experienced professionals stay ahead of
-              the curve with the latest Apple technologies and development
-              trends, ensuring world-class iOS solutions for your business.
-            </p>
-            <p className="pb-2">
-              Along with iOS apps, we also specialize in web development and
-              e-commerce solutions, offering a complete suite of digital
-              services to help you grow. From robust iOS applications to dynamic
-              websites and scalable online stores, Analogue is your trusted
-              digital partner.
-            </p>
-            <p className="pb-2">
-              Though headquartered in Hyderabad, our iOS app development
-              services extend globally, making us the preferred iOS app
-              development company in Hyderabad, Telangana. Get in touch today
-              and discover how Analogue can transform your business through
-              cutting-edge iOS solutions.
-            </p>
+              Your digital presence deserves more than just a good design — it deserves an experience that leaves a lasting impression. Partner with Analogue IT Solutions - the Best UI/UX Design Company in Hyderabad - and let us help you craft engaging, user-friendly, and conversion-focused designs that set your brand apart.            </p>
           </div>
         </div>
 
         {/* faqs section */}
         <div className="w-[86%] mx-auto pb-3 xss:mt-5">
           <div>
-            <FrequentQuestions Question={IosfaqArray} />
+            <FrequentQuestions Question={UiUxfaqArray} />
           </div>
         </div>
 

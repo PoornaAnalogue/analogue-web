@@ -69,35 +69,35 @@ export default function ChromeExtension() {
 
   //   faqs
 
-  const faqArray = [
+  const ChromefaqArray = [
     {
       question:
-        "01. What services does your Android app development company offer?",
+        "01. What is a Chrome extension?",
       answer:
-        "Our company offers a wide range of services including custom app development, app redesign and optimization, app maintenance and support, and app testing and quality assurance.",
+        "A Chrome extension is a lightweight software add-on that enhances browser functionality, offering users quick tools, features, or integrations directly within Chrome. It allows businesses to provide additional value to users right in their browser.",
     },
     {
       question:
-        "02. How long does it typically take for an Android app to be developed by your company?",
+        "02. Why should my business invest in a Chrome extension?",
       answer:
-        "The timeline for developing an Android app varies depending on the complexity of the project. However, we strive to deliver a high-quality app within 4-6 months.",
+        "Chrome extensions improve customer convenience, boost engagement, and keep your brand accessible in daily browsing. They can also streamline workflows or provide instant solutions to user needs.",
     },
     {
       question:
-        "03. How much does it cost to develop an Android app Development?",
+        "03. What technologies are used to build Chrome extensions?",
       answer:
-        "The cost of developing an Android app with us varies depending on the scope and requirements of the project. We offer competitive pricing and customizable packages to meet your budget.",
+        "They are mainly developed using HTML, CSS, JavaScript, and Chrome APIs, with optional backend integrations for advanced features or data storage. Modern tools like Figma or InVision are also used for prototyping UI/UX.",
     },
     {
       question:
-        "04. Can your company assist with app publication and marketing on the Google Play Store?",
+        "04. Can I update my extension after launch?",
       answer:
-        "Yes, we provide app publication services to ensure your app meets Google Play Store guidelines and requirements. Additionally, we offer app marketing strategies to help increase visibility and downloads.",
+        "Yes, updates can be released anytime to fix bugs, add new features, or improve performance, and users automatically receive the latest version. This helps maintain functionality and user satisfaction.",
     },
     {
-      question: "05. How experienced is your team in Android app development?",
+      question: "05. How can I get started?",
       answer:
-        "Our team of developers and designers have 7+ years of experience in Android app development. To give our clients cutting-edge solutions, we stay current on the newest trends and technologies.",
+        "You can start by consulting with an experienced team like Analogue IT Solutions, who will guide you from ideation to design, development, testing, and successful launch of your Chrome extension.",
     },
   ];
 
@@ -132,19 +132,13 @@ export default function ChromeExtension() {
               ABOUT OUR COMPANY
             </span>
           </div>
-          <h1 className=" text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] xl:w-[55%] 2xl:w-[45%] font-semibold text-black leading-snug">
+          <h1 className="  text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.7rem] md:w-[75%] xl:text-[2rem] 3xl:text-[2.5rem] xl:w-[75%] 2xl:w-[65%] font-semibold text-black leading-snug">
             Best{" "}
-            <span className="text-blue-500"> Chrome Extension Service </span>{" "}
-            Company in Hyderabad, India
+            <span className="text-blue-500"> Chrome Browser Extension  </span>{" "}
+            Development Company in Hyderabad, India
           </h1>
           <p className="text-gray-500 leading-relaxed text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base">
-            Are you in search of a Best Android App Development Company in
-            Hyderabad? Look no further than Analogue IT Solutions! Our team is
-            dedicated to developing innovative and tailored Android applications
-            that resonate with your target audience. We combine cutting-edge
-            technology with industry insights to create robust, high-performance
-            Android apps that drive user engagement and business growth. Trust
-            us to elevate your mobile presence and bring your app ideas to life!
+            Chrome extensions are the perfect solution for enhancing browser functionality, streamlining workflows, and improving user productivity. At Analogue IT Solutions, we specialize in creating feature-rich, secure, and scalable Chrome browser extensions that drive value for your business.
           </p>
 
           {/* Free Quote button + Call us */}
@@ -176,38 +170,10 @@ export default function ChromeExtension() {
               WELCOME TO OUR COMPANY
             </span>
           </div>
-          <h5 className="text-[#0D6EFD] text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] xl:w-[60%] font-semibold leading-tight">
-            Accelerating Business Growth with Top-Notch Android Development
-          </h5>
+          <h5 className="subt text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.5rem] md:w-[75%] xl:text-[1.8rem] 3xl:text-[2.2rem] xl:w-[75%] 2xl:w-[65%] font-semibold text-black leading-snug">
+            Why Choose Chrome Extension Development?          </h5>
           <p className="text-gray-500 leading-relaxed text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base">
-            As a top Android app development company in Hyderabad, we harness
-            the latest technologies to accelerate your business growth. Our
-            skilled team of Android app developers excels at crafting customized
-            solutions that meet your specific requirements. With a commitment to
-            quality and innovation, we empower businesses to thrive by
-            delivering high-performance Android applications that enhance user
-            engagement and streamline operations. From intuitive{" "}
-            <a
-              className="text-blue-700 font-semibold"
-              href="https://analogueitsolutions.com/ui-ux-design-company-in-hyderabad"
-            >
-              UI/UX design
-            </a>{" "}
-            to seamless backend integration, we ensure every aspect of your app
-            is built for efficiency and scalability. Whether you&apos;re a
-            startup looking to launch your first mobile app or an enterprise
-            seeking advanced solutions, our expertise covers everything from{" "}
-            <a
-              className="text-blue-700 font-semibold"
-              href="https://analogueitsolutions.com/ecommerce-app-development-company"
-            >
-              e-commerce
-            </a>{" "}
-            to fintech, healthcare, and beyond. Our approach is
-            customer-centric, focusing on delivering apps that are not only
-            visually appealing but also robust, secure, and optimized for
-            performance. Partner with us to turn your app idea into a reality
-            and stay ahead in the competitive digital landscape.
+            You can improve the Chrome browser to better suit your business needs. By making tasks easier and streamlining workflows, you can boost productivity. Plus, with Chrome&apos;s large user base, you can reach a wider audience and grow your business.
           </p>
           <div className="my-2">
             <button className="bg-blue-600 xss:text-xs lg:text-sm text-white xss:px-2 xss:py-2 xl:px-5 xl:py-3 rounded-3xl hover:bg-blue-700 transition cursor-pointer ">
@@ -221,16 +187,10 @@ export default function ChromeExtension() {
           <div className="relative w-full h-auto min-h-[200px] xss:min-h-[250px] xs:min-h-[200px] sm:min-h-[350px] md:min-h-[400px] lg:h-[400px] bg-[url('/service-icons/app-dev-bg.jpg')] bg-cover bg-center flex flex-col lg:flex-row justify-end items-center">
             <div className="w-full lg:w-[48%] 2xl:w-[50%] lg:absolute lg:inset-y-0 lg:left-0 p-4 xss:p-6 xs:p-8 sm:p-10 md:p-12 lg:p-11 xl:p-9 2xl:p-10">
               <h1 className="text-white text-lg xss:text-md xs:text-lg sm:text-xl md:text-xl xl:text-2xl 3xl:text-[1.6rem] font-bold xss:leading-tight 2xl:leading-loose">
-                Crafting Exceptional Android Apps for <br /> Your Business
+                Custom Chrome Extension Development for Your Business
               </h1>
               <p className="text-white text-xs xss:text-xs xs:text-xs sm:text-sm md:text-sm lg:text-[0.75rem] xl:text-sm 3xl:text-base xss:leading-5 xl:leading-7 mt-2 xss:mt-3 xs:mt-4 sm:mt-4 md:mt-5 lg:mt-3 xl:mt-4 2xl:mt-5">
-                At Analogue IT Solutions, we specialise in expert Android app
-                development, employing advanced technologies such as React
-                Native and Flutter. Whether you need a robust e-commerce
-                platform or a tailored mobile solution, our team is dedicated to
-                delivering high-quality Android applications that enhance user
-                experience and drive business success. Trust us to bring your
-                app vision to life with precision and innovation.
+                At Analogue IT Solutions, we specialize in Chrome browser extension development that enhances functionality, improves productivity, and delivers seamless user experiences. By leveraging modern web technologies and innovative design, we create extensions that are fast, reliable, and tailored to your business needs. From workflow automation tools to e-commerce enhancers and productivity boosters, our team focuses on building Chrome extensions that simplify tasks, engage users, and drive measurable business results.Expert in AI development, providing top solutions with cutting-edge technology.
               </p>
               <button className="bg-blue-700 text-white rounded p-2 xss:p-2 xs:p-2 sm:p-3 md:p-3 lg:p-2 xl:p-2 2xl:p-3 mt-2 lg:mt-4 xss:mt-3 xs:mt-4 sm:mt-4 md:mt-4 lg:mt-2 xl:mt-3 2xl:mt-4 text-xs xss:text-xs xs:text-sm sm:text-sm md:text-sm lg:text-[0.65rem] xl:text-xs 2xl:text-sm">
                 <Link href="/contact">Contact Us</Link>
@@ -264,11 +224,10 @@ export default function ChromeExtension() {
                 <span
                   key={index}
                   onClick={() => setSelectedCategory(tech.category)}
-                  className={`cursor-pointer pb-1 border-b-2 font-medium xss:text-xs sm:text-sm lg:text-base  transition-all duration-500 ease-in-out ${
-                    selectedCategory === tech.category
-                      ? "border-white text-[#0E59F2]"
-                      : "border-transparent"
-                  } hover:border-[#0E59F2]`}
+                  className={`cursor-pointer pb-1 border-b-2 font-medium xss:text-xs sm:text-sm lg:text-base  transition-all duration-500 ease-in-out ${selectedCategory === tech.category
+                    ? "border-white text-[#0E59F2]"
+                    : "border-transparent"
+                    } hover:border-[#0E59F2]`}
                 >
                   {tech.category}
                 </span>
@@ -309,48 +268,47 @@ export default function ChromeExtension() {
           </div>
         </div>
 
-        {/* Start Work with us */}
-        <div
-          className="w-full h-auto bg-white px-3 py-5 xs:px-4 xs:py-6 
-                        sm:px-5 sm:py-7 md:px-6 md:py-8 lg:px-8 lg:py-10 xl:px-10 xl:py-8 xl:px-20"
-        >
-          <p
-            className="text-[#071637] font-semibold text-body mb-3 font-600 underline decoration-[#0D6EFD] decoration-2 underline-offset-6
-                            xs:text-body xs:decoration-2 xs:underline-offset-7 xs:mb-4
-                            text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold
-                            sm:decoration-3 md:decoration-3  xl:decoration-4 
-                            sm:underline-offset-10 md:underline-offset-15 xl:underline-offset-[20px] 
-                            sm:mb-2 md:mb-4 xl:mb-5"
-          >
-            Start Work With Us
-          </p>
-          <div className=" p-1 xs:p-2 sm:p-3 md:p-4 lg:p-5 xl:px-4">
-            <p className="text-[#0D6EFD] text-lg xss:text-sm  sm:text-base md:text-lg 2xl:text-[1.2rem] font-medium mb-2 xs:mb-3  ">
-              The Best Android App Development Company.
-            </p>
-            <p className="text-[#7B7E86] text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base xl:leading-6 xss:leading-5 sm:leading-relaxed 3xl:leading-8 mb-2">
-              At Analogue IT Solutions, we are a premier Android app development
-              company committed to turning your app ideas into reality. With our
-              deep expertise and dedication to excellence, we collaborate
-              closely with you to create exceptional Android app solutions that
-              meet your unique needs and exceed expectations.
-            </p>
-            <p className="text-[#7B7E86] text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base xl:leading-6 xss:leading-5 sm:leading-relaxed 3xl:leading-8 mb-2">
-              Our team leverages the latest technologies and industry best
-              practices to build high-performance, user-friendly apps tailored
-              to your business goals. From intuitive UI/UX design to seamless
-              functionality, we ensure that every app delivers a smooth and
-              engaging experience. Whether you&apos;re a startup or an
-              established business, our scalable solutions help you stay ahead
-              in the competitive mobile landscape.
-            </p>
-            <p className="text-[#7B7E86] text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base xl:leading-6 xss:leading-5 sm:leading-relaxed 3xl:leading-8 mb-2">
-              Beyond development, we offer ongoing support and updates to keep
-              your app optimized and future-ready. Our goal is to not just build
-              apps, but to create digital experiences that drive growth and
-              enhance customer engagement. Partner with us to bring your Android
-              app vision to life.
-            </p>
+        {/* Our services new section */}
+        <div className=" pb-10">
+          <div className="flex flex-col xss:items-start sm:items-center xss:px-4 xss:py-5 xl:py-10">
+            <div className="flex items-center mb-1">
+              <span className="w-1 h-1 bg-black rounded-full mr-2"></span>
+              <span className="font-medium text-xs xss:text-subsmall sm:text-xs xl:text-sm text-black">
+                Our Services
+              </span>
+            </div>
+            <h1 className=" text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold text-black leading-snug">
+              Chrome Browser Extension
+            </h1>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 xss:gap-8 xss:px-8 3xl:gap-20 2xl:gap-14 2xl:px-14 3xl:px-30 px-10">
+            <div className=" text-[#7B7E86] p-5 border-l border-r border-gray-200 shadow-[0_4px_2px_rgba(0,0,0,0.3)] bg-white rounded-lg">
+              <h3 className="font-weight-400 text-[#0E59F2] xss:mb-3 xl:text-2xl xl:mb-4 xss:mb-1text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold">
+                UI/UX Optimization
+              </h3>
+              <p className="xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base  xss:leading-4 sm:leading-relaxed 3xl:leading-7">
+                Seamless, user-friendly designs for superior user experiences, crafted to maximize engagement and usability.Our design approach focuses on clarity, accessibility, and effortless navigation.              </p>
+            </div>
+            <div className=" text-[#7B7E86] p-5 border-l border-r border-gray-200 shadow-[0_4px_2px_rgba(0,0,0,0.3)] bg-white p-6 rounded-lg">
+              <h3 className="font-weight-400 text-[#0E59F2] xss:mb-3 xl:text-2xl xl:mb-4 xss:mb-1text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold">
+                Extension Maintenance And Updates
+              </h3>
+              <p className="xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base  xss:leading-4 sm:leading-relaxed 3xl:leading-7">
+                Ongoing support to ensure compatibility and performance.Regular updates for security and new features.Proactive monitoring and troubleshooting included.              </p>
+            </div>
+            <div className=" text-[#7B7E86] p-5 border-l border-r border-gray-200 shadow-[0_4px_2px_rgba(0,0,0,0.3)] bg-white p-6 rounded-lg">
+              <h3 className="font-weight-400 text-[#0E59F2] xss:mb-3 xl:text-2xl xl:mb-4 xss:mb-1text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold">
+                Cross-Browser Integration
+              </h3>
+              <p className="xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base  xss:leading-4 sm:leading-relaxed 3xl:leading-7">
+                Extensions compatible with other browsers as needed, ensuring smooth performance across platforms.We make sure your extensions run reliably on Chrome, Firefox, Edge, and beyond.              </p>
+            </div>
+            <div className=" text-[#7B7E86] p-5 border-l border-r border-gray-200 shadow-[0_4px_2px_rgba(0,0,0,0.3)] bg-white p-6 rounded-lg">
+              <h3 className="font-weight-400 text-[#0E59F2] xss:mb-3 xl:text-2xl xl:mb-4 xss:mb-1text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold">
+                Custom Chrome Extension Development Project Research              </h3>
+              <p className="xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base  xss:leading-4 sm:leading-relaxed 3xl:leading-7">
+                Tailored solutions to fit your business requirements, delivering functionality that matches your goals. From concept to deployment, we enhance productivity.              </p>
+            </div>
           </div>
         </div>
 
@@ -359,61 +317,57 @@ export default function ChromeExtension() {
           <CalendarPage />
         </div>
 
-        {/* Android dev company in India */}
-        <div className="w-full h-auto bg-white xl:p-5 xl:px-20 xss:px-5 pt-5 xs:p-5 sm:px-8 ">
-          <p className="font-weight-400 font-semibold text-[#0E59F2] xss:mb-3 xl:text-2xl xl:mb-4 xss:mb-1text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold">
-            Mobile App Development Company in India
-          </p>
+        {/*  company in India */}
+        <div className="w-full h-auto py-5 bg-white xl:p-5 xl:px-20 xss:px-5 pt-5 xs:p-5 sm:px-8 ">
+          <p className="subt text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.5rem] md:w-[75%] xl:text-[1.8rem] 3xl:text-[2.2rem] xl:w-[75%] 2xl:w-[65%] font-semibold text-black leading-snug">
+            Best Chrome Browser Extension Development Company          </p>
           <div className="xl:text-sm text-[#7B7E86] xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base  xss:leading-4 sm:leading-relaxed 3xl:leading-8">
             <p className="pb-2">
-              As a leading Indian Android app development company, Analogue IT
-              Solutions is dedicated to exploring the intricacies of Android
-              applications and delivering top-notch solutions tailored to client
-              needs. Our expertise focuses on Android app development, ensuring
-              apps that meet the highest standards of quality and innovation.
-              Recognized as one of the top Android app development companies in
-              Hyderabad, we transform your ideas into cutting-edge solutions
-              that exceed expectations.
-            </p>
-            <p className="pb-2">
-              Our handpicked Android app development professionals in Hyderabad
-              are skilled in various platforms, including Flutter and iOS, with
-              a primary focus on Android app development. Alongside app
-              development, Analogue also offers digital marketing strategy
-              design and business development strategy. Reach out to Analogue
-              for comprehensive Android app solutions that propel your business
-              to new heights.
-            </p>
-            <p className="pb-2">
-              {" "}
-              Our Android app development services in Hyderabad turn your ideas
-              into reality, providing the finest user-friendly apps.
+              As a leading Chrome browser extension development company, we specialize in creating tailored solutions that enhance your business operations. Our extensions are designed to simplify tasks, boost productivity, and streamline workflows. We focus on meeting your unique business needs with innovative and user-friendly tools. With our expertise, you can take advantage of Chrome’s global reach to grow your audience and business.
             </p>
           </div>
         </div>
 
-        {/* text under responsive india */}
-        <div className="w-full h-auto bg-white xl:p-5 xl:px-20 xss:px-5 xss:pb-2 sm:px-8 ">
-          <p className="font-weight-400 font-semibold text-[#0E59F2] text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] xl:mb-4 xss:mb-1 xs:mb-1 ">
-            Analogue IT Solutions - Best AndroidAppDevelopment Services <br />{" "}
-            in Hyderabad
-          </p>
-          <div className=" text-[#7B7E86] text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base xl:leading-6 xss:leading-4 sm:leading-relaxed 3xl:leading-8">
-            <p className="pb-2">
-              Analogue has earned a reputation as the best Android app
-              development company in Hyderabad by formulating a client-centric
-              process. Our teams collaborate, brainstorm, and devise top
-              strategies for planning and creating high-quality Android
-              applications.
-            </p>
-            <p className="pb-2">
-              {" "}
-              We are committed to crafting Android apps that are engaging,
-              intuitive, well-structured, and innovative. As the leading Android
-              app development company in Hyderabad, India, we blend essential
-              design patterns with sophisticated style elements to capture the
-              essence of your business.
-            </p>
+        {/* why choose ait */}
+        <div className="w-full py-5 h-auto bg-white xl:p-0 xl:px-20 xss:px-5 pt-5 xs:p-5 sm:px-8">
+          <h5 className="  text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.5rem] md:w-[75%] xl:text-[1.8rem] 3xl:text-[2.2rem] xl:w-[75%] 2xl:w-[65%] font-semibold text-black leading-snug">
+            Why Choose Analogue IT Solutions?
+          </h5>
+          <div className="text-[#7B7E86]">
+            <div className="pb-2 text-lg xss:text-sm sm:text-base md:text-lg 2xl:text-[1.2rem] font-medium text-[#363638D9]">
+              Proven Chrome Extension Expertise -{" "}
+              <span className="xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base xss:leading-4 sm:leading-relaxed 3xl:leading-8">
+                Your technical advantage is our commitment. We deliver specialized solutions at every level.
+              </span>
+            </div>
+
+            <div className="pb-2 text-lg xss:text-sm sm:text-base md:text-lg 2xl:text-[1.2rem] font-medium text-[#363638D9]">
+              Custom-Tailored Solutions  -{" "}
+              <span className="xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base xss:leading-4 sm:leading-relaxed 3xl:leading-8">
+                Your unique needs drive our approach. We create perfectly fitting solutions at every turn.
+              </span>
+            </div>
+
+            <div className="pb-2 text-lg xss:text-sm sm:text-base md:text-lg 2xl:text-[1.2rem] font-medium text-[#363638D9]">
+              Transparent Pricing -{" "}
+              <span className="xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base xss:leading-4 sm:leading-relaxed 3xl:leading-8">
+                Your budget clarity matters most. We maintain honest pricing at every quote.
+              </span>
+            </div>
+
+            <div className="pb-2 text-lg xss:text-sm sm:text-base md:text-lg 2xl:text-[1.2rem] font-medium text-[#363638D9]">
+              Agile Development Process -{" "}
+              <span className="xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base xss:leading-4 sm:leading-relaxed 3xl:leading-8">
+                Your collaboration shapes our workflow. We ensure flexible adaptation at every phase.
+              </span>
+            </div>
+
+            <div className="pb-2 text-lg xss:text-sm sm:text-base md:text-lg 2xl:text-[1.2rem] font-medium text-[#363638D9]">
+              Quality & Security Assurance  -{" "}
+              <span className="xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base xss:leading-4 sm:leading-relaxed 3xl:leading-8">
+                Your safety is fundamental. We implement rigorous standards at every step.
+              </span>
+            </div>
           </div>
         </div>
 
@@ -510,71 +464,33 @@ export default function ChromeExtension() {
           </div>
         </div>
 
-        {/* guarantees */}
-        <div className="2xl:p-10 lg:px-7 xl:px-20 2xl:px-15 xss:p-5 w-full h-auto">
-          <p className="text-[#0E59F2] text-lg xss:text-sm  sm:text-base md:text-lg 2xl:text-[1.2rem] font-medium xl:leading-7 text-black mb-2">
-            Got it! Here&apos;s a concise version without descriptions:
-          </p>
-          <p className="text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold text-[#0E59F2] mb-2">
-            {" "}
-            Why Choose Analogue IT Solutions?
-          </p>
-          <ol className="list-decimal xss:ml-5 text-[#7B7E86] text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base pt-2">
-            <li className="xss:pb-1 lg:pb-3">
-              Non-Disclosure Agreement (NDA) for confidentiality
-            </li>
-            <li className="xss:pb-1 lg:pb-3">
-              Affordable design and development services
-            </li>
-            <li className="xss:pb-1 lg:pb-3">
-              Support from experienced Android professionals
-            </li>
-            <li className="xss:pb-1 lg:pb-3">
-              Fast development tailored to your needs
-            </li>
-            <li className="xss:pb-1 lg:pb-3">
-              Creation of user-friendly and interactive apps
-            </li>
-            <li className="xss:pb-1 lg:pb-3">
-              Reliable performance under heavy usage
-            </li>
-            <li className="xss:pb-1 lg:pb-3">
-              Timely responses and ongoing support
-            </li>
-            <li className="xss:pb-1 lg:pb-3">
-              Customised Android applications aligned with your business goals
-            </li>
-          </ol>
-        </div>
 
-        {/* text under guarantess */}
+
+        {/* ready to create text */}
         <div className="w-full h-auto bg-white xl:p-5 xl:px-20 xss:px-5 sm:px-8 ">
-          <h3 className="font-weight-400 text-[#0D6EFD] font-semibold xl:text-2xl xl:mb-4 xss:mb-1 xss:text-sm xs:mb-1 lg:mb-3 text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold">
-            Choose the Best Android App Developers in Hyderabad
+          <h3 className="subt text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.5rem] md:w-[75%] xl:text-[1.8rem] 3xl:text-[2.2rem] xl:w-[75%] 2xl:w-[65%] font-semibold text-black leading-snug">
+            Ready to Create Your Chrome Extension?
           </h3>
           <div className="text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-[#7B7E86] xl:leading-6 xss:leading-4 sm:leading-relaxed 3xl:leading-8">
-            <p className="pb-2">
-              Analogue has earned a reputation as the best Android app
-              development company in Hyderabad by formulating a client-centric
-              process. Our teams collaborate, brainstorm, and devise top
-              strategies for planning and creating high-quality Android
-              applications.
+            <p className="pb-1">
+              Unlock the potential of your ideas with Analogue IT Solutions, the trusted Chrome Browser Extension Development Company. Whether you're looking to enhance productivity, streamline operations, or target a broader audience, our expert Chrome extension developers are here to help.
             </p>
-            <p className="pb-2">
-              {" "}
-              We are committed to crafting Android apps that are engaging,
-              intuitive, well-structured, and innovative. As the leading Android
-              app development company in Hyderabad, India, we blend essential
-              design patterns with sophisticated style elements to capture the
-              essence of your business.
+            <p className="pb-1">
+              We specialize in delivering innovative and secure Chrome extension development services, tailored to your unique business needs. From small businesses to large enterprises, we&apos;ve helped countless clients create extensions that simplify workflows and elevate user experiences.
             </p>
+            <p className="pb-1">
+              Looking for a custom Chrome browser extension? Or perhaps you need an experienced browser extension developer to bring your vision to life? At Analogue IT Solutions, we combine technical expertise with a client-centric approach to deliver results that exceed expectations.            </p>
+            <p className="pb-1">
+              Don&apos;t just create a Chrome extension create one that stands out. Work with a proven Chrome browser extension development company that prioritizes your goals and ensures seamless integration with the Chrome Web Store.            </p>
+            <p className="pb-1">
+              Take the next step today! Contact us to explore how our Chrome Extension Development Services can transform your business.            </p>
           </div>
         </div>
 
         {/* faqs section */}
         <div className="w-[86%] mx-auto pb-3 xss:mt-5">
           <div>
-            <FrequentQuestions Question={faqArray} />
+            <FrequentQuestions Question={ChromefaqArray} />
           </div>
         </div>
 

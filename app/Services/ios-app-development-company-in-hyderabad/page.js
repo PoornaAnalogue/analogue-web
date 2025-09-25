@@ -10,7 +10,7 @@ import FrequentQuestions from "@/components/faqs-page";
 import GetAQuoteForm from "@/components/get-quote-form";
 import CalendarPage from "@/app/home-page-main/calendar/calendar-page";
 
-export default function FlutterAppDevelopment() {
+export default function IOSAppDevelopment() {
   const [isOpen, setIsOpen] = useState(false);
 
   const [selectedCategory, setSelectedCategory] = useState("Web Apps");
@@ -132,7 +132,7 @@ export default function FlutterAppDevelopment() {
               ABOUT OUR COMPANY
             </span>
           </div>
-          <h1 className=" text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] xl:w-[55%] 2xl:w-[45%] font-semibold text-black leading-snug">
+          <h1 className=" text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1. text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.7rem] md:w-[75%] xl:text-[2rem] 3xl:text-[2.5rem] xl:w-[75%] 2xl:w-[65%] font-semibold text-black leading-snug">
             Best <span className="text-blue-500"> IOS App Development </span>{" "}
             Company in Hyderabad, India
           </h1>
@@ -177,7 +177,7 @@ export default function FlutterAppDevelopment() {
               WELCOME TO OUR COMPANY
             </span>
           </div>
-          <h5 className=" text-2xl xss:text-[1.1rem] text-[#0D6EFD] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] xl:w-[60%] font-semibold leading-relaxed">
+          <h5 className="subt text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.5rem] md:w-[75%] xl:text-[1.8rem] 3xl:text-[2.2rem] xl:w-[75%] 2xl:w-[65%] font-semibold text-black leading-snug">
             Accelerating Business Growth with Expert iOS App Development
           </h5>
           <p className="text-gray-500 leading-relaxed text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base">
@@ -204,7 +204,7 @@ export default function FlutterAppDevelopment() {
           </p>
           <p className="text-gray-500 leading-relaxed text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base">
             Partner with Analogue IT Solutions to turn your iOS app vision into
-            reality and stay ahead in the competitive digital landscape.
+            reality and stay ahead in the competitive digital landscape.
           </p>
           <div className="my-2">
             <button className="bg-blue-600 xss:text-xs lg:text-sm text-white xss:px-2 xss:py-2 xl:px-5 xl:py-3 rounded-3xl hover:bg-blue-700 transition cursor-pointer ">
@@ -225,7 +225,7 @@ export default function FlutterAppDevelopment() {
                 creating tailored applications that align with your business
                 goals. Our team leverages advanced technologies and creative
                 design to deliver secure, scalable, and user-friendly solutions.
-                Whether you’re looking for an e-commerce platform or a unique
+                Whether you&apos;re looking for an e-commerce platform or a unique
                 business application, our iOS app development expertise ensures
                 exceptional performance and seamless user experiences. With
                 innovation and precision, we bring your vision to life, making
@@ -371,7 +371,7 @@ export default function FlutterAppDevelopment() {
 
         {/* IOS app dev company in India */}
         <div className="w-full h-auto bg-white xl:p-5 xl:px-20 xss:px-5 pt-5 xs:p-5 sm:px-8 ">
-          <h3 className="font-weight-400 font-semibold text-[#0E59F2] xss:mb-3 xl:text-2xl xl:mb-4 xss:mb-1text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold">
+          <h3 className="subt text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.5rem] md:w-[75%] xl:text-[1.8rem] 3xl:text-[2.2rem] xl:w-[75%] 2xl:w-[65%] font-semibold text-black leading-snug">
             Are You Looking for The Best IOS App Development Company?
           </h3>
           <div className="xl:text-sm text-[#7B7E86] xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base leading-relaxed 3xl:leading-8">
@@ -493,7 +493,7 @@ export default function FlutterAppDevelopment() {
 
         {/* IOS app dev company in India */}
         <div className="w-full h-auto bg-white xl:p-5 xl:px-20 xss:px-5 pt-5 xs:p-5 sm:px-8 ">
-          <h3 className="font-weight-400 font-semibold text-[#0E59F2] xss:mb-3 xl:text-2xl xl:mb-4 xss:mb-1text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold">
+          <h3 className="subt text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.5rem] md:w-[75%] xl:text-[1.8rem] 3xl:text-[2.2rem] xl:w-[75%] 2xl:w-[65%] font-semibold text-black leading-snug">
             IOS App Development Company in Hyderabad, India
           </h3>
           <div className="xl:text-sm text-[#7B7E86] xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base leading-relaxed 3xl:leading-8">
@@ -527,7 +527,7 @@ export default function FlutterAppDevelopment() {
 
         {/* content under IOS app dev company in India */}
         <div className="w-full h-auto bg-white xl:p-5 xl:px-20 xss:px-5 pt-5 xs:p-5 sm:px-8 ">
-          <h3 className="font-weight-400 font-semibold text-[#0E59F2] xss:mb-3 xl:text-2xl xl:mb-4 xss:mb-1text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold">
+          <h3 className="subt text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.5rem] md:w-[75%] xl:text-[1.8rem] 3xl:text-[2.2rem] xl:w-[75%] 2xl:w-[65%] font-semibold text-black leading-snug">
             Analogue IT Solutions - Best iOS App Development Services in
             Hyderabad
           </h3>
@@ -550,7 +550,7 @@ export default function FlutterAppDevelopment() {
 
         {/* why analogue it solutions */}
         <div className="w-full h-auto bg-white xl:p-5 xl:px-20 xss:px-5 pt-5 xs:p-5 sm:px-8 ">
-          <h3 className="font-weight-400 font-semibold text-[#0E59F2] xss:mb-3 xl:text-2xl xl:mb-4 xss:mb-1text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold ">
+          <h3 className="subt text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.5rem] md:w-[75%] xl:text-[1.8rem] 3xl:text-[2.2rem] xl:w-[75%] 2xl:w-[65%] font-semibold text-black leading-snug ">
             Why Choose Analogue IT Solutions?
           </h3>
           <div className="xl:text-sm text-[#7B7E86] xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base leading-relaxed 3xl:leading-8">
@@ -585,7 +585,7 @@ export default function FlutterAppDevelopment() {
 
         {/* IOS app dev company in India */}
         <div className="w-full h-auto bg-white xl:p-5 xl:px-20 xss:px-5 pt-5 xs:p-5 sm:px-8 ">
-          <h3 className="font-weight-400 font-semibold text-[#0E59F2] xss:mb-3 xl:text-2xl xl:mb-4 xss:mb-1text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold">
+          <h3 className="subt text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.5rem] md:w-[75%] xl:text-[1.8rem] 3xl:text-[2.2rem] xl:w-[75%] 2xl:w-[65%] font-semibold text-black leading-snug">
             Choose the Best iOS App Developers in Hyderabad
           </h3>
           <div className="xl:text-sm text-[#7B7E86] xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base leading-relaxed 3xl:leading-8">

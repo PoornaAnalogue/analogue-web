@@ -161,8 +161,8 @@ export default function ClientCarouselPage() {
                   alt={`Logo ${i}`}
                   width={120}
                   height={100}
-                  className="object-contain w-[50px] h-[30px] sm:w-[70px] sm:h-[40px] md:w-[90px] md:h-[55px] lg:w-[110px] lg:h-[70px]"
-                />
+                className={`object-contain w-[50px] h-[30px] sm:w-[70px] sm:h-[40px] md:w-[90px] md:h-[55px] lg:w-[110px] lg:h-[70px] transition-all duration-300 ${
+                        activeIndex === i % companies.length ? "grayscale-0" : "grayscale" }`}                />
               </div>
             </SwiperSlide>
           ))}

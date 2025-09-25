@@ -17,7 +17,7 @@ export default function Responsive_Buykeyz() {
     { id: 11, src: "/SingleProduct-Images/keras.png", alt: "Keras logo" },
     { id: 12, src: "/SingleProduct-Images/R Programming.png", alt: "R logo" },
     { id: 13, src: "/SingleProduct-Images/Flutter-logo.png", alt: "Flutter logo" },
-    { id: 14, src: "/SingleProduct-Images/React.png", alt: "React logo" },
+    { id: 14, src: "/SingleProduct-Images/Expo.png", alt: "Expo logo" },
     { id: 15, src: "/SingleProduct-Images/kotlin-logo.png", alt: "Kotlin logo" },
     { id: 16, src: "/SingleProduct-Images/Laravel-logo.png", alt: "Laravel logo" },
     { id: 17, src: "/SingleProduct-Images/Spark-logo.png", alt: "Spark logo" },
@@ -99,14 +99,8 @@ export default function Responsive_Buykeyz() {
             </p>
 
             {/* Intro paragraph */}
-            <p className="text-[#7B7E86] text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-start mt-3 leading-5 sm:leading-6 mr-8 md:mr-15">
-              Analogue is a Best mobile app development company in Hyderabad
-              that specialises in creating and enhancing user experience through
-              the design and development of mobile and web applications. Our
-              focus lies in helping businesses expand and reach their specific
-              customer base by collaborating with individuals and organisations
-              to conceptualise and promote their products.
-            </p>
+            <p className="text-[#7B7E86] xl:w-2/3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-start mt-3 leading-5 sm:leading-6 mr-8 md:mr-15">
+              At Analogue IT Solutions, we follow a structured process to ensure every project's success. We begin with understanding your requirements, then create a clear roadmap with defined goals and timelines. Our design journey starts with paper sketches, followed by wireframes, and then the final UI design to ensure clarity and creativity at every stage. Our expert team develops scalable solutions, conducts thorough testing to guarantee quality, and once launched, we provide ongoing support and continuous improvements to keep your product performing at its best.            </p>
 
             {/* Development tools (first 2 rows show initially) */}
             <div className="w-full xl:w-2/3 mt-4">
@@ -178,13 +172,9 @@ export default function Responsive_Buykeyz() {
               <p className="text-[#0D6EFD] text-sm xss:text-base sm:text-lg lg:text-xl 2xl:text-2xl 3xl:text-[1.75rem] font-bold text-start">
                 About Project
               </p>
-              <p className="text-[#7B7E86] text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-start mt-3 leading-5 sm:leading-6 mr-8 md:mr-15">
-                Analogue is a Best mobile app development company in Hyderabad
-                that specialises in creating and enhancing user experience through
-                the design and development of mobile and web applications. Our
-                focus lies in helping businesses expand and reach their specific
-                customer base by collaborating with individuals and organisations
-                to conceptualise and promote their products.
+              <p className="text-[#7B7E86] w-full text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-start mt-3 leading-5 sm:leading-6 mr-8 md:mr-15">
+                BuyKeyz is a feature-rich e-commerce marketplace specializing in electronics and electrical products.
+ It is your one-stop eCommerce app for premium electrical and electronic items at the best prices. From home appliances and lighting to power tools and industrial components, it offers a wide range of trusted products from top brands. With secure payments, EMI options, and a seamless shopping experience, BuyKeyz makes buying electrical essentials easier and more affordable.
               </p>
             </div>
           </div>

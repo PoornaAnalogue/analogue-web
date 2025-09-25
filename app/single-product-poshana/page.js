@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Responsive_Poshana() {
 
-    const developingIcons = [
+  const developingIcons = [
     { id: 1, src: "/SingleProduct-Images/React.png", alt: "React logo" },
     { id: 2, src: "/SingleProduct-Images/Angular.png", alt: "Angular logo" },
     { id: 3, src: "/SingleProduct-Images/icons8-vue-js 1.png", alt: "Vue.js logo" },
@@ -17,7 +17,7 @@ export default function Responsive_Poshana() {
     { id: 11, src: "/SingleProduct-Images/keras.png", alt: "Keras logo" },
     { id: 12, src: "/SingleProduct-Images/R Programming.png", alt: "R logo" },
     { id: 13, src: "/SingleProduct-Images/Flutter-logo.png", alt: "Flutter logo" },
-    { id: 14, src: "/SingleProduct-Images/React.png", alt: "React logo" },
+    { id: 14, src: "/SingleProduct-Images/Expo.png", alt: "Expo logo" },
     { id: 15, src: "/SingleProduct-Images/kotlin-logo.png", alt: "Kotlin logo" },
     { id: 16, src: "/SingleProduct-Images/Laravel-logo.png", alt: "Laravel logo" },
     { id: 17, src: "/SingleProduct-Images/Spark-logo.png", alt: "Spark logo" },
@@ -68,7 +68,7 @@ export default function Responsive_Poshana() {
           {/* Image Section */}
           <div className=" w-full xl:w-1/2 flex justify-center items-center px-4 xss:px-6 xs:px-8 sm:px-10 md:px-12 lg:px-14 xl:px-5 ">
             <Image
-              src="/SingleProd-Images/Prod-Poshana.svg"
+              src="/SingleProd-Images/poshana.png"
               width={650}
               height={280}
               alt="Combine image"
@@ -99,14 +99,8 @@ export default function Responsive_Poshana() {
             </p>
 
             {/* Intro paragraph */}
-            <p className="text-[#7B7E86] text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-start mt-3 leading-5 sm:leading-6 mr-8 md:mr-15">
-              Analogue is a Best mobile app development company in Hyderabad
-              that specialises in creating and enhancing user experience through
-              the design and development of mobile and web applications. Our
-              focus lies in helping businesses expand and reach their specific
-              customer base by collaborating with individuals and organisations
-              to conceptualise and promote their products.
-            </p>
+            <p className="text-[#7B7E86] text-xs xss:text-xs xl:w-2/3 sm:text-sm lg:text-subbody 3xl:text-base text-start mt-3 leading-5 sm:leading-6 mr-8 md:mr-15">
+              At Analogue IT Solutions, we follow a structured process to ensure every project's success. We begin with understanding your requirements, then create a clear roadmap with defined goals and timelines. Our design journey starts with paper sketches, followed by wireframes, and then the final UI design to ensure clarity and creativity at every stage. Our expert team develops scalable solutions, conducts thorough testing to guarantee quality, and once launched, we provide ongoing support and continuous improvements to keep your product performing at its best.            </p>
 
             {/* Development tools (first 2 rows show initially) */}
             <div className="w-full xl:w-2/3 mt-4">
@@ -178,13 +172,9 @@ export default function Responsive_Poshana() {
               <p className="text-[#0D6EFD] text-sm xss:text-base sm:text-lg lg:text-xl 2xl:text-2xl 3xl:text-[1.75rem] font-bold text-start">
                 About Project
               </p>
-              <p className="text-[#7B7E86] text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-start mt-3 leading-5 sm:leading-6 mr-8 md:mr-15">
-                Analogue is a Best mobile app development company in Hyderabad
-                that specialises in creating and enhancing user experience through
-                the design and development of mobile and web applications. Our
-                focus lies in helping businesses expand and reach their specific
-                customer base by collaborating with individuals and organisations
-                to conceptualise and promote their products.
+              <p className="text-[#7B7E86] w-full text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-start mt-3 leading-5 sm:leading-6 mr-8 md:mr-15">
+                Poshana is a health and wellness app promoting fitness, nutrition, and holistic lifestyle improvement.
+ It is your all-in-one health and wellness app, offering personalized nutrition plans, activity tracking, and expert guidance. From fitness and mindful living to stress management and community support, it helps you achieve your health goals with ease. With tailored insights and holistic tools, Poshana makes a balanced lifestyle simple and sustainable.
               </p>
             </div>
           </div>

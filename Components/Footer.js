@@ -11,9 +11,12 @@ import {
 import Link from "next/link";
 import { CalendarIcon } from "@heroicons/react/20/solid";
 import { useBypass } from "@/components/ByPassProvider";
+import snowfallAnimation from "@/animations/Snowfall";
+import Lottie from "lottie-react";
 
 export default function Footer() {
   const isBypass = useBypass; // 🔥 define here
+
   const socialLinks = [
     {
       id: 1,
@@ -50,6 +53,62 @@ export default function Footer() {
       name: "Youtube",
       icon: FaYoutube,
       link: "https://www.youtube.com/@AnalogueITSolutions",
+    },
+  ];
+
+  // Location data array
+  const locationData = [
+    {
+      name: "Hyderabad, India",
+      flag: "/Flags/India-Flag.svg",
+      width: 20,
+      height: 20,
+      maxWidth: "30px",
+      maxHeight: "20px",
+      link: "#", // Replace with actual links
+    },
+    {
+      name: "United States",
+      flag: "/Flags/US.png",
+      width: 28,
+      height: 14,
+      maxWidth: "28px",
+      maxHeight: "25px",
+      link: "#",
+    },
+    {
+      name: "United Kingdom",
+      flag: "/Flags/UK.png",
+      width: 28,
+      height: 14,
+      maxWidth: "28px",
+      maxHeight: "24px",
+      link: "#",
+    },
+    {
+      name: "UAE",
+      flag: "/Flags/UAE.png",
+      width: 28,
+      height: 20,
+      fixedSize: true, // For fixed dimensions
+      link: "#",
+    },
+    {
+      name: "Europe",
+      flag: "/Flags/europe.png",
+      width: 28,
+      height: 14,
+      maxWidth: "28px",
+      maxHeight: "24px",
+      link: "#",
+    },
+    {
+      name: "Australia",
+      flag: "/Flags/Australia.png",
+      width: 28,
+      height: 14,
+      fixedSize: true, // For fixed dimensions
+      link: "#",
     },
   ];
   return (
@@ -140,71 +199,34 @@ export default function Footer() {
             </div>
 
             {/* Location */}
+            {/* Location */}
             <div className="col-span-1 xss:col-span-2 sm:col-span-1">
               <h3 className="font-bold mb-3">Location</h3>
-              <div className="grid grid-cols-1">
-                <div className="flex items-center gap-2 lg:p-1 lg:min-w-[100px] ">
-                  <span className="text-gray-400 xl:text-sm xss:text-lg">
-                    Hyderabad, India
-                  </span>
-                  <Image
-                    src="/Flags/India-Flag.svg"
-                    width={20}
-                    height={20}
-                    alt="India"
-                    className="w-auto h-auto max-w-[25px] max-h-[16px]"
-                  />
-                </div>
-                <div className="flex items-center gap-2 p-1 min-w-[100px]">
-                  <span className="text-gray-400 xl:text-sm xss:text-lg">
-                    Dubai
-                  </span>
-                  <Image
-                    src="/Flags/Uae-Flag.svg"
-                    width={28}
-                    height={20}
-                    alt="UAE"
-                    className="w-[28px]  h-[20px]"
-                  />
-                </div>
-                <div className="flex items-center gap-2 p-1 min-w-[100px]">
-                  <span className="text-gray-400 xl:text-sm xss:text-lg">
-                    California
-                  </span>
-                  <Image
-                    src="/Flags/California-republic.svg"
-                    width={28}
-                    height={14}
-                    alt="USA"
-                    className="w-auto h-auto max-w-[28px] max-h-[25px]"
-                  />
-                </div>
-                <div className="flex items-center gap-2 p-1 min-w-[100px]">
-                  <span className="text-gray-400 xl:text-sm xss:text-lg">
-                    Denmark
-                  </span>
-                  <Image
-                    src="/Flags/Denmark-Flag.svg"
-                    width={28}
-                    height={14}
-                    alt="Denmark"
-                    className="w-auto h-auto max-w-[28px] max-h-[24px]"
-                  />
-                </div>
-                <div className="flex items-center gap-2 p-1 min-w-[100px]">
-                  <span className="text-gray-400 xl:text-sm xss:text-lg">
-                    Qatar
-                  </span>
-                  <Image
-                    src="/Flags/Qatar-Flag.svg"
-                    width={28}
-                    height={14}
-                    alt="Qatar"
-                    className="w-[28px]  h-[14px]"
-                  />
-                </div>
+              <div className="grid grid-cols-2 gap-2 items-center">
+                {locationData.map((location, index) => (
+                  <div key={index} className="contents">
+                    {/* Country Name */}
+                    <span className="text-gray-400 xl:text-sm xss:text-lg">
+                      {location.name}
+                    </span>
+
+                    {/* Flag */}
+                    <Image
+                      src={location.flag}
+                      alt={location.name}
+                      width={location.width}
+                      height={location.height}
+                      style={
+                        location.fixedSize
+                          ? { width: `${location.width}px`, height: `${location.height}px` }
+                          : { maxWidth: `${location.maxWidth}`, maxHeight: `${location.maxHeight}`, width: "auto", height: "auto" }
+                      }
+                    />
+                  </div>
+                ))}
               </div>
             </div>
+
 
             {/* Recent Posts */}
             <div className="col-span-2 sm:col-span-1 xl:col-span-4 2xl:col-span-1 flex flex-col xl:flex-col">
@@ -277,15 +299,15 @@ export default function Footer() {
                 className="text-blue-500 hover:text-white"
                 scroll={false}
                 onClick={(e) => {
-                e.preventDefault();
-                isBypass.current = true; // 🔥 enable bypass
-                window.scrollTo({ top: 0, behavior: "smooth" });
+                  e.preventDefault();
+                  isBypass.current = true; // 🔥 enable bypass
+                  window.scrollTo({ top: 0, behavior: "smooth" });
 
-                // reset bypass after scroll finishes
-                setTimeout(() => {
-                  isBypass.current = false;
-                }, 1200); // match smooth scroll duration
-              }}
+                  // reset bypass after scroll finishes
+                  setTimeout(() => {
+                    isBypass.current = false;
+                  }, 1200); // match smooth scroll duration
+                }}
               >
                 {" "}
                 Analogue IT Solutions. {" "}
@@ -294,7 +316,7 @@ export default function Footer() {
             </div>
 
             {/* address, working hours, contact Details */}
-            <div className="col-span-3 grid grid-cols-1 xl:grid-cols-3 xss:gap-4 xl:gap-2 2xl:gap-5 xl:ml-[-1rem] 2xl:ml-0">
+            <div className=" z-20 col-span-3 grid grid-cols-1 xl:grid-cols-3 xss:gap-4 xl:gap-2 2xl:gap-5 xl:ml-[-1rem] 2xl:ml-0">
               {/* Location */}
               <div className="flex items-start gap-4">
                 <div className="relative w-[50px] h-[50px] sm:w-[60px] sm:h-[60px] xl:w-[70px] xl:h-[60px]">
@@ -359,15 +381,21 @@ export default function Footer() {
                   </h2>
                   <a
                     href="mailto:info@analogueitsolutions.com"
-                    className="hover:underline text-gray-400 text-sm"
+                    className="hover:underline text-gray-400 text-sm cursor-pointer"
                   >
                     info@analogueitsolutions.com
                   </a>
                   <a
                     href="tel:+918919088163"
-                    className="hover:underline text-gray-400 text-sm"
+                    className="hover:underline text-gray-400 text-sm cursor-pointer"
                   >
                     +91 89190 88163
+                  </a>
+                  <a
+                    href="tel:+918897594222"
+                    className="hover:underline text-gray-400 text-sm cursor-pointer"
+                  >
+                    +91 8897594222
                   </a>
                 </div>
               </div>
@@ -377,21 +405,54 @@ export default function Footer() {
 
         {/* Background Big Text */}
         <div className="2xl:mt-30 xl:mt-25 3xl:mt-35 ">
-          <h1 className="absolute xss:hidden xl:block 3xl:bottom-[-78px] 3xl:text-[16rem] 2xl:bottom-[-65px] 2xl:text-[14rem] xl:bottom-[-52px] xl:text-[11rem] left-0 right-0 font-semibold text-[#103687] leading-none z-0 select-none text-center">
-            Analogue IT
+          <h1 className="absolute xss:hidden xl:block overflow-hidden 3xl:bottom-[-78px] 3xl:text-[16rem] 2xl:bottom-[-65px] 2xl:text-[14rem] xl:bottom-[-52px] xl:text-[11rem] left-0 right-0 font-semibold text-[#103687] leading-none z-0 select-none text-center">
+            {"Analogue IT".split("").map((char, i) => (
+              <span
+                key={i}
+                className="relative inline-flex justify-center items-start"
+              >
+                {/* Snowfall starting at the top of each letter */}
+                <span className="absolute inset-0 z-0">
+                  <Lottie
+                    animationData={snowfallAnimation}
+                    loop
+                    autoplay
+                    className="w-full h-full pointer-events-none opacity-80"
+                  />
+                </span>
+
+                {/* Letter or custom "A" */}
+                {char === "A" ? (
+                  <span className="relative  z-10 inline-flex justify-center items-start overflow-hidden">
+
+                    {/* The A image with explicit width/height */}
+                    <Image
+                      src="/Footer/A-footer.png"
+                      alt="A"
+                      width={220}
+                      height={240}
+                      className="block z-10 object-cover mb-[-4.5rem] "
+                    />
+                  </span>
+                ) : (
+                  <span className="relative z-10">{char}</span>
+                )}
+              </span>
+            ))}
           </h1>
         </div>
+
         <div className="text-center md:text-lg xss:px-3 xss:text-sm bg-[#1a265c] py-4 w-screen text-gray-200 mt-4 xl:hidden">
           Developed by {" "}
           <Link
             href="/"
             className="text-blue-500 hover:text-white"
             scroll={false}
-              onClick={(e) => {
-                e.preventDefault();   
-                // Just jump to top instantly
-                window.scrollTo({ top: 0, behavior: "auto" });
-              }}
+            onClick={(e) => {
+              e.preventDefault();
+              // Just jump to top instantly
+              window.scrollTo({ top: 0, behavior: "auto" });
+            }}
           >
             Analogue IT Solutions.
           </Link>

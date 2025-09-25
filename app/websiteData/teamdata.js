@@ -1,34 +1,34 @@
 const teamData = [
-  { name: "Lohith Reddy", role: "Manager", img: "/aboutimages/ceoimg.svg" },
+  { name: "Lohith Reddy", role: "Manager", img: "/aboutimages/manager.jpg" },
   {
-    name: "Jane Smith",
-    role: "UI/UX Designer",
+    name: "Surya Murugesan",
+    role: "Frontend Team Lead",
     img: "/aboutimages/ceoimg.svg",
   },
   {
-    name: "Michael Lee",
-    role: "Project Manager",
+    name: "Venkata Thanooj",
+    role: "Backend Team Lead",
     img: "/aboutimages/ceoimg.svg",
   },
-  { name: "Emily Davis", role: "QA Engineer", img: "/aboutimages/ceoimg.svg" },
-  {
-    name: "Chris Johnson",
-    role: "Backend Developer",
+    {
+    name: "Hemanth Raghupatruni",
+    role: "Testing Team Lead",
     img: "/aboutimages/ceoimg.svg",
   },
+  { name: "on hold", role: "on hold", img: "/aboutimages/ceoimg.svg" },
   {
-    name: "Sophia Wilson",
-    role: "Frontend Developer",
-    img: "/aboutimages/ceoimg.svg",
-  },
-  {
-    name: "Daniel Martinez",
-    role: "DevOps Engineer",
+    name: "Rohith Madipelly",
+    role: "Senior Frontend Developer",
     img: "/aboutimages/ceoimg.svg",
   },
   {
-    name: "Olivia Brown",
-    role: "Product Designer",
+    name: "Rishitha Chawla",
+    role: "Business Analyst",
+    img: "/aboutimages/ceoimg.svg",
+  },
+  {
+    name: "on hold",
+    role: "on hold",
     img: "/aboutimages/ceoimg.svg",
   },
 ];

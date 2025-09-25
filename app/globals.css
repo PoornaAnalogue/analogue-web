@@ -73,15 +73,32 @@
 
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #ededed;
-    --foreground: #ededed;
-  }
-}
 .NewFont {
   font-family: 'Archivo', sans-serif;
 }
+
+/* globals.css */
+
+.sub-text {
+  @apply pb-2 text-lg xss:text-sm sm:text-base md:text-lg 2xl:text-[1rem] font-bold;
+  color: #7B7E86; /* custom color */
+}
+
+.sub-heading-main {
+  @apply text-2xl pb-2 xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.5rem] xl:text-[1.8rem] 3xl:text-[2.2rem] font-bold text-black leading-snug;
+  color:#000000; /* custom color */
+}
+
+.sub-heading {
+  @apply text-2xl pb-2 xss:text-[0.8rem] sm:text-[1rem] md:text-[1.3rem] xl:text-[1.6rem] 3xl:text-[1.6rem] font-semibold text-black leading-snug;
+  color:#000000; /* custom color */
+}
+
+.text{
+  @apply text-gray-500 font-medium leading-relaxed text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base;
+  color: #7B7E86
+}
+
 
 /* html and body global styles */
 
@@ -273,6 +290,16 @@ body {
     height: calc(100vh - 64px);
   }
 }
+
+@keyframes pop {
+  0% { transform: scale(0.8); opacity: 0.5; }
+  50% { transform: scale(1.1); opacity: 1; }
+  100% { transform: scale(1); opacity: 1; }
+}
+.animate-pop {
+  animation: pop 0.6s ease-out;
+}
+
 
 /* .mac-safari .hero-fix .mobile {
    height: 30rem; 
@@ -699,4 +726,28 @@ body {
 
 
 
-/*  */
+/* service pages animation heading */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slideIn {
+  animation: slideIn 0.8s ease-out forwards;
+}
+
+.animate-blink {
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

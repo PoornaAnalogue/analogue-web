@@ -40,7 +40,7 @@ export default function TestimonialsPage() {
     },
     {
       text: "A big thank you to Analogue IT Solutions for their incredible support in the development of my application. From the very beginning, the team showed dedication, professionalism, and creativity, making the entire process smooth and enjoyable.",
-      name: "Shiva Kumar",
+      name: "Kumar",
       image: "/Testimonial-Images/Male-logo.png",
       stars: 5,
     },

@@ -1,3 +1,4 @@
+"use client";
 import GetAQuoteForm from "@/components/get-quote-form";
 import Image from "next/image";
 
@@ -122,7 +123,7 @@ export default function Contact() {
       </div>
 
       {/* middle box */}
-      <div className="p-4 xs:p-6 sm:p-8 md:p-10 lg:p-12 xl:p-16 2xl:px-20 xl:py-0 lg:mt-[-1.8rem] 2xl:mt-[-3rem] rounded-lg">
+      <div className="p-4 xs:p-6 sm:p-8 md:p-10 lg:p-12 xl:p-16 2xl:px-20 xl:py-0 lg:mt-[-1.8rem] 2xl:mt-[-3rem] rounded-lg xss:mb-5 xl:mb-10">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center bg-blue-200 rounded-2xl p-4 xs:p-6 sm:p-8 md:p-10 lg:p-12 xl:p-12 overflow-hidden">
           <Image
             src="/contact/leftbox-topleft-img.svg"
@@ -141,7 +142,19 @@ export default function Contact() {
               customized quotation for your needs.
             </p>
           </div>
-          <button className="mt-4 md:mt-0 bg-blue-700 rounded text-white px-3 xs:px-4 sm:px-5 md:px-3 lg:px-2 py-2 lg:ml-2 text-xs xs:text-sm sm:text-sm md:text-small xl:text-sm 2xl:text-lg whitespace-nowrap">
+          <button onClick={() => {
+    setTimeout(() => {
+      const formSection = document.getElementById("form-section");
+      if (formSection) {
+        formSection.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+          inline: "center",
+        });
+      }
+    }, 500);
+  }}
+   className="mt-4 md:mt-0 bg-blue-700 rounded text-white px-3 xs:px-4 sm:px-5 md:px-3 lg:px-2 py-2 lg:ml-2 text-xs xs:text-sm sm:text-sm md:text-small xl:text-sm 2xl:text-lg whitespace-nowrap">
             Contact Us
           </button>
         </div>

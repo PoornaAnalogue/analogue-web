@@ -7,35 +7,35 @@ export default function ProductsPage() {
   const router = useRouter();
   const cards = [
     {
-      title: "Mahaboob",
-      description: "E-commerce App and Static Website",
+      title: "Mahboob",
+      description: "Event Management & Venue Booking Website",
       image: "/Product-Images/ProductImg14.png",
       bgColor: "bg-[#E67E20]",
-      link: "/single-product-mahaboob",
+      link: "/single-product-mahboob",
       objectfit: "",
       width: 350,
     },
     {
-      title: "Allonzy",
-      description: "E-commerce App and Static Website",
+      title: "Allons-z",
+      description: "Travel referral & Tourism App ",
       image: "/Product-Images/ProductImg13.png",
       bgColor: "bg-[#44689C]",
-      link: "/single-product-allons",
+      link: "/single-product-allons-z",
       objectfit: "",
       width: 350,
     },
     {
       title: "Cake Factory",
-      description: "E-commerce App and Static Website",
+      description: "E-Commerce (Food & Beverages) Website",
       image: "/Product-Images/ProductImg12.png",
       bgColor: "bg-[#E6C1D3]",
-      link: "/SingleProduct",
+      link: "/single-product-cakefactory",
       objectfit: "",
       width: 350,
     },
     {
       title: "Flythru",
-      description: "E-commerce App and Static Website",
+      description: " Baggage Services App (Kuwait)",
       image: "/Product-Images/ProductImg11.png",
       bgColor: "bg-[#164E8E]",
       link: "/single-product-flythru",
@@ -43,19 +43,19 @@ export default function ProductsPage() {
       width: 350,
     },
     {
-      title: "Care Cradle",
-      description: "E-commerce App and Static Website",
+      title: "Cradlewell",
+      description: "Postnatal & Newborn Care App",
       image: "/Product-Images/ProductImg10.png",
-      bgColor: "bg-[#6169FF]  ",
-      link: "/single-product-carecradle",
+      bgColor: "bg-[#6169FF]",
+      link: "/single-product-cradlewell",
       objectfit: "object-contain",
       width: 250,
       paddingy: "pt-8",
       res_size: "xss:pl-13",
     },
     {
-      title: "My Flat info",
-      description: "E-commerce App and Static Website",
+      title: "My Flat Info",
+      description: "Property Management SaaS App",
       image: "/Product-Images/ProductImg9.png",
       bgColor: "bg-[#283E71]",
       link: "/single-product-myflatinfo",
@@ -65,11 +65,11 @@ export default function ProductsPage() {
       res_size: "xss:pl-13",
     },
     {
-      title: "Aarishhh",
-      description: "E-commerce App and Static Website",
+      title: "Yaarishhh",
+      description: "Home Services & Movie Booking App",
       image: "/Product-Images/ProductImg8.png",
       bgColor: "bg-[#2A9D8F]",
-      link: "/single-product-aarish",
+      link: "/single-product-yaarishhh",
       objectfit: "object-contain",
       width: 250,
       paddingy: "pt-8",
@@ -77,7 +77,7 @@ export default function ProductsPage() {
     },
     {
       title: "Giftyu",
-      description: "E-commerce App and Static Website",
+      description: "Event Management & Social Networking App",
       image: "/Product-Images/ProductImg7.png",
       bgColor: "bg-[#FF6757]",
       link: "/single-product-giftyu",
@@ -87,7 +87,7 @@ export default function ProductsPage() {
     },
     {
       title: "Buykeyz",
-      description: "E-commerce App and Static Website",
+      description: "Electronics & Electricals E-Commerce App",
       image: "/Product-Images/ProductImg6.png",
       bgColor: "bg-[#3AA9FF]",
       link: "/single-product-buykeyz",
@@ -98,7 +98,7 @@ export default function ProductsPage() {
     },
     {
       title: "Cinepass",
-      description: "E-commerce App and Static Website",
+      description: "Movie Ticket Booking & Entertainment App",
       image: "/Product-Images/ProductImg5.png",
       bgColor: "bg-[#FFB300]",
       link: "/single-product-cinepass",
@@ -107,10 +107,10 @@ export default function ProductsPage() {
     },
     {
       title: "TGNPDCL",
-      description: "E-commerce App and Static Website",
+      description: "Telangana Government Electricity App",
       image: "/Product-Images/ProductImg4.png",
       bgColor: "bg-[#2023BA]",
-      link: "/SingleProduct",
+      link: "/single-product-TGNPDCL",
       objectfit: "object-contain",
       width: 250,
       paddingy: "pt-8",
@@ -118,7 +118,7 @@ export default function ProductsPage() {
     },
     {
       title: "Poshana",
-      description: "E-commerce App and Static Website",
+      description: "Health & Wellness App",
       image: "/Product-Images/ProductImg3.png",
       bgColor: "bg-[#007A8F]",
       link: "/single-product-poshana",
@@ -129,25 +129,25 @@ export default function ProductsPage() {
     },
     {
       title: "Healr",
-      description: "E-commerce App and Static Website",
+      description: "Healthcare Recruitment App",
       image: "/Product-Images/ProductImg2.svg",
       bgColor: "bg-[#2EDED3]",
-      link: "/SingleProduct",
+      link: "/single-product-healr",
       objectfit: "object-cover",
       width: 350,
     },
     {
-      title: "Naukari",
-      description: "E-commerce App and Static Website",
+      title: "IT Naukari",
+      description: "EdTech & Career Development App",
       image: "/Product-Images/ProductImg1.png",
       bgColor: "bg-[#E1DBFF]",
-      link: "/SingleProduct",
+      link: "/single-product-naukari",
       objectfit: "",
       width: 350,
     },
     {
       title: "Intellect Ignite",
-      description: "E-commerce App and Static Website",
+      description: "EdTech (Exam Management) App",
       image: "/Product-Images/ProductImg18.png",
       bgColor: "bg-[#114465]",
       link: "/single-product-intellectignite",
@@ -156,17 +156,17 @@ export default function ProductsPage() {
     },
     {
       title: "Gavathi Party",
-      description: "E-commerce App and Static Website",
+      description: "Food Delivery App (Single Vendor)",
       image: "/Product-Images/ProductImg17.png",
       bgColor: "bg-[#E31E25]",
       link: "/single-product-gavathi",
-      objectfit: "object-contain",
+      objectfit: "object-cover",
       width: 350,
       paddingy: "py-7",
     },
     {
       title: "Zipck",
-      description: "E-commerce App and Static Website",
+      description: "Multi-Vendor E-Commerce & Retail App",
       image: "/Product-Images/ProductImg16.png",
       bgColor: "bg-[#788F55]",
       link: "/single-product-zipck",
@@ -176,13 +176,14 @@ export default function ProductsPage() {
     },
     {
       title: "JSE",
-      description: "E-commerce App and Static Website",
+      description: "Devotional Music Streaming App",
       image: "/Product-Images/ProductImg15.png",
       bgColor: "bg-[#E2B35B]",
       link: "/single-product-jse",
       objectfit: "",
       width: 350,
     },
+
   ];
 
   const handleClick = (link) => {
@@ -235,7 +236,7 @@ export default function ProductsPage() {
                     <p className="xss:text-sm sm:text-subbody lg:text-base 3xl:text-base font-bold ml-2 sm:ml-4 text-gray-800  underline decoration-blue-500 underline-offset-9 pb-2 2xl:ml-6">
                       {card.title}
                     </p>
-                    <p className="text-gray-600 text-xs xss:text-xs sm:text-sm lg:text-sm 3xl:text-base text-center xss:ml-1 md:ml-2 ">
+                    <p className="text-gray-600 text-xs xss:text-xs sm:text-sm lg:text-sm 3xl:text-base text-start xss:ml-1 md:ml-2 2xl:ml-6 ">
                       {card.description}
                     </p>
                   </div>

@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Responsive_MyFlatInfo() {
 
-    const developingIcons = [
+  const developingIcons = [
     { id: 1, src: "/SingleProduct-Images/React.png", alt: "React logo" },
     { id: 2, src: "/SingleProduct-Images/Angular.png", alt: "Angular logo" },
     { id: 3, src: "/SingleProduct-Images/icons8-vue-js 1.png", alt: "Vue.js logo" },
@@ -17,7 +17,7 @@ export default function Responsive_MyFlatInfo() {
     { id: 11, src: "/SingleProduct-Images/keras.png", alt: "Keras logo" },
     { id: 12, src: "/SingleProduct-Images/R Programming.png", alt: "R logo" },
     { id: 13, src: "/SingleProduct-Images/Flutter-logo.png", alt: "Flutter logo" },
-    { id: 14, src: "/SingleProduct-Images/React.png", alt: "React logo" },
+    { id: 14, src: "/SingleProduct-Images/Expo.png", alt: "Expo logo" },
     { id: 15, src: "/SingleProduct-Images/kotlin-logo.png", alt: "Kotlin logo" },
     { id: 16, src: "/SingleProduct-Images/Laravel-logo.png", alt: "Laravel logo" },
     { id: 17, src: "/SingleProduct-Images/Spark-logo.png", alt: "Spark logo" },
@@ -68,7 +68,7 @@ export default function Responsive_MyFlatInfo() {
           {/* Image Section */}
           <div className=" w-full xl:w-1/2 flex justify-center items-center px-4 xss:px-6 xs:px-8 sm:px-10 md:px-12 lg:px-14 xl:px-5 ">
             <Image
-              src="/SingleProd-Images/Prod-myflatinfo.svg"
+              src="/SingleProd-Images/myflatinfo.png"
               width={650}
               height={280}
               alt="Combine image"
@@ -86,7 +86,7 @@ export default function Responsive_MyFlatInfo() {
                 width={250}
                 height={200}
                 alt="LogoImage"
-                className="w-[150px] xss:w-[160px] sm:w-[180px] md:w-[220px] lg:w-[230px] xl:w-[240px] 2xl:w-[250px] 3xl:w-[280px] h-auto"
+                className="w-[150px] xss:w-[160px] sm:w-[180px] md:w-[220px] lg:w-[230px] xl:w-[240px] 2xl:w-[250px] 3xl:w-[250px] h-auto"
               />
             </div>
 
@@ -99,14 +99,8 @@ export default function Responsive_MyFlatInfo() {
             </p>
 
             {/* Intro paragraph */}
-            <p className="text-[#7B7E86] text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-start mt-3 leading-5 sm:leading-6 mr-8 md:mr-15">
-              Analogue is a Best mobile app development company in Hyderabad
-              that specialises in creating and enhancing user experience through
-              the design and development of mobile and web applications. Our
-              focus lies in helping businesses expand and reach their specific
-              customer base by collaborating with individuals and organisations
-              to conceptualise and promote their products.
-            </p>
+            <p className="text-[#7B7E86] xl:w-2/3 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-start mt-3 leading-5 sm:leading-6 mr-8 md:mr-15">
+              At Analogue IT Solutions, we follow a structured process to ensure every project's success. We begin with understanding your requirements, then create a clear roadmap with defined goals and timelines. Our design journey starts with paper sketches, followed by wireframes, and then the final UI design to ensure clarity and creativity at every stage. Our expert team develops scalable solutions, conducts thorough testing to guarantee quality, and once launched, we provide ongoing support and continuous improvements to keep your product performing at its best.            </p>
 
             {/* Development tools (first 2 rows show initially) */}
             <div className="w-full xl:w-2/3 mt-4">
@@ -178,13 +172,9 @@ export default function Responsive_MyFlatInfo() {
               <p className="text-[#0D6EFD] text-sm xss:text-base sm:text-lg lg:text-xl 2xl:text-2xl 3xl:text-[1.75rem] font-bold text-start">
                 About Project
               </p>
-              <p className="text-[#7B7E86] text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-start mt-3 leading-5 sm:leading-6 mr-8 md:mr-15">
-                Analogue is a Best mobile app development company in Hyderabad
-                that specialises in creating and enhancing user experience through
-                the design and development of mobile and web applications. Our
-                focus lies in helping businesses expand and reach their specific
-                customer base by collaborating with individuals and organisations
-                to conceptualise and promote their products.
+              <p className="text-[#7B7E86] w-full text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base text-start mt-3 leading-5 sm:leading-6 mr-8 md:mr-15">
+                Myflatinfo is a SaaS-based property management platform enabling landlords and tenants to manage flats efficiently.
+ It is a powerful apartment management SaaS app that simplifies communication and daily operations for residents and admins. From bill payments, facility bookings, and parcel management to visitor entries, classifieds, and issue reporting, it brings all apartment needs into one platform. With secure payments, real-time updates, and easy profile management, Myflatinfo ensures smarter and more efficient community living.
               </p>
             </div>
           </div>
