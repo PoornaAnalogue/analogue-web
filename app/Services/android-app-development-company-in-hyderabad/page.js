@@ -10,6 +10,7 @@ import FrequentQuestions from "@/components/faqs-page";
 import GetAQuoteForm from "@/components/get-quote-form";
 import CalendarPage from "@/app/home-page-main/calendar/calendar-page";
 import ExtendedLocations from "@/components/service-related-components/extended-locations";
+import TypewriterHeading from "@/components/service-related-components/typewrite-heading";
 
 export default function AndroidAppDevelopment() {
   const [isOpen, setIsOpen] = useState(false);
@@ -102,6 +103,17 @@ export default function AndroidAppDevelopment() {
     },
   ];
 
+      const heading = [
+    { word: "Best", color: "text-black" },
+    { word: "Android", color: "text-blue-500" },
+    { word: "App", color: "text-blue-500" },
+    { word: "Development", color: "text-blue-500" },
+    { word: "Company", color: "text-black" },
+    { word: "in", color: "text-black" },
+    { word: "Hyderabad,", color: "text-black" },
+    { word: "India", color: "text-black" },
+  ];
+
   return (
     <>
       <div className="hero flex flex-col justify-center items-center bg-white pb-12">
@@ -127,46 +139,50 @@ export default function AndroidAppDevelopment() {
         {/* heading and content section */}
         <div className="px-4 xss:px-6 xs:px-8 sm:px-10 md:px-12 lg:px-16 xl:px-20 flex flex-col space-y-4 ">
           {/* about our company on top */}
-          <div className="flex items-center mb-1">
-            <span className="w-1 h-1 bg-black rounded-full mr-2"></span>
-            <span className="font-medium text-xs xss:text-subsmall sm:text-xs xl:text-sm text-black">
-              ABOUT OUR COMPANY
-            </span>
-          </div>
-          <h1 className="  text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.7rem] md:w-[75%] xl:text-[2rem] 3xl:text-[2.5rem] xl:w-[75%] 2xl:w-[65%] font-semibold text-black leading-snug">
-            Best{" "}
-            <span className="text-blue-500"> Android App Development </span>{" "}
-            Company in Hyderabad, India
-          </h1>
-          <p className="text-gray-500 leading-relaxed text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base">
-            Are you in search of a Best Android App Development Company in
+          <div className="flex flex-col xl:flex-row items-center xl:items-start w-full gap-6">
+            <div className="xl:w-1/2">
+              <div className="flex items-center mb-1">
+                <span className="w-1 h-1 bg-black rounded-full mr-2"></span>
+                <span className="font-medium text-xs xss:text-subsmall sm:text-xs xl:text-sm text-black">
+                  ABOUT OUR COMPANY
+                </span>
+              </div>
+              <TypewriterHeading textArray={heading} />
+              <p className="text">
+                Are you in search of a Best Android App Development Company in
             Hyderabad? Look no further than Analogue IT Solutions! Our team is
             dedicated to developing innovative and tailored Android applications
             that resonate with your target audience. We combine cutting-edge
             technology with industry insights to create robust, high-performance
             Android apps that drive user engagement and business growth. Trust
             us to elevate your mobile presence and bring your app ideas to life!
-          </p>
+              </p>
 
-          {/* Free Quote button + Call us */}
-          <div className="lg:flex gap-4">
-            <button
-              suppressHydrationWarning
-              onClick={() => setIsOpen(true)}
-              className="bg-blue-600 xss:text-xs lg:text-sm text-white xss:px-2 xss:py-2 xl:px-5 xl:py-3 rounded-3xl hover:bg-blue-700 transition cursor-pointer"
-            >
-              Get Free Quote
-            </button>
-            <div className="flex xss:flex-col lg:flex-row lg:items-center xss:ml-2 lg:ml-[-0.3rem] xss:mt-2 lg:mt-0">
-              <span className="xss:text-xs lg:text-sm text-blue-500 mr-2">
-                Call Us
-              </span>
-              <a
-                href="tel:+918919088163"
-                className="xss:text-xs lg:text-sm text-blue-700 hover:underline transition-colors duration-200"
-              >
-                +91 8919088163
-              </a>
+              {/* Free Quote button + Call us */}
+              <div className="xs:flex  gap-4 xss:pt-2 xl:pt-3">
+                <button
+                  suppressHydrationWarning
+                  onClick={() => setIsOpen(true)}
+                  className="bg-blue-600 xss:text-xs lg:text-sm text-white xss:px-2 xss:py-2 xl:px-5 xl:py-3 rounded-3xl hover:bg-blue-700 transition cursor-pointer"
+                >
+                  Get Free Quote
+                </button>
+                <div className="flex xss:flex-col lg:flex-row lg:items-center xss:ml-2 lg:ml-[-0.3rem] xss:mt-2 lg:mt-0">
+                  <span className="xss:text-xs lg:text-sm text-blue-500 mr-2">
+                    Call Us
+                  </span>
+                  <a
+                    href="tel:+918919088163"
+                    className="xss:text-xs lg:text-sm text-blue-700 hover:underline transition-colors duration-200"
+                  >
+                    +91 8919088163
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="xl:w-1/2 flex justify-center items-center">
+              <Image src="/service-icons/flutter-img.png" width={600} height={400} alt="flutter image"
+                className="w-full h-auto max-w-[30rem] object-contain " />
             </div>
           </div>
 
@@ -177,7 +193,7 @@ export default function AndroidAppDevelopment() {
               WELCOME TO OUR COMPANY
             </span>
           </div>
-          <h5 className="subt text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.5rem] md:w-[75%] xl:text-[1.8rem] 3xl:text-[2.2rem] xl:w-[75%] 2xl:w-[65%] font-semibold text-black leading-snug">
+          <h5 className="sub-heading-main">
             Accelerating Business Growth with Top-Notch Android Development
           </h5>
           <p className="text-gray-500 leading-relaxed text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base">
@@ -190,7 +206,7 @@ export default function AndroidAppDevelopment() {
             engagement and streamline operations. From intuitive{" "}
             <a
               className="text-blue-700 font-semibold"
-              href="https://analogueitsolutions.com/ui-ux-design-company-in-hyderabad"
+              href="/Services/ui-ux-design-company-in-hyderabad"
             >
               UI/UX design
             </a>{" "}
