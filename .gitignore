@@ -1,15 +1,8 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> 07fd8890ed6014623b403ff8fbe98eb7f97a02d1
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
 /node_modules
-<<<<<<< HEAD
 node_modules/
-=======
->>>>>>> 07fd8890ed6014623b403ff8fbe98eb7f97a02d1
 /.pnp
 .pnp.*
 .yarn/*
@@ -22,13 +15,9 @@ node_modules/
 /coverage
 
 # next.js
-<<<<<<< HEAD
 .next/
 ./next/
 ./next
-=======
-/.next/
->>>>>>> 07fd8890ed6014623b403ff8fbe98eb7f97a02d1
 /out/
 
 # production
@@ -53,7 +42,6 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-<<<<<<< HEAD
 
 # Node modules
 node_modules/
@@ -68,5 +56,3 @@ yarn-error.log*
 
 # Env files
 .env
-=======
->>>>>>> 07fd8890ed6014623b403ff8fbe98eb7f97a02d1
