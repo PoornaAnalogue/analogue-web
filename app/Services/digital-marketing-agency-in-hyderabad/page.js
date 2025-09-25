@@ -9,6 +9,9 @@ import CarousalServicePage from "@/components/carousal-servicepage";
 import FrequentQuestions from "@/components/faqs-page";
 import GetAQuoteForm from "@/components/get-quote-form";
 import CalendarPage from "@/app/home-page-main/calendar/calendar-page";
+import TypewriterHeading from "@/components/service-related-components/typewrite-heading";
+import TechnologiesButtons from "@/components/service-related-components/tech-icons";
+import ExtendedLocations from "@/components/service-related-components/extended-locations";
 
 export default function DigitalMarketing() {
   const [isOpen, setIsOpen] = useState(false);
@@ -78,7 +81,7 @@ export default function DigitalMarketing() {
     {
       question: "02. Is Digital Marketing is important for all?",
       answer:
-        "Yes , It Is Important to All the Businesses, Because Reaching a global audience: Unlike traditional marketing, digital efforts transcend geographical boundaries, connecting you with potential customers worldwide. Laser-sharp targeting: Pinpoint your ideal audience with precision, ensuring your message resonates with those most likely to convert. Measurable results: Track campaign performance in real-time, gaining valuable insights to optimise your strategy for maximum impact. Cost-effectiveness: Compared to traditional methods, digital marketing offers greater flexibility and affordability, allowing you to stretch your budget further. Building relationships: Foster genuine connections with your audience through interactive platforms, creating brand loyalty and advocacy.",
+        "Digital marketing helps businesses reach customers anywhere in the world. It is more cost-effective than traditional marketing and allows businesses to use their budget more efficiently.",
     },
     {
       question: "03. Is SEO is really helpful?",
@@ -93,8 +96,18 @@ export default function DigitalMarketing() {
     {
       question: "05. Is digital Marketing a Product or Service?",
       answer:
-        "Digital Marketing is a Service. It's the application of strategic planning, creative content, and technological expertise to promote products or services online. It involves activities like SEO, social media marketing, email marketing, and PPC advertising, all aimed at achieving specific marketing objectives for a client. Essentially, digital marketers provide a service to their clients by helping them reach their target audience and achieve their business goals.",
+        "Digital marketing is a service that uses strategy, creativity, and technology to promote products or services online and help businesses reach their target audience.",
     },
+  ];
+
+      const heading = [
+    { word: "Best", color: "text-black" },
+    { word: "Digital", color: "text-blue-500" },
+    { word: "Marketing", color: "text-blue-500" },
+    { word: "Agency", color: "text-black" },
+    { word: "in", color: "text-black" },
+    { word: "Hyderabad,", color: "text-black" },
+    { word: "India", color: "text-black" },
   ];
 
   return (
@@ -122,44 +135,44 @@ export default function DigitalMarketing() {
         {/* heading and content section */}
         <div className="px-4 xss:px-6 xs:px-8 sm:px-10 md:px-12 lg:px-16 xl:px-20 flex flex-col space-y-4 ">
           {/* about our company on top */}
-          <div className="flex items-center mb-1">
-            <span className="w-1 h-1 bg-black rounded-full mr-2"></span>
-            <span className="font-medium text-xs xss:text-subsmall sm:text-xs xl:text-sm text-black">
-              ABOUT OUR COMPANY
-            </span>
-          </div>
-          <h1 className="  text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.7rem] md:w-[75%] xl:text-[2rem] 3xl:text-[2.5rem] xl:w-[75%] 2xl:w-[65%] font-semibold text-black leading-snug">
-            Best <span className="text-blue-500"> Digital Marketing </span>{" "}
-            Agency in Hyderabad, India
-          </h1>
-          <p className="text-gray-500 leading-relaxed text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base">
-            Analogue is the Best Digital Marketing Agency in Hyderabad
-            specialised in driving tangible results through SEO, Social Media
-            Marketing, and Google Ads. Our team of experts crafts tailored
-            strategies to improve your search engine rankings, engage your
-            audience on social platforms, and convert visitors into customers.
-            Let us help you dominate the digital landscape.
-          </p>
+          <div className="flex flex-col xl:flex-row items-center xl:items-start w-full gap-6">
+            <div className="xl:w-1/2">
+              <div className="flex items-center mb-1">
+                <span className="w-1 h-1 bg-black rounded-full mr-2"></span>
+                <span className="font-medium text-xs xss:text-subsmall sm:text-xs xl:text-sm text-black">
+                  ABOUT OUR COMPANY
+                </span>
+              </div>
+              <TypewriterHeading textArray={heading} />
+              <p className="text-gray-500 leading-relaxed text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base">
+                Analogue is the Best Digital Marketing Agency in Hyderabad, specialized in driving tangible results through SEO, Social Media Marketing, and Google Ads. Our team of experts crafts tailored strategies to improve your search engine rankings, engage your audience on social platforms, and convert visitors into customers. Let us help you dominate the digital landscape. We leverage data-driven insights and the latest marketing trends to maximize your ROI. With a focus on innovation and measurable outcomes, we ensure your brand stands out in the competitive online space.
+              </p>
 
-          {/* Free Quote button + Call us */}
-          <div className="lg:flex gap-4">
-            <button
-              suppressHydrationWarning
-              onClick={() => setIsOpen(true)}
-              className="bg-blue-600 xss:text-xs lg:text-sm text-white xss:px-2 xss:py-2 xl:px-5 xl:py-3 rounded-3xl hover:bg-blue-700 transition cursor-pointer"
-            >
-              Get Free Quote
-            </button>
-            <div className="flex xss:flex-col lg:flex-row lg:items-center xss:ml-2 lg:ml-[-0.3rem] xss:mt-2 lg:mt-0">
-              <span className="xss:text-xs lg:text-sm text-blue-500 mr-2">
-                Call Us
-              </span>
-              <a
-                href="tel:+918919088163"
-                className="xss:text-xs lg:text-sm text-blue-700 hover:underline transition-colors duration-200"
-              >
-                +91 8919088163
-              </a>
+              {/* Free Quote button + Call us */}
+              <div className="xs:flex  gap-4 xss:pt-2 xl:pt-3">
+                <button
+                  suppressHydrationWarning
+                  onClick={() => setIsOpen(true)}
+                  className="bg-blue-600 xss:text-xs lg:text-sm text-white xss:px-2 xss:py-2 xl:px-5 xl:py-3 rounded-3xl hover:bg-blue-700 transition cursor-pointer"
+                >
+                  Get Free Quote
+                </button>
+                <div className="flex xss:flex-col lg:flex-row lg:items-center xss:ml-2 lg:ml-[-0.3rem] xss:mt-2 lg:mt-0">
+                  <span className="xss:text-xs lg:text-sm text-blue-500 mr-2">
+                    Call Us
+                  </span>
+                  <a
+                    href="tel:+918919088163"
+                    className="xss:text-xs lg:text-sm text-blue-700 hover:underline transition-colors duration-200"
+                  >
+                    +91 8919088163
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="xl:w-1/2 flex justify-center items-center">
+              <Image src="/service-icons/digitalmarketing-img.png" width={600} height={400} alt="Digital marketing image"
+                className="w-full h-auto max-w-[30rem] object-contain " />
             </div>
           </div>
 
@@ -170,12 +183,12 @@ export default function DigitalMarketing() {
               WELCOME TO OUR COMPANY
             </span>
           </div>
-          <h5 className=" subt text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.5rem] md:w-[75%] xl:text-[1.8rem] 3xl:text-[2.2rem] xl:w-[75%] 2xl:w-[65%] font-semibold text-black leading-snug">
+          <h5 className=" sub-heading">
             Elevating Business Success Through Digital Marketing
           </h5>
           <p className="text-gray-500 leading-relaxed text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base">
             As the Best digital marketing agency, we are dedicated to harnessing
-            the power of innovative strategies to enhance your brand’s online
+            the power of innovative strategies to enhance your brand&apos;s online
             presence.Our experienced team blends creativity with industry
             knowledge to deliver customised marketing solutions tailored to your
             specific goals. With a commitment to excellence and a results-driven
@@ -231,59 +244,8 @@ export default function DigitalMarketing() {
         </div>
 
         {/* TECHNOLOGIES SECTION  WITH ICONS AND BG IMAGE */}
-        <div className=" w-full h-auto bg-[url('/service-icons/app-dev-bg.jpg')] bg-cover bg-center flex flex-col lg:flex-row h-[35rem] sm:h-[27rem] md:h-[32rem] lg:h-[32rem] xl:h-[26rem]">
-          <div className=" pt-[4%] sm:pt-[5%] 3xl:w-[80%] w-[80%] mx-auto text-white">
-            <h2 className="text-2xl xss:text-center lg:text-start xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold mb-9">
-              TECHNOLOGIES
-            </h2>
-            <div className="flex space-x-8 mb-6">
-              {technologies.map((tech, index) => (
-                <span
-                  key={index}
-                  onClick={() => setSelectedCategory(tech.category)}
-                  className={`cursor-pointer pb-1 border-b-2 font-medium xss:text-xs sm:text-sm lg:text-base  transition-all duration-500 ease-in-out ${
-                    selectedCategory === tech.category
-                      ? "border-white text-[#0E59F2]"
-                      : "border-transparent"
-                  } hover:border-[#0E59F2]`}
-                >
-                  {tech.category}
-                </span>
-              ))}
-            </div>
-
-            {/* Display selected category items */}
-            <div className="flex">
-              <div className="w-full">
-                <div className="grid grid-cols-6 xss:grid-cols-2 sm:grid-cols-3 2xl:w-[60rem] xl:grid-cols-5">
-                  {selectedItems?.map((item, idx) => (
-                    <div
-                      key={idx}
-                      className="py-1 p-2 m-5 sm:m-0 sm:my-2 md:m-0 md:my-2 text-black relative"
-                    >
-                      <Image
-                        src={TechIcons.bgicon}
-                        width={200}
-                        height={100}
-                        alt="design"
-                        className=" xss:w-[5.5rem] sm:w-[6.3rem] md:w-[120px] lg:w-[135px] flex justify-center items-center mx-auto"
-                      />
-                      <div className="absolute inset-0 xss:text-subsmall sm:text-xs flex flex-col items-center justify-center">
-                        <Image
-                          src={item.icon}
-                          width={200}
-                          height={100}
-                          alt={item.name}
-                          className="w-[65px] h-[65px] xss:w-[2.5rem] xss:h-[2rem] sm:w-[55px] sm:h-[50px] md:w-[60px] md:h-[50px] lg:w-[68px] lg:h-[55px] xl:w-[85px] xl:h-[75px]"
-                        />
-                        {item.name}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
+        <div >
+          <TechnologiesButtons />
         </div>
 
         {/* Our services new section */}
@@ -304,7 +266,7 @@ export default function DigitalMarketing() {
               professionalism and skills.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 xss:gap-8 xss:px-8 3xl:gap-20 2xl:gap-14 2xl:px-14 3xl:px-30 px-10">
+          <div className="grid grid-cols-1 text-center md:grid-cols-2 xl:grid-cols-4 xss:gap-8 xss:px-8 3xl:gap-20 2xl:gap-14 2xl:px-14 3xl:px-30 px-10">
             <div className=" text-[#7B7E86] p-5 border-l border-r border-gray-200 shadow-[0_4px_2px_rgba(0,0,0,0.3)] bg-white rounded-lg">
               <h3 className="font-weight-400 text-[#0E59F2] xss:mb-3 xl:text-2xl xl:mb-4 xss:mb-1text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold">
                 Search Engine Optimization
@@ -356,11 +318,11 @@ export default function DigitalMarketing() {
         </div>
 
         {/* Digital marketing agency in hyd */}
-        <div className="w-full h-auto bg-white xl:p-5 xl:px-20 xss:px-5 xss:py-5 2xl:py-12 pt-5 xs:p-5 sm:px-8 ">
-          <h3 className="subt text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.5rem] md:w-[75%] xl:text-[1.8rem] 3xl:text-[2.2rem] xl:w-[75%] 2xl:w-[65%] font-semibold text-black leading-snug">
+        <div className="w-full h-auto bg-white xl:pt-5 xl:p-0 xl:px-20 xss:px-5 pt-5 xs:p-5 sm:px-8 ">
+          <h3 className="sub-heading">
             Digital Marketing Agency in Hyderabad
           </h3>
-          <div className="xl:text-sm text-[#7B7E86] xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base leading-relaxed 3xl:leading-8">
+          <div className="text">
             <p className="pb-2">
               At Analogue IT Solutions, we are a leading Digital Marketing
               Agency in Hyderabad dedicated to helping businesses grow online.
@@ -376,105 +338,12 @@ export default function DigitalMarketing() {
           </div>
         </div>
 
-        {/* Extended Locations */}
-        <div className=" w-full h-auto bg-[url('/service-icons/app-dev-bg.jpg')] bg-cover bg-center xss:p-7 xl:p-15">
-          <div className="text-white text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold xss:pb-5 lg:pb-8 2xl:pb-15 text-center">
-            Our Services Extend to These Top Locations!
-          </div>
-          <div className="grid lg:grid-cols-2 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base xss:grid-cols-1 xss:gap-4 xl:gap-5 sm:px-8 md:px-28 lg:px-10 2xl:px-50">
-            <div className="flex items-center">
-              <div className="w-[1.5rem] xss:w-[1.8rem] sm:w-[2rem] lg:w-[2.4rem] ">
-                <Image
-                  src="/service-icons/hyd.svg"
-                  alt="hyd"
-                  width={40}
-                  height={40}
-                  priority={false}
-                />
-              </div>
-              <p className="text-white pl-2">
-                Mobile App Development Company in Hyderabad
-              </p>
-            </div>
-            <div className="flex items-center">
-              <div className="w-[1.5rem] xss:w-[1.8rem] sm:w-[2rem] lg:w-[2.4rem] ">
-                <Image
-                  src="/service-icons/torento.svg"
-                  alt="toronto"
-                  width={40}
-                  height={40}
-                  priority={false}
-                />
-              </div>
-              <p className="text-white pl-2">
-                Mobile App Development Company in Toronto
-              </p>
-            </div>
-            <div className="flex items-center">
-              <div className="w-[1.5rem] xss:w-[1.8rem] sm:w-[2rem] lg:w-[2.4rem] ">
-                <Image
-                  src="/service-icons/saudi.svg"
-                  alt="saudi"
-                  width={40}
-                  height={40}
-                  priority={false}
-                />
-              </div>
-              <p className="text-white pl-2">
-                Mobile App Development Company in Saudi
-              </p>
-            </div>
-            <div className="flex items-center">
-              <div className="w-[1.5rem] xss:w-[1.8rem] sm:w-[2rem] lg:w-[2.4rem] ">
-                <Image
-                  src="/service-icons/dubai.svg"
-                  alt="dubai"
-                  width={40}
-                  height={40}
-                  priority={false}
-                />
-              </div>
-              <p className="text-white pl-2">
-                Mobile App Development Company in Dubai
-              </p>
-            </div>
-            <div className="flex items-center">
-              <div className="w-[1.5rem] xss:w-[1.8rem] sm:w-[2rem] lg:w-[2.4rem] ">
-                <Image
-                  src="/service-icons/qatar.svg"
-                  alt="qatar"
-                  width={40}
-                  height={40}
-                  priority={false}
-                />
-              </div>
-              <p className="text-white pl-2">
-                Mobile App Development Company in Qatar
-              </p>
-            </div>
-            <div className="flex items-center">
-              <div className="w-[1.5rem] xss:w-[1.8rem] sm:w-[2rem] lg:w-[2.4rem] ">
-                <Image
-                  src="/service-icons/kochi.svg"
-                  alt="kochi"
-                  width={40}
-                  height={40}
-                  priority={false}
-                />
-              </div>
-              <p className="text-white pl-2">
-                Mobile App Development Company in Kochi
-              </p>
-            </div>
-          </div>
-        </div>
-
         {/* DM agency in India */}
-        <div className="w-full h-auto bg-white xl:p-5 xl:px-20 xss:px-5 pt-5 xs:p-5 sm:px-8 ">
-          <h3 className="subt text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.5rem] md:w-[75%] xl:text-[1.8rem] 3xl:text-[2.2rem] xl:w-[75%] 2xl:w-[65%] font-semibold text-black leading-snug">
+        <div className="w-full h-auto bg-white xl:p-3 xl:px-20 xss:px-5 pt-5 xs:p-5 sm:px-8 ">
+          <h3 className="sub-heading">
             Digital Marketing Agency in India
           </h3>
-          <div className="xl:text-sm text-[#7B7E86] xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base leading-relaxed 3xl:leading-8">
+          <div className="text">
             <p className="pb-2">
               Analogue IT Solutions is not just Best digital marketing company
               in Hyderabad, we are your strategic partner in achieving online
@@ -504,12 +373,17 @@ export default function DigitalMarketing() {
           </div>
         </div>
 
+                {/* Extended Locations */}
+        <div>
+          <ExtendedLocations />
+        </div>
+
         {/* content under Digital marketing dev company in India */}
-        <div className="w-full h-auto bg-white xl:p-5 xl:px-20 xss:px-5 pt-5 xs:p-5 sm:px-8 ">
-          <h3 className="subt text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.5rem] md:w-[75%] xl:text-[1.8rem] 3xl:text-[2.2rem] xl:w-[75%] 2xl:w-[65%] font-semibold text-black leading-snug">
+        <div className="w-full h-auto bg-white xl:pt-5 xl:px-20 xss:px-5 pt-5 xs:p-5 sm:px-8 ">
+          <h3 className="sub-heading">
             Analogue IT Solutions - Best Digital Marketing Agency in Hyderabad
           </h3>
-          <div className="xl:text-sm text-[#7B7E86] xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base leading-relaxed 3xl:leading-8">
+          <div className="text">
             <p className="pb-2">
               At our esteemed digital marketing agency, we pride ourselves on
               being the best digital marketing agency in Hyderabad, delivering
@@ -525,11 +399,11 @@ export default function DigitalMarketing() {
         </div>
 
         {/* why analogue it solutions */}
-        <div className="w-full h-auto bg-white xl:p-5 xl:px-20 xss:px-5 pt-5 xs:p-5 sm:px-8 ">
-          <h3 className="subt text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.5rem] md:w-[75%] xl:text-[1.8rem] 3xl:text-[2.2rem] xl:w-[75%] 2xl:w-[65%] font-semibold text-black leading-snug ">
+        <div className="w-full h-auto bg-white xl:p-0 xl:px-20 xss:px-5 pt-5 xs:p-5 sm:px-8 ">
+          <h3 className="sub-heading ">
             Choose Best Digital Marketing Agency in Hyderabad
           </h3>
-          <div className="xl:text-sm text-[#7B7E86] xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base leading-relaxed 3xl:leading-8">
+          <div className="text">
             <p className="pb-2">
               Are you ready to take your business to new heights? Partner with
               Analogue IT Solutions, the best digital marketing agency in

@@ -12,22 +12,6 @@ export default function FrequentQuestions({ Question }) {
 
   // Function to render the answer, formatting as bullet points for the specific FAQs
   const renderAnswer = (faq) => {
-    if (
-      faq.question === "02. Is Digital Marketing is important for all?" ||
-      faq.question === "05. Is digital Marketing a Product or Service?"
-    ) {
-      const points = faq.answer
-        .split(".")
-        .map((point) => point.trim())
-        .filter((point) => point);
-      return (
-        <ul className="list-disc pl-5">
-          {points.map((point, index) => (
-            <li key={index}>{point}</li>
-          ))}
-        </ul>
-      );
-    }
     return faq.answer;
   };
 

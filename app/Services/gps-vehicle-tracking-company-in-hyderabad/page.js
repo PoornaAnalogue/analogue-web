@@ -240,8 +240,8 @@ export default function GPSVehicleTracking() {
         {/* GPS vehicle tracking */}
         <div className="w-full h-auto bg-white xl:p-5 xl:px-20 xss:px-5 pt-5 xs:p-5 sm:px-8 ">
           <h3 className="sub-heading">
-            GPS Vehicle Tracking - Real-Time Vehicle Monitoring Made Easy        
-              </h3>
+            GPS Vehicle Tracking - Real-Time Vehicle Monitoring Made Easy
+          </h3>
           <div className="text">
             <p className="pb-1">
               GPS Vehicle Tracking is the process of monitoring the real-time location and movement of vehicles using advanced satellite signals. With the help of our GPS Tracking Services, you can not only view live tracking but also access detailed reports, driving history, and performance insights.
@@ -255,15 +255,15 @@ export default function GPSVehicleTracking() {
         {/* key features */}
         <div className="w-full h-auto bg-white xl:p-0 xl:px-20 xss:px-5 xss:px-5 sm:px-8">
           <h5 className=" xss:pb-2 xl:pb-3 sub-heading">
-            Key Features of Our GPS Vehicle Tracking System 
-            </h5>
+            Key Features of Our GPS Vehicle Tracking System
+          </h5>
 
           <div className="text-[#7B7E86]">
             <div className="sub-text">
               Real-Time Location Tracking -{" "}
               <span className="text">
-                Instantly know where your vehicle is at any time.    
-                  </span>
+                Instantly know where your vehicle is at any time.
+              </span>
             </div>
 
             <div className="sub-text">
@@ -408,7 +408,7 @@ export default function GPSVehicleTracking() {
           </h3>
           <div className="text">
             <p className="pb-2">
-We offer advanced GIS Mapping Services to visualize your fleet's location and routes on customized maps. By leveraging GPS trackers and vehicle tracking systems, our GIS Mapping Services help you plan efficient routes and monitor driver behavior. These solutions enhance operational transparency, reduce fuel costs, and improve overall fleet productivity. With real-time data insights, businesses can make smarter decisions and deliver services more efficiently.            </p>
+              We offer advanced GIS Mapping Services to visualize your fleet's location and routes on customized maps. By leveraging GPS trackers and vehicle tracking systems, our GIS Mapping Services help you plan efficient routes and monitor driver behavior. These solutions enhance operational transparency, reduce fuel costs, and improve overall fleet productivity. With real-time data insights, businesses can make smarter decisions and deliver services more efficiently.            </p>
           </div>
         </div>
 
@@ -417,7 +417,7 @@ We offer advanced GIS Mapping Services to visualize your fleet's location and ro
             Drones as a Service for Vehicle Monitoring          </h3>
           <div className="text">
             <p className="pb-2">
-We also provide drone services for aerial monitoring of your vehicles and assets. Drones equipped with GPS technology can provide real-time aerial views of your fleet, ensuring enhanced security and better oversight of remote or large-area locations. This allows for quicker incident detection, improved risk management, and proactive maintenance planning. With high-resolution imaging and data collection, you gain actionable insights to optimize fleet safety and performance.            </p>
+              We also provide drone services for aerial monitoring of your vehicles and assets. Drones equipped with GPS technology can provide real-time aerial views of your fleet, ensuring enhanced security and better oversight of remote or large-area locations. This allows for quicker incident detection, improved risk management, and proactive maintenance planning. With high-resolution imaging and data collection, you gain actionable insights to optimize fleet safety and performance.            </p>
           </div>
         </div>
 
@@ -427,7 +427,7 @@ We also provide drone services for aerial monitoring of your vehicles and assets
             Why Choose Analogue IT Solutions for Your GPS Vehicle Tracking Needs?          </h3>
           <div className="text">
             <p className="xss:pb-2 md:pb-5">
-As one of the leading vehicle tracking device service providers, we have extensive experience in providing reliable GPS tracking solutions. Our team is committed to delivering high-quality, customizable tracking systems that provide real-time, accurate data. Whether you are a small business or a large enterprise, we tailor our services to meet your specific requirements. With our advanced solutions, you can improve operational efficiency, reduce costs, and ensure greater safety for your fleet. Our customer-focused approach guarantees seamless integration and ongoing support for hassle-free management. By choosing us, you gain a trusted partner dedicated to helping your business thrive with smart tracking technologies.            </p>
+              As one of the leading vehicle tracking device service providers, we have extensive experience in providing reliable GPS tracking solutions. Our team is committed to delivering high-quality, customizable tracking systems that provide real-time, accurate data. Whether you are a small business or a large enterprise, we tailor our services to meet your specific requirements. With our advanced solutions, you can improve operational efficiency, reduce costs, and ensure greater safety for your fleet. Our customer-focused approach guarantees seamless integration and ongoing support for hassle-free management. By choosing us, you gain a trusted partner dedicated to helping your business thrive with smart tracking technologies.            </p>
           </div>
         </div>
 
@@ -440,8 +440,8 @@ As one of the leading vehicle tracking device service providers, we have extensi
         {/* discuss ideas */}
         <div className="w-full h-auto bg-white xl:p-5  xl:px-20 xss:px-5 pt-5 xs:p-5 sm:px-8 ">
           <h3 className=" sub-heading">
-            Get Started Today            
-            </h3>
+            Get Started Today
+          </h3>
           <div className="xl:text-sm text-[#7B7E86] pb-2 xl:leading-6 text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base leading-relaxed 3xl:leading-8">
             <p className="pb-2">
               If you're looking for reliable GPS Vehicle Tracking solutions or want to learn more about our vehicle tracking system, GPS tracker, or GIS mapping services, contact Analogue IT Solutions today! Our experts are here to guide you in choosing the best solution for your vehicle fleet management needs.            </p>

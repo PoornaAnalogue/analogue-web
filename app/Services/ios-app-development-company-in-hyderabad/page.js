@@ -9,6 +9,8 @@ import CarousalServicePage from "@/components/carousal-servicepage";
 import FrequentQuestions from "@/components/faqs-page";
 import GetAQuoteForm from "@/components/get-quote-form";
 import CalendarPage from "@/app/home-page-main/calendar/calendar-page";
+import TypewriterHeading from "@/components/service-related-components/typewrite-heading";
+import ExtendedLocations from "@/components/service-related-components/extended-locations";
 
 export default function IOSAppDevelopment() {
   const [isOpen, setIsOpen] = useState(false);
@@ -101,6 +103,17 @@ export default function IOSAppDevelopment() {
     },
   ];
 
+  const heading = [
+    { word: "Best", color: "text-black" },
+    { word: "IOS", color: "text-blue-500" },
+    { word: "App", color: "text-blue-500" },
+    { word: "Development", color: "text-blue-500" },
+    { word: "Company", color: "text-black" },
+    { word: "in", color: "text-black" },
+    { word: "Hyderabad,", color: "text-black" },
+    { word: "India", color: "text-black" },
+  ];
+
   return (
     <>
       <div className="hero flex flex-col justify-center items-center bg-white pb-12">
@@ -126,47 +139,52 @@ export default function IOSAppDevelopment() {
         {/* heading and content section */}
         <div className="px-4 xss:px-6 xs:px-8 sm:px-10 md:px-12 lg:px-16 xl:px-20 flex flex-col space-y-4 ">
           {/* about our company on top */}
-          <div className="flex items-center mb-1">
-            <span className="w-1 h-1 bg-black rounded-full mr-2"></span>
-            <span className="font-medium text-xs xss:text-subsmall sm:text-xs xl:text-sm text-black">
-              ABOUT OUR COMPANY
-            </span>
-          </div>
-          <h1 className=" text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1. text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.7rem] md:w-[75%] xl:text-[2rem] 3xl:text-[2.5rem] xl:w-[75%] 2xl:w-[65%] font-semibold text-black leading-snug">
-            Best <span className="text-blue-500"> IOS App Development </span>{" "}
-            Company in Hyderabad, India
-          </h1>
-          <p className="text-gray-500 leading-relaxed text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base">
-            Are you looking for a top-notch IOS app development company to
-            create a cutting-edge mobile application that will take your
-            business to the next level? Look no further! Our team of expert IOS
-            app developers specialises in creating high-quality IOS apps that
-            are tailored to meet your specific needs and objectives. At Analogue
-            IT Solutions, we offer a wide range of IOS app development services.
-            Whether you need a simple iOS app or a complex, feature-rich mobile
-            application, our team of experienced IOS and Android app developers
-            has the skills and expertise to bring your vision to life.
-          </p>
+          <div className="flex flex-col xl:flex-row items-center xl:items-start w-full gap-6">
+            <div className="xl:w-1/2">
+              <div className="flex items-center mb-1">
+                <span className="w-1 h-1 bg-black rounded-full mr-2"></span>
+                <span className="font-medium text-xs xss:text-subsmall sm:text-xs xl:text-sm text-black">
+                  ABOUT OUR COMPANY
+                </span>
+              </div>
+              <TypewriterHeading textArray={heading} />
+              <p className="text">
+                Are you looking for a top-notch IOS app development company to
+                create a cutting-edge mobile application that will take your
+                business to the next level? Look no further! Our team of expert IOS
+                app developers specialises in creating high-quality IOS apps that
+                are tailored to meet your specific needs and objectives. At Analogue
+                IT Solutions, we offer a wide range of IOS app development services.
+                Whether you need a simple iOS app or a complex, feature-rich mobile
+                application, our team of experienced IOS and Android app developers
+                has the skills and expertise to bring your vision to life.
+              </p>
 
-          {/* Free Quote button + Call us */}
-          <div className="lg:flex gap-4">
-            <button
-              suppressHydrationWarning
-              onClick={() => setIsOpen(true)}
-              className="bg-blue-600 xss:text-xs lg:text-sm text-white xss:px-2 xss:py-2 xl:px-5 xl:py-3 rounded-3xl hover:bg-blue-700 transition cursor-pointer"
-            >
-              Get Free Quote
-            </button>
-            <div className="flex xss:flex-col lg:flex-row lg:items-center xss:ml-2 lg:ml-[-0.3rem] xss:mt-2 lg:mt-0">
-              <span className="xss:text-xs lg:text-sm text-blue-500 mr-2">
-                Call Us
-              </span>
-              <a
-                href="tel:+918919088163"
-                className="xss:text-xs lg:text-sm text-blue-700 hover:underline transition-colors duration-200"
-              >
-                +91 8919088163
-              </a>
+              {/* Free Quote button + Call us */}
+              <div className="xs:flex  gap-4 xss:pt-2 xl:pt-3">
+                <button
+                  suppressHydrationWarning
+                  onClick={() => setIsOpen(true)}
+                  className="bg-blue-600 xss:text-xs lg:text-sm text-white xss:px-2 xss:py-2 xl:px-5 xl:py-3 rounded-3xl hover:bg-blue-700 transition cursor-pointer"
+                >
+                  Get Free Quote
+                </button>
+                <div className="flex xss:flex-col lg:flex-row lg:items-center xss:ml-2 lg:ml-[-0.3rem] xss:mt-2 lg:mt-0">
+                  <span className="xss:text-xs lg:text-sm text-blue-500 mr-2">
+                    Call Us
+                  </span>
+                  <a
+                    href="tel:+918919088163"
+                    className="xss:text-xs lg:text-sm text-blue-700 hover:underline transition-colors duration-200"
+                  >
+                    +91 8919088163
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div className="xl:w-1/2 flex justify-center items-center">
+              <Image src="/service-icons/ios-img.png" width={600} height={400} alt="Digital marketing image"
+                className="w-full h-auto max-w-[30rem] object-contain " />
             </div>
           </div>
 
@@ -177,17 +195,27 @@ export default function IOSAppDevelopment() {
               WELCOME TO OUR COMPANY
             </span>
           </div>
-          <h5 className="subt text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.5rem] md:w-[75%] xl:text-[1.8rem] 3xl:text-[2.2rem] xl:w-[75%] 2xl:w-[65%] font-semibold text-black leading-snug">
+          <h5 className="sub-heading-main">
             Accelerating Business Growth with Expert iOS App Development
           </h5>
-          <p className="text-gray-500 leading-relaxed text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base">
+          <p className="text">
             At Analogue IT Solutions, we are a leading iOS app development
             company in Hyderabad, helping businesses transform ideas into
             powerful mobile experiences. Our skilled team of iOS developers
             harnesses the latest technologies to craft customised applications
-            that align with your business goals and deliver real value.
+            that align with your business goals and deliver real value. From elegant, user-friendly UI/UX design to secure and scalable
+            backend integration, every iOS app we build is designed for
+            performance, reliability, and growth. Whether you are a startup
+            launching your first app or an enterprise looking for advanced
+            solutions, our iOS app development expertise spans industries like
+            e-commerce, healthcare, fintech, logistics, and more. With a customer-centric approach, we create iOS applications that
+            are not only visually appealing but also robust, secure, and
+            optimised for seamless performance. Our focus is on delivering apps
+            that enhance user engagement, streamline operations, and boost
+            business growth.Partner with Analogue IT Solutions to turn your iOS app vision into
+            reality and stay ahead in the competitive digital landscape.
           </p>
-          <p className="text-gray-500 leading-relaxed text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base">
+          {/* <p className="text">
             From elegant, user-friendly UI/UX design to secure and scalable
             backend integration, every iOS app we build is designed for
             performance, reliability, and growth. Whether you are a startup
@@ -195,17 +223,17 @@ export default function IOSAppDevelopment() {
             solutions, our iOS app development expertise spans industries like
             e-commerce, healthcare, fintech, logistics, and more.
           </p>
-          <p className="text-gray-500 leading-relaxed text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base">
+          <p className="text">
             With a customer-centric approach, we create iOS applications that
             are not only visually appealing but also robust, secure, and
             optimised for seamless performance. Our focus is on delivering apps
             that enhance user engagement, streamline operations, and boost
             business growth.
-          </p>
-          <p className="text-gray-500 leading-relaxed text-xs xss:text-xs sm:text-sm lg:text-subbody 3xl:text-base">
+          </p> */}
+          {/* <p className="text">
             Partner with Analogue IT Solutions to turn your iOS app vision into
             reality and stay ahead in the competitive digital landscape.
-          </p>
+          </p> */}
           <div className="my-2">
             <button className="bg-blue-600 xss:text-xs lg:text-sm text-white xss:px-2 xss:py-2 xl:px-5 xl:py-3 rounded-3xl hover:bg-blue-700 transition cursor-pointer ">
               <Link href="/aboutus">Discover More</Link>
@@ -254,59 +282,8 @@ export default function IOSAppDevelopment() {
         </div>
 
         {/* TECHNOLOGIES SECTION  WITH ICONS AND BG IMAGE */}
-        <div className=" w-full h-auto bg-[url('/service-icons/app-dev-bg.jpg')] bg-cover bg-center flex flex-col lg:flex-row h-[35rem] sm:h-[27rem] md:h-[32rem] lg:h-[32rem] xl:h-[26rem]">
-          <div className=" pt-[4%] sm:pt-[5%] 3xl:w-[80%] w-[80%] mx-auto text-white">
-            <h2 className="text-2xl xss:text-center lg:text-start xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold mb-9">
-              TECHNOLOGIES
-            </h2>
-            <div className="flex space-x-8 mb-6">
-              {technologies.map((tech, index) => (
-                <span
-                  key={index}
-                  onClick={() => setSelectedCategory(tech.category)}
-                  className={`cursor-pointer pb-1 border-b-2 font-medium xss:text-xs sm:text-sm lg:text-base  transition-all duration-500 ease-in-out ${
-                    selectedCategory === tech.category
-                      ? "border-white text-[#0E59F2]"
-                      : "border-transparent"
-                  } hover:border-[#0E59F2]`}
-                >
-                  {tech.category}
-                </span>
-              ))}
-            </div>
-
-            {/* Display selected category items */}
-            <div className="flex">
-              <div className="w-full">
-                <div className="grid grid-cols-6 xss:grid-cols-2 sm:grid-cols-3 2xl:w-[60rem] xl:grid-cols-5">
-                  {selectedItems?.map((item, idx) => (
-                    <div
-                      key={idx}
-                      className="py-1 p-2 m-5 sm:m-0 sm:my-2 md:m-0 md:my-2 text-black relative"
-                    >
-                      <Image
-                        src={TechIcons.bgicon}
-                        alt="design"
-                        width={20}
-                        height={20}
-                        className=" xss:w-[5.5rem] sm:w-[6.3rem] md:w-[120px] lg:w-[135px] flex justify-center items-center mx-auto"
-                      />
-                      <div className="absolute inset-0 xss:text-subsmall sm:text-xs flex flex-col items-center justify-center">
-                        <Image
-                          src={item.icon}
-                          alt={item.name}
-                          width={20}
-                          height={20}
-                          className="w-[65px] h-[65px] xss:w-[2.5rem] xss:h-[2rem] sm:w-[55px] sm:h-[50px] md:w-[60px] md:h-[50px] lg:w-[68px] lg:h-[55px] xl:w-[85px] xl:h-[75px]"
-                        />
-                        {item.name}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
+        <div >
+          <ExtendedLocations />
         </div>
 
         {/* Our services new section */}
@@ -322,7 +299,7 @@ export default function IOSAppDevelopment() {
               IOS App Development Services at Analogue IT Solutions
             </h1>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 xss:gap-8 xss:px-8 3xl:gap-20 2xl:gap-14 2xl:px-14 3xl:px-30 px-10">
+          <div className="grid grid-cols-1 text-center md:grid-cols-2 xl:grid-cols-4 xss:gap-8 xss:px-8 3xl:gap-20 2xl:gap-14 2xl:px-14 3xl:px-30 px-10">
             <div className=" text-[#7B7E86] p-5 border-l border-r border-gray-200 shadow-[0_4px_2px_rgba(0,0,0,0.3)] bg-white rounded-lg">
               <h3 className="font-weight-400 text-[#0E59F2] xss:mb-3 xl:text-2xl xl:mb-4 xss:mb-1text-2xl xss:text-[1.1rem] xs:text-[1.2rem] sm:text-[1.3rem] md:text-[1.4rem] xl:text-[1.5rem] 3xl:text-[1.6rem] font-semibold">
                 Mobile App Optimization
